@@ -12,9 +12,9 @@
 			<div class="grid-x grid-padding-x">
 				<h2 class="title medium-12">This lesson helps learners answer the following questions:</h2>
 				<ul class="medium-7 lesson-items" style="margin-left:0; padding-right:12px">
-				  <li>What are the different types of irony?</li>
-				  <li>What is suspense?</li>
-				  <li>How do writers use suspense and irony in narratives?</li>
+				  <li>How is an opinion piece organized?</li>
+				  <li>What is the purpose of an introduction, body, and conclusion in an opinion piece?</li>
+				  <li>How does a writer organize reasons and evidence in an opinion piece?</li>
 				</ul>
 				<div class="medium-5"><img src="https://media.giphy.com/media/34xC5tyVDJrI4/giphy.gif"/></div>
 			</div>

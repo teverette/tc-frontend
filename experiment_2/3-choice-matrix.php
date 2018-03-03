@@ -14,56 +14,61 @@
 		<div class="grid-x grid-padding-x">
 		  
 		  
-		  <h2 class="title medium-12">What is verbal irony?</h2>
-		  <p class="lesson-desc medium-12">Verbal irony is when words express something different from their normal meaning. Is verbal irony being used in the examples below?</p>
+		  <h2 class="title medium-12">Writers use words and phrases to help organize their ideas in an opinion piece. How would a writer use the words below?</h2>
+		  <p class="lesson-desc medium-12">Select the correct button next to each word.</p>
 		  
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
-		      <th width="60%"></th>
-		      <th width="20%" class="text-center">Verbal Irony</th>
-		      <th width="20%" class="text-center">Not Verbal Irony</th>
+		      <th width="40%"></th>
+		      <th width="30%" class="text-center">To show order</th>
+		      <th width="30%" class="text-center">To show importance</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td>A cat drinking a bowl of milk smiles and says, &ldquo;I love milk!&rdquo;</td>
-		      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="irony"/></td>
-		      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="not-irony"/></td>
+		      <td>Next</td>
+		      <td class="text-center"><input type="radio" name="q3_1" value="order"/></td>
+		      <td class="text-center"><input type="radio" name="q3_1" value="importance"/></td>
 		    </tr>
 		    <tr>
-		      <td>A teacher assigns a lot of homework and a student says, &ldquo;I can&rsquo;t imagine a better way to spend my weekend.&rdquo;</td>
-		      <td class="text-center"><input type="radio" name="q1_2" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q1_2" value="not-irony"/></td>
+		      <td>One reason</td>
+		      <td class="text-center"><input type="radio" name="q3_2" value="order"/></td>
+		      <td class="text-center"><input type="radio" name="q3_2" value="importance"/></td>
 		    </tr>
 		    <tr>
-		      <td>A soccer player makes a goal and the coach says, &ldquo;Well done!&rdquo;</td>
-		      <td class="text-center"><input type="radio" name="q1_3" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q1_3" value="not-irony"/></td>
+		      <td>Most importantly</td>
+		      <td class="text-center"><input type="radio" name="q3_3" value="order"/></td>
+		      <td class="text-center"><input type="radio" name="q3_3" value="importance"/></td>
+		    </tr>
+		    <tr>
+		      <td>Above all</td>
+		      <td class="text-center"><input type="radio" name="q3_4" value="order"/></td>
+		      <td class="text-center"><input type="radio" name="q3_4" value="importance"/></td>
 		    </tr>
 		  </tbody>
 		</table>
 		
 		  <div class="medium-12 lesson-desc grid-x hide rationale">
 		  	<h3>Why are these the answers?</h3>
-		  	<p>Verbal irony is saying one thing but meaning another. It is used to keep the reader interested in the narrative.</p>
+		  	<p>The words “one reason”  and “next” organize an idea based on its order. The phrases “most important” and “above all” organize the ideas in the opinion piece based on their  importance. </p>
 		  </div>
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
 			<hr/>
 			<div class="medium-12">
-			<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
+			<a class="button back large" href="learn-page-2.php"><i class="fas fa-angle-left"></i> Back</a>
 			<a id="choice-matrix-2" class="check-disabled button success large float-right">Check</a>
 			</div>
 		</div>
 		<script>
 			$(document).foundation();
 			
-	    	var questions = ["q1_1","q1_2","q1_3"];
-	      	var answerKey = {q1_1:"not-irony", q1_2:"irony",q1_3:"not-irony"};
+	    	var questions = ["q3_1","q3_2","q3_3","q3_4"];
+	      	var answerKey = {q3_1:"order", q3_2:"order",q3_3:"importance",q3_4:"importance"};
 	      	var response_key = {};
-	      	var nextPage = "q2-cloze-dropdown.php";
+	      	var nextPage = "4-cloze-dropdown.php";
 	      	var storage = window.sessionStorage;
 
 	      	// part of the initialization of the object.

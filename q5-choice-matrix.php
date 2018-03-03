@@ -58,15 +58,14 @@
 		<div class="grid-x grid-padding-x footer">
 			<hr/>
 			<div class="medium-12">
-			<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
+			<a class="button back large" href="q4-choice-matrix.php#checked"><i class="fas fa-angle-left"></i> Back</a>
 			<a id="choice-matrix-2" class="check-disabled button success large float-right">Check</a>
 			</div>
 		</div>
 		<script>
 			$(document).foundation();
-				
 		    	var questions = ["q5_1","q5_2","q5_3"];
-		      	var question2 = {q5_1:"irony", q5_2:"not-irony",q5_3:"irony"};
+		      	var answerKey = {q5_1:"irony", q5_2:"not-irony",q5_3:"irony"};
 		      	var nextPage = "q6-multiple-choice.php";
 
 		      	var numberCorrect = 3;
@@ -80,55 +79,23 @@
 
 				$(document).ready(function() {
 	      			highlightCurrentQuiz();
-	      			ChoiceMatrix.initialize(3,3);
+	      			ChoiceMatrix.initialize(3,3, "matrix");
 	      		});
 	      		
-		      	function loopThruQuestions() {
-		      		var questionLength = questions.length;
-					for(i=0; i<questionLength; i++){
-						console.log("question: " + questions[i]);
-						var name = questions[i];
-						var val = $('input[name='+name+']:checked').val();
-						console.log(val);
-						updateQuestionStatus(this, name, val);
-		    	  	}
-					highlightCorrectQuiz();
-					if(points==numberCorrect) {
-				    	  incrementScore();
-				      }
-		      	}
-
-		      	function updateQuestionStatus(o, name, selectedAnswer) {
-			      	var correctAnswer = question2[name];
-		      		if(correctAnswer==selectedAnswer) {
-						$(o).parent().addClass('correct');
-						$('input[name='+name+']:checked').parent()
-							.addClass('correct')
-							.append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
-						points++;
-					} else {
-						$(o).parent().addClass('incorrect');
-						$('input[name='+name+']:checked').parent()
-							.addClass('incorrect')
-							.append('<i class="fas fa-times" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
-					}
-		      	}
-		      
 		      $(document).on("click",".check", function() {
-		    	  // todo add question/answer verification logic
-		    	  loopThruQuestions();
-		    	  showRationale();
-		    	  updateNextStepBtn(this);
-		    	  $("input").attr('disabled','disabled');
+		    	  ChoiceMatrix.assess(false);
 		      });
 		      
 		      $(document).on("click",".check-verified", function() {
 				  window.location.href=nextPage;
 		      });
 
-		      window.onload = function() {
-		    		lockTest();
-		    	}
+			window.onload = function() {
+				var isLocked = lockTest();
+				if(isLocked) {
+					ChoiceMatrix.getResponses();
+				}
+		    }
 		  </script>
 	</body>
 </html>

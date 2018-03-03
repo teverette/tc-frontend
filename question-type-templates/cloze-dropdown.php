@@ -12,10 +12,10 @@
 <div class="content"> 
 <div class="grid-x grid-padding-x">
   
-  <h2 class="title medium-12">How is an opinion piece organized into sections?</h2>
-  <p class="lesson-desc">Select the best word from each drop-down menu.</p>
+  <h2 class="title medium-12">How is verbal irony used in narratives?</h2>
+  <p class="lesson-desc">Complete the paragraphs by selecting statements that introduce verbal irony into the story. </p>
   <div class="medium-12 grid-x lesson-copy">
-    <p>The [introduction, body, conclusion] begins the opinion piece. it includes the opinion statement and helps readers understand the topic.
+    <p>John’s brother brings his dog to visit. The dog chews John&rsquo;s favorite shoes. John says, &ldquo;
     <label class="select"><select class="inline-select question" style="width: 325px;" name="q2_1">
     <option selected disabled value="-">&nbsp; Select an option</option>
     <option value="1">&nbsp; Your dog is terrible!</option>

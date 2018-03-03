@@ -58,77 +58,44 @@
 		<div class="grid-x grid-padding-x footer">
 			<hr/>
 			<div class="medium-12">
-			<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
+			<a class="button back large" href="q3-multiple-choice.php#checked"><i class="fas fa-angle-left"></i> Back</a>
 			<a id="choice-matrix-2" class="check-disabled button success large float-right">Check</a>
 			</div>
 		</div>
 		<script>
 			$(document).foundation();
-				
-		    	var questions = ["q4_1","q4_2","q4_3","q4_4"];
-		      	var question2 = {q4_1:"irony", q4_2:"not-irony",q4_3:"irony",q4_4:"not-irony"};
-		      	var nextPage = "q5-choice-matrix.php";
+	    	var questions = ["q4_1","q4_2","q4_3","q4_4"];
+	      	var answerKey = {q4_1:"irony", q4_2:"not-irony",q4_3:"irony",q4_4:"not-irony"};
+	      	var nextPage = "q5-choice-matrix.php";
 
-		      	var numberCorrect = 4;
-			    var points = 0;
-				// initialization stuff
-			    var storage = window.sessionStorage;
-		      	
-			    $("input:radio").click(function() {
-					ChoiceMatrix.enableButton();
-				});
+	      	var numberCorrect = 4;
+		    var points = 0;
+			// initialization stuff
+		    var storage = window.sessionStorage;
+	      	
+		    $("input:radio").click(function() {
+				ChoiceMatrix.enableButton();
+			});
 
-				$(document).ready(function() {
-	      			highlightCurrentQuiz();
-	      			ChoiceMatrix.initialize(4,4);
-	      		});
+			$(document).ready(function() {
+      			highlightCurrentQuiz();
+      			ChoiceMatrix.initialize(4,4,"matrix");
+      		});
 	      		
-		      	function loopThruQuestions() {
-		      		var questionLength = questions.length;
-					for(i=0; i<questionLength; i++){
-						console.log("question: " + questions[i]);
-						var name = questions[i];
-						var val = $('input[name='+name+']:checked').val();
-						console.log(val);
-						updateQuestionStatus(this, name, val);
-		    	  	}
-					
-					if(points==numberCorrect) {
-				    	  incrementScore();
-				      }
-		      	}
-
-		      	function updateQuestionStatus(o, name, selectedAnswer) {
-			      	var correctAnswer = question2[name];
-		      		if(correctAnswer==selectedAnswer) {
-						$(o).parent().addClass('correct');
-						$('input[name='+name+']:checked').parent()
-							.addClass('correct')
-							.append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
-						points++;
-					} else {
-						$(o).parent().addClass('incorrect');
-						$('input[name='+name+']:checked').parent()
-							.addClass('incorrect')
-							.append('<i class="fas fa-times" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
-					}
-		      	}
+		    $(document).on("click",".check", function() {
+		    	ChoiceMatrix.assess(false);
+		    });
 		      
-		      $(document).on("click",".check", function() {
-		    	  // todo add question/answer verification logic
-		    	  loopThruQuestions();
-		    	  showRationale();
-		    	  updateNextStepBtn(this);
-		    	  $("input").attr('disabled','disabled');
-		      });
-		      
-		      $(document).on("click",".check-verified", function() {
-				  window.location.href=nextPage;
-		      });
+		    $(document).on("click",".check-verified", function() {
+				window.location.href=nextPage;
+		    });
 
-		      window.onload = function() {
-		    		lockTest();
-		    	}
+		    window.onload = function() {
+	    		var isLocked = lockTest();
+			  	if(isLocked) {
+					ChoiceMatrix.getResponses();
+				}
+			}
 		  </script>
 	</body>
 </html>

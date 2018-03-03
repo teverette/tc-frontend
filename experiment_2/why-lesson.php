@@ -30,7 +30,7 @@
 			<hr/>
 			<div class="medium-12" style="margin-top:9px;">
 				<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
-				<a class="check-verified button success large float-right" href="practice-transition.php">Got it</a>
+				<a class="check-verified button success large float-right" href="lp.php">Got it</a>
 			</div>
 		</div>
 		<script>

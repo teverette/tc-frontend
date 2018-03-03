@@ -11,7 +11,9 @@ function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check");
 	$(o).text("Next");
 	location.hash = "checked";
-	
+	$(".back").click(function(){
+		onclick="history.back(-2);";
+	})
 }
 
 function lockTest() {
@@ -60,10 +62,12 @@ function incrementScore() {
 var storage = window.sessionStorage;
 
 var ChoiceMatrix = {
+		name: null,
 		numberCorrect: null,
 		minReq:null,
 		points:0,
 		answered:0,
+		responseKey: {},
 		type:0,
 		isMinimumAnswersMet: function() {
 			this.answered = $( "input:checked" ).length;
@@ -79,30 +83,32 @@ var ChoiceMatrix = {
 		},
 		
 		getResponses: function() {
-      		$("input").attr('disabled','disabled');
+      		// $("input").attr('disabled','disabled');
       		var questionLength = questions.length;
 			for(i=0; i<questionLength; i++){
 				var name = questions[i];
 				var val = $('input[name='+name+']:checked').val();
 				ChoiceMatrix.checkResponse(name, val);
     	  	}
+			
+			// save all response to storage
+			var string = JSON.stringify(this.responseKey)
+			storage[this.name] = string;
+			
 			highlightCorrectQuiz();
-			if(points==numberCorrect) {
-		    	  incrementScore();
-		      }
+			if(this.points==this.numberCorrect) {
+				incrementScore();
+		    }
       	}, 
 		checkResponse: function(name, selectedAnswer) {
 	      	var correctAnswer = answerKey[name];
-	        // write to storage/console
-	        // response_key[name] = selectedAnswer;
-	        // var string = JSON.stringify(response_key);
-	        // console.log(string);
       		if(correctAnswer==selectedAnswer) {
       			ChoiceMatrix.updateQuestionStateCorrect(name);
 				this.points++;
 			} else {
 				ChoiceMatrix.updateQuestionStateIncorrect(name)
 			}
+      		this.responseKey[name] = selectedAnswer;
       	},
 
 		updateQuestionStateCorrect: function(name) {
@@ -136,7 +142,24 @@ var ChoiceMatrix = {
 	    	showRationale();
 	    	updateNextStepBtn($(".check"));
       	},
-		initialize: function(minToScore, minToCheck, type) {
+      	setPreviousResponse: function() {
+    		var responseKeyString = storage[this.name];
+    		
+    		console.log(responseKeyString);
+    		this.responseKey = JSON.parse(responseKeyString);
+    		
+    		for (x in this.responseKey) {
+    			console.log(this.responseKey[x]);
+    			var $currentSelect = $('input[name='+x+'][value='+this.responseKey[x]+']');
+    			$currentSelect.val(this.responseKey[x]);
+    			$currentSelect.attr("checked","checked");
+    			this.checkResponse(x, this.responseKey[x]);
+    		}
+    		showRationale();
+    		updateNextStepBtn($(".check"));
+    	},
+		initialize: function(name, minToScore, minToCheck, type) {
+			this.name = name;
 			this.numberCorrect = minToScore;
 			this.minReq = minToCheck;
 			this.type = type!=null ? type : "matrix";
@@ -144,9 +167,11 @@ var ChoiceMatrix = {
   }
 
 var ClozeDropdown = {
+	name: null,
 	numberCorrect: null,
 	minReq:null,
 	answered:0,
+	responseKey: {},
 	isMinimumAnswersMet: function() {
 		this.answered=0;
 		$(".question").each(function() {
@@ -173,6 +198,9 @@ var ClozeDropdown = {
 			  var val = $(this).val();
 			  ClozeDropdown.checkResponse($(this).parent(), name, val);
 		});
+		// save all response to storage
+		var string = JSON.stringify(this.responseKey)
+		storage[this.name] = string;
 	},
 
 	checkResponse: function(o, name, selectedAnswer) {
@@ -185,13 +213,30 @@ var ClozeDropdown = {
 		}  else {
 			$(o).addClass('incorrect').append('<i class="fas fa-times " style="color: #FED700;position:relative; right: 51px;" aria-hidden="true"></i>');
 		}
+      	
+      	this.responseKey[name] = selectedAnswer;
+    	
 	},
 	assess: function() {
 		this.getResponses();
 		showRationale();
 		updateNextStepBtn($(".check"));
 	},
-	initialize: function(minToScore, minToCheck) {
+	setPreviousResponse: function() {
+		var responseKeyString = storage[this.name];
+		
+		console.log(responseKeyString);
+		this.responseKey = JSON.parse(responseKeyString);
+		
+		for (x in this.responseKey) {
+			console.log(this.responseKey[x]);
+			var $currentSelect = $('select[name='+x+']');
+			$currentSelect.val(this.responseKey[x]);
+			this.checkResponse($currentSelect, x, this.responseKey[x]);
+		}
+	},
+	initialize: function(name, minToScore, minToCheck) {
+		this.name = name;
 		this.numberCorrect = minToScore;
 		this.minReq = minToCheck;
 	}
