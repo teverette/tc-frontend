@@ -28,6 +28,7 @@
 	<a class="button back large" href="q1-choice-matrix.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
+<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
 	
  <script>
       $(document).foundation();
@@ -71,8 +72,12 @@
       
       $(document).on("click",".check", function() {
     	  loopThruQuestions(this);
-    	  showRationale();
-    	  // update rationale logic
+    	  var $modal = $('.answer-rationale-reveal');
+
+	  		$.ajax('rationales/quiz_2.html')
+	  		  .done(function(resp){
+	  		    $modal.html(resp).foundation('open');
+	  		});
     	  updateNextStepBtn(this);
     	  $("input").attr('disabled','disabled');
       });

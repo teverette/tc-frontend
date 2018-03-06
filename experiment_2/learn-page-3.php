@@ -18,7 +18,7 @@
 				
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; top: 470px; margin-bottom: 7px;">
+		<div class="grid-x grid-padding-x footer">
 			<a class="button back large" href="4-cloze-dropdown.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check button success large" style="position:relative; left:864px; width:85px; padding:7px 0;" href="5-multiple-choice.php">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>

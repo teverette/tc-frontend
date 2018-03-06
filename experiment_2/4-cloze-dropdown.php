@@ -5,7 +5,7 @@
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 </head>
-<body class="progress">
+<body class="practice">
 	<?php $width = "75.0"; ?>
 	<?php include '_progress.php'; ?>
 <div class="content"> 
@@ -14,9 +14,9 @@
   <h2 class="title medium-12">Which words and phrases should be included to organize the following passage?</h2>
   <div class="medium-12 grid-x lesson-copy">
   <p>Sometimes swimmers need to swim faster for a race, for more exercise, or just for more fun. Underwater swimming is faster than 
-  swimming on the surface of the water. <a class="button dropdown-question" data-question="q4_1" onclick="showDrawer(this);">Select an option</a> it is faster under water is that a swimmer&rsquo;s strokes can spread 
-  across longer distances in less time. <a class="button dropdown-question" data-question="q4_2" onclick="showDrawer(this);">Select an option</a> underwater swimming is faster is that the splashing on the 
-  surface slows the swimmer down. <a class="button dropdown-question" data-question="q4_3" onclick="showDrawer(this);">Select an option</a> underwater swimming is faster because swimmers do not get as 
+  swimming on the surface of the water. <a class="button dropdown-question" data-question="q4_1" data-drawer-id="drawer-one"  onclick="showDrawer(this);">Select an option</a> it is faster under water is that a swimmer&rsquo;s strokes can spread 
+  across longer distances in less time. <a class="button dropdown-question" data-question="q4_2" data-drawer-id="drawer-two" onclick="showDrawer(this);">Select an option</a> underwater swimming is faster is that the splashing on the 
+  surface slows the swimmer down. <a class="button dropdown-question" data-question="q4_3" data-drawer-id="drawer-three"  onclick="showDrawer(this);">Select an option</a> underwater swimming is faster because swimmers do not get as 
   tired from the splashing and repeated movements used in surface swimming.</p>
 
   </div>
@@ -26,11 +26,21 @@
   
 </div>
 </div>
-<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
+<div class="grid-x grid-padding-x footer">
 	<a class="button back large" href="3-choice-matrix.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
-<div class="drop-down-drawer text-center">
+<div id="drawer-one" class="drop-down-drawer text-center">
+	<a class="button secondary answer-option" data-value="1">One reason</a>
+	<a class="button secondary answer-option" data-value="2">Above all,</a>
+	<a class="button secondary answer-option" data-value="3">Another reason</a>	
+</div>
+<div id="drawer-two" class="drop-down-drawer text-center">
+	<a class="button secondary answer-option" data-value="1">One reason</a>
+	<a class="button secondary answer-option" data-value="2">Above all,</a>
+	<a class="button secondary answer-option" data-value="3">Another reason</a>	
+</div>
+<div id="drawer-three" class="drop-down-drawer text-center">
 	<a class="button secondary answer-option" data-value="1">One reason</a>
 	<a class="button secondary answer-option" data-value="2">Above all,</a>
 	<a class="button secondary answer-option" data-value="3">Another reason</a>	

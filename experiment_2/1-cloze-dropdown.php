@@ -9,18 +9,21 @@
 	<?php $width = "25.0"; ?>
 	<?php include '_progress.php'; ?>
 <div class="content"> 
+
 <div class="grid-x grid-padding-x">
   
   <h2 class="title medium-12">How is an opinion piece organized into sections?</h2>
+  <p>
+The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.
+</p>
   <div class="medium-12 grid-x lesson-copy">
     <p>
-    <a class="button dropdown-question" data-question="q1_1" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
+    <a class="button dropdown-question" data-question="q1_1" data-drawer-id="drawer-one" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
     It includes the opinion statement and helps readers understand the topic.
-    
     </p>
-    <p>The <a class="button dropdown-question" data-question="q1_2" onclick="showDrawer(this);">Select an option</a> follows the introduction. It explains how the opinion statement is supported with reasons or evidence.  
+    <p>The <a class="button dropdown-question" data-question="q1_2" data-drawer-id="drawer-two" onclick="showDrawer(this);">Select an option</a> follows the introduction. It explains how the opinion statement is supported with reasons or evidence.  
     </p>
-    <p>The <a class="button dropdown-question" data-question="q1_3" onclick="showDrawer(this);">Select an option</a> is at the end. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.
+    <p>The <a class="button dropdown-question" data-question="q1_3" data-drawer-id="drawer-three" onclick="showDrawer(this);">Select an option</a> is at the end. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.
     </p>
   </div>
   <input type="hidden" class="q1_1 dd-response" name="q1_1"></input>
@@ -32,7 +35,17 @@
 	<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
-<div class="drop-down-drawer text-center">
+<div id="drawer-one" class="drop-down-drawer text-center">
+	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
+	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
+	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
+</div>
+<div id="drawer-two" class="drop-down-drawer text-center">
+	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
+	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
+	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
+</div>
+<div id="drawer-three" class="drop-down-drawer  text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	

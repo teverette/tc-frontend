@@ -326,19 +326,22 @@ function scoreStuff() {
 	function showDrawer(o) {
 		$('.hint').hide();
     	ClozeDropdown.resetForm();
- 		$('.drop-down-drawer').toggle("slide", { direction: "down" }, 400);
+    	var curDrawer = $(o).data('drawer-id');
+ 		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
  		$('.dropdown-question').removeClass('selected-dd');
  		$(o).addClass('selected-dd');
  	}
 
 	$(document).on("click",".answer-option", function() {
  	 	var drawerId = $(".selected-dd").data('question');
+ 	 	var curDrawer = $(".selected-dd").data('drawer-id');
+ 	 	$('#'+curDrawer+ ' .answer-option').removeClass('selected-dd-response');
 		$(".selected-dd").text($(this).text()).addClass('filled');
 		$("."+drawerId).val($(this).data("value"));
 		
-		$('.drop-down-drawer').hide("slide", { direction: "down" }, 400);
+		$(this).addClass('selected-dd-response');
 		$('.dropdown-question').removeClass('selected-dd');
-		$('.answer-option').removeClass('selected-dd-response');
+		$('#'+curDrawer).hide("slide", { direction: "down" }, 400);
 
 		ClozeDropdown.enableButton();
 	});

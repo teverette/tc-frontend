@@ -5,7 +5,7 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	</head>
-<body class="progress">
+<body class="practice">
 	<?php $width = "100"; ?>
 	<?php include '_progress.php'; ?>
 	<div class="content"> 
@@ -37,7 +37,7 @@
 	  </div>
 	</div>
 	</div>
-	<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
+	<div class="grid-x grid-padding-x footer">
 		<a class="button back large" href="learn-page-3.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 		<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>

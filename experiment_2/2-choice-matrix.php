@@ -4,22 +4,32 @@
 		<title>What is verbal irony?</title>
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
+		<style>
+		.tooltip {border-radius: 4px; background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); max-height:130px; max-width: 15rem;}
+		.tooltip.top::before {border:none}
+		.has-tip {border:none}
+		</style>
 	</head>
-	<body class="progress">
+	<body class="practice">
 		<?php $width = "37.5"; ?>
 		<?php include '_progress.php'; ?>
 		<div class="content"> 
-		
+		<div class="global-tip" style="position:fixed; left:470px; top:20px; height: 102px; width: 171px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;
+background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Click on the blue words to get a definition.
+<span style="display:inline-block; float:right; margin-top: 20px; text-align: center; cursor:pointer; height: 24px; width: 34px; border: 2px solid #FFFFFF; border-radius: 2px;" onclick="$('.global-tip').hide()">OK</span></div>
 		<div class="grid-x grid-padding-x">
 		  <p class="lesson-desc medium-12">Choose which section of an opinion piece is shown in each sentence.</p>
-		  
+		   
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
 		      <th width="60%"></th>
-		      <th width="14%" class="text-center">Introduction</th>
-		      <th width="13%" class="text-center">Body</th>
-		      <th width="13%" class="text-center">Conclusion</th>
+		      <th width="14%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      	title="The introduction starts the opinion piece. It includes the opinion statement and helps readers understand the topic.">Introduction</span></th>
+		      <th width="13%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">Body</span></th>
+		      <th width="13%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      	title="The conclusion is the ending section. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.">Conclusion</span></th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -47,8 +57,8 @@
 		</div>
 		</div>
 		
-		<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
-			<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+		<div class="grid-x grid-padding-x footer">
+			<a class="button back large" href="1-cloze-dropdown.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		<div class="hint">
