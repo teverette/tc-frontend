@@ -25,8 +25,8 @@
 			<h3 class="lesson-desc" style="color:#FFF">Now, it's your chance to earn points</h3>
 			<img class="" src="images/quiz-animation.gif" />
 		</div>
-		<p style="margin-top:120px"><a class="button large secondary neutral" href="q11-multiple-choice.php" 
-			style=" font-family:'Roboto', sans-serif;font-size:20px;color:#4A4A4A;background-color:#FFF;width:166px;height:49px; padding-top: 13px;">Start Quiz</a></p>
+		<p style="margin-top:90px"><a class="button large secondary neutral" href="q1-choice-matrix.php" 
+			style="display:none; font-family:'Roboto', sans-serif;font-size:20px;color:#4A4A4A;background-color:#FFF;width:166px;height:49px; padding-top: 13px;">Start Quiz</a></p>
 		<script>
 			// reset scoring situation
 			var storage = window.sessionStorage;
@@ -37,7 +37,10 @@
 	    	    width: "100%"
 		  	  }, 750, function() {
 		  	    $(".motivation").hide(400);
-		  	    $(".ready-set-go").delay(400).show(300);
+		  	    $(".ready-set-go").delay(400).show(300, function() {
+		  	    	$(".button").show("fast");
+			    });
+		  	    
 		  	  });
 		</script>
 	</body>

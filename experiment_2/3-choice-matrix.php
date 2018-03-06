@@ -6,16 +6,12 @@
 		<?php include '_js.html'; ?>
 	</head>
 	<body class="progress">
-		<?php $width = "35.7"; ?>
+		<?php $width = "62.5"; ?>
 		<?php include '_progress.php'; ?>
-		<h2 class="lesson-label text-center medium-12"><img src="images/PracticeIcon_Spec.png" class="label-type-icon"/>Practice Question</h2>
 		<div class="content"> 
 		
 		<div class="grid-x grid-padding-x">
-		  
-		  
 		  <h2 class="title medium-12">Writers use words and phrases to help organize their ideas in an opinion piece. How would a writer use the words below?</h2>
-		  <p class="lesson-desc medium-12">Select the correct button next to each word.</p>
 		  
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
@@ -55,13 +51,16 @@
 		  </div>
 		</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<hr/>
-			<div class="medium-12">
-			<a class="button back large" href="learn-page-2.php"><i class="fas fa-angle-left"></i> Back</a>
-			<a id="choice-matrix-2" class="check-disabled button success large float-right">Check</a>
-			</div>
+		<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
+			<a class="button back large" href="learn-page-2.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
+		<div class="hint">
+			<p class="hint-label">Not quite!</p>
+			<p class="hint-text primary">Phrases used to organize information by importance show a special or major idea being explained. Try again!</p>
+			<p class="hint-text secondary">Words and phrases can tell a reader the sequence or number of reasons used in an opinion piece. Try again!</p>
+		</div>
+		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal style="background-color: #94D150; color: #FFF"></div>
 		<script>
 			$(document).foundation();
 			
@@ -70,13 +69,6 @@
 	      	var response_key = {};
 	      	var nextPage = "4-cloze-dropdown.php";
 	      	var storage = window.sessionStorage;
-
-	      	// part of the initialization of the object.
-	      	// var numberCorrect = 3;
-	      	// var minReq = 3;
-	      	// should live inside the object. needs more testing.
-		    // var points = 0;
-		    // var answered = 0;
 
 			$(document).on("click",".check", function() {
 				ChoiceMatrix.assess(false);
@@ -87,17 +79,20 @@
 	     	});
 
 			$("input:radio").click(function() {
+				if($('.hint').is(':visible')) {
+					ChoiceMatrix.resetForm();
+				}
 				ChoiceMatrix.enableButton();
-			});
-
-			$(window).bind("unload", function() {
-				alert("unload");
 			});
 
 			$(document).ready(function() {
       			highlightCurrentQuiz();
-      			ChoiceMatrix.initialize(3,3);
+      			ChoiceMatrix.initialize('question_3',4,4);
       		});
+
+			$(window).bind("unload", function() {
+				alert("unload");
+			});
       		
 			window.onload = function() {
 				var isLocked = lockTest();

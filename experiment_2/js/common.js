@@ -9,7 +9,7 @@ function showRationale() {
 
 function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check");
-	$(o).text("Next");
+	$(o).text("Continue");
 	location.hash = "checked";
 	$(".back").click(function(){
 		onclick="history.back(-2);";
@@ -69,6 +69,8 @@ var ChoiceMatrix = {
 		answered:0,
 		responseKey: {},
 		type:0,
+		isPractice:true,
+		retryTotal:0,
 		isMinimumAnswersMet: function() {
 			this.answered = $( "input:checked" ).length;
 			console.log("answered: " + this.answered);
@@ -83,23 +85,26 @@ var ChoiceMatrix = {
 		},
 		
 		getResponses: function() {
-      		// $("input").attr('disabled','disabled');
+			this.points=0;
       		var questionLength = questions.length;
 			for(i=0; i<questionLength; i++){
 				var name = questions[i];
 				var val = $('input[name='+name+']:checked').val();
 				ChoiceMatrix.checkResponse(name, val);
     	  	}
-			
-			// save all response to storage
-			var string = JSON.stringify(this.responseKey)
-			storage[this.name] = string;
-			
-			highlightCorrectQuiz();
-			if(this.points==this.numberCorrect) {
-				incrementScore();
-		    }
-      	}, 
+      	},
+    	isReadyNextStep: function() {
+    		// points
+    		if(this.points==this.numberCorrect) {
+    			$("input").attr('disabled','disabled');
+    			// save all response to storage
+    			var string = JSON.stringify(this.responseKey)
+    			storage[this.name] = string;
+    			return true;
+    	    } else {
+    	    	return false;
+    	    }
+    	}, 
 		checkResponse: function(name, selectedAnswer) {
 	      	var correctAnswer = answerKey[name];
       		if(correctAnswer==selectedAnswer) {
@@ -135,14 +140,44 @@ var ChoiceMatrix = {
 					.append('<i class="fas fa-times" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
 			}
       	},
-      	
+      	resetForm: function() {
+      		$(".fa-check").remove();
+      		$(".fa-times").remove();
+      		$("td").removeClass("incorrect").removeClass("correct");
+      		$("label").removeClass("incorrect").removeClass("correct");
+      		$(".check").addClass("check-disabled").removeClass("check");
+      		$('.hint').hide();
+      	},
+      	showHint: function() {
+    		this.retryTotal++;
+    		$('.hint-text').hide('fast');
+    		if(this.retryTotal==1) { 
+    			$('.hint-text.primary').show('fast');
+    		} else {
+    			$('.hint-text.secondary').show('fast');
+    		}
+    		$('.hint').show('500');
+    	},
       	assess: function(includeScore) {
       		// todo add question/answer verification logic
+      		ChoiceMatrix.resetForm();
 	    	ChoiceMatrix.getResponses();
-	    	showRationale();
-	    	updateNextStepBtn($(".check"));
+	    	if(this.isReadyNextStep()) {
+	    		this.getRationale();
+	    		updateNextStepBtn($(".check"));
+	    	} else {
+    			this.showHint();
+    		}
       	},
-      	setPreviousResponse: function() {
+      	getRationale: function() {
+    		var $modal = $('.answer-rationale-reveal');
+
+    		$.ajax('rationales/'+this.name+'.html')
+    		  .done(function(resp){
+    		    $modal.html(resp).foundation('open');
+    		});
+    	},
+    	setPreviousResponse: function() {
     		var responseKeyString = storage[this.name];
     		
     		console.log(responseKeyString);
@@ -155,7 +190,7 @@ var ChoiceMatrix = {
     			$currentSelect.attr("checked","checked");
     			this.checkResponse(x, this.responseKey[x]);
     		}
-    		showRationale();
+    		// showRationale();
     		updateNextStepBtn($(".check"));
     	},
 		initialize: function(name, minToScore, minToCheck, type) {
@@ -171,57 +206,96 @@ var ClozeDropdown = {
 	numberCorrect: null,
 	minReq:null,
 	answered:0,
+	points:0,
 	responseKey: {},
+	isPractice: true,
+	retryTotal:0,
 	isMinimumAnswersMet: function() {
 		this.answered=0;
-		$(".question").each(function() {
+		$(".dd-response").each(function() {
     		  var name = $(this).attr("name");
 			  var val = $(this).val();
-			  console.log("value: " + val);
-			  if(val!=null) {ClozeDropdown.answered++;}
-			  console.log("answered: " + ClozeDropdown.answered);
+			  if(val!=null && val!="") {ClozeDropdown.answered++;}
 		});
-		console.log("answered: " + this.answered);
 		return this.answered==this.minReq
 	},
 	enableButton: function() {
-		console.log("minimum check");
 		if(this.isMinimumAnswersMet()) {
-			console.log("met minimum");
 			$(".check-disabled").addClass("check").removeClass("check-disabled");
 		}
 	},
 	getResponses: function() {
-		$("input").attr('disabled','disabled');
-		$(".question").each(function() {
+		this.points=0;
+		$(".dd-response").each(function() {
     		  var name = $(this).attr("name");
 			  var val = $(this).val();
 			  ClozeDropdown.checkResponse($(this).parent(), name, val);
 		});
-		// save all response to storage
-		var string = JSON.stringify(this.responseKey)
-		storage[this.name] = string;
 	},
-
+	isReadyNextStep: function() {
+		// points
+		if(this.points==this.numberCorrect) {
+			$("input").attr('disabled','disabled');
+			// save all response to storage
+			var string = JSON.stringify(this.responseKey)
+			storage[this.name] = string;
+			return true;
+	    } else {
+	    	return false;
+	    }
+	},
 	checkResponse: function(o, name, selectedAnswer) {
       	var correctAnswer = answerKey[name];
       	console.log("correctAnswer: " + correctAnswer);
       	if(!correctAnswer && !selectedAnswer) {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
-			$(o).addClass('correct').append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: 51px;" aria-hidden="true"></i>');
+			$('*[data-question="'+name+'"]').addClass('correct').append('<i class="fas fa-check" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
+			this.points++;
 		}  else {
-			$(o).addClass('incorrect').append('<i class="fas fa-times " style="color: #FED700;position:relative; right: 51px;" aria-hidden="true"></i>');
+			$('*[data-question="'+name+'"]').addClass('incorrect').append('<i class="fas fa-times " style="color: #FED700;position:relative; right: -10px;" aria-hidden="true"></i>');
 		}
       	
       	this.responseKey[name] = selectedAnswer;
     	
 	},
-	assess: function() {
-		this.getResponses();
-		showRationale();
-		updateNextStepBtn($(".check"));
+	resetForm: function() {
+  		$(".fa-check").remove();
+  		$(".fa-times").remove();
+  		$(".button").removeClass("incorrect").removeClass("correct");
+  		$(".check").addClass("check-disabled").removeClass("check");
+  		$('.hint').hide();
+  	},
+	showHint: function() {
+		this.retryTotal++;
+		$('.hint-text').hide('fast');
+		if(this.retryTotal==1) { 
+			$('.hint-text.primary').show('slow');
+		} else {
+			$('.hint-text.secondary').show('slow');
+		}
+		$('.hint').show('fast');
 	},
+	assess: function() {
+		this.resetForm();
+		this.getResponses();
+		if(this.isReadyNextStep()) {
+			this.getRationale();
+			updateNextStepBtn($(".check"));
+		} else {
+			this.showHint();
+		}
+		
+	},
+	getRationale: function() {
+		var $modal = $('.answer-rationale-reveal');
+
+		$.ajax('rationales/'+this.name+'.html')
+		  .done(function(resp){
+		    $modal.html(resp).foundation('open');
+		});
+	},
+	
 	setPreviousResponse: function() {
 		var responseKeyString = storage[this.name];
 		
@@ -248,3 +322,23 @@ function scoreStuff() {
 	  incrementScore();
 	}
 }
+
+	function showDrawer(o) {
+		$('.hint').hide();
+    	ClozeDropdown.resetForm();
+ 		$('.drop-down-drawer').toggle("slide", { direction: "down" }, 400);
+ 		$('.dropdown-question').removeClass('selected-dd');
+ 		$(o).addClass('selected-dd');
+ 	}
+
+	$(document).on("click",".answer-option", function() {
+ 	 	var drawerId = $(".selected-dd").data('question');
+		$(".selected-dd").text($(this).text()).addClass('filled');
+		$("."+drawerId).val($(this).data("value"));
+		
+		$('.drop-down-drawer').hide("slide", { direction: "down" }, 400);
+		$('.dropdown-question').removeClass('selected-dd');
+		$('.answer-option').removeClass('selected-dd-response');
+
+		ClozeDropdown.enableButton();
+	});

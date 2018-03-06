@@ -6,8 +6,6 @@
 	  <?php include '_js.html'; ?>
 	</head>
 	<body class="progress">
-	    <?php $width = "14"; ?>
-		<?php include '_progress.php'; ?>
 		<div class="content">
 			<div class="grid-x grid-padding-x">
 				<h2 class="title medium-12">How can words and phrases help organize the sections in an opinion piece?</h2>
@@ -22,12 +20,10 @@
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<hr/>
-			<div class="medium-12">
-				<a class="button back large" href="2-choice-matrix.php#checked"><i class="fas fa-angle-left"></i> Back</a>
-				<a class="button success large float-right" href="3-choice-matrix.php">Got it</a>
-			</div>
+			<a class="button back large" href="2-choice-matrix.php#checked" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check-verified button success large" style="position:relative; left:864px; width:85px; padding:7px 0;" href="3-choice-matrix.php">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
+		
 		 <script>
 		      $(document).foundation();
 	    </script>

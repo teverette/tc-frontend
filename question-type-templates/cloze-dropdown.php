@@ -4,55 +4,65 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
-<body class="progress">
+<body class="practice">
 	<?php $width = "35.7"; ?>
 	<?php include '_progress.php'; ?>
-	<h2 class="lesson-label medium-12"><img src="images/PracticeIcon_Spec.png" class="label-type-icon"/>Practice Question</h2>
 <div class="content"> 
 <div class="grid-x grid-padding-x">
   
-  <h2 class="title medium-12">How is verbal irony used in narratives?</h2>
-  <p class="lesson-desc">Complete the paragraphs by selecting statements that introduce verbal irony into the story. </p>
+  <h2 class="title medium-12">How is an opinion piece organized into sections?</h2>
   <div class="medium-12 grid-x lesson-copy">
-    <p>John’s brother brings his dog to visit. The dog chews John&rsquo;s favorite shoes. John says, &ldquo;
-    <label class="select"><select class="inline-select question" style="width: 325px;" name="q2_1">
-    <option selected disabled value="-">&nbsp; Select an option</option>
-    <option value="1">&nbsp; Your dog is terrible!</option>
-    <option value="2">&nbsp; Thank you for bringing your dog over.</option>
-    <option value="3">&nbsp; Get this dog out of here!</option>
-    </select></label>&rdquo; 
+    <p>
+    <a class="button dropdown-question" data-question="q1_1" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
+    It includes the opinion statement and helps readers understand the topic.
     </p>
-    <p>Maria was bragging to her friends about how well she could skateboard. When she fell flat on her back, she said, 
-     &ldquo;
-    <label class="select"><select class="inline-select question" style="width: 330px;" name="q2_2">
-    <option selected disabled value="-">&nbsp; Select an option</option>
-    <option value="1">&nbsp; I bet none of you can do that trick!</option>
-    <option value="2">&nbsp; I am such a loser.</option>
-    <option value="3">&nbsp; Maybe I shouldn&rsquo;t have been bragging.</option></select></label>
-    &rdquo; 
-        
+    <p>The <a class="button dropdown-question" data-question="q1_2" onclick="showDrawer(this);">Select an option</a> follows the introduction. It explains how the opinion statement is supported with reasons or evidence.  
+    </p>
+    <p>The <a class="button dropdown-question" data-question="q1_3" onclick="showDrawer(this);">Select an option</a> is at the end. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.
     </p>
   </div>
-  <div class="medium-12 lesson-desc grid-x hide rationale">
-  	<h3>Why are these the answers?</h3>
-  	<p>Verbal irony is saying one thing but meaning another. For example, 
-  	John may thank his brother for bringing over his dog when he is very angry 
-  	at his brother’s dog for chewing his favorite shoes. </p>
-  </div>
+  <input type="hidden" class="q1_1 dd-response"></input>
+  <input type="hidden" class="q1_2 dd-response"></input>
+  <input type="hidden" class="q1_3 dd-response"></input>
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-			<hr/>
-<div class="medium-12">
-<a class="button back large" href="q1-choice-matrix.php"><i class="fas fa-angle-left"></i> Back</a>
-<a class="check-disabled button success large float-right">Check</a>
+	<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
+<div class="drop-down-drawer text-center">
+	<a class="button secondary answer-option" data-value="1">Intro</a>
+	<a class="button secondary answer-option" data-value="2">Body</a>
+	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
+</div>
+<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF">
+		
 </div>
  <script>
+ 	function showDrawer(o) {
+ 		$('.drop-down-drawer').toggle("slide", { direction: "down" }, 1000);
+ 		$('.dropdown-question').removeClass('selected-dd');
+ 		$(o).addClass('selected-dd');
+ 	}
+
+ 	$('.answer-option').click(function() {
+ 	 	var drawerId = $(".selected-dd").data('question');
+		$(".selected-dd").text($(this).text()).addClass('filled');
+		$("."+drawerId).val($(this).data("value"));
+		$(this).addClass('selected-dd-response').delay(500, function() {
+			$('.drop-down-drawer').hide("slide", { direction: "down" }, 1000);
+			$('.dropdown-question').removeClass('selected-dd');
+			$('.answer-option').removeClass('selected-dd-response');
+		});
+
+		ClozeDropdown.enableButton();
+	});
+	
       	$(document).foundation();
-      	var answerKey = {q2_1:"2", q2_2:"1"};
-		var nextPage = "q3-multiple-choice.php";
+      	var answerKey = {q1_1:"1", q1_2:"2", q1_3:"3"};
+		var nextPage = "2-choice-matrix.php";
     
         $(document).on("click",".check", function() {
         	ClozeDropdown.assess();
@@ -65,7 +75,7 @@
       
       	var storage = window.sessionStorage;
       	$(document).ready(function() {
-			ClozeDropdown.initialize(2,2);
+			ClozeDropdown.initialize("question_1",3,3);
 	  	});
 
       	$(".question").change(function() {
@@ -75,7 +85,8 @@
       	window.onload = function() {
     	  	var isLocked = lockTest();
 			if(isLocked) {
-				ClozeDropdown.getResponses();
+				ClozeDropdown.setPreviousResponse();
+				// ClozeDropdown.getResponses();
 			}
     	}
   </script>

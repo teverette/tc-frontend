@@ -9,7 +9,7 @@
 	</head>
 	<body class="overview">
 		<h1 class="title-only">Organization in Opinion Pieces</h1>
-		<p><a class="button secondary neutral overview-button" href="overview.php">Start Lesson</a></p>
+		<p><a class="button secondary neutral overview-button" href="lesson-helps-learners.php">Start Lesson</a></p>
 		<script>
 			// reset scoring situation
 			var storage = window.sessionStorage;

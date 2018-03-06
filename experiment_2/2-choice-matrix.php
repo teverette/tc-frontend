@@ -6,16 +6,12 @@
 		<?php include '_js.html'; ?>
 	</head>
 	<body class="progress">
-		<?php $width = "35.7"; ?>
+		<?php $width = "37.5"; ?>
 		<?php include '_progress.php'; ?>
-		<h2 class="lesson-label text-center medium-12"><img src="images/PracticeIcon_Spec.png" class="label-type-icon"/>Practice Question</h2>
 		<div class="content"> 
 		
 		<div class="grid-x grid-padding-x">
-		  
-		  
-		  <h2 class="title medium-12"></h2>
-		  <p class="lesson-desc medium-12">Read each sentence. Then choose which section of an opinion piece is shown in each sentence.</p>
+		  <p class="lesson-desc medium-12">Choose which section of an opinion piece is shown in each sentence.</p>
 		  
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
@@ -48,22 +44,19 @@
 		  </tbody>
 		</table>
 		
-		  <div class="medium-12 lesson-desc grid-x hide rationale">
-		  	<h3>Why are these the answers?</h3>
-		  	<p>The introduction provides information about public transportation and states the writer’s opinion that trains are a better form of 
-		  	public transportation than buses. The body section of the opinion piece explains the reasons that trains are a better form of 
-		  	transportation than buses. The conclusion ends the opinion piece and reviews how the opinion was stated and what the writer wants their
-		  	reader or listener to do and believe. </p>
-		  </div>
 		</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<hr/>
-			<div class="medium-12">
-			<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
-			<a id="choice-matrix-2" class="check-disabled button success large float-right">Check</a>
-			</div>
+		
+		<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
+			<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
+		<div class="hint">
+			<p class="hint-label">Not quite!</p>
+			<p class="hint-text primary">Specific examples about how trains are better than buses offers support for the opinion. Try again!</p>
+			<p class="hint-text secondary">The writer reviews their main points and tells how people should behave in the conclusion. Try again!</p>
+		</div>
+		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal style="background-color: #94D150; color: #FFF"></div>
 		<script>
 			$(document).foundation();
 			
@@ -82,6 +75,9 @@
 	     	});
 
 			$("input:radio").click(function() {
+				if($('.hint').is(':visible')) {
+					ChoiceMatrix.resetForm();
+				}
 				ChoiceMatrix.enableButton();
 			});
 

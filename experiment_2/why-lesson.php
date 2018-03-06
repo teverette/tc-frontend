@@ -9,12 +9,10 @@
 	  	.overview-content {min-height: 369px; height: inherit;}
 	  </style>
 	</head>
-	<body class="progress">
-		<?php $width = "21"; ?>
-		<?php include '_progress.php'; ?>
+	<body class="practice">
 		<h2 class="title medium-11">Why this lesson is important</h2>
-		<div class="overview-content">
-			<div class="grid-x grid-padding-x" style="margin-top:111px;margin-left:215px">
+		<div class="overview-content" style="height: 333px;">
+			<div class="grid-x grid-padding-x" style="margin-top:0px;margin-left:215px">
 				
 				<div class="medium-5 lesson-desc" >
 					<img src="images/important-illox.png" style="width:244px"></span>
@@ -26,13 +24,11 @@
 				<hr style="width:183px; border:1px solid #4A90E2; margin: 31px 0;"/></div>
 			</div>
 		</div>
-		<div class="grid-x footer">
-			<hr/>
-			<div class="medium-12" style="margin-top:9px;">
-				<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
-				<a class="check-verified button success large float-right" href="lp.php">Got it</a>
-			</div>
+		<div class="grid-x grid-padding-x footer">
+			<a class="button back large" onclick="history.back(-1);" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check button success large" href="lp.php" style="position:relative; left:864px; width:85px; padding:7px 0;">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
+		
 		<script>
 		      $(document).foundation();
 	    </script>

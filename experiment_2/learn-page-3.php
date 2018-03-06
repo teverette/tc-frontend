@@ -6,8 +6,6 @@
 	  <?php include '_js.html'; ?>
 	</head>
 	<body class="progress">
-	    <?php $width = "14"; ?>
-		<?php include '_progress.php'; ?>
 		<div class="content">
 			<div class="grid-x grid-padding-x">
 				<h2 class="title medium-12">How are reasons and evidence used in a body section?</h2>
@@ -20,12 +18,9 @@
 				
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<hr/>
-			<div class="medium-12">
-				<a class="button back large" href="4-cloze-dropdown.php#checked"><i class="fas fa-angle-left"></i> Back</a>
-				<a class="button success large float-right" href="5-multiple-choice.php">Got it</a>
-			</div>
+		<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; top: 470px; margin-bottom: 7px;">
+			<a class="button back large" href="4-cloze-dropdown.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check button success large" style="position:relative; left:864px; width:85px; padding:7px 0;" href="5-multiple-choice.php">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		 <script>
 		      $(document).foundation();

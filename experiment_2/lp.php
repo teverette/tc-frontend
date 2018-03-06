@@ -5,9 +5,7 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	</head>
-	<body class="progress">
-	    <?php $width = "14"; ?>
-		<?php include '_progress.php'; ?>
+	<body class="practice" style="position: inherit;">
 		<div class="content">
 			<div class="grid-x grid-padding-x">
 				<h2 class="title medium-12">What is organization in an opinion piece?</h2>
@@ -23,12 +21,10 @@
 			The sections help a writer to explain their ideas and a reader to understand.</p>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<hr/>
-			<div class="medium-12">
-				<a class="button back large" onclick="history.back(-1);"><i class="fas fa-angle-left"></i> Back</a>
-				<a class="button success large float-right" href="practice-transition.php">Got it</a>
-			</div>
+			<a class="button back large" onclick="history.back(-1);" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check button success large" href="practice-transition.php" style="position:relative; left:864px; width:85px; padding:7px 0;">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
+		
 		 <script>
 		      $(document).foundation();
 	    </script>

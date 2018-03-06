@@ -6,45 +6,36 @@
 	  <?php include '_js.html'; ?>
 	</head>
 <body class="progress">
-	<?php $width = "100"; ?>
-	<?php include '_progress.php'; ?>
+	<?php include '_quiz_progress.php'; ?>
 	<div class="content"> 
 	<div class="grid-x grid-padding-x">
 	  
-	  <h2 class="title medium-12">Which statement is not true about using reasons and evidence to organize a body paragraph of an opinion piece?</h2>
+	  <h2 class="title medium-12">Which evidence supports the reason, “Cats are better pets than dogs because cats usually make less noise?”</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  <label class="radio" style="position:absolute; left:0; top:-5px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
 	  </label>
-	  	<p class="lesson-copy mc-text">Reasons and evidence are often explained in a body paragraph of an opinion piece.</p>
-		<label class="radio" style="position:absolute; left:0; top:75px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  	<p class="lesson-copy mc-text">A cat might meow, but it’s usually not as loud as a barking dog.</p>
+		<label class="radio" style="position:absolute; left:0; top:45px;left:-30px;padding-left: 10px; padding-right: 0;">
 		  	<input type="radio" class="q5_1 question" name="q5_1" value="2"/>
 		</label>
-	  <p class="lesson-copy mc-text">Reasons and evidence should not be connected by a similar idea.</p>
+	  <p class="lesson-copy mc-text">Cats can keep themselves busy and don’t expect humans to play with them or take them outside.</p>
 	  <label class="radio" style="position:absolute; left:0; top: 120px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input  type="radio" class="q5_1 question" name="q5_1" value="3"/>
 	  </label>
-	  <p class="lesson-copy mc-text">Evidence provides specific examples or pieces of information that explain a reason.</p>
-	  <label class="radio" style="position:absolute; left:0; top: 200px;left:-30px;padding-left: 10px; padding-right: 0;">
-	  	<input  type="radio" class="q5_1 question" name="q5_1" value="4"/>
-	  </label>
-	  <p class="lesson-copy mc-text">Reasons and evidence in a body paragraph support the opinion that is stated throughout an entire written piece.</p>
+	  <p class="lesson-copy mc-text">Cats give themselves baths with their own tongues.</p>
 	  </div>
 	  <div class="medium-12 lesson-desc grid-x hide rationale">
 	  	<h3>Why are these the answers?</h3>
-	  	<p>Reasons and evidence are usually explained in the body section of an opinion piece. Reasons and evidence should be related to the idea or 
-	  	topic of an opinion. Evidence gives specific examples or pieces of information that explain a reason.</p>
+	  	<p>Reasons and evidence should be paired in the body section of an opinion piece. Together they work to support a writer’s 
+	  	opinion. “A cat might meow, but it’s usually not as loud as a barking dog” is correct because it is specific evidence that 
+	  	proves and supports a writer’s reason, “Cats are better pets than dogs because cats usually make less noise.”</p>
 	  </div>
 	</div>
 	</div>
-	<div class="grid-x grid-padding-x footer" style="position:absolute; z-index:22; bottom:0; margin-bottom: 7px;">
+	<div class="grid-x grid-padding-x footer">
 		<a class="button back large" href="learn-page-3.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
 		<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
-	</div>
-	<div class="hint">
-		<p class="hint-label">Not quite!</p>
-		<p class="hint-text primary">A writer can organize their ideas in the body section by using reasons and evidence. Try again!</p>
-		<p class="hint-text secondary">The reasons and evidence a writer uses should have similar information that help prove a writer’s opinion statement. Try again!</p>
 	</div>
 	<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
 	
@@ -52,8 +43,8 @@
       $(document).foundation();
       /* setup question and answer for quiz question */
       	var questions = ["q5_1"];
-		var answerKey = {q5_1:"2"};
-  		var nextPage = "quiz-transition.php";
+		var answerKey = {q5_1:"1"};
+  		var nextPage = "quiz-5.php";
 
 
 	    $(document).on("click",".check", function() {
@@ -65,16 +56,13 @@
 		});
 
      	$("input:radio").click(function() {
-     		if($('.hint').is(':visible')) {
-				ChoiceMatrix.resetForm();
-			}
   			ChoiceMatrix.enableButton();
  		});
 
       	$(document).ready(function() {
 			highlightCurrentQuiz();
 			highlightAllCorrectQuiz();
-			ChoiceMatrix.initialize("question_5",1,1,"mc");
+			ChoiceMatrix.initialize("quiz_4",1,1,"mc");
 		});
 
       	window.onload = function() {
