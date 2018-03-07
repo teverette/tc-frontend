@@ -120,6 +120,8 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}
 .footer div {margin: 0 114px}
 .answer-rationale-reveal .footer {position:absolute; left:0}
+.answer-rationale-reveal.incorrect {background-color: #7F7F7F; color: #FFF}
+.answer-rationale-reveal.correct {background-color: #94D150; color: #FFF}
 
 .button {border-radius:4px; width:138px;height:40px; font-family:'Roboto', san-serif; font-size:18px; color: #FFF;padding:10px;}
 .button.check-disabled,.button.check-disabled:hover {background-color:#4A90E2; opacity:0.30}
@@ -163,7 +165,7 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .point-value, .point-label {font-weight:300; color: #FFF; font-family:'Roboto Slab', sans-serif; font-size: 20px; line-height: 26px;}
 .point-value {font-weight:bold}
 
-.hint {display:none;position:absolute; z-index:9; bottom: -15px;height:110px;background-color: #FDF8C2;padding-left:115px; 
+.hint {display:none;position:absolute; z-index:1001; bottom: -15px;height:110px;background-color: #FDF8C2;padding-left:115px; 
 	 width:1024px; padding-top:21px; color:#6C6C6C;font-size:16px;line-height:19px}
 .hint-text{width:525px;font-size:16px;line-height:19px;display:none}
 .hint-label {font-weight:bold; font-size:22px; line-height:29px; color:#E8CA00;margin-bottom:2px;}

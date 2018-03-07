@@ -38,7 +38,7 @@
 		<a class="button back button-left-side" href="learn-page-3.php" ><i class="fas fa-lg fa-angle-left" ></i></a>
 		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>
-	<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
+	<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style=""></div>
 	
  <script>
       $(document).foundation();
