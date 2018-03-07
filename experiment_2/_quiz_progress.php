@@ -11,6 +11,6 @@
   </ul>
   
   <div style="display:inline-block; position: absolute;left: 857px; top: 12px;">
- 	 <span class="point-value">2</span> <span class="point-label">points</span>
+ 	 <span class="point-value">0</span> <span class="point-label">points</span>
   </div>
 </div>
