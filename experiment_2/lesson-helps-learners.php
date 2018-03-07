@@ -5,16 +5,13 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  	.title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  	.overview-content {min-height: 458px; height: inherit;}
 	  	.lesson-point-item {margin-top:17px;width:240px;text-align:center}
 	  	.lesson-point-item.first-item {margin-left: 57px;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:230px; display:inline-block}
-	  	.learn-page-title {color: #0845B5; font-family: "Roboto Slab"; font-size: 28px; font-weight: 300; line-height: 37px}
 	  </style>
 	</head>
 	<body class="practice">
-		<div class="title">&nbsp;</div>
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x" >
 				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer the following questions: </h2>

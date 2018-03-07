@@ -30,8 +30,7 @@
 	  </style>
 	</head>
 	<body class="practice">
-		<div class="title">&nbsp;</div>
-		
+
 		<div class="overview-content" style="height: 333px;">
 			<h2 class="medium-12 medium-centered learn-page-title text-center">Why this lesson is important</h2>
 			<div class="grid-x grid-padding-x" style="margin-top:0px;">

@@ -12,7 +12,6 @@
 	</head>
 	<body class="practice" style="position: inherit;">
 		<div class="overview-content">
-			<div class="title">&nbsp;</div>
 			<div class="grid-x grid-padding-x" style="text-align:center">
 				<h2 class="medium-12 learn-page-title text-center">What is organization in an opinion piece?</h2>
 				<p class="medium-12 subtitle text-center"><strong>Organization</strong> explains how an opinion piece is arranged into sections.</p>
