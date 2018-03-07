@@ -85,6 +85,7 @@
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize('quiz_1',3,3);
       			ChoiceMatrix.isQuiz=true;
+      			getScore();
       		});
 
 			$(window).bind("unload", function() {

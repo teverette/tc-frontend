@@ -63,7 +63,7 @@
 	
       	$(document).foundation();
       	var answerKey = {quiz_5_1:"1", quiz_5_2:"2", quiz_5_3:"2",quiz_5_4:"3"};
-		var nextPage = "summary.php";
+		var nextPage = "lp-end.php";
     
         $(document).on("click",".check", function() {
         	ClozeDropdown.assess();
@@ -93,7 +93,7 @@
     	}
     	$(document).ready(function() {
     		highlightCurrentQuiz();
-    		
+    		getScore();
     		if($(".content").prop('scrollHeight') > ($(".content").height() - 100)) {
     			$(".content").attr("style","padding-bottom:100px");
     		}

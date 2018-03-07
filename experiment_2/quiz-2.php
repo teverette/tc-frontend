@@ -38,7 +38,7 @@
     	var question2 = {quiz_2_1:false, quiz_2_2:true,quiz_2_3:true,quiz_2_4:true,quiz_2_5:false};
     	var nextPage = "quiz-3.php";
     	var points=0;
-    	var numberCorrect=5;
+    	var numberCorrect=3;
     
     	function loopThruQuestions() {
     		var questionLength = questions.length;
@@ -51,9 +51,7 @@
 				updateQuestionStatus(obj, name, isSelected);
 			}
 			highlightCorrectQuiz();
-			if(points==numberCorrect) {
-		   		incrementScore();
-		    }
+			increaseScoreBy(points);
     	}
 
     	function updateQuestionStatus(o, name, selectedAnswer) {
@@ -61,7 +59,6 @@
 	      	console.log("correctAnswer: " + correctAnswer);
 	      	if(!correctAnswer && !selectedAnswer || !selectedAnswer) {
 				$(o).addClass('clear');
-				points++;
 			} else if(correctAnswer==selectedAnswer) {
 				$(o).addClass('correct');
 				$(o).append('<i class="fas fa-check" aria-hidden="true" style="position:relative;right: -6px;color: #77A977;"></i>');
@@ -74,11 +71,21 @@
       
       $(document).on("click",".check", function() {
     	  loopThruQuestions(this);
-    	  var $modal = $('.answer-rationale-reveal');
+    	  var status;
+    	  if(points==numberCorrect) {
+			status = "correct";
+    	  } else {
+			status ="incorrect";
+          }
+
+			var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct' : '<i class="fas fa-lg fa-times"></i> Incorrect';
+    		$('.answer-rationale-reveal').addClass(status);
+    	  	var $modal = $('.answer-rationale-reveal');
 
 	  		$.ajax('rationales/quiz_2.html')
 	  		  .done(function(resp){
 	  		    $modal.html(resp).foundation('open');
+	  		    $('.answer-rationale-reveal .title').html(label);
 	  		});
     	  updateNextStepBtn(this);
     	  $("input").attr('disabled','disabled');
@@ -102,7 +109,7 @@
       var storage = window.sessionStorage;
       $(document).ready(function() {
 			highlightCurrentQuiz();
-  			highlightAllCorrectQuiz();
+  			getScore();
 		});
       window.onload = function() {
 			lockTest();

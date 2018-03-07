@@ -10,29 +10,27 @@
 	  	.lesson-point-item {margin-top:17px;width:240px;text-align:center}
 	  	.lesson-point-item.first-item {margin-left: 57px;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:230px; display:inline-block}
+	  	.learn-page-title {color: #0845B5; font-family: "Roboto Slab"; font-size: 28px; font-weight: 300; line-height: 37px}
 	  </style>
 	</head>
 	<body class="practice">
-		<h2 class="title medium-11">This lesson helps learners answer the following questions: </h2>
+		<div class="title">&nbsp;</div>
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x" >
-				
+				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer the following questions: </h2>
 				<div class="lesson-point-item first-item">
-					<img src="images/Icon1.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
-					<img src="images/illo-1x.png" class="lesson-point" style="margin-top:40px;margin-bottom:41px"/>
-					<hr style="width:230px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<img src="images/2-Organize.png" class="lesson-point" style="margin-top:40px;margin-bottom:0px"/>
+					<hr style="width:230px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">How is an opinion piece organized?</p>			
 				</div>
 				<div class="lesson-point-item second-item" style="margin-left:94px;">
-					<img src="images/Icon2.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
-					<img src="images/illo-2x.png" class="lesson-point"/>
-					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<img src="images/purpose.png" class="lesson-point"/>
+					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">What is the purpose of an introduction, body, and conclusion in an opinion piece?</p>			
 				</div>
 				<div class="lesson-point-item third-item" style="margin-left:94px;">
-					<img src="images/Icon3.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
-					<img src="images/illo-3x.png" class="lesson-point" style="margin-top:40px;margin-bottom:42px"/>
-					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<img src="images/evidence.png" class="lesson-point" style="margin-top:40px;margin-bottom:0"/>
+					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">How does a writer organize reasons and evidence in an opinion piece?</p>			
 				</div>
 				

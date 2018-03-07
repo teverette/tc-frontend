@@ -58,8 +58,26 @@ function highlightAllCorrectQuiz() {
 	}
 }
 
+function getScore() {
+	var storage = window.sessionStorage;
+	var points = storage["quiz_total"];
+	$(".point-value").text(points);
+	if(points==1) {
+		$(".point-label").text("point");
+	} else {
+		$(".point-label").text("points");
+	}
+	
+	//return points;
+}
+
 function incrementScore() {
 	storage["quiz_total"] = 1 + parseInt(storage["quiz_total"]);
+	console.log("quiz total: " + storage["quiz_total"]);
+}
+
+function increaseScoreBy(points) {
+	storage["quiz_total"] = points + parseInt(storage["quiz_total"]);
 	console.log("quiz total: " + storage["quiz_total"]);
 }
 var storage = window.sessionStorage;
@@ -98,6 +116,9 @@ var ChoiceMatrix = {
       	},
     	isReadyNextStep: function() {
     		// points
+    		if(this.isQuiz && this.points==this.numberCorrect) {
+    			increaseScoreBy(this.points);
+    		}
     		if(this.points==this.numberCorrect || this.isQuiz) {
     			$("input").attr('disabled','disabled');
     			// save all response to storage
@@ -248,6 +269,9 @@ var ClozeDropdown = {
 	},
 	isReadyNextStep: function() {
 		// points
+		if(this.isQuiz && this.points==this.numberCorrect) {
+			increaseScoreBy(this.points);
+		}
 		if(this.points==this.numberCorrect || this.isQuiz) {
 			$("input").attr('disabled','disabled');
 			// save all response to storage

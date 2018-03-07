@@ -79,7 +79,8 @@
 			$(document).ready(function() {
       			highlightCurrentQuiz();
 				ChoiceMatrix.initialize('quiz_3',3,3);
-      			ChoiceMatrix.isQuiz=true;
+      			ChoiceMatrix.isQuiz=true; 
+      			getScore();
 
       		});
 

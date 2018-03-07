@@ -62,9 +62,9 @@
 
       	$(document).ready(function() {
 			highlightCurrentQuiz();
-			highlightAllCorrectQuiz();
 			ChoiceMatrix.initialize("quiz_4",1,1,"mc");
 			ChoiceMatrix.isQuiz=true;
+			getScore();
 		});
 
       	window.onload = function() {
