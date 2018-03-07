@@ -294,19 +294,31 @@ var ClozeDropdown = {
 		this.resetForm();
 		this.getResponses();
 		if(this.isReadyNextStep()) {
-			this.getRationale();
+			if(this.isQuiz!=true){
+    			this.getRationale("correct");
+    		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
+    			this.getRationale("correct");
+    		} else {
+    			this.getRationale("incorrect");
+    		}
 			updateNextStepBtn($(".check"));
 		} else {
 			this.showHint();
 		}
 		
 	},
-	getRationale: function() {
+
+	getRationale: function(status) {
+  		var status = status!==null ? status : "correct";
+  		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct' : '<i class="fas fa-lg fa-times"></i> Incorrect';
+  		$('.answer-rationale-reveal').addClass(status);
 		var $modal = $('.answer-rationale-reveal');
 
 		$.ajax('rationales/'+this.name+'.html')
 		  .done(function(resp){
+			
 		    $modal.html(resp).foundation('open');
+		    $('.answer-rationale-reveal .title').html(label);
 		});
 	},
 	

@@ -58,9 +58,7 @@
 	<a class="button secondary answer-option" data-value="2">Body</a>
 	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
 </div>
-<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF">
-		
-</div>
+<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal></div>
  <script>
 	
       	$(document).foundation();
