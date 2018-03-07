@@ -34,6 +34,9 @@ function lockTest() {
 function highlightCurrentQuiz() {
 	if($("body").hasClass("quiz")) {
 		var quizQuestion = $("body").data("quiz-question");
+		for(i=0;i<quizQuestion; i++) {
+			$(".question-bubble").eq(i).addClass("answered");
+		}
 		$(".question-bubble").eq(quizQuestion).addClass("current");
 	}
 }

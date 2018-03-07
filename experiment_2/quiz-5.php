@@ -5,7 +5,7 @@
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 </head>
-<body class="practice">
+<body class="practice quiz quiz-question" data-quiz-question="4">
 	<?php include '_quiz_progress.php'; ?>
 <div class="content"> 
 <div class="grid-x grid-padding-x">
@@ -93,6 +93,7 @@
 			}
     	}
     	$(document).ready(function() {
+    		highlightCurrentQuiz();
     		if($(".content").prop('scrollHeight') > ($(".content").height() - 100)) {
     			$(".content").attr("style","padding-bottom:100px");
     		}

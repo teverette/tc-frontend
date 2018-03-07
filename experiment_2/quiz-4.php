@@ -5,7 +5,7 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	</head>
-<body class="progress">
+<body class="practice quiz quiz-question" data-quiz-question="3">
 	<?php include '_quiz_progress.php'; ?>
 	<div class="content"> 
 	<div class="grid-x grid-padding-x">
