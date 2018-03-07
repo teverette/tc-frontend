@@ -72,7 +72,7 @@ var ChoiceMatrix = {
 		answered:0,
 		responseKey: {},
 		type:0,
-		isPractice:true,
+		isQuiz:false,
 		retryTotal:0,
 		isMinimumAnswersMet: function() {
 			this.answered = $( "input:checked" ).length;
@@ -98,7 +98,7 @@ var ChoiceMatrix = {
       	},
     	isReadyNextStep: function() {
     		// points
-    		if(this.points==this.numberCorrect) {
+    		if(this.points==this.numberCorrect || this.isQuiz) {
     			$("input").attr('disabled','disabled');
     			// save all response to storage
     			var string = JSON.stringify(this.responseKey)
@@ -211,7 +211,7 @@ var ClozeDropdown = {
 	answered:0,
 	points:0,
 	responseKey: {},
-	isPractice: true,
+	isQuiz: false,
 	retryTotal:0,
 	isMinimumAnswersMet: function() {
 		this.answered=0;
@@ -237,7 +237,7 @@ var ClozeDropdown = {
 	},
 	isReadyNextStep: function() {
 		// points
-		if(this.points==this.numberCorrect) {
+		if(this.points==this.numberCorrect || this.isQuiz) {
 			$("input").attr('disabled','disabled');
 			// save all response to storage
 			var string = JSON.stringify(this.responseKey)

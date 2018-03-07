@@ -79,6 +79,7 @@
       	var storage = window.sessionStorage;
       	$(document).ready(function() {
 			ClozeDropdown.initialize("quiz_5",4,4);
+			ClozeDropdown.isQuiz=true;
 	  	});
 
       	$(".question").change(function() {
@@ -94,6 +95,7 @@
     	}
     	$(document).ready(function() {
     		highlightCurrentQuiz();
+    		
     		if($(".content").prop('scrollHeight') > ($(".content").height() - 100)) {
     			$(".content").attr("style","padding-bottom:100px");
     		}

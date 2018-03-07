@@ -84,6 +84,7 @@
 			$(document).ready(function() {
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize('quiz_1',3,3);
+      			ChoiceMatrix.isQuiz=true;
       		});
 
 			$(window).bind("unload", function() {
