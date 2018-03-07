@@ -118,7 +118,7 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .footer div {margin: 0 114px}
 .answer-rationale-reveal .footer {position:absolute; left:0}
 
-.button {border-radius:4px; width:138px;height:40px; font-family:'Roboto', san-serif; font-size:18px; color: #FFF;padding:9px;}
+.button {border-radius:4px; width:138px;height:40px; font-family:'Roboto', san-serif; font-size:18px; color: #FFF;padding:10px;}
 .button.check-disabled,.button.check-disabled:hover {background-color:#4A90E2; opacity:0.30}
 
 .button.check {background-color:#4A90E2; opacity:0.95}
@@ -131,7 +131,9 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .button-left-side {position:relative; left:33px;width:40px}
 
 .button.back {background-color: #C7C5C8; opacity:0.95;height:40px;border-radius:100%}
-.button.back:hover{opacity:1}
+.button.back:hover, .learn-page-forward-button:hover{opacity:1}
+.learn-page-forward-button {background-color: #43B02A; opacity:0.95;height:40px; width:40px; left: 910px; border-radius:100%; padding-top:2px]}
+.learn-page-forward-button:hover{background-color: #43B02A;}
 
 .question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}
 .correct-icon-element {position: absolute;right: 1.75rem; color: #00AA00;top: 20px;}
