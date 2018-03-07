@@ -10,7 +10,8 @@
 	<div class="content"> 
 	<div class="grid-x grid-padding-x">
 	  
-	  <h2 class="title medium-12">Which evidence supports the reason, “Cats are better pets than dogs because cats usually make less noise?”</h2>
+	  <h2 class="title medium-12">Which <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Specific information that gives examples of a reason">evidence</span> 
+	  supports the <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="The ideas that explain why an opinion is true.">reason</span>, “Cats are better pets than dogs because cats usually make less noise?”</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  <label class="radio" style="position:absolute; left:0; top:-5px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
@@ -34,8 +35,8 @@
 	</div>
 	</div>
 	<div class="grid-x grid-padding-x footer">
-		<a class="button back large" href="learn-page-3.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-		<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+		<a class="button back button-left-side" href="learn-page-3.php" ><i class="fas fa-lg fa-angle-left" ></i></a>
+		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>
 	<div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
 	

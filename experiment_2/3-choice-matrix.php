@@ -11,14 +11,14 @@
 		<div class="content"> 
 		
 		<div class="grid-x grid-padding-x">
-		  <h2 class="title medium-12">Writers use words and phrases to help organize their ideas in an opinion piece. How would a writer use the words below?</h2>
+		 <h2 class="title medium-12">Writers use words and phrases to help <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> their ideas in an opinion piece. How would a writer use the words below?</h2>
 		  
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
 		      <th width="40%"></th>
-		      <th width="30%" class="text-center">To show order</th>
-		      <th width="30%" class="text-center">To show importance</th>
+		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by order lists the sequence or amount of information.">order</span></th>
+		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">importance</span></th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -52,8 +52,8 @@
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back large" href="learn-page-2.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="button back button-left-side" href="learn-page-2.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		<div class="hint">
 			<p class="hint-label">Not quite!</p>

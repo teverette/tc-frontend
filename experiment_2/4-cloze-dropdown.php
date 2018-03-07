@@ -11,7 +11,7 @@
 <div class="content"> 
 <div class="grid-x grid-padding-x">
   
-  <h2 class="title medium-12">Which words and phrases should be included to organize the following passage?</h2>
+  <h2 class="title medium-12">Which words and phrases should be included to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> the following passage?</h2>
   <div class="medium-12 grid-x lesson-copy">
   <p>Sometimes swimmers need to swim faster for a race, for more exercise, or just for more fun. Underwater swimming is faster than 
   swimming on the surface of the water. <a class="button dropdown-question" data-question="q4_1" data-drawer-id="drawer-one"  onclick="showDrawer(this);">Select an option</a> it is faster under water is that a swimmer&rsquo;s strokes can spread 
@@ -27,8 +27,8 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-	<a class="button back large" href="3-choice-matrix.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+	<a class="button back button-left-side" href="3-choice-matrix.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div id="drawer-one" class="drop-down-drawer text-center">
 	<a class="button secondary answer-option" data-value="1">One reason</a>

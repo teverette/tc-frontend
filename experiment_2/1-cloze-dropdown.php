@@ -13,9 +13,7 @@
 <div class="grid-x grid-padding-x">
   
   <h2 class="title medium-12">How is an opinion piece organized into sections?</h2>
-  <p>
-The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.
-</p>
+ 
   <div class="medium-12 grid-x lesson-copy">
     <p>
     <a class="button dropdown-question" data-question="q1_1" data-drawer-id="drawer-one" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
@@ -32,8 +30,8 @@ The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-	<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+	<a class="button back button-left-side" href="practice-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div id="drawer-one" class="drop-down-drawer text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>

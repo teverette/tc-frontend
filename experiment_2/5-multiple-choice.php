@@ -11,7 +11,10 @@
 	<div class="content"> 
 	<div class="grid-x grid-padding-x">
 	  
-	  <h2 class="title medium-12">Which statement is not true about using reasons and evidence to organize a body paragraph of an opinion piece?</h2>
+	  <h2 class="title medium-12">Which statement is not true about using <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="The ideas that explain why an opinion is true.">reasons</span>
+	   and <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Specific information that gives examples of a reason">evidence</span> 
+	   to organize a <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> paragraph of an opinion piece?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  <label class="radio" style="position:absolute; left:0; top:-5px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
@@ -38,8 +41,8 @@
 	</div>
 	</div>
 	<div class="grid-x grid-padding-x footer">
-		<a class="button back large" href="learn-page-3.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-		<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+		<a class="button back button-left-side" href="learn-page-3.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>
 	<div class="hint">
 		<p class="hint-label">Not quite!</p>

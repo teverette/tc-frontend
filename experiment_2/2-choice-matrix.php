@@ -5,9 +5,7 @@
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
 		<style>
-		.tooltip {border-radius: 4px; background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); max-height:130px; max-width: 15rem;}
-		.tooltip.top::before {border:none}
-		.has-tip {border:none}
+
 		</style>
 	</head>
 	<body class="practice">
@@ -24,8 +22,10 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Click 
 		  <thead>
 		    <tr>
 		      <th width="60%"></th>
-		      <th width="14%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
-		      	title="The introduction starts the opinion piece. It includes the opinion statement and helps readers understand the topic.">Introduction</span></th>
+		      <th width="14%" class="text-center">
+		      <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      	title="The introduction starts the opinion piece. It includes the opinion statement and helps readers understand the topic.">Introduction</span>
+		      	</th>
 		      <th width="13%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
 		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">Body</span></th>
 		      <th width="13%" class="text-center"><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
@@ -58,8 +58,8 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Click 
 		</div>
 		
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back large" href="1-cloze-dropdown.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="button back button-left-side" href="1-cloze-dropdown.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		<div class="hint">
 			<p class="hint-label">Not quite!</p>

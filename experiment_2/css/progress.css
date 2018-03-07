@@ -126,8 +126,12 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .button.check-verified {background-color:#4A90E2;opacity:0.95}
 .button.check-verified:hover {background-color:#4A90E2;opacity:1.0}
 
-.button.back {background-color: #C7C5C8; opacity:0.95}
-.button.back:hover{ opacity:1}
+.forward-button {padding:9px 4px 9px 8px;border-radius: 4px 20px 20px 4px; font-size: 20px; font-family:Roboto Slab}
+.button-right-side {position:relative; left:860px; width:95px}
+.button-left-side {position:relative; left:33px;width:40px}
+
+.button.back {background-color: #C7C5C8; opacity:0.95;height:40px;border-radius:100%}
+.button.back:hover{opacity:1}
 
 .question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}
 .correct-icon-element {position: absolute;right: 1.75rem; color: #00AA00;top: 20px;}
@@ -158,4 +162,8 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 	 width:1024px; padding-top:21px; color:#6C6C6C;font-size:16px;line-height:19px}
 .hint-text{width:525px;font-size:16px;line-height:19px;display:none}
 .hint-label {font-weight:bold; font-size:22px; line-height:29px; color:#E8CA00;margin-bottom:2px;}
+
+.tooltip {border-radius: 4px; background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); max-height:130px; max-width: 15rem;}
+.tooltip.top::before, .tooltip.bottom::before  {border:none}
+.has-tip {border:none}
 

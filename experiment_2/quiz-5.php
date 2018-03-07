@@ -35,8 +35,8 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer" style="z-index:0">
-	<a class="button back large" href="practice-transition.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+	<a class="button back button-left-side" href="practice-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div id="drawer-one" class="drop-down-drawer text-center">
 	<a class="button secondary answer-option" data-value="1">Introduction</a>

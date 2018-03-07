@@ -10,7 +10,9 @@
 	<?php include '_quiz_progress.php'; ?>
 <div class="content"> 
 <div class="grid-x grid-padding-x">
-  <h2 class="title medium-12">Which words are used to organize a writer’s reasons in the body section of an opinion piece?</h2>
+  <h2 class="title medium-12">Which words are used to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span>
+   a writer’s reasons in the <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> section of an opinion piece?</h2>
   <div class="medium-12 grid-x lesson-copy">
   <p>An audience can enjoy a story no matter <mark class="keyword quiz_2_1 answer">how</mark> it's told, but books are more 
   entertaining than movies and plays. <mark class="keyword quiz_2_2 answer">First of all</mark>, books can entertain readers anywhere. 
@@ -25,8 +27,8 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-	<a class="button back large" href="q1-choice-matrix.php" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success large" style="position:relative; left:864px; width:85px; padding:7px 0;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+	<a class="button back button-left-side" href="q1-choice-matrix.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
 	
