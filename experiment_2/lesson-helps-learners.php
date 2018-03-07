@@ -39,8 +39,8 @@
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back large" onclick="history.back(-1);" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check button success large" href="why-lesson.php" style="position:relative; left:864px; width:85px; padding:7px 0;">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="button back button-left-side" onclick="history.back(-1);"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class=" button learn-page-forward-button button-right-side" href="why-lesson.php"><i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		
 		<script>

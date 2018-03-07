@@ -20,8 +20,8 @@
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back large" href="2-choice-matrix.php#checked" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-verified button success large" style="position:relative; left:864px; width:85px; padding:7px 0;" href="3-choice-matrix.php">Got it <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="button back button-left-side" href="2-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class=" button learn-page-forward-button button-right-side" href="3-choice-matrix.php"><i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		
 		 <script>
