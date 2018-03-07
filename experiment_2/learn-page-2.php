@@ -10,9 +10,10 @@
 	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
 	  	</style>
 	</head>
-	<body class="progress">
+	<body class="practice">
+		<?php $width = "33.3"; ?>
+		<?php include '_progress.php'; ?>
 		<div class="overview-content">
-			<div class="title">&nbsp;</div>
 			<div class="grid-x grid-padding-x">
 				<h2 class="medium-8 medium-offset-2 text-center learn-page-title">How can words and phrases help organize the sections in an opinion piece?</h2>
 				
@@ -22,7 +23,9 @@
 					<div style="width:50%;height:227px;float:left">
 					<div class="medium-10 " style="margin: 0 auto;"><img class="text-center" src="images/7C-01.png" style="height: 245px;float: right;margin-right:37px"/></div>
 					</div>
-					<div style="width:272px;float:left;	border: 2px solid #307FE2; padding:23px;" class="part-5">Words and phrases can be used to organize ideas based upon its order, or the sequence and amount of information. For example, a writer may organize their ideas with words and phrases like, “First of all”, “Another”, “Then” or “Finally”. </div>
+					<div style="width:272px;float:left;	border: 2px solid #307FE2; padding:23px;" class="part-5">Words and phrases can be used to organize ideas based 
+					upon its <strong>order</strong>, or the sequence and amount of information. For example, a writer may organize their ideas with words and phrases like, 
+					“First of all”, “Another”, “Then” or “Finally”. </div>
 				</div>
 			</div>
 			</div>

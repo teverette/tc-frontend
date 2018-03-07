@@ -6,7 +6,7 @@
 	  <?php include '_js.html'; ?>
 </head>
 <body class="practice">
-	<?php $width = "75.0"; ?>
+	<?php $width = "66.6"; ?>
 	<?php include '_progress.php'; ?>
 <div class="content"> 
 <div class="grid-x grid-padding-x">

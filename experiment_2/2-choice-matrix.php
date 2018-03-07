@@ -9,7 +9,7 @@
 		</style>
 	</head>
 	<body class="practice">
-		<?php $width = "37.5"; ?>
+		<?php $width = "22.2"; ?>
 		<?php include '_progress.php'; ?>
 		<div class="content"> 
 		<div class="global-tip" style="position:fixed; left:470px; top:20px; height: 102px; width: 171px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;

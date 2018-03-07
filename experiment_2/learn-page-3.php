@@ -10,9 +10,10 @@
 	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
 	  </style>
 	</head>
-	<body class="progress">
+	<body class="practice">
+		<?php $width = "77.7"; ?>
+		<?php include '_progress.php'; ?>
 		<div class="overview-content">
-			<div class="title">&nbsp;</div>
 			<div class="grid-x grid-padding-x">
 				<h2 class="medium-12 learn-page-title text-center">How are reasons and evidence used in a body section?</h2>
 				
