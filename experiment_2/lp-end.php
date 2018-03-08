@@ -16,9 +16,16 @@
 						<img src="images/18-Overview.gif" style="float:right"/>
 						</div>
 						<div style="width:50%;float:left" class="part-3">
-						<h2 class="learn-page-title medium-12">This lesson taught learners:</h2>
-						When an opinion piece is well organized, 
-						it is more effective in helping others understand and perhaps even agree with the opinion.</div>
+							<h2 class="learn-page-title medium-12">This lesson taught learners:</h2>
+							<p style="border-bottom:1px solid #D1D3D4;margin-bottom:30px;padding-bottom:15px;"><span style="display:inline-block;padding-right:20px;font-weight:bold;color:#43B02A;font-size:24px;">Organize</span>
+							how an opinion piece is organized</p>
+							<p style="border-bottom:1px solid #D1D3D4;margin-bottom:30px;padding-bottom:15px;">
+							<span style="display:inline-block;padding-right:20px;font-weight:bold;color:#43B02A;font-size:24px; width:120px;">Purpose</span>
+							the purpose of an introduction, body, and conclusion in an opinion piece</p>
+							</div>
+							<p style="border-bottom:1px solid #D1D3D4;margin-bottom:30px;padding-bottom:15px;"><span style="display:inline-block;padding-right:20px;font-weight:bold;color:#43B02A;font-size:24px; height:40px;">Support</span>
+							how to organize reasons and evidence to support an opinion</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -36,3 +43,4 @@
 		</script>
 	</body>
 </html>
+Roboto regular 16px line heigh 24px #6D6E71 

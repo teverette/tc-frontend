@@ -11,14 +11,14 @@
 		<div class="content"> 
 		
 		<div class="grid-x grid-padding-x">
-		 <h2 class="title medium-12">Writers use words and phrases to help <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> their ideas in an opinion piece. How would a writer use the words below?</h2>
+		 <h2 class="title medium-12">Writers use words and phrases to help <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> their ideas in an opinion piece. How would a writer use the words below?</h2>
 		  
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
 		      <th width="40%"></th>
-		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by order lists the sequence or amount of information.">order</span></th>
-		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">importance</span></th>
+		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by order lists the sequence or amount of information.">order</span></th>
+		      <th width="30%" class="text-center">To show <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">importance</span></th>
 		    </tr>
 		  </thead>
 		  <tbody>

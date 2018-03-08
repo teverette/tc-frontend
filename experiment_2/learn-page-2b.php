@@ -17,7 +17,7 @@
 			<div class="grid-x grid-padding-x">
 				<h2 class="medium-8 medium-offset-2 text-center learn-page-title">How can words and phrases organize the importance of ideas in an opinion piece?</h2>
 				<div class="medium-8 medium-centered" style="margin: 0 auto;">
-				<div class="medium-12  lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;margin-top:31px  ">
+				<div class="medium-12  lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;margin-top:31px;display:none">
 					<div style="width:50%;float:left">
 					<div class="medium-10 " style="margin: 0 auto;"><img class="text-center" src="images/7C-02.png" style="height: 245px;float: right;margin-right:37px"/></div>
 					</div>
@@ -35,6 +35,9 @@
 		
 		 <script>
 		      $(document).foundation();
+		      $(document).ready(function() {
+					$(".lesson-desc").fadeIn(500);
+		      });
 	    </script>
 	</body>
 </html>

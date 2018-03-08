@@ -15,18 +15,18 @@
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x" >
 				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer the following questions: </h2>
-				<div class="lesson-point-item first-item">
-					<img src="images/2-Organize.png" class="lesson-point" style="margin-top:40px;margin-bottom:0px"/>
+				<div class="lesson-point-item first-item" style="display:none">
+					<img src="images/2-Organize.png" class="lesson-point" style="margin-top:89px;margin-bottom:0px"/>
 					<hr style="width:230px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">How is an opinion piece organized?</p>			
 				</div>
-				<div class="lesson-point-item second-item" style="margin-left:94px;">
+				<div class="lesson-point-item second-item" style="margin-left:94px;display:none">
 					<img src="images/purpose.png" class="lesson-point"/>
 					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">What is the purpose of an introduction, body, and conclusion in an opinion piece?</p>			
 				</div>
-				<div class="lesson-point-item third-item" style="margin-left:94px;">
-					<img src="images/evidence.png" class="lesson-point" style="margin-top:40px;margin-bottom:0"/>
+				<div class="lesson-point-item third-item" style="margin-left:94px;display:none">
+					<img src="images/evidence.png" class="lesson-point" style="margin-top:38px;margin-bottom:0"/>
 					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
 					<p style="width:240px;text-align:center">How does a writer organize reasons and evidence in an opinion piece?</p>			
 				</div>
@@ -39,7 +39,17 @@
 		</div>
 		
 		<script>
-		      $(document).foundation();
+		    $(document).foundation();
+			$(document).ready(function() {
+				$(".first-item").fadeIn(500);
+				setTimeout(function() {
+					$(".second-item").fadeIn(500);
+				},2000);
+				setTimeout(function() {
+					$(".third-item").fadeIn(500);
+				},4000);
+				
+			});
 	    </script>
 	</body>
 </html>

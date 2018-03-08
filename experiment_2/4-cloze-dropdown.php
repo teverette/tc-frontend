@@ -11,7 +11,7 @@
 <div class="content"> 
 <div class="grid-x grid-padding-x">
   
-  <h2 class="title medium-12">Which words and phrases should be included to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> the following passage?</h2>
+  <h2 class="title medium-12">Which words and phrases should be included to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span> the following passage?</h2>
   <div class="medium-12 grid-x lesson-copy">
   <p>Sometimes swimmers need to swim faster for a race, for more exercise, or just for more fun. Underwater swimming is faster than 
   swimming on the surface of the water. <a class="button dropdown-question" data-question="q4_1" data-drawer-id="drawer-one"  onclick="showDrawer(this);">Select an option</a> it is faster under water is that a swimmer&rsquo;s strokes can spread 

@@ -33,13 +33,13 @@
 
 		<div class="overview-content" style="height: 333px;">
 			<h2 class="medium-12 medium-centered learn-page-title text-center">Why this lesson is important</h2>
-			<div class="grid-x grid-padding-x" style="margin-top:0px;">
+			<div class="grid-x grid-padding-x" style="margin-top:0px; ">
 				
-				<div class="medium-12 lesson-desc text-center" >
+				<div class="medium-12 lesson-desc text-center" style="display:none;">
 					<img src="images/3-Opinions.png" style="height: 250px"></span>
 				</div>
-				<div class="medium-8 medium-centered" style="margin: 0 auto;">
-					<div class="medium-12  lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;    ">
+				<div class="medium-8 medium-centered lesson-copy" style="margin: 0 auto; border:2px solid #307fe2; padding:25px; display:none;">
+					<div class="medium-12 lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;    ">
 						<div style="width:50%;float:left">
 						<span class="part-1">Opinion pieces</span><br/> <span class="part-2">are written to share a point of view.</span>
 						</div>
@@ -56,6 +56,10 @@
 		
 		<script>
 		      $(document).foundation();
+		      $(document).ready(function() {
+					$(".lesson-desc").fadeIn(500);
+					$(".lesson-copy").fadeIn(500);
+		      });
 	    </script>
 	</body>
 </html>

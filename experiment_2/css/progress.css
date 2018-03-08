@@ -152,7 +152,7 @@ p.mc-text {line-height: 31px; margin-left:33px}
 h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 
 /* dropdown */
-.drop-down-drawer {height: 87px; padding-top:20px; background-color: #DBE7F6; width:100%; border-top:1px solid gray; display:none; position:fixed; bottom:0; z-index:10000}
+.drop-down-drawer {height: 87px; padding-top:20px; background-color: #DBE7F6; width:100%; display:none; position:fixed; bottom:0; z-index:10000}
 .dropdown-question {background-color:rgba(74,144,226,0.1);border: 1px dashed #4A90E2; color:#8E8E8E;border-radius: 4px; font-family:Roboto; font-size: 22px; line-height: 25px; padding:7px 10px 9px;margin: 5px 0;min-width: 225px;}
 .dropdown-question.selected-dd, .dropdown-question.selected-dd:hover {border: 3px solid #4A90E2;padding:5px 10px;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
 .dropdown-question:hover {border: 1px solid #4A90E2;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
@@ -170,7 +170,7 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .hint-text{width:525px;font-size:16px;line-height:19px;display:none}
 .hint-label {font-weight:bold; font-size:22px; line-height:29px; color:#E8CA00;margin-bottom:2px;}
 
-.tooltip {border-radius: 4px; background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); max-height:130px; max-width: 15rem;}
+.tooltip {border-radius: 4px; background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); max-height:130px; max-width: 15rem;font-size: 16px;}
 .tooltip.top::before, .tooltip.bottom::before  {border:none}
 .has-tip {border:none}
 
