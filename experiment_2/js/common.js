@@ -11,9 +11,9 @@ function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check");
 	$(o).text("Continue");
 	location.hash = "checked";
-	$(".back").click(function(){
+	/*$(".back").click(function(){
 		onclick="history.back(-2);";
-	})
+	})*/
 }
 
 function lockTest() {
@@ -74,11 +74,26 @@ function getScore() {
 function incrementScore() {
 	storage["quiz_total"] = 1 + parseInt(storage["quiz_total"]);
 	console.log("quiz total: " + storage["quiz_total"]);
+	 
 }
 
 function increaseScoreBy(points) {
 	storage["quiz_total"] = points + parseInt(storage["quiz_total"]);
 	console.log("quiz total: " + storage["quiz_total"]);
+	
+	var p = $(".point-value");
+	var position = p.position();
+
+    var points_inc = "+ " + points;
+	$("body").append("<span class='points-earned' style='left: 910px;position:absolute; z-index:10000; color:#7D7D7D; top:600px'>"+points_inc+"</span>");
+	$(".points-earned").addClass('animate').animate({
+	    left: "857px",
+	    top: "12px"
+	  }, 2000, function() {
+	    	$(".points-earned").hide();
+	    	$(".point-value").text(storage["quiz_total"]);
+	    });
+	
 }
 var storage = window.sessionStorage;
 
@@ -116,7 +131,7 @@ var ChoiceMatrix = {
       	},
     	isReadyNextStep: function() {
     		// points
-    		if(this.isQuiz && this.points==this.numberCorrect) {
+    		if(this.isQuiz && this.points>0) {
     			increaseScoreBy(this.points);
     		}
     		if(this.points==this.numberCorrect || this.isQuiz) {
@@ -190,10 +205,11 @@ var ChoiceMatrix = {
 	    		if(this.isQuiz!=true){
 	    			this.getRationale("correct");
 	    		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
-	    			this.getRationale("correct");
+	    			setTimeout(function(){ChoiceMatrix.getRationale("correct")},3000);
 	    		} else {
-	    			this.getRationale("incorrect");
+	    			setTimeout(function(){ChoiceMatrix.getRationale("incorrect")},3000);
 	    		}
+	    		
 	    		updateNextStepBtn($(".check"));
 	    	} else {
     			this.showHint();
@@ -201,14 +217,19 @@ var ChoiceMatrix = {
       	},
       	getRationale: function(status) {
       		var status = status!==null ? status : "correct";
-      		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct' : '<i class="fas fa-lg fa-times"></i> Incorrect';
+      		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct!' : '<i class="fas fa-lg fa-times"></i> Not quite!';
       		$('.answer-rationale-reveal').addClass(status);
     		var $modal = $('.answer-rationale-reveal');
 
     		$.ajax('rationales/'+this.name+'.html')
     		  .done(function(resp){
-    			
+    			  
     		    $modal.html(resp).foundation('open');
+    		    if(status=="correct") {
+      		    	$('.rationale-icon').attr('src','images/Confetti.png');
+    			  } else {
+    				  $('.rationale-icon').attr('src','images/TryAgain.png');
+    			  }
     		    $('.answer-rationale-reveal .title').html(label);
     		});
     	},
@@ -226,7 +247,8 @@ var ChoiceMatrix = {
     			this.checkResponse(x, this.responseKey[x]);
     		}
     		// showRationale();
-    		updateNextStepBtn($(".check"));
+    		//updateNextStepBtn($(".check"));
+    		$(".forward-button").addClass("check-verified").removeClass("check-disabled").text("Continue");
     	},
 		initialize: function(name, minToScore, minToCheck, type) {
 			this.name = name;
@@ -269,7 +291,7 @@ var ClozeDropdown = {
 	},
 	isReadyNextStep: function() {
 		// points
-		if(this.isQuiz && this.points==this.numberCorrect) {
+		if(this.isQuiz && this.points>0) {
 			increaseScoreBy(this.points);
 		}
 		if(this.points==this.numberCorrect || this.isQuiz) {
@@ -321,9 +343,9 @@ var ClozeDropdown = {
 			if(this.isQuiz!=true){
     			this.getRationale("correct");
     		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
-    			this.getRationale("correct");
+    			setTimeout(function(){ClozeDropdown.getRationale("correct")},3000);
     		} else {
-    			this.getRationale("incorrect");
+    			setTimeout(function(){ClozeDropdown.getRationale("incorrect")},3000);
     		}
 			updateNextStepBtn($(".check"));
 		} else {
@@ -334,14 +356,18 @@ var ClozeDropdown = {
 
 	getRationale: function(status) {
   		var status = status!==null ? status : "correct";
-  		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct' : '<i class="fas fa-lg fa-times"></i> Incorrect';
+  		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct!' : '<i class="fas fa-lg fa-times"></i> Not quite!';
   		$('.answer-rationale-reveal').addClass(status);
 		var $modal = $('.answer-rationale-reveal');
 
 		$.ajax('rationales/'+this.name+'.html')
 		  .done(function(resp){
-			
 		    $modal.html(resp).foundation('open');
+		    if(status=="correct") {
+		    	$('.rationale-icon').attr('src','images/Confetti.png');
+			  } else {
+				  $('.rationale-icon').attr('src','images/TryAgain.png');
+			  }
 		    $('.answer-rationale-reveal .title').html(label);
 		});
 	},
@@ -377,9 +403,19 @@ function scoreStuff() {
 		$('.hint').hide();
     	ClozeDropdown.resetForm();
     	var curDrawer = $(o).data('drawer-id');
- 		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
- 		$('.dropdown-question').removeClass('selected-dd');
- 		$(o).addClass('selected-dd');
+    	var visDrawer = $(".drop-down-drawer:visible").length == 1 ? $(".drop-down-drawer:visible").first().attr('id') : 0;
+
+    	if(curDrawer==visDrawer){
+    		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
+    		$('.dropdown-question').removeClass('selected-dd');
+    	} else {
+    		$(".drop-down-drawer:visible").hide("slide", { direction: "down" }, 400);
+    		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
+    		$('.dropdown-question').removeClass('selected-dd');
+    		$(o).addClass('selected-dd');
+    	}
+ 		
+ 		
  	}
 
 	$(document).on("click",".answer-option", function() {
