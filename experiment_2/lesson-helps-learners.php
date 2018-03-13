@@ -9,26 +9,35 @@
 	  	.lesson-point-item {margin-top:17px;width:240px;text-align:center}
 	  	.lesson-point-item.first-item {margin-left: 57px;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:230px; display:inline-block}
+	  	.subheader {font-family:'Roboto Slab'; font-weight:bold; font-size: 24px; color: #43B02A}
+	  	.subheader-content {color:#59585A;font-size:20px; line-height:26px}
 	  </style>
 	</head>
 	<body class="practice">
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer the following questions: </h2>
-				<div class="lesson-point-item first-item" style="display:none">
-					<img src="images/2-Organize.png" class="lesson-point" style="margin-top:89px;margin-bottom:0px"/>
-					<hr style="width:230px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
-					<p style="width:240px;text-align:center">How is an opinion piece organized?</p>			
+				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer<br/> the following questions: </h2>
+				<div class="lesson-point-item first-item" style="display:none; margin-left:141px;margin-top:57px; padding-left: 85px;">
+					<div class="text-left">
+						<img src="images/One.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
+						<p style="display:inline; " class="subheader">Organize</p>
+					</div>	
+					<p style="width:218px;text-align:left; padding-left: 42px;" class="subheader-content">How is an opinion piece organized?</p>
 				</div>
-				<div class="lesson-point-item second-item" style="margin-left:94px;display:none">
-					<img src="images/purpose.png" class="lesson-point"/>
-					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
-					<p style="width:240px;text-align:center">What is the purpose of an introduction, body, and conclusion in an opinion piece?</p>			
+				<div class="lesson-point-item second-item" style="margin-left:0px; width: 292px;display:none">
+					<img src="images/1-a.png" style="width: 250px"/>
+					<div>
+						<img src="images/Three.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
+						<p style="display:inline; " class="subheader">Support</p>
+					</div>
+					<p style="width:321px;text-align:left;" class="subheader-content">How does a writer organize reasons and evidence in an opinion piece?</p>			
 				</div>
-				<div class="lesson-point-item third-item" style="margin-left:94px;display:none">
-					<img src="images/evidence.png" class="lesson-point" style="margin-top:38px;margin-bottom:0"/>
-					<hr style="width:183px; border:1px solid #4A90E2; margin: 16px auto 16px;"/>
-					<p style="width:240px;text-align:center">How does a writer organize reasons and evidence in an opinion piece?</p>			
+				<div class="lesson-point-item third-item" style="display:none; margin-top: 124px; left: -30px; position: relative;">
+					<div class="text-left">
+						<img src="images/Two.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
+						<p style="display:inline; " class="subheader">Purpose</p>
+					</div>	
+					<p style="width:278px;text-align:left; padding-left: 42px;" class="subheader-content">What is the purpose of an introduction, body, and conclusion in an opinion piece?</p>		
 				</div>
 				
 			</div>

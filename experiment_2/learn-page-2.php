@@ -8,6 +8,8 @@
 	  .title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  .overview-content {min-height: 458px; height: inherit;}
 	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
+	  .learn-page-title {font-family: 'Roboto Slab';font-size: 16px; color: #6D6E71; line-height: 18px;}
+	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
 	<body class="practice">
@@ -15,17 +17,13 @@
 		<?php include '_progress.php'; ?>
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x">
-				<h2 class="medium-8 medium-offset-2 text-center learn-page-title">How can words and phrases help organize the sections in an opinion piece?</h2>
+				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">How can <strong>words</strong> help organize <br/>the sections in an opinion piece?</h2>
 				
-				
-				<div class="medium-8 medium-centered" style="margin: 0 auto;">
-				<div class="medium-12  lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;margin-top:31px;display:none;">
-					<div style="width:50%;height:227px;float:left">
-						<div class="medium-10 " style="margin: 0 auto;"><img class="text-center" src="images/7C-01.gif" style="height: 245px;float: right;margin-right:37px"/></div>
-					</div>
-					<div style="width:272px;float:left;	border: 2px solid #307FE2; padding:23px;" class="part-5">Words and phrases can be used to organize ideas based 
-					upon its <strong>order</strong>, or the sequence and amount of information. For example, a writer may organize their ideas with words and phrases like, 
-					“First of all”, “Another”, “Then” or “Finally”. </div>
+				<div class="medium-8 medium-centered text-center" style="margin: 0 auto;">
+					<img src="images/7-a.png"/>
+				</div>
+				<div style="position:absolute; top:289px; left:190px; width:200px; height:100px; border-bottom: 1px solid gray">
+					For example, a writer may organize their ideas with <strong>words</strong> like, 
 				</div>
 			</div>
 			</div>
