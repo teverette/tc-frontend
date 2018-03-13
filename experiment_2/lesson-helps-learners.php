@@ -44,10 +44,10 @@
 				$(".first-item").fadeIn(500);
 				setTimeout(function() {
 					$(".second-item").fadeIn(500);
-				},2000);
+				},1000);
 				setTimeout(function() {
 					$(".third-item").fadeIn(500);
-				},4000);
+				},2000);
 				
 			});
 	    </script>

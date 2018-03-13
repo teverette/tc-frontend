@@ -10,8 +10,8 @@
 	<?php include '_quiz_progress.php'; ?>
 <div class="content"> 
 <div class="grid-x grid-padding-x">
-  <h2 class="title medium-12">Which words are used to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span>
-   a writer’s reasons in the <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+  <h2 class="title medium-12">Which words are used to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span>
+   a writer’s reasons in the <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> section of an opinion piece?</h2>
   <div class="medium-12 grid-x lesson-copy">
   <p>An audience can enjoy a story no matter <mark class="keyword quiz_2_1 answer">how</mark> it's told, but books are more 
@@ -27,7 +27,7 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-	<a class="button back button-left-side" href="q1-choice-matrix.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="button back button-left-side" href="q1-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal></div>
@@ -38,7 +38,7 @@
     	var question2 = {quiz_2_1:false, quiz_2_2:true,quiz_2_3:true,quiz_2_4:true,quiz_2_5:false};
     	var nextPage = "quiz-3.php";
     	var points=0;
-    	var numberCorrect=3;
+    	var numberCorrect=5;
     
     	function loopThruQuestions() {
     		var questionLength = questions.length;
@@ -59,6 +59,7 @@
 	      	console.log("correctAnswer: " + correctAnswer);
 	      	if(!correctAnswer && !selectedAnswer || !selectedAnswer) {
 				$(o).addClass('clear');
+				points++;
 			} else if(correctAnswer==selectedAnswer) {
 				$(o).addClass('correct');
 				$(o).append('<i class="fas fa-check" aria-hidden="true" style="position:relative;right: -6px;color: #77A977;"></i>');
@@ -78,18 +79,33 @@
 			status ="incorrect";
           }
 
-			var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct' : '<i class="fas fa-lg fa-times"></i> Incorrect';
-    		$('.answer-rationale-reveal').addClass(status);
-    	  	var $modal = $('.answer-rationale-reveal');
-
-	  		$.ajax('rationales/quiz_2.html')
-	  		  .done(function(resp){
-	  		    $modal.html(resp).foundation('open');
-	  		    $('.answer-rationale-reveal .title').html(label);
-	  		});
-    	  updateNextStepBtn(this);
-    	  $("input").attr('disabled','disabled');
+	 	  setTimeout(function() {callRationale()}, 3000);
       });
+
+      function callRationale() {
+    	  if(points==numberCorrect) {
+  			status = "correct";
+      	  } else {
+  			status ="incorrect";
+            }
+
+  			var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct!' : '<i class="fas fa-lg fa-times"></i> Not quite!';
+      		$('.answer-rationale-reveal').addClass(status);
+      	  	var $modal = $('.answer-rationale-reveal');
+
+  	  		$.ajax('rationales/quiz_2.html')
+  	  		  .done(function(resp){
+  	  		    $modal.html(resp).foundation('open');
+  	  		  if(status=="correct") {
+      		    	$('.rationale-icon').attr('src','images/Confetti.png');
+    			  } else {
+    				  $('.rationale-icon').attr('src','images/TryAgain.png');
+    			  }
+  	  		    $('.answer-rationale-reveal .title').html(label);
+  	  		});
+      	  updateNextStepBtn(this);
+      	  $("input").attr('disabled','disabled');
+      }
 
       
       $(document).on("click",".check-verified", function() {

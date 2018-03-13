@@ -43,4 +43,3 @@
 		</script>
 	</body>
 </html>
-Roboto regular 16px line heigh 24px #6D6E71 

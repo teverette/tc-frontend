@@ -19,7 +19,7 @@
 				<div class="medium-8 medium-centered" style="margin: 0 auto;">
 				<div class="medium-12  lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;margin-top:31px;display:none">
 					<div style="width:50%;float:left">
-					<div class="medium-10 " style="margin: 0 auto;"><img class="text-center" src="images/7C-02.png" style="height: 245px;float: right;margin-right:37px"/></div>
+					<div class="medium-10 " style="margin: 0 auto;"><img class="text-center" src="images/7C-02.gif" style="height: 245px;float: right;margin-right:37px"/></div>
 					</div>
 					<div style="width:272px;float:left;	border: 2px solid #00B5BA; padding:23px;" class="part-5">Words and phrases can be used to organize ideas based on their 
 					<strong>importance</strong>, or how much special attention the information deserves. For example, a writer may organize their ideas with words and phrases 

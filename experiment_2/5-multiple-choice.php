@@ -11,9 +11,9 @@
 	<div class="content"> 
 	<div class="grid-x grid-padding-x">
 	  
-	  <h2 class="title medium-12">Which statement is not true about using <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="The ideas that explain why an opinion is true.">reasons</span>
-	   and <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Specific information that gives examples of a reason">evidence</span> 
-	   to organize a <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+	  <h2 class="title medium-12">Which statement is not true about using <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="The ideas that explain why an opinion is true.">reasons</span>
+	   and <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Specific information that gives examples of a reason">evidence</span> 
+	   to organize a <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> paragraph of an opinion piece?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  <label class="radio" style="position:absolute; left:0; top:-5px;left:-30px;padding-left: 10px; padding-right: 0;">

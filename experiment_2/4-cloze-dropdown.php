@@ -27,7 +27,7 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer">
-	<a class="button back button-left-side" href="3-choice-matrix.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="button back button-left-side" href="3-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div id="drawer-one" class="drop-down-drawer text-center">

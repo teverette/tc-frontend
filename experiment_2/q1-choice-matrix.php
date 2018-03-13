@@ -24,21 +24,21 @@
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      <td><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">Body</span></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_1" value="1"/></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_1" value="2"/></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_1" value="3"/></td>
 		    </tr>
 		    <tr>
-		      <td> <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      <td> <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="The introduction starts the opinion piece. It includes the opinion statement and helps readers understand the topic.">Introduction</span></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_2" value="1"/></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_2" value="2"/></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_2" value="3"/></td>
 		    </tr>
 		    <tr>
-		      <td><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="true" tabindex="1" 
+		      <td><span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="The conclusion is the ending section. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.">Conclusion</span></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_3" value="1"/></td>
 		      <td class="text-center"><input type="radio" name="quiz_1_3" value="2"/></td>
@@ -55,7 +55,7 @@
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="learn-page-2.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="button back button-left-side" href="quiz-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 	
@@ -95,9 +95,11 @@
 			window.onload = function() {
 				var isLocked = lockTest();
 				if(isLocked) {
-					ChoiceMatrix.getResponses();
+					ChoiceMatrix.setPreviousResponse();
 				}
 			}
+			var storage = window.sessionStorage;
+	    	storage["quiz_total"]=0;
 		  </script>
 		 <!-- <?php echo "page loaded";?> -->
 	</body>

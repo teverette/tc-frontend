@@ -56,7 +56,7 @@
 		</div>
 		
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="1-cloze-dropdown.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="button back button-left-side" href="1-cloze-dropdown.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 		<div class="hint">

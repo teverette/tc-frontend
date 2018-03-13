@@ -35,7 +35,7 @@
 </div>
 </div>
 <div class="grid-x grid-padding-x footer" style="z-index:0">
-	<a class="button back button-left-side" href="practice-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+	<a class="button back button-left-side" href="quiz-4.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
 <div id="drawer-one" class="drop-down-drawer text-center">
@@ -88,7 +88,6 @@
     	  	var isLocked = lockTest();
 			if(isLocked) {
 				ClozeDropdown.setPreviousResponse();
-				// ClozeDropdown.getResponses();
 			}
     	}
     	$(document).ready(function() {

@@ -16,8 +16,8 @@
 		  <thead>
 		    <tr>
 		      <th width="40%"></th>
-		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by order lists the sequence or amount of information.">Order</span></th>
-		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="true" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">Importance</span></th>
+		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by order lists the sequence or amount of information.">Order</span></th>
+		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">Importance</span></th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -50,7 +50,7 @@
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="learn-page-2.php"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="button back button-left-side" href="quiz-2.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button" style="z-index:1001;position:relative;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
 	
@@ -91,7 +91,7 @@
 			window.onload = function() {
 				var isLocked = lockTest();
 				if(isLocked) {
-					ChoiceMatrix.getResponses();
+					ChoiceMatrix.setPreviousResponse();
 				}
 			}
 		  </script>
