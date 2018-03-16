@@ -24,11 +24,11 @@
 		  	<input type="radio" class="q5_1 question" name="q5_1" value="2"/>
 		</label>
 	  <p class="lesson-copy mc-text">Reasons and evidence should not be connected by a similar idea.</p>
-	  <label class="radio" style="position:absolute; left:0; top: 120px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  <label class="radio" style="position:absolute; left:0; top: 150px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input  type="radio" class="q5_1 question" name="q5_1" value="3"/>
 	  </label>
 	  <p class="lesson-copy mc-text">Evidence provides specific examples or pieces of information that explain a reason.</p>
-	  <label class="radio" style="position:absolute; left:0; top: 200px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  <label class="radio" style="position:absolute; left:0; top: 230px;left:-30px;padding-left: 10px; padding-right: 0;">
 	  	<input  type="radio" class="q5_1 question" name="q5_1" value="4"/>
 	  </label>
 	  <p class="lesson-copy mc-text">Reasons and evidence in a body paragraph support the opinion that is stated throughout an entire written piece.</p>
@@ -44,6 +44,7 @@
 		<a class="button back button-left-side" href="learn-page-3.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>
+	<div class="hint-callout callout"></div>
 	<div class="hint">
 		<p class="hint-label">Not quite!</p>
 		<p class="hint-text primary">A writer can organize their ideas in the body section by using reasons and evidence. Try again!</p>
@@ -55,9 +56,14 @@
       $(document).foundation();
       /* setup question and answer for quiz question */
       	var questions = ["q5_1"];
+      	var hintArray = {
+      	      	"hint_q5_1":{
+          	      	1:"Not quite. This is a true statement.",
+          	      	3:"Not quite. This is a true statement.",
+          	        4:"Not quite. This is a true statement."}
+      	}
 		var answerKey = {q5_1:"2"};
   		var nextPage = "quiz-transition.php";
-
 
 	    $(document).on("click",".check", function() {
 	    	ChoiceMatrix.assess(false);

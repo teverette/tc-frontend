@@ -4,6 +4,9 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style>
+	  	
+	  </style>
 </head>
 <body class="practice">
 	<?php $width = "11.1"; ?>
@@ -46,7 +49,7 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-three" class="drop-down-drawer  text-center">
+<div id="drawer-three" class="drop-down-drawer text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
@@ -56,12 +59,32 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
 	<p class="hint-text primary">Introductions start an opinion piece. The body section explains proof for an opinion statement. Try again!</p>
 	<p class="hint-text secondary">Conclusions summarize the opinion piece and suggests how the reader should think about a topic. Try again!</p>
 </div>
+<div class="hint-callout callout"></div>
+<div class="rationale-callout callout"></div>
+
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF">
 		
 </div>
  <script>
       	$(document).foundation();
       	var answerKey = {q1_1:"1", q1_2:"2", q1_3:"3"};
+      	var hintArray = {
+      	      	"hint_q1_1":{
+          	      	2:"The body is not the first part of an opinion piece. Try again!",
+          	      	3:"The conclusion is not the beginning. Try again!"},
+      	      	"hint_q1_2":{
+          	      	1:"The introduction does not follow the introduction. Try again!",
+          	      	3:"The conclusion does not provide reasons and evidence for the first time. Try again!"},
+      	      	"hint_q1_3":{
+          	      	1:"The introduction is not the last part. Try again!",
+          	      	2:"The body does not include a call to action. Try again!"
+              	}
+      	}
+      	var rationaleArray = {
+      	      	"rationale_q1_1":"Correct! At the beginning of an opinion piece, the writer introduces the topic and the opinion statement.",
+      	      	"rationale_q1_2":"Correct! The body explains the opinion statement that was included in the introduction.",
+      	      	"rationale_q1_3":"Correct! The conclusion is the last part of an opinion piece and provides a strong finish.",
+      	}
 		var nextPage = "2-choice-matrix.php";
     
         $(document).on("click",".check", function() {

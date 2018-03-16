@@ -19,7 +19,7 @@
 				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">How can <strong>phrases</strong> help organize the sections in an opinion piece?</h2>
 				<div class="medium-8 medium-centered" style="margin: 0 auto;">
 					<div class="medium-8 medium-centered text-center" style="margin: 0 auto;">
-					<img src="images/7-a.png"/>
+					<img src="images/7-b.png"/>
 					</div>
 					<div style="position:absolute; top:289px; left:190px; width:200px; height:100px; border-bottom: 2px solid #A7A9AC">
 						For example, a writer <br/> may organize their <br/>ideas with <strong>phrases</strong> like, 

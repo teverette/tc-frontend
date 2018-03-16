@@ -59,7 +59,7 @@
 			$(document).foundation();
 			
 	    	var questions = ["quiz_3_1","quiz_3_2","quiz_3_3"];
-	      	var answerKey = {quiz_3_1:"1", quiz_3_2:"1",quiz_3_3:"2"};
+	      	var answerKey = {quiz_3_1:"2", quiz_3_2:"2",quiz_3_3:"2"};
 	      	var response_key = {};
 	      	var nextPage = "quiz-4.php";
 	      	var storage = window.sessionStorage;

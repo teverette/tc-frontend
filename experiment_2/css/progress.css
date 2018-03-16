@@ -3,6 +3,7 @@
 body.practice, body.progress {background-color: #FFF; color: #4A4A4A; font-family: 'Roboto', sans-serif; 
 	width:1024px;  position:relative;margin-right: 0;height:561px; overflow:none;}
 body.practice {position: inherit}
+body.practice .content {margin:36px 272px 0 114px}
 body.overview {background-color: #4A90E2; color: #FFF; text-align:center;width:1024px;}
 body.answer-rationale {background-color: #94D150; color: #FFF; width:1024px; padding-top: 50px; }
 .answer-rationale .title{color: #FFF}
@@ -116,7 +117,7 @@ input.question.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight:
 label.select {display:inline}
 label.radio, label.radio:after {display: inline-block; padding:0.5rem 0 0.5rem 0.5rem; font-size: .875rem !important;}
 select.question {width:12rem;font-family: 'Roboto', sans-serif;}
-.footer {z-index:100; height:47px;width:1024px;background-color: transparent;position:fixed; z-index:22; bottom:0; margin-bottom: 7px;}
+.footer {z-index:1002; height:47px;width:1024px;background-color: transparent;position:fixed; bottom:0; margin-bottom: 7px;}
 .footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}
 .footer div {margin: 0 114px}
 .answer-rationale-reveal .footer {position:absolute; left:0}
@@ -175,3 +176,13 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .has-tip {border:none}
 
 .learn-page-title {color: #0845B5; font-family: "Roboto Slab"; font-size: 28px; font-weight: 300; line-height: 37px;margin-top:22px}
+.hint-callout {position:fixed; left:808px; top:225px; height: 175px; width: 150px; border-radius: 4px; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px; 
+	color:#6C6C6C; background-color: #FBEB95; }
+.rationale-callout {
+	background-color: rgba(152,207,92,0.8);}
+	
+.callout {color: #0845B5;position:fixed; left:808px; top:225px; height: 175px; width: 150px; border-radius: 4px; font-size:16px; 
+	line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5); display:none}
+	
+.rationale-icon {color: #00AA00; position: relative; background-color: #4A4A4A; border-radius: 100%;cursor:pointer}
+.hint-icon {background-color:#4A4A4A; color: #F8E71C;position:relative; border-radius:100%;cursor:pointer}

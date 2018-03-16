@@ -50,10 +50,29 @@
 	<p class="hint-text primary">Words used to show order will explain the sequence before a reason or evidence is stated. Try again! </p>
 	<p class="hint-text secondary">Phrases used to show importance signal that special attention should be given before a reason is stated. Try again!</p>
 </div>
+<div class="hint-callout callout"></div>
+<div class="rationale-callout callout"></div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal style="background-color: #94D150; color: #FFF"></div>
  <script>
       	$(document).foundation();
       	var answerKey = {q4_1:"1", q4_2:"3", q4_3:"2"};
+      	var hintArray = {
+      	      	"hint_q4_1":{
+          	      	2:"&ldquo;Above all&rdquo; is not used for the first reason when organizing by importance. Try again!",
+          	      	3:"&ldquo;Another reason&rdquo; is used for the middle when organizing by importance. Try again!"},
+      	      	"hint_q4_2":{
+          	      	1:"&ldquo;One reason&rdquo; introduces the first reason, not the middle. Try again!",
+          	      	2:"&ldquo;Above all&rdquo; is used for the final reason in an explanation. Try again!"},
+      	      	"hint_q4_3":{
+          	      	1:"&ldquo;One reason&rdquo; is used for the first reason in a list. Try again!",
+          	      	3:"&ldquo;Another reason&rdquo; is used for the middle when organizing by importance. Try again!"
+              	}
+      	}
+      	var rationaleArray = {
+      	      	"rationale_q4_1":"Correct! “One reason” can be used for the first reason in a passage organized by importance.",
+      	      	"rationale_q4_2":"“Another reason” is used for the middle part of the list of reasons.",
+      	      	"rationale_q4_3":"Correct! “Above all” is used for the strongest reason, at the end of the passage.",
+      	}
 		var nextPage = "learn-page-3.php";
     
         $(document).on("click",".check", function() {

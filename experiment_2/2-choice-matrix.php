@@ -64,12 +64,31 @@
 			<p class="hint-text primary">Specific examples about how trains are better than buses offers support for the opinion. Try again!</p>
 			<p class="hint-text secondary">The writer reviews their main points and tells how people should behave in the conclusion. Try again!</p>
 		</div>
+		<div class="hint-callout callout"></div>
+		<div class="rationale-callout callout"></div>
 		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal style="background-color: #94D150; color: #FFF"></div>
 		<script>
 			$(document).foundation();
 			
 	    	var questions = ["q2_1","q2_2","q2_3"];
 	      	var answerKey = {q2_1:"introduction", q2_2:"body",q2_3:"conclusion"};
+	      	var hintArray = {
+	      	      	"hint_q2_1":{
+	          	      	"body":"This sentence states the opinion statement. Try again.",
+	          	      	"conclusion":"This sentence states the opinion statement. Try again."},
+	      	      	"hint_q2_2":{
+	          	      	"introduction":"This section includes reasons that support the opinion statement. Try again.",
+	          	      	"conclusion":"This section includes reasons that support the opinion statement. Try again."},
+	      	      	"hint_q2_3":{
+	          	      	"introduction":"This sentence repeats the opinion statement and makes a suggestion. Try again.",
+	          	      	"body":"This sentence repeats the opinion statement and makes a suggestion. Try again."
+	              	}
+	      	}
+	      	var rationaleArray = {
+	      	      	"rationale_q2_1":"Correct! This sentence introduces the opinion statement and helps the reader understand the topic.",
+	      	      	"rationale_q2_2":"Correct! The body gives reasons that support the writer’s opinion statement.",
+	      	      	"rationale_q2_3":"Correct! This sentence provides a strong finish by repeating the opinion statement and providing a call to action.",
+	      	}
 	      	var response_key = {};
 	      	var nextPage = "learn-page-2.php";
 	      	var storage = window.sessionStorage;

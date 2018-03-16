@@ -15,7 +15,7 @@
 		<h1 class="title-summary">You earned the opinion dog!</h1>
 		<img src="images/Summary.jpg" style="margin-top: 50px; height: 194px;"/>
 		<h3 style="font-family:'Roboto', sans-serif; color: #FCFCFC; font-family: "Roboto Slab"; font-size: 30px; font-weight: 300;	
-			line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> points out of <span>14</span>.</h3>
+			line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> points out of <span>16</span>.</h3>
 		
 		<div style="width:600px; margin:80px auto 0;position:relative;">
 			<div style="position:absolute; left:0;top:-30px">Novice</div>

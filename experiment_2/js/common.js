@@ -8,12 +8,8 @@ function showRationale() {
 }
 
 function updateNextStepBtn(o) {
-	$(o).addClass("check-verified").removeClass("check");
-	$(o).text("Continue");
-	location.hash = "checked";
-	/*$(".back").click(function(){
-		onclick="history.back(-2);";
-	})*/
+	$(o).addClass("check-verified").removeClass("check-disabled");
+	$(o).text("Next");
 }
 
 function lockTest() {
@@ -150,7 +146,11 @@ var ChoiceMatrix = {
       			ChoiceMatrix.updateQuestionStateCorrect(name);
 				this.points++;
 			} else {
-				ChoiceMatrix.updateQuestionStateIncorrect(name)
+				if(this.isQuiz) {
+					ChoiceMatrix.updateQuestionStateIncorrect(name);
+				} else {
+					ChoiceMatrix.updateQuestionStateIncorrectHint(name,selectedAnswer);
+				}
 			}
       		this.responseKey[name] = selectedAnswer;
       	},
@@ -160,11 +160,14 @@ var ChoiceMatrix = {
 			if(this.type=="mc") {
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
-				.prepend('<i class="fas fa-lg fa-check" style="color: #00AA00;position:absolute; left: 9px; top: 15px;" aria-hidden="true"></i>');
+				//.prepend('<i class="fas fa-lg fa-check" style="color: #00AA00;position:absolute; left: 9px; top: 15px;" aria-hidden="true"></i>');
+				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="right: -3px" aria-hidden="true"></i>');
+
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
-					.append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
+					// .append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
+					.append('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"></i>');
 			}
       	},
 
@@ -179,15 +182,28 @@ var ChoiceMatrix = {
 					.append('<i class="fas fa-times" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
 			}
       	},
+      	updateQuestionStateIncorrectHint: function(name, selectedAnswer) {
+      		if(this.type=="mc") {
+      			$('input[name='+name+']:checked').parent()
+				.addClass('incorrect')
+				.prepend('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:absolute; left: 9px; top: 15px; border-radius:100%" aria-hidden="true"></i>');
+			} else {
+				$('input[name='+name+']:checked').parent()
+				.addClass('incorrect')
+				.append('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:relative; right: -15px; top: 3px; border-radius:100%" aria-hidden="true"></i>');
+			}
+      	},
       	resetForm: function() {
       		$(".fa-check").remove();
       		$(".fa-times").remove();
+      		$(".hint-icon").remove();
+      		$(".hint-callout").hide();
       		$("td").removeClass("incorrect").removeClass("correct");
       		$("label").removeClass("incorrect").removeClass("correct");
       		$(".check").addClass("check-disabled").removeClass("check");
       		$('.hint').hide();
       	},
-      	showHint: function() {
+      	showHintOld: function() {
     		this.retryTotal++;
     		$('.hint-text').hide('fast');
     		if(this.retryTotal==1) { 
@@ -197,11 +213,36 @@ var ChoiceMatrix = {
     		}
     		$('.hint').show('500');
     	},
+    	showHint: function() {
+    		// find any incorrect answers
+    		$(".hint-icon").each(function(){
+    			$(this).click(function(){
+    				$(".rationale-callout").hide();
+    				var hint_id = $(this).data("question");
+    				var selected_answer = $(this).data("selected");
+    				// get hint string && add to tip
+    				var hint_index = "hint_" + hint_id;				
+    				$(".hint-callout").html(hintArray[hint_index][selected_answer]).show();
+    				
+    			})
+    		});
+    		
+    		$(".rationale-icon").each(
+				function(){
+					$(this).click(function(){
+						$(".callout").hide();
+						var rationale_index = "rationale_" + $(this).data("question");			
+						$(".rationale-callout").html(rationaleArray[rationale_index]).show();
+				})
+			});
+    	},
       	assess: function(includeScore) {
       		// todo add question/answer verification logic
       		ChoiceMatrix.resetForm();
 	    	ChoiceMatrix.getResponses();
 	    	if(this.isReadyNextStep()) {
+	    		updateNextStepBtn($(".check-disabled"));
+	    		/*
 	    		if(this.isQuiz!=true){
 	    			this.getRationale("correct");
 	    		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
@@ -209,8 +250,8 @@ var ChoiceMatrix = {
 	    		} else {
 	    			setTimeout(function(){ChoiceMatrix.getRationale("incorrect")},3000);
 	    		}
+	    		*/
 	    		
-	    		updateNextStepBtn($(".check"));
 	    	} else {
     			this.showHint();
     		}
@@ -310,10 +351,19 @@ var ClozeDropdown = {
       	if(!correctAnswer && !selectedAnswer) {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
-			$('*[data-question="'+name+'"]').addClass('correct').append('<i class="fas fa-check" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
-			this.points++;
+			if(this.isQuiz) {
+				$('*[data-question="'+name+'"]').addClass('correct').after('<i class="fas fa-check-circle" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
+				this.points++;
+			} else {
+				$('*[data-question="'+name+'"]').addClass('correct').after('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="right: -3px" aria-hidden="true"></i>');
+				this.points++;
+			}
 		}  else {
-			$('*[data-question="'+name+'"]').addClass('incorrect').append('<i class="fas fa-times " style="color: #FED700;position:relative; right: -10px;" aria-hidden="true"></i>');
+			if(this.isQuiz) {
+				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-question="' + name + '" class="fas fa-times" style="color: #FED700;position:relative; right: -10px;" style="right: -3px" aria-hidden="true"></i>');
+			} else {
+				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon"  style="right: -3px" aria-hidden="true"></i>');
+			}
 		}
       	
       	this.responseKey[name] = selectedAnswer;
@@ -321,12 +371,14 @@ var ClozeDropdown = {
 	},
 	resetForm: function() {
   		$(".fa-check").remove();
-  		$(".fa-times").remove();
+  		$(".rationale-icon").remove();
+  		$(".hint-icon").remove();
+  		$(".hint-callout").hide();
   		$(".button").removeClass("incorrect").removeClass("correct");
   		$(".check").addClass("check-disabled").removeClass("check");
   		$('.hint').hide();
   	},
-	showHint: function() {
+	showHintOld: function() {
 		this.retryTotal++;
 		$('.hint-text').hide('fast');
 		if(this.retryTotal==1) { 
@@ -336,10 +388,35 @@ var ClozeDropdown = {
 		}
 		$('.hint').show('fast');
 	},
+	showHint: function() {
+		// find any incorrect answers
+		$(".hint-icon").each(function(){
+			$(this).click(function(){
+				$(".callout").hide();
+				var hint_id = $(this).data("question");
+				var selected_answer = $(this).data("selected");
+				var hint_index = "hint_" + hint_id;				
+				$(".hint-callout").html(hintArray[hint_index][selected_answer]).show();
+			})
+		});
+		
+		$(".rationale-icon").each(
+			function(){
+				$(this).click(function(){
+					$(".callout").hide();
+					var rationale_index = "rationale_" + $(this).data("question");			
+					$(".rationale-callout").html(rationaleArray[rationale_index]).show();
+					
+			})
+		});
+	},
 	assess: function() {
 		this.resetForm();
 		this.getResponses();
+		this.showHint();
 		if(this.isReadyNextStep()) {
+			updateNextStepBtn($(".check-disabled"));
+			/*
 			if(this.isQuiz!=true){
     			this.getRationale("correct");
     		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
@@ -347,9 +424,9 @@ var ClozeDropdown = {
     		} else {
     			setTimeout(function(){ClozeDropdown.getRationale("incorrect")},3000);
     		}
-			updateNextStepBtn($(".check"));
+			*/
 		} else {
-			this.showHint();
+			// this.showHint();
 		}
 		
 	},
@@ -414,8 +491,6 @@ function scoreStuff() {
     		$('.dropdown-question').removeClass('selected-dd');
     		$(o).addClass('selected-dd');
     	}
- 		
- 		
  	}
 
 	$(document).on("click",".answer-option", function() {

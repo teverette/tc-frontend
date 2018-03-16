@@ -23,12 +23,12 @@
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td>Next</td>
+		      <td>In the end</td>
 		      <td class="text-center"><input type="radio" name="q3_1" value="order"/></td>
 		      <td class="text-center"><input type="radio" name="q3_1" value="importance"/></td>
 		    </tr>
 		    <tr>
-		      <td>One reason</td>
+		      <td>At first</td>
 		      <td class="text-center"><input type="radio" name="q3_2" value="order"/></td>
 		      <td class="text-center"><input type="radio" name="q3_2" value="importance"/></td>
 		    </tr>
@@ -60,12 +60,28 @@
 			<p class="hint-text primary">Phrases used to organize information by importance show a special or major idea being explained. Try again!</p>
 			<p class="hint-text secondary">Words and phrases can tell a reader the sequence or number of reasons used in an opinion piece. Try again!</p>
 		</div>
+		<div class="hint-callout callout"></div>
 		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal style="background-color: #94D150; color: #FFF"></div>
 		<script>
 			$(document).foundation();
 			
 	    	var questions = ["q3_1","q3_2","q3_3","q3_4"];
 	      	var answerKey = {q3_1:"order", q3_2:"order",q3_3:"importance",q3_4:"importance"};
+	      	var hintArray = {
+	      	      	"hint_q3_1":{
+	          	      	"importance":"&ldquo;In the end&rdquo; does not tell how important something is. Try again!",
+	          	      	"importance":"&ldquo;In the end&rdquo; does not tell how important something is. Try again!"},
+	      	      	"hint_q3_2":{
+	          	      	"importance":"&ldquo;At first&rdquo; does not help readers find the most important information. Try again!",
+	          	      	"importance":"&ldquo;At first&rdquo; does not help readers find the most important information. Try again!"},
+	      	      	"hint_q3_3":{
+	          	      	"order":"Organizing by order tells the sequence of events. Try again!",
+	          	      	"order":"Organizing by order tells the sequence of events. Try again!"},
+          	        "hint_q3_4":{
+	          	      	"order":"&ldquo;Above all&rdquo; does not tell which things happened first, next, and last. Try again!",
+	          	      	"order":"&ldquo;Above all&rdquo; does not tell which things happened first, next, and last. Try again!"
+          	        }
+	      	}
 	      	var response_key = {};
 	      	var nextPage = "4-cloze-dropdown.php";
 	      	var storage = window.sessionStorage;
@@ -79,7 +95,7 @@
 	     	});
 
 			$("input:radio").click(function() {
-				if($('.hint').is(':visible')) {
+				if($('.hint-icon').is(':visible')) {
 					ChoiceMatrix.resetForm();
 				}
 				ChoiceMatrix.enableButton();
