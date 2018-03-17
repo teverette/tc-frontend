@@ -115,7 +115,7 @@ table.grid-matrix td {position:relative}
 input.question.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f00d"; position: relative;right: -.75rem; top:.2rem; color:#FED700; font-size:22px;}
 
 label.select {display:inline}
-label.radio, label.radio:after {display: inline-block; padding:0.5rem 0 0.5rem 0.5rem; font-size: .875rem !important;}
+label.radio, label.radio:after {display: inline-block; font-size: .875rem !important;}
 select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .footer {z-index:1002; height:47px;width:1024px;background-color: transparent;position:fixed; bottom:0; margin-bottom: 7px;}
 .footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}

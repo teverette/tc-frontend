@@ -16,22 +16,33 @@
 	   to organize a <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> paragraph of an opinion piece?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
-	  <label class="radio" style="position:absolute; left:0; top:-5px;left:-30px;padding-left: 10px; padding-right: 0;">
-	  	<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
-	  </label>
-	  	<p class="lesson-copy mc-text">Reasons and evidence are often explained in a body paragraph of an opinion piece.</p>
-		<label class="radio" style="position:absolute; left:0; top:75px;left:-30px;padding-left: 10px; padding-right: 0;">
-		  	<input type="radio" class="q5_1 question" name="q5_1" value="2"/>
+	  	<label class="radio">
+			<div style="position:absolute; left:0; top:2px;left:-30px;padding-left: 10px; padding-right: 0;">
+		  		<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
+		  	</div>
+		  	<p class="lesson-copy mc-text">Reasons and evidence are often explained in a body paragraph of an opinion piece.</p>
 		</label>
-	  <p class="lesson-copy mc-text">Reasons and evidence should not be connected by a similar idea.</p>
-	  <label class="radio" style="position:absolute; left:0; top: 150px;left:-30px;padding-left: 10px; padding-right: 0;">
-	  	<input  type="radio" class="q5_1 question" name="q5_1" value="3"/>
-	  </label>
-	  <p class="lesson-copy mc-text">Evidence provides specific examples or pieces of information that explain a reason.</p>
-	  <label class="radio" style="position:absolute; left:0; top: 230px;left:-30px;padding-left: 10px; padding-right: 0;">
-	  	<input  type="radio" class="q5_1 question" name="q5_1" value="4"/>
-	  </label>
-	  <p class="lesson-copy mc-text">Reasons and evidence in a body paragraph support the opinion that is stated throughout an entire written piece.</p>
+		<label class="radio">
+			<div style="position:absolute; left:0; top:82px;left:-30px;padding-left: 10px; padding-right: 0;">
+		  		<input type="radio" class="q5_1 question" name="q5_1" value="2"/>
+		  	</div>
+		  	<p class="lesson-copy mc-text">Reasons and evidence should not be connected by a similar idea.</p>
+		</label>
+	  
+	  	<label class="radio">
+	  		<div style="position:absolute; left:0; top: 157px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  			<input  type="radio" class="q5_1 question" name="q5_1" value="3"/>
+	  		</div>
+	  		<p class="lesson-copy mc-text">Evidence provides specific examples or pieces of information that explain a reason.</p>
+	  	</label>
+	  
+	  	<label class="radio">
+	  		<div style="position:absolute; left:0; top: 237px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  			<input  type="radio" class="q5_1 question" name="q5_1" value="4"/>
+	  		</div>
+	  		<p class="lesson-copy mc-text">Reasons and evidence in a body paragraph support the opinion that is stated throughout an entire written piece.</p>	
+	 	</label>
+	  
 	  </div>
 	  <div class="medium-12 lesson-desc grid-x hide rationale">
 	  	<h3>Why are these the answers?</h3>
@@ -45,6 +56,7 @@
 		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 	</div>
 	<div class="hint-callout callout"></div>
+	<div class="rationale-callout callout"></div>
 	<div class="hint">
 		<p class="hint-label">Not quite!</p>
 		<p class="hint-text primary">A writer can organize their ideas in the body section by using reasons and evidence. Try again!</p>
@@ -61,6 +73,9 @@
           	      	1:"Not quite. This is a true statement.",
           	      	3:"Not quite. This is a true statement.",
           	        4:"Not quite. This is a true statement."}
+      	}
+      	var rationaleArray = {
+      	      	"rationale_q5_1":"Correct! Reasons and evidence should be connected by a similar idea, so this is not a true statement."
       	}
 		var answerKey = {q5_1:"2"};
   		var nextPage = "quiz-transition.php";

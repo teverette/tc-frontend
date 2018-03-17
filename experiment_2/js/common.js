@@ -9,7 +9,7 @@ function showRationale() {
 
 function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check-disabled");
-	$(o).text("Next");
+	$(o).html('Next <i class="fas fa-lg fa-angle-right" ></i>');
 }
 
 function lockTest() {
@@ -156,26 +156,24 @@ var ChoiceMatrix = {
       	},
 
 		updateQuestionStateCorrect: function(name) {
-      		// $(o).parent().addClass('correct');
 			if(this.type=="mc") {
+				$('input[name='+name+']:checked').parent().parent().addClass("correct");
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
-				//.prepend('<i class="fas fa-lg fa-check" style="color: #00AA00;position:absolute; left: 9px; top: 15px;" aria-hidden="true"></i>');
-				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="right: -3px" aria-hidden="true"></i>');
-
+				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"></i>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
-					// .append('<i class="fas fa-check" style="color: #00AA00;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
 					.append('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"></i>');
 			}
       	},
 
       	updateQuestionStateIncorrect: function(name) {
       		if(this.type=="mc") {
+      			$('input[name='+name+']:checked').parent().parent().addClass("incorrect");
       			$('input[name='+name+']:checked').parent()
 				.addClass('incorrect')
-				.prepend('<i class="fas fa-lg fa-times" style="color: #FED700;position:absolute; left: 9px; top: 15px;" aria-hidden="true"></i>');
+				.prepend('<i class="fas fa-lg fa-times" style="color: #FED700;position:absolute; right: -630px; top: 7px;" aria-hidden="true"></i>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('incorrect')
@@ -184,9 +182,9 @@ var ChoiceMatrix = {
       	},
       	updateQuestionStateIncorrectHint: function(name, selectedAnswer) {
       		if(this.type=="mc") {
+      			$('input[name='+name+']:checked').parent().parent().addClass("incorrect");
       			$('input[name='+name+']:checked').parent()
-				.addClass('incorrect')
-				.prepend('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:absolute; left: 9px; top: 15px; border-radius:100%" aria-hidden="true"></i>');
+				.prepend('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:absolute; right: -630px; top: 7px; border-radius:100%" aria-hidden="true"></i>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 				.addClass('incorrect')
@@ -203,15 +201,12 @@ var ChoiceMatrix = {
       		$(".check").addClass("check-disabled").removeClass("check");
       		$('.hint').hide();
       	},
-      	showHintOld: function() {
-    		this.retryTotal++;
-    		$('.hint-text').hide('fast');
-    		if(this.retryTotal==1) { 
-    			$('.hint-text.primary').show('fast');
-    		} else {
-    			$('.hint-text.secondary').show('fast');
+      	showFirstHint: function() {
+    		if($(".hint-icon").length>0) {
+    			$(".hint-icon").first().trigger("click");
+    		} else if($(".rationale-icon").length>0) {
+    			$(".rationale-icon").first().trigger("click");
     		}
-    		$('.hint').show('500');
     	},
     	showHint: function() {
     		// find any incorrect answers
@@ -240,6 +235,8 @@ var ChoiceMatrix = {
       		// todo add question/answer verification logic
       		ChoiceMatrix.resetForm();
 	    	ChoiceMatrix.getResponses();
+	    	this.showHint();
+	    	this.showFirstHint();
 	    	if(this.isReadyNextStep()) {
 	    		updateNextStepBtn($(".check-disabled"));
 	    		/*
@@ -253,7 +250,7 @@ var ChoiceMatrix = {
 	    		*/
 	    		
 	    	} else {
-    			this.showHint();
+    			
     		}
       	},
       	getRationale: function(status) {
