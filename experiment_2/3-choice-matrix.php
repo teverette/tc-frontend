@@ -44,23 +44,16 @@
 		    </tr>
 		  </tbody>
 		</table>
-		
-		  <div class="medium-12 lesson-desc grid-x hide rationale">
-		  	<h3>Why are these the answers?</h3>
-		  	<p>The words “one reason”  and “next” organize an idea based on its order. The phrases “most important” and “above all” organize the ideas in the opinion piece based on their  importance. </p>
-		  </div>
+
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
 			<a class="button back button-left-side" href="learn-page-2.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
-		<div class="hint">
-			<p class="hint-label">Not quite!</p>
-			<p class="hint-text primary">Phrases used to organize information by importance show a special or major idea being explained. Try again!</p>
-			<p class="hint-text secondary">Words and phrases can tell a reader the sequence or number of reasons used in an opinion piece. Try again!</p>
-		</div>
+		
 		<div class="hint-callout callout"></div>
+		<div class="rationale-callout callout"></div>
 		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal style="background-color: #94D150; color: #FFF"></div>
 		<script>
 			$(document).foundation();
@@ -81,6 +74,12 @@
 	          	      	"order":"&ldquo;Above all&rdquo; does not tell which things happened first, next, and last. Try again!",
 	          	      	"order":"&ldquo;Above all&rdquo; does not tell which things happened first, next, and last. Try again!"
           	        }
+	      	}
+	      	var rationaleArray = {
+	      	      	"rationale_q3_1":"Correct! Writers use “in the end” to tell the order something happened in.",
+	      	      	"rationale_q3_2":"Correct! “At first” is used to tell the order something happened in. ",
+	      	      	"rationale_q3_3":"Correct! Writers use “Most importantly” to tell how important an idea is.",
+	      	      	"rationale_q3_4":"Correct! “Above all” tells how important an idea is.",
 	      	}
 	      	var response_key = {};
 	      	var nextPage = "4-cloze-dropdown.php";
@@ -104,6 +103,9 @@
 			$(document).ready(function() {
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize('question_3',4,4);
+      			if(hasAlreadyAnswered("question_3")) {
+					ChoiceMatrix.setPreviousResponse();
+				}
       		});
 
 			$(window).bind("unload", function() {
@@ -111,12 +113,8 @@
 			});
       		
 			window.onload = function() {
-				var isLocked = lockTest();
-				if(isLocked) {
-					ChoiceMatrix.getResponses();
-				}
+				
 			}
 		  </script>
-		 <!-- <?php echo "page loaded";?> -->
 	</body>
 </html>

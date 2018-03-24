@@ -30,17 +30,17 @@
 	<a class="button back button-left-side" href="3-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
-<div id="drawer-one" class="drop-down-drawer text-center">
+<div id="drawer-one" class="drop-down-drawer q4_1 text-center">
 	<a class="button secondary answer-option" data-value="1">One reason</a>
 	<a class="button secondary answer-option" data-value="2">Above all,</a>
 	<a class="button secondary answer-option" data-value="3">Another reason</a>	
 </div>
-<div id="drawer-two" class="drop-down-drawer text-center">
+<div id="drawer-two" class="drop-down-drawer q4_2 text-center">
 	<a class="button secondary answer-option" data-value="1">One reason</a>
 	<a class="button secondary answer-option" data-value="2">Above all,</a>
 	<a class="button secondary answer-option" data-value="3">Another reason</a>	
 </div>
-<div id="drawer-three" class="drop-down-drawer text-center">
+<div id="drawer-three" class="drop-down-drawer q4_3 text-center">
 	<a class="button secondary answer-option" data-value="1">One reason</a>
 	<a class="button secondary answer-option" data-value="2">Above all,</a>
 	<a class="button secondary answer-option" data-value="3">Another reason</a>	
@@ -87,13 +87,13 @@
       	var storage = window.sessionStorage;
       	$(document).ready(function() {
 			ClozeDropdown.initialize('question_4',3,3);
+      		if(hasAlreadyAnswered("question_4")) {
+      			ClozeDropdown.setPreviousResponse();
+			}
 	  	});
 
       	window.onload = function() {
-    	  	var isLocked = lockTest();
-			if(isLocked) {
-				ClozeDropdown.getResponses();
-			}
+
     	}
   </script>
 </body>

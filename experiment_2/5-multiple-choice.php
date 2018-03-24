@@ -4,6 +4,9 @@
 	  <title>testing</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style>
+	  	
+	  </style>
 	</head>
 <body class="practice">
 	<?php $width = "89.9"; ?>
@@ -17,27 +20,27 @@
 		      	title="The body follows the introduction. It explains how the opinion statement is supported with reasons or evidence.">body</span> paragraph of an opinion piece?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  	<label class="radio">
-			<div style="position:absolute; left:0; top:2px;left:-30px;padding-left: 10px; padding-right: 0;">
+			<div class="mc-input-box" style="top: 2px">
 		  		<input type="radio" class="q5_1 question" name="q5_1" value="1"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Reasons and evidence are often explained in a body paragraph of an opinion piece.</p>
 		</label>
 		<label class="radio">
-			<div style="position:absolute; left:0; top:82px;left:-30px;padding-left: 10px; padding-right: 0;">
+			<div class="mc-input-box" style="top: 82px">
 		  		<input type="radio" class="q5_1 question" name="q5_1" value="2"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Reasons and evidence should not be connected by a similar idea.</p>
 		</label>
 	  
 	  	<label class="radio">
-	  		<div style="position:absolute; left:0; top: 157px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  		<div class="mc-input-box" style="top: 157px">
 	  			<input  type="radio" class="q5_1 question" name="q5_1" value="3"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">Evidence provides specific examples or pieces of information that explain a reason.</p>
 	  	</label>
 	  
 	  	<label class="radio">
-	  		<div style="position:absolute; left:0; top: 237px;left:-30px;padding-left: 10px; padding-right: 0;">
+	  		<div class="mc-input-box" style="top: 237px">
 	  			<input  type="radio" class="q5_1 question" name="q5_1" value="4"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">Reasons and evidence in a body paragraph support the opinion that is stated throughout an entire written piece.</p>	
@@ -99,13 +102,13 @@
 			highlightCurrentQuiz();
 			highlightAllCorrectQuiz();
 			ChoiceMatrix.initialize("question_5",1,1,"mc");
+			if(hasAlreadyAnswered("question_5")) {
+				ChoiceMatrix.setPreviousResponse();
+			}
 		});
 
       	window.onload = function() {
-    		var isLocked = lockTest();
-		  	if(isLocked) {
-				ChoiceMatrix.setPreviousResponse();
-			}
+    		
 		}
   </script>
 </body>

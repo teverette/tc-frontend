@@ -4,9 +4,6 @@
 		<title>What is verbal irony?</title>
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
-		<style>
-
-		</style>
 	</head>
 	<body class="practice">
 		<?php $width = "22.2"; ?>
@@ -56,13 +53,8 @@
 		</div>
 		
 		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="1-cloze-dropdown.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
+			<a class="button back button-left-side" href="1-cloze-dropdown.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
-		<div class="hint">
-			<p class="hint-label">Not quite!</p>
-			<p class="hint-text primary">Specific examples about how trains are better than buses offers support for the opinion. Try again!</p>
-			<p class="hint-text secondary">The writer reviews their main points and tells how people should behave in the conclusion. Try again!</p>
 		</div>
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
@@ -115,14 +107,13 @@
 			$(document).ready(function() {
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize("question_2",3,3);
+      			if(hasAlreadyAnswered("question_2")) {
+					ChoiceMatrix.setPreviousResponse();
+				}
       		});
       		
 			window.onload = function() {
-				var isLocked = lockTest();
-				if(isLocked) {
-					ChoiceMatrix.setPreviousResponse();
-//					ChoiceMatrix.getResponses();
-				}
+				
 			}
 		  </script>
 		 <!-- <?php echo "page loaded";?> -->

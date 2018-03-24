@@ -17,20 +17,20 @@
 		<div class="overview-content">
 			<div class="grid-x grid-padding-x" >
 				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer<br/> the following questions: </h2>
-				<div class="lesson-point-item first-item" style="display:none; margin-left:141px;margin-top:57px; padding-left: 85px;">
+				<div class="lesson-point-item first-item" style="margin-left:141px;margin-top:57px; padding-left: 85px;">
 					<div class="text-left">
 						<img src="images/One.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
 						<p style="display:inline; " class="subheader">Organize</p>
 					</div>	
 					<p style="width:218px;text-align:left; padding-left: 42px;" class="subheader-content">How is an opinion piece organized?</p>
 				</div>
-				<div class="lesson-point-item second-item" style="margin-left:0px; width: 292px;display:none">
+				<div class="lesson-point-item " style="margin-left:0px; width: 292px;">
 					<img src="images/1-a.png" style="width: 250px"/>
-					<div>
+					<div class="second-item" style="display:none">
 						<img src="images/Three.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
 						<p style="display:inline; " class="subheader">Support</p>
 					</div>
-					<p style="width:321px;text-align:left;" class="subheader-content">How does a writer organize reasons and evidence in an opinion piece?</p>			
+					<p style="width:321px;text-align:left;display:none" class="subheader-content second-item">How does a writer organize reasons and evidence in an opinion piece?</p>			
 				</div>
 				<div class="lesson-point-item third-item" style="display:none; margin-top: 124px; left: -30px; position: relative;">
 					<div class="text-left">
@@ -52,10 +52,10 @@
 			$(document).ready(function() {
 				$(".first-item").fadeIn(500);
 				setTimeout(function() {
-					$(".second-item").fadeIn(500);
+					$(".third-item").fadeIn(500);
 				},1000);
 				setTimeout(function() {
-					$(".third-item").fadeIn(500);
+					$(".second-item").fadeIn(500);
 				},2000);
 				
 			});

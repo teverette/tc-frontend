@@ -36,33 +36,68 @@
 </div>
 <div class="grid-x grid-padding-x footer" style="z-index:0">
 	<a class="button back button-left-side" href="quiz-4.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+	<a class="check-disabled button success button-right-side forward-button submit">Submit <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
-<div id="drawer-one" class="drop-down-drawer text-center">
+<div id="drawer-one" class="drop-down-drawer quiz_5_1 text-center">
 	<a class="button secondary answer-option" data-value="1">Introduction</a>
 	<a class="button secondary answer-option" data-value="2">Body</a>
 	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-two" class="drop-down-drawer text-center">
+<div id="drawer-two" class="drop-down-drawer quiz_5_2 text-center">
 	<a class="button secondary answer-option" data-value="1">Introduction</a>
 	<a class="button secondary answer-option" data-value="2">Body</a>
 	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-three" class="drop-down-drawer text-center">
+<div id="drawer-three" class="drop-down-drawer quiz_5_3 text-center">
 	<a class="button secondary answer-option" data-value="1">Introduction</a>
 	<a class="button secondary answer-option" data-value="2">Body</a>
 	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-four" class="drop-down-drawer text-center">
+<div id="drawer-four" class="drop-down-drawer quiz_5_4 text-center">
 	<a class="button secondary answer-option" data-value="1">Introduction</a>
 	<a class="button secondary answer-option" data-value="2">Body</a>
 	<a class="button secondary answer-option" data-value="3">Conclusion</a>	
 </div>
+<div class="rationale-callout callout" style="height: 375px; top: 100px;"></div>
+<div class="hint-callout callout" style="height: 375px; top: 100px;"></div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal></div>
  <script>
 	
       	$(document).foundation();
       	var answerKey = {quiz_5_1:"1", quiz_5_2:"2", quiz_5_3:"2",quiz_5_4:"3"};
+      	var rationaleText = "At the beginning of the opinion piece, the introduction introduces the topic and the opinion statement. After the introduction, \
+  	      	the body supports the writer’s opinion with reasons and evidence. The conclusion at the end summarizes the reasons and includes a call to action.";
+      	var hintArray = {
+          		"hint_quiz_5_1": {
+          			"2":rationaleText,
+          			"3":rationaleText},
+          		"hint_quiz_5_2": {
+              		"1":rationaleText,
+              		"3":rationaleText},
+              	"hint_quiz_5_3": {
+                  	"1":rationaleText,
+                  	"3":rationaleText},
+                "hint_quiz_5_4": {
+                    "1":rationaleText,
+                    "2":rationaleText
+                }
+      	}
+          		
+      	var rationaleArray = {
+      		"rationale_quiz_5_1":
+      			"At the beginning of the opinion piece, the introduction introduces the topic and the opinion statement. After the introduction, \
+      	      	the body supports the writer’s opinion with reasons and evidence. The conclusion at the end summarizes the reasons and includes a call to action.",
+      	    "rationale_quiz_5_2":
+        			"At the beginning of the opinion piece, the introduction introduces the topic and the opinion statement. After the introduction, \
+        	      	the body supports the writer’s opinion with reasons and evidence. The conclusion at the end summarizes the reasons and includes a call to action.",
+      	     "rationale_quiz_5_3":
+          			"At the beginning of the opinion piece, the introduction introduces the topic and the opinion statement. After the introduction, \
+          	      	the body supports the writer’s opinion with reasons and evidence. The conclusion at the end summarizes the reasons and includes a call to action.",
+          	 "rationale_quiz_5_4":
+            			"At the beginning of the opinion piece, the introduction introduces the topic and the opinion statement. After the introduction, \
+            	      	the body supports the writer’s opinion with reasons and evidence. The conclusion at the end summarizes the reasons and includes a call to action."
+      	}
+      	
 		var nextPage = "lp-end.php";
     
         $(document).on("click",".check", function() {
@@ -85,17 +120,18 @@
 		});
 
       	window.onload = function() {
-    	  	var isLocked = lockTest();
-			if(isLocked) {
-				ClozeDropdown.setPreviousResponse();
-			}
+      		
     	}
     	$(document).ready(function() {
     		highlightCurrentQuiz();
     		getScore();
+    		if(hasAlreadyAnswered("quiz_5")) {
+				ClozeDropdown.setPreviousResponse();
+			}
     		if($(".content").prop('scrollHeight') > ($(".content").height() - 100)) {
     			$(".content").attr("style","padding-bottom:100px");
     		}
+    		
         });
   </script>
 </body>

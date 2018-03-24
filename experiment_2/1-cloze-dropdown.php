@@ -4,9 +4,6 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <style>
-	  	
-	  </style>
 </head>
 <body class="practice">
 	<?php $width = "11.1"; ?>
@@ -17,8 +14,8 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
 <span style="display:inline-block; float:right; margin-top: 20px; text-align: center; cursor:pointer; height: 24px; width: 34px; border: 2px solid #FFFFFF; border-radius: 2px;" onclick="$('.global-tip').hide()">OK</span></div>
 <div class="grid-x grid-padding-x">
   
-  <h2 class="title medium-12">How is an <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
-		      	title="To arrange information and ideas in to a pattern.">opinion</span> piece organized into sections?</h2>
+  <h2 class="title medium-12">How is an opinion piece <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
+		      	title="To arrange information and ideas in to a pattern.">organized</span> into sections?</h2>
  
   <div class="medium-12 grid-x lesson-copy">
     <p>
@@ -39,26 +36,22 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
 	<a class="button back button-left-side" href="practice-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
 </div>
-<div id="drawer-one" class="drop-down-drawer text-center">
+<div id="drawer-one" class="drop-down-drawer q1_1 text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-two" class="drop-down-drawer text-center">
+<div id="drawer-two" class="drop-down-drawer q1_2 text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
 </div>
-<div id="drawer-three" class="drop-down-drawer text-center">
+<div id="drawer-three" class="drop-down-drawer q1_3 text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
 	<a class="button secondary answer-option q1_3" data-value="3">Conclusion</a>	
 </div>
-<div class="hint">
-	<p class="hint-label">Not quite!</p>
-	<p class="hint-text primary">Introductions start an opinion piece. The body section explains proof for an opinion statement. Try again!</p>
-	<p class="hint-text secondary">Conclusions summarize the opinion piece and suggests how the reader should think about a topic. Try again!</p>
-</div>
+
 <div class="hint-callout callout"></div>
 <div class="rationale-callout callout"></div>
 
@@ -81,9 +74,9 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
               	}
       	}
       	var rationaleArray = {
-      	      	"rationale_q1_1":"Correct! At the beginning of an opinion piece, the writer introduces the topic and the opinion statement.",
-      	      	"rationale_q1_2":"Correct! The body explains the opinion statement that was included in the introduction.",
-      	      	"rationale_q1_3":"Correct! The conclusion is the last part of an opinion piece and provides a strong finish.",
+      	      	"rationale_q1_1":"At the beginning of an opinion piece, the writer introduces the topic and the opinion statement.",
+      	      	"rationale_q1_2":"The body explains the opinion statement that was included in the introduction.",
+      	      	"rationale_q1_3":"The conclusion is the last part of an opinion piece and provides a strong finish.",
       	}
 		var nextPage = "2-choice-matrix.php";
     
@@ -92,7 +85,6 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
         });
       
       	$(document).on("click",".check-verified", function() {
-    	  console.log("is verified");
 		  window.location.href=nextPage;
       	});
       
@@ -100,15 +92,13 @@ background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover 
     	storage["quiz_total"]=0;
       	$(document).ready(function() {
 			ClozeDropdown.initialize("question_1",3,3);
+			if(hasAlreadyAnswered("question_1")) {
+				ClozeDropdown.setPreviousResponse();
+			}
 	  	});
 
-      	window.onload = function() {
-    	  	var isLocked = lockTest();
-			if(isLocked) {
-				ClozeDropdown.setPreviousResponse();
-				// ClozeDropdown.getResponses();
-			}
-    	}
+
+      	setCookie("quiz", ' {q1_1:"1", q1_2:"2", q1_3:"3"}', 2);
   </script>
 </body>
 </html>

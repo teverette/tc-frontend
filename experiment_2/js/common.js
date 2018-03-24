@@ -8,8 +8,12 @@ function showRationale() {
 }
 
 function updateNextStepBtn(o) {
-	$(o).addClass("check-verified").removeClass("check-disabled");
+	$(o).addClass("check-verified").removeClass("check-disabled").removeClass("again");
 	$(o).html('Next <i class="fas fa-lg fa-angle-right" ></i>');
+}
+
+function updateCheckAgainBtn(o) {
+	$(o).html('Check again <i class="fas fa-lg fa-angle-right" ></i>').addClass('again');
 }
 
 function lockTest() {
@@ -25,6 +29,15 @@ function lockTest() {
     	return true;
     }
     return false;
+}
+
+function hasAlreadyAnswered(q) {
+	if(storage[q]!=null) {
+		// var questionResponses = storage[q];
+		return true;
+	} else{
+		return false;
+	}
 }
 
 function highlightCurrentQuiz() {
@@ -146,7 +159,7 @@ var ChoiceMatrix = {
       			ChoiceMatrix.updateQuestionStateCorrect(name);
 				this.points++;
 			} else {
-				if(this.isQuiz) {
+				if(false) {
 					ChoiceMatrix.updateQuestionStateIncorrect(name);
 				} else {
 					ChoiceMatrix.updateQuestionStateIncorrectHint(name,selectedAnswer);
@@ -160,7 +173,7 @@ var ChoiceMatrix = {
 				$('input[name='+name+']:checked').parent().parent().addClass("correct");
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
-				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"></i>');
+				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px; transform: scale(1.95)" aria-hidden="true"></i>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
@@ -192,7 +205,7 @@ var ChoiceMatrix = {
 			}
       	},
       	resetForm: function() {
-      		$(".fa-check").remove();
+      		$(".rationale-icon").remove();
       		$(".fa-times").remove();
       		$(".hint-icon").remove();
       		$(".hint-callout").hide();
@@ -213,11 +226,14 @@ var ChoiceMatrix = {
     		$(".hint-icon").each(function(){
     			$(this).click(function(){
     				$(".rationale-callout").hide();
+    				$(".hint-icon").removeClass("pressed");
+    				$(".rationale-icon").removeClass("pressed");
+    				$(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
     				// get hint string && add to tip
     				var hint_index = "hint_" + hint_id;				
-    				$(".hint-callout").html(hintArray[hint_index][selected_answer]).show();
+    				$(".hint-callout").html("<h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer]).show();
     				
     			})
     		});
@@ -226,8 +242,11 @@ var ChoiceMatrix = {
 				function(){
 					$(this).click(function(){
 						$(".callout").hide();
+						$(".rationale-icon").removeClass("pressed");
+						$(".hint-icon").removeClass("pressed");
+						$(this).addClass("pressed");
 						var rationale_index = "rationale_" + $(this).data("question");			
-						$(".rationale-callout").html(rationaleArray[rationale_index]).show();
+						$(".rationale-callout").html("<h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index]).show();
 				})
 			});
     	},
@@ -239,18 +258,8 @@ var ChoiceMatrix = {
 	    	this.showFirstHint();
 	    	if(this.isReadyNextStep()) {
 	    		updateNextStepBtn($(".check-disabled"));
-	    		/*
-	    		if(this.isQuiz!=true){
-	    			this.getRationale("correct");
-	    		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
-	    			setTimeout(function(){ChoiceMatrix.getRationale("correct")},3000);
-	    		} else {
-	    			setTimeout(function(){ChoiceMatrix.getRationale("incorrect")},3000);
-	    		}
-	    		*/
-	    		
 	    	} else {
-    			
+	    		updateCheckAgainBtn($(".check-disabled"));
     		}
       	},
       	getRationale: function(status) {
@@ -284,9 +293,10 @@ var ChoiceMatrix = {
     			$currentSelect.attr("checked","checked");
     			this.checkResponse(x, this.responseKey[x]);
     		}
-    		// showRationale();
-    		//updateNextStepBtn($(".check"));
-    		$(".forward-button").addClass("check-verified").removeClass("check-disabled").text("Continue");
+    		$("input").attr('disabled','disabled');
+    		this.showHint();
+	    	this.showFirstHint();
+    		updateNextStepBtn($(".check-disabled"));
     	},
 		initialize: function(name, minToScore, minToCheck, type) {
 			this.name = name;
@@ -349,14 +359,14 @@ var ClozeDropdown = {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
 			if(this.isQuiz) {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<i class="fas fa-check-circle" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
 				this.points++;
 			} else {
 				$('*[data-question="'+name+'"]').addClass('correct').after('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="right: -3px" aria-hidden="true"></i>');
 				this.points++;
 			}
 		}  else {
-			if(this.isQuiz) {
+			if(false) {
 				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-question="' + name + '" class="fas fa-times" style="color: #FED700;position:relative; right: -10px;" style="right: -3px" aria-hidden="true"></i>');
 			} else {
 				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon"  style="right: -3px" aria-hidden="true"></i>');
@@ -375,25 +385,25 @@ var ClozeDropdown = {
   		$(".check").addClass("check-disabled").removeClass("check");
   		$('.hint').hide();
   	},
-	showHintOld: function() {
-		this.retryTotal++;
-		$('.hint-text').hide('fast');
-		if(this.retryTotal==1) { 
-			$('.hint-text.primary').show('slow');
-		} else {
-			$('.hint-text.secondary').show('slow');
+  	showFirstHint: function() {
+		if($(".hint-icon").length>0) {
+			$(".hint-icon").first().trigger("click");
+		} else if($(".rationale-icon").length>0) {
+			$(".rationale-icon").first().trigger("click");
 		}
-		$('.hint').show('fast');
 	},
 	showHint: function() {
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
 			$(this).click(function(){
 				$(".callout").hide();
+				$(".rationale-icon").removeClass("pressed");
+				$(".hint-icon").removeClass("pressed");
+				$(this).addClass("pressed");
 				var hint_id = $(this).data("question");
 				var selected_answer = $(this).data("selected");
 				var hint_index = "hint_" + hint_id;				
-				$(".hint-callout").html(hintArray[hint_index][selected_answer]).show();
+				$(".hint-callout").html("<h4 class='nearly-there'>Nearly there!</h4>" + hintArray[hint_index][selected_answer]).show();
 			})
 		});
 		
@@ -401,8 +411,11 @@ var ClozeDropdown = {
 			function(){
 				$(this).click(function(){
 					$(".callout").hide();
+					$(".rationale-icon").removeClass("pressed");
+					$(".hint-icon").removeClass("pressed");
+					$(this).addClass("pressed");
 					var rationale_index = "rationale_" + $(this).data("question");			
-					$(".rationale-callout").html(rationaleArray[rationale_index]).show();
+					$(".rationale-callout").html("<h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index]).show();
 					
 			})
 		});
@@ -411,19 +424,11 @@ var ClozeDropdown = {
 		this.resetForm();
 		this.getResponses();
 		this.showHint();
+		this.showFirstHint();
 		if(this.isReadyNextStep()) {
 			updateNextStepBtn($(".check-disabled"));
-			/*
-			if(this.isQuiz!=true){
-    			this.getRationale("correct");
-    		} else if(this.isQuiz==true && this.points==this.numberCorrect) {
-    			setTimeout(function(){ClozeDropdown.getRationale("correct")},3000);
-    		} else {
-    			setTimeout(function(){ClozeDropdown.getRationale("incorrect")},3000);
-    		}
-			*/
 		} else {
-			// this.showHint();
+			updateCheckAgainBtn($(".check-disabled"));
 		}
 		
 	},
@@ -456,8 +461,17 @@ var ClozeDropdown = {
 			console.log(this.responseKey[x]);
 			var $currentSelect = $('select[name='+x+']');
 			$currentSelect.val(this.responseKey[x]);
+			var curVal = this.responseKey[x];
+			// set value in dropdown
+
+			var text = $(".drop-down-drawer."+x+" .answer-option[data-value="+curVal+"]").text();
+			$("a[data-question="+x+"]").text(text);
 			this.checkResponse($currentSelect, x, this.responseKey[x]);
 		}
+		this.showHint();
+		this.showFirstHint();
+		$("input").attr('disabled','disabled');
+		updateNextStepBtn($(".check-disabled"));
 	},
 	initialize: function(name, minToScore, minToCheck) {
 		this.name = name;
@@ -503,3 +517,26 @@ function scoreStuff() {
 
 		ClozeDropdown.enableButton();
 	});
+	
+	
+	function setCookie(cname, cvalue, exdays) {
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	    var expires = "expires="+d.toUTCString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	
+	function getCookie(cname) {
+	    var name = cname + "=";
+	    var ca = document.cookie.split(';');
+	    for(var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}

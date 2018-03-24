@@ -42,24 +42,41 @@
 		  </tbody>
 		</table>
 		
-		  <div class="medium-12 lesson-desc grid-x hide rationale">
-		  	<h3>Why are these the answers?</h3>
-		  	<p>First, an opinion piece should begin with an introduction, second it is followed a 
-		  	body section and lastly it ends with a conclusion.</p>
-		  </div>
+		 
 		</div>
 		</div>
 		<div class="grid-x grid-padding-x footer">
 			<a class="button back button-left-side" href="quiz-2.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-disabled button success button-right-side forward-button" style="z-index:1001;position:relative;">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="check-disabled button success button-right-side forward-button submit" style="z-index:1001;position:relative;">Submit <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
-	
+		<div class="rationale-callout callout" style="height: 300px; top: 100px;"></div>
+		<div class="hint-callout callout" style="height: 300px; top: 100px;"></div>
 		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal></div>
 		<script>
 			$(document).foundation();
 			
 	    	var questions = ["quiz_3_1","quiz_3_2","quiz_3_3"];
 	      	var answerKey = {quiz_3_1:"2", quiz_3_2:"2",quiz_3_3:"2"};
+	      	var rationaleText = "Reasons and evidence work together to support a writer&rsquo;s opinion. &rdquo;A cat might meow, but it&rsquo;s usually \
+      	      	not as loud as a barking dog&rdquo; is correct because it is specific evidence that supports the reason.";
+	      	var hintArray = {
+	      			"hint_quiz_3_1":{
+	          	      	"1":rationaleText
+	          	     	},
+	          	      	
+	      	      	"hint_quiz_3_2":{
+	          	      	"1":rationaleText},
+	          	      	
+	      	      	"hint_quiz_3_3":{
+	          	      	"1":rationaleText
+	              	}
+	      	}
+	      	var rationaleArray = {
+	      	      	"rationale_quiz_3_1": rationaleText,
+		      	    "rationale_quiz_3_2": rationaleText,
+			      	"rationale_quiz_3_3": rationaleText
+	      	}
+	      	
 	      	var response_key = {};
 	      	var nextPage = "quiz-4.php";
 	      	var storage = window.sessionStorage;
@@ -80,6 +97,9 @@
       			highlightCurrentQuiz();
 				ChoiceMatrix.initialize('quiz_3',3,3);
       			ChoiceMatrix.isQuiz=true; 
+      			if(hasAlreadyAnswered("quiz_3")) {
+					ChoiceMatrix.setPreviousResponse();
+				}
       			getScore();
 
       		});
@@ -89,10 +109,7 @@
 			});
       		
 			window.onload = function() {
-				var isLocked = lockTest();
-				if(isLocked) {
-					ChoiceMatrix.setPreviousResponse();
-				}
+				
 			}
 		  </script>
 		 <!-- <?php echo "page loaded";?> -->

@@ -15,7 +15,7 @@
 			<div class="grid-x grid-padding-x" style="text-align:center">
 				<h2 class="medium-12 learn-page-title text-center">What is organization in an opinion piece?</h2>
 				<p class="medium-12 subtitle text-center"><strong>Organization</strong> explains how an opinion piece is arranged into sections.</p>
-				<div class="medium-10 illustration-image" style="margin: 0 auto;display:none;"><img class="text-center" src="images/4-Organize.gif" style="height: 245px;"/></div>
+				<div class="medium-10 illustration-image" style="margin: 0 auto;display:none;"><img class="text-center" src="images/Organize-Slow-3Secs.gif" style="height: 245px;"/></div>
 				
 			</div>
 			<p class="text-center copy-here illustrator-copy" style="display:none;">Each section gives specific information that is important to an opinion piece. 

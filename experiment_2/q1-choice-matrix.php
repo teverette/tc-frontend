@@ -56,15 +56,37 @@
 		</div>
 		<div class="grid-x grid-padding-x footer">
 			<a class="button back button-left-side" href="quiz-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
+			<a class="check-disabled button success button-right-side forward-button submit">Submit <i class="fas fa-lg fa-angle-right" ></i></a>
 		</div>
-	
+		<div class="rationale-callout callout" style="height:205px"></div>
+		<div class="hint-callout callout" style="height:205px"></div>
 		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal></div>
 		<script>
 			$(document).foundation();
 			
 	    	var questions = ["quiz_1_1","quiz_1_2","quiz_1_3"];
+	    	var rationaleText = "First, an opinion piece should begin with an introduction. Second, the introduction \
+		    	is followed a body section. And last, the opinion piece ends with a conclusion.";
 	      	var answerKey = {quiz_1_1:"2", quiz_1_2:"1",quiz_1_3:"3"};
+	      	var hintArray = {
+	      			"hint_quiz_1_1":{
+	          	      	"1":rationaleText,
+	          	      	"3":rationaleText
+	          	    },
+	      	      	"hint_quiz_1_2":{
+	          	      	"2":rationaleText,
+	          	      	"3":rationaleText
+	          	    },
+	      	      	"hint_quiz_1_3":{
+	          	      	"1":rationaleText,
+	          	      	"2":rationaleText
+	              	}
+	      	}
+	      	var rationaleArray = {
+	      	      	"rationale_quiz_1_1":rationaleText,
+	      	      	"rationale_quiz_1_2":rationaleText,
+	      	      	"rationale_quiz_1_3":rationaleText
+	      	}
 	      	var response_key = {};
 	      	var nextPage = "quiz-2.php";
 	      	var storage = window.sessionStorage;
@@ -85,6 +107,9 @@
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize('quiz_1',3,3);
       			ChoiceMatrix.isQuiz=true;
+      			if(hasAlreadyAnswered("quiz_1")) {
+					ChoiceMatrix.setPreviousResponse();
+				}
       			getScore();
       		});
 
@@ -93,13 +118,9 @@
 			});
       		
 			window.onload = function() {
-				var isLocked = lockTest();
-				if(isLocked) {
-					ChoiceMatrix.setPreviousResponse();
-				}
+				
 			}
-			var storage = window.sessionStorage;
-	    	storage["quiz_total"]=0;
+			
 		  </script>
 		 <!-- <?php echo "page loaded";?> -->
 	</body>

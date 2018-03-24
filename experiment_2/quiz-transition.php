@@ -14,6 +14,11 @@
 		<script>
 			var storage = window.sessionStorage;
 	    	storage["quiz_total"]=0;
+	    	storage.removeItem('quiz_1');
+	    	storage.removeItem('quiz_2');
+	    	storage.removeItem('quiz_3');
+	    	storage.removeItem('quiz_4');
+	    	storage.removeItem('quiz_5');
 		</script>
 	</body>
 </html>
