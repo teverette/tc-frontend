@@ -6,36 +6,36 @@
 	  <?php include '_js.html'; ?>
 </head>
 <body class="practice">
-	<?php $width = "11.1"; ?>
-	<?php include '_progress.php'; ?>
+
 <div class="content"> 
-<div class="global-tip" style="position:fixed; left:156px; top:10px; height: 82px; width: 200px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;
-background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover on the blue words to get a definition.
-<span style="display:inline-block; float:right; margin-top: 20px; text-align: center; cursor:pointer; height: 24px; width: 34px; border: 2px solid #FFFFFF; border-radius: 2px;" onclick="$('.global-tip').hide()">OK</span></div>
-<div class="grid-x grid-padding-x">
-  
-  <h2 class="title medium-12">How is an opinion piece <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
-		      	title="To arrange information and ideas in to a pattern.">organized</span> into sections?</h2>
- 
-  <div class="medium-12 grid-x lesson-copy">
-    <p>
-    <a class="button dropdown-question" data-question="q1_1" data-drawer-id="drawer-one" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
-    It includes the opinion statement and helps readers understand the topic.
-    </p>
-    <p>The <a class="button dropdown-question" data-question="q1_2" data-drawer-id="drawer-two" onclick="showDrawer(this);">Select an option</a> follows the introduction. It explains how the opinion statement is supported with reasons or evidence.  
-    </p>
-    <p>The <a class="button dropdown-question" data-question="q1_3" data-drawer-id="drawer-three" onclick="showDrawer(this);">Select an option</a> is at the end. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.
-    </p>
-  </div>
-  <input type="hidden" class="q1_1 dd-response" name="q1_1"></input>
-  <input type="hidden" class="q1_2 dd-response" name="q1_2"></input>
-  <input type="hidden" class="q1_3 dd-response" name="q1_3"></input>
+	<div class="content-header content-header-practice">Practice</div>
+	<div class="global-tip" style="position:fixed; left:156px; top:10px; height: 82px; width: 200px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;
+	background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover on the blue words to get a definition.
+	<span style="display:inline-block; float:right; margin-top: 20px; text-align: center; cursor:pointer; height: 24px; width: 34px; border: 2px solid #FFFFFF; border-radius: 2px;" onclick="$('.global-tip').hide()">OK</span></div>
+	<div class="grid-x grid-padding-x">
+	  
+	  <h2 class="title medium-12">How is an opinion piece <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
+			      	title="To arrange information and ideas in to a pattern.">organized</span> into sections?</h2>
+	 
+	  <div class="medium-12 grid-x lesson-copy">
+	    <p>
+	    <a class="button dropdown-question" data-question="q1_1" data-drawer-id="drawer-one" onclick="showDrawer(this);">Select an option</a> begins the opinion piece. 
+	    It includes the opinion statement and helps readers understand the topic.
+	    </p>
+	    <p>The <a class="button dropdown-question" data-question="q1_2" data-drawer-id="drawer-two" onclick="showDrawer(this);">Select an option</a> follows the introduction. It explains how the opinion statement is supported with reasons or evidence.  
+	    </p>
+	    <p>The <a class="button dropdown-question" data-question="q1_3" data-drawer-id="drawer-three" onclick="showDrawer(this);">Select an option</a> is at the end. It reviews the opinion statement and support. It also includes a call to action--what the writer wants the reader to do or believe.
+	    </p>
+	  </div>
+	  <input type="hidden" class="q1_1 dd-response" name="q1_1"></input>
+	  <input type="hidden" class="q1_2 dd-response" name="q1_2"></input>
+	  <input type="hidden" class="q1_3 dd-response" name="q1_3"></input>
+	</div>
+	<div class="rationale-sidebar"></div>
 </div>
-</div>
-<div class="grid-x grid-padding-x footer">
-	<a class="button back button-left-side" href="practice-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
-</div>
+<?php $width = "11.1"; ?>
+<?php include '_footer_progress.php'?>
+
 <div id="drawer-one" class="drop-down-drawer q1_1 text-center">
 	<a class="button secondary answer-option q1_1" data-value="1">Intro</a>
 	<a class="button secondary answer-option q1_2" data-value="2">Body</a>
