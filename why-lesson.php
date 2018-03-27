@@ -47,7 +47,7 @@
 		</div>
 		<?php $width = "11.1"; ?>
 		<?php $back = "lesson-helps-learners.php"; ?>
-		<?php $next = "lp.php"; ?>
+		<?php $next = "learn-page-2.php"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		<script>
