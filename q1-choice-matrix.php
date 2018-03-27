@@ -5,9 +5,8 @@
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
 	</head>
-	<body class="practice quiz" data-quiz-question="0">
-		<?php $width = "35.7"; ?>
-		<?php include '_quiz_progress.php'; ?>
+	<body class="practice" data-quiz-question="0">
+
 		<div class="content"> 
 		
 		<div class="grid-x grid-padding-x">
@@ -47,13 +46,13 @@
 		  </tbody>
 		</table>
 		
-		  <div class="medium-12 lesson-desc grid-x hide rationale">
-		  	<h3>Why are these the answers?</h3>
-		  	<p>First, an opinion piece should begin with an introduction, second it is followed a 
-		  	body section and lastly it ends with a conclusion.</p>
-		  </div>
+		
 		</div>
 		</div>
+		
+		<?php $back = "lp.php"; ?>
+		<?php $next = "2-choice-matrix.php"; ?>
+		<?php include '_footer_progress.php'?>
 		<div class="grid-x grid-padding-x footer">
 			<a class="button back button-left-side" href="quiz-transition.php"><i class="fas fa-lg fa-angle-left" ></i></a>
 			<a class="check-disabled button success button-right-side forward-button submit">Submit <i class="fas fa-lg fa-angle-right" ></i></a>

@@ -12,19 +12,19 @@
 	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
-	<body class="practice">
-		<?php $width = "33.3"; ?>
-		<?php include '_progress.php'; ?>
-		<div class="overview-content">
-			<div class="grid-x grid-padding-x">
-				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">How can <strong>words</strong> help organize <br/>the sections in an opinion piece?</h2>
+	<body class="progress">
+		<div class="content">
+			<div class="grid-x grid-padding-x" >
+				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">What is verbal irony?</h2>
+				<p>Verbal irony occurs when words express something different from their normal meanings. Verbal irony can be used to add humor or interest.</p>
 				
-				<div class="medium-8 medium-centered text-center" style="margin: 0 auto;">
-					<img src="images/7-a.png"/>
-				</div>
-				<div style="position:absolute; top:289px; left:190px; width:200px; height:100px; border-bottom: 1px solid gray">
-					For example, a writer may organize their ideas with <strong>words</strong> like, 
-				</div>
+				<p style="padding-left:50px">Scott arrived downtown for his job interview almost 15 minutes late 
+				because his bus never arrived. While running from his apartment to the office, he dropped the folder 
+				that contained his application into a deep puddle. “Well, this is going well,” he muttered.</p>
+				
+				<p>Scott’s comment, “Well, this is going well,” shows verbal irony because Scott says things are 
+				going well, but he means that things are not going well at all.</p>
+				
 			</div>
 			</div>
 		</div>

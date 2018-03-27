@@ -233,7 +233,7 @@ var ChoiceMatrix = {
     				var selected_answer = $(this).data("selected");
     				// get hint string && add to tip
     				var hint_index = "hint_" + hint_id;				
-    				$(".hint-callout").html("<h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer]).show();
+    				$(".rationale-sidebar").html("<h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer]).show();
     				
     			})
     		});
@@ -246,7 +246,7 @@ var ChoiceMatrix = {
 						$(".hint-icon").removeClass("pressed");
 						$(this).addClass("pressed");
 						var rationale_index = "rationale_" + $(this).data("question");			
-						$(".rationale-callout").html("<h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index]).show();
+						$(".rationale-sidebar").html("<h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index]).show();
 				})
 			});
     	},
@@ -403,7 +403,7 @@ var ClozeDropdown = {
 				var hint_id = $(this).data("question");
 				var selected_answer = $(this).data("selected");
 				var hint_index = "hint_" + hint_id;				
-				$(".hint-callout").html("<h4 class='nearly-there'>Nearly there!</h4>" + hintArray[hint_index][selected_answer]).show();
+				$(".rationale-sidebar").html("<h4 class='nearly-there'>Nearly there!</h4>" + hintArray[hint_index][selected_answer]).show();
 			})
 		});
 		
@@ -415,7 +415,7 @@ var ClozeDropdown = {
 					$(".hint-icon").removeClass("pressed");
 					$(this).addClass("pressed");
 					var rationale_index = "rationale_" + $(this).data("question");			
-					$(".rationale-callout").html("<h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index]).show();
+					$(".rationale-sidebar").html("<h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index]).show();
 					
 			})
 		});

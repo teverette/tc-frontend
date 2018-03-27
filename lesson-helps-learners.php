@@ -5,60 +5,45 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
+	  	.title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  	.overview-content {min-height: 458px; height: inherit;}
 	  	.lesson-point-item {margin-top:17px;width:240px;text-align:center}
 	  	.lesson-point-item.first-item {margin-left: 57px;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:230px; display:inline-block}
-	  	.subheader {font-family:'Roboto Slab'; font-weight:bold; font-size: 24px; color: #43B02A}
-	  	.subheader-content {color:#59585A;font-size:20px; line-height:26px}
 	  </style>
 	</head>
-	<body class="practice">
-		<div class="overview-content">
+	<body class="progress">
+		<h2 class="title medium-11">This lesson helps learners answer the following questions: </h2>
+		<div class="content">
 			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-12 medium-centered learn-page-title text-center">This lesson helps learners answer<br/> the following questions: </h2>
-				<div class="lesson-point-item first-item" style="margin-left:141px;margin-top:57px; padding-left: 85px;">
-					<div class="text-left">
-						<img src="images/One.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
-						<p style="display:inline; " class="subheader">Organize</p>
-					</div>	
-					<p style="width:218px;text-align:left; padding-left: 42px;" class="subheader-content">How is an opinion piece organized?</p>
+				
+				<div class="lesson-point-item first-item">
+					<img src="images/Icon1.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
+					<img src="images/illo-1x.png" class="lesson-point" style="margin-top:40px;margin-bottom:41px"/>
+					<hr style="width:230px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<p style="width:240px;text-align:center">What are the different types of irony?</p>			
 				</div>
-				<div class="lesson-point-item " style="margin-left:0px; width: 292px;">
-					<img src="images/1-a.png" style="width: 250px"/>
-					<div class="second-item" style="display:none">
-						<img src="images/Three.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
-						<p style="display:inline; " class="subheader">Support</p>
-					</div>
-					<p style="width:321px;text-align:left;display:none" class="subheader-content second-item">How does a writer organize reasons and evidence in an opinion piece?</p>			
+				<div class="lesson-point-item second-item" style="margin-left:94px;">
+					<img src="images/Icon2.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
+					<img src="images/illo-2x.png" class="lesson-point"/>
+					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<p style="width:240px;text-align:center">What is suspense? </p>			
 				</div>
-				<div class="lesson-point-item third-item" style="display:none; margin-top: 124px; left: -30px; position: relative;">
-					<div class="text-left">
-						<img src="images/Two.png" style="width:28px;margin-right: 10px; padding-bottom: 5px;"/>
-						<p style="display:inline; " class="subheader">Purpose</p>
-					</div>	
-					<p style="width:278px;text-align:left; padding-left: 42px;" class="subheader-content">What is the purpose of an introduction, body, and conclusion in an opinion piece?</p>		
+				<div class="lesson-point-item third-item" style="margin-left:94px;">
+					<img src="images/Icon3.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
+					<img src="images/illo-3x.png" class="lesson-point" style="margin-top:40px;margin-bottom:42px"/>
+					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<p style="width:240px;text-align:center">How do writers use irony and suspense in narratives?</p>			
 				</div>
 				
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" onclick="history.back(-1);"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class=" button learn-page-forward-button button-right-side" href="why-lesson.php"><i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
-		
+		<?php $width = "11.1"; ?>
+		<?php $back = "index.php"; ?>
+		<?php $next = "why-lesson.php"; ?>
+		<?php include '_footer_progress.php'?>
 		<script>
-		    $(document).foundation();
-			$(document).ready(function() {
-				$(".first-item").fadeIn(500);
-				setTimeout(function() {
-					$(".third-item").fadeIn(500);
-				},1000);
-				setTimeout(function() {
-					$(".second-item").fadeIn(500);
-				},2000);
-				
-			});
+		      $(document).foundation();
 	    </script>
 	</body>
 </html>

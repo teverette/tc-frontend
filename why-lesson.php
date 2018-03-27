@@ -4,8 +4,9 @@
 	  <title>Why Lesson?</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <link rel="stylesheet" href="css/progress.phase1.css" crossorigin="anonymous" />
 	  <style>
-	  	.title {background-color:#FBFBFB; color:#4A90E2; height:58px;padding-top: 8px;padding-left:114px;}
+	  	.title {background-color:#FBFBFB; color:#4A90E2; height:58px;padding-top: 8px;padding-left:114px;margin-bottom:10px}
 	  	.overview-content {min-height: 369px; height: inherit;}
 	  	.part-1{	
 	color: #43B02A;
@@ -29,30 +30,25 @@
 
 	  </style>
 	</head>
-	<body class="practice">
-
-		<div class="overview-content" style="height: 333px;">
-			<h2 class="medium-12 medium-centered learn-page-title text-center">Why this lesson is important</h2>
-			<div class="grid-x grid-padding-x" style="margin-top:0px; ">
+	<body class="progress">
+		<h2 class="title medium-11">Why this lesson is important</h2>
+		<div class="content">
+			<div class="grid-x grid-padding-x" style="margin-top:0px;margin-left:115px">
 				
-				<div class="medium-12 lesson-desc text-center" style="display:none;">
-					<img src="images/3-Opinions.png" style="height: 250px"></span>
+				<div class="medium-5 lesson-desc" >
+					<img src="images/important-illox.png" style="width:244px"></span>
 				</div>
-				<div class="medium-8 medium-centered lesson-copy" style="margin: 0 auto; border:2px solid #307fe2; padding:25px; display:none;">
-					<div class="medium-12 lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;    ">
-						<div style="width:50%;float:left">
-						<span class="part-1">Opinion pieces</span><br/> <span class="part-2">are written to share a point of view.</span>
-						</div>
-						<div style="width:50%;float:left" class="part-3">When an opinion piece is well organized, 
-						it is more effective in helping others understand and perhaps even agree with the opinion.</div>
-					</div>
-				</div>
+				<div class="medium-6 lesson-desc" style="font-family:'Roboto', serif;font-size:20px; font-color#4a4a4a;margin-left:20px">
+				<span style="display:inline-block; width:349px">
+				A narrative is a story: it contains characters, story events, and settings. Writers use techniques like irony and suspense 
+				to make their narratives more interesting and pleasurable for readers.</span>
+				<hr style="width:183px; border:1px solid #4A90E2; margin: 31px 0;"/></div>
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<a class="button back large" onclick="history.back(-1);" style="position:relative; left:33px;width:40px; height:40px;border-radius:100%;"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class=" button learn-page-forward-button button-right-side" href="lp.php"><i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
+		<?php $width = "11.1"; ?>
+		<?php $back = "lesson-helps-learners.php"; ?>
+		<?php $next = "lp.php"; ?>
+		<?php include '_footer_progress.php'?>
 		
 		<script>
 		      $(document).foundation();

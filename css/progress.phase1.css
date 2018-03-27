@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+
+body.progress {background-color: #FFF; color: #4A4A4A; font-family: 'Roboto', sans-serif; width:1024px;  position:relative;margin-right: 0;}
+body.overview {background-color: #4A90E2; color: #FFF; text-align:center;width:1024px; overflow: hidden;}
+body.transition-page {background-color:#fff;text-align:center;width:1024px; overflow: hidden;}
+body.transition-page h1.alternate-title {font-family:'Roboto Slab', sans-serif; font-size: 36px; line-height: 48px; font-weight: 400;padding:16px 0;
+background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
+.overview-content {min-height: 400px; height: inherit;}
+.overview-content-body {background-color: #4A90E2;color: #FFF;}
+.overview-content-body h2.subtitle {font-family: 'Roboto Slab', sans-serif; font-size: 44px; line-height: 58px; font-weight: 400; margin-top:44px}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif;}
+.overview-icon {width:39px;height:39px; margin-right:30px}
+
+.content {min-height:479px; font-family: 'Roboto Slab', sans-serif; font-size: 22px; line-height: 39px; font-weight: 300;margin:29px 114px 0}
+.overview .title {text-align:center; font-family: 'Roboto Slab', serif; font-size:40px; color:#fff;  margin-top:159px}
+.title-only { margin:159px auto 237px; font-family: 'Roboto Slab', serif; font-size:40px}
+.overview p {margin-top:30px}
+.progress {border-radius: 6px; height: 5px; background-color: #ECECEC;}
+.progress.secondary .progress-meter {border-radius: 6px; background-color: #9D9D9D;}
+
+.button.neutral {background-color: #FFF; color: #333333}
+.button.neutral:hover {background-color: #EEE; color: #333}
+
+.pagination-circular li.current {
+  border: 2px solid #4A90E2;
+  border-radius: 5000px;
+  padding: 0.285em 0.8em;
+  font-size: 4px;
+  background: transparent;
+}
+
+.pagination-circular li.correct {
+  border: 2px solid #4A90E2;
+  background-color:#4A90E2;
+  border-radius: 5000px;
+  padding: 0.285em 0.8em;
+  font-size: 4px;
+}
+
+.pagination-circular li.disabled {
+  border: 1px solid #cacaca;
+  padding: 0.285em 0.8em;
+  border-radius: 5000px;
+  font-size: 4px;
+}
+
+.pagination-circular .question-bubble {
+  border-radius: 5000px;
+  padding: 0.285em 0.8em;
+  border: 1px solid #1779ba;
+  font-size: 4px;
+}
+
+.pagination-circular li:not(.disabled):hover a {
+  background: #4A90E2;
+  color: #fefefe;
+}
+
+.pagination-circular li a {
+  transition: background 0.15s ease-in, color 0.15s ease-in;
+}
+
+.lesson-items {list-style-position: inside; display: table;}
+ul.lesson-items > li {display:table-row;}
+ul.lesson-items > li:before { content:"\2022\00a0 \00a0 \00a0"; font-size: 36px; vertical-align:top; display: table-cell; text-align: right; }
+.lesson-items li {font-size: 24px; line-height: 45px;}
+.button-row {margin-top:12rem}
+.button {border-radius:6px;}
+.button.success {color: #FFF}
+.button.success:focus, .button.success:hover {color:#FFF}
+
+/* invision */
+.lesson-label {background-color: #6DADF9; color: #FFF; margin-bottom: 0; font-size: 36px; line-height: 48px; font-weight: bold; padding-left: 0;margin-top:17.5px; height:61px;padding-top:6px; text-align:center}
+.title {font-family: 'Roboto Slab', serif; color: #4A4A4A; line-height:37px; font-size:28px;margin-bottom: 34px;}
+.lesson-desc {font-size:24px; color:#4A4A4A; font-family: 'Roboto', sans-serif;font-weight:300; line-height:39px;margin-bottom: 23px;}
+.lesson-copy, .lesson-copy mark {font-size:22px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:39px;}
+.label-type-icon {margin-right:20px;width:36px}
+.inline-select {width:intrinsic;display:inline; margin-right:.5rem;border-radius: 6px;margin-bottom:0;}
+.rationale {opacity:0}
+.rationale h3 {color:#FFF; background-color:#00C016;width:100%; font-size: 24px; padding: 0 1.0rem}
+.rationale p {font-size: 20px;}
+mark.keyword {background-color: #EEE; cursor: pointer; border: 2px solid #C7C5C8; border-radius: 4px; padding: 0 6px 0 6px;}
+mark.keyword.selected {background-color: #999999; padding:0 20px 0 6px;}
+mark.keyword.incorrect {background-color:#C2B25C; border-color:#FED700;padding-right: 12px;}
+/* mark.keyword.incorrect::after {font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f1ea";position: absolute;} */
+mark.keyword.correct {background-color: #C7F9C7; border-color: #C7F9C7;padding-right: 12px;}
+input.question {margin: 0 .5rem 0 1.5rem}
+.incorrect .question, td.incorrect, label.radio.incorrect {background-color:#FBEB95}
+.correct .question, td.correct, label.radio.correct {background-color:#C2F4C2}
+
+/* 
+label.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f00d"; position: relative;right:3rem; color:#FED700; font-size:22px;}
+label.correct:after { font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f00c"; position: relative;right:3rem; color:#00AA00;font-size:22px;}
+*/ 
+table, th, td {
+   border: 2px solid rgba(199,197,200, .4);
+}
+table.grid-matrix td {position:relative}
+.grid-matrix {width:795px;}
+.grid-matrix td input {margin: 0.5rem 0 0.5rem;}
+.grid-matrix th {font-size:18px; font-weight:500; font-family: 'Roboto', sans-serif; height:32px;line-height: 25px;}
+.grid-matrix td {font-family:'Roboto', sans-serif; font-size:18px; line-height: 25px; color:#4a4a4a; font-weight:400;}
+.grid-matrix tr {min-height:32px}
+.grid-matrix thead tr {background-color:#ECECEC}
+
+
+input.question.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f00d"; position: relative;right: -.75rem; top:.2rem; color:#FED700; font-size:22px;}
+
+label.select {display:inline}
+label.radio, label.radio:after {display: inline-block; padding:0.5rem 0 0.5rem 0.5rem; font-size: .875rem !important;}
+select.question {width:12rem;font-family: 'Roboto', sans-serif;}
+.footer {z-index:100; height:83px;width:1024px;background-color: #FFF}
+.footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}
+.footer div {margin: 0 114px}
+
+.button {border-radius:4px; width:138px;height:40px; font-family:'Roboto', san-serif; font-size:18px; color: #FFF;padding:9px;margin:20px 0}
+.button.check-disabled,.button.check-disabled:hover {background-color:#4A90E2; opacity:0.30}
+
+.button.check {background-color:#4A90E2; opacity:0.95}
+.button.check:hover {background-color:#4A90E2; opacity:1.0}
+.button.check-verified {background-color:#43B02A;opacity:0.95}
+.button.check-verified:hover {background-color:#43B02A;opacity:1.0}
+
+.button.back {background-color: #C7C5C8; opacity:0.95}
+.button.back:hover{ opacity:1}
+
+.question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}
+.correct-icon-element {position: absolute;right: 1.75rem; color: #00AA00;top: 20px;}
+.incorrect-icon-element {position: absolute;right: 1.75rem; color: #FED700;top: 20px;}
+
+
+p.mc-text {line-height: 31px; margin-left:33px} 
+.mc-correct {color:#43B02A; font-weight:bold}
+.mc-incorrect {color: #FED700; font-weight:bold}
+
+.lesson-label.quiz {background-color:#70C216}
+h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}

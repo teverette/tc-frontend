@@ -8,7 +8,7 @@
 	  font-size:20px;color:#4A4A4A;background-color:#FFF;width:166px;height:49px; padding-top: 13px; line-height:24px; font-weight:500}</style>
 	</head>
 	<body class="overview">
-		<h1 class="title-only">Organization in Opinion Pieces</h1>
+		<h1 class="title-only">Organizing Ideas with Authors' Crafts</h1>
 		<p><a class="button secondary neutral overview-button" href="lesson-helps-learners.php">Start Lesson</a></p>
 		<script>
 			// reset scoring situation
