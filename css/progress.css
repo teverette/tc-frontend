@@ -32,7 +32,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .content-header {height: 40px; width: 160px;position:absolute; left:324px; top:0; font-family: "Roboto Slab"; font-size: 18px; line-height: 24px; text-align:center; color:#FFF}
 .content-header-practice { background-color: #43B02A;}
 .content-header-quiz {background-color: #307FE2;}
-.rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:absolute; right:22px; top:10px}
+.rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:fixed; right:22px; top:20px}
 
 
 

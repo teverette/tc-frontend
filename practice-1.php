@@ -101,8 +101,8 @@
 
 			$(document).ready(function() {
       			highlightCurrentQuiz();
-      			ChoiceMatrix.initialize("question_2",3,3);
-      			if(hasAlreadyAnswered("question_2")) {
+      			ChoiceMatrix.initialize("practice_1",3,3);
+      			if(hasAlreadyAnswered("practice_1")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
       		});
