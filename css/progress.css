@@ -32,7 +32,10 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .content-header {height: 40px; width: 160px;position:absolute; left:324px; top:0; font-family: "Roboto Slab"; font-size: 18px; line-height: 24px; text-align:center; color:#FFF}
 .content-header-practice { background-color: #43B02A;}
 .content-header-quiz {background-color: #307FE2;}
-.rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:fixed; right:22px; top:20px}
+.rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:fixed; right:22px; top:20px; color: #4A4A4A; font-family: Roboto; font-size: 14px; font-weight: bold; line-height: 20px;
+}
+.hint-status {border-radius: 5px;	background-color: #FFE39D;}
+.correct-status{border-radius: 5px;	background-color: #FFE39D;}
 
 
 
@@ -227,19 +230,22 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .hint-icon.pressed {color:#D9CA18;box-shadow: 0px 0px 1px 1px #4a4a4a}
 
 .that-s-it {
-	height: 29px;
+	height: 49px;
 	width: 90px;
 	color: #3E7304;
 	font-family: "Roboto Slab";
 	font-size: 22px;
 	line-height: 29px;
+	border-bottom: 1px solid #43B02A;
 }
 
 .nearly-there {
-	height: 29px;
-	width: 135px;
-	color: #D48504;
+	height: 80px;
+	width: 125px;
+	color: #4A4A4A;
 	font-family: "Roboto Slab";
-	font-size: 22px;
-	line-height: 29px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 32px;
+	border-bottom: 1px solid #FF6900;
 }
