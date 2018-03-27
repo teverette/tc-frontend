@@ -61,14 +61,13 @@
 	      	var answerKey = {q1_1:"not-irony", q1_2:"irony",q1_3:"not-irony"};
 	      	var hintArray = {
 	      	      	"hint_q1_1":{
-	          	      	"body":"This sentence states the opinion statement. Try again.",
-	          	      	"conclusion":"This sentence states the opinion statement. Try again."},
+	          	      	"irony":"This sentence states the opinion statement. Try again."
+		          	},
 	      	      	"hint_q1_2":{
-	          	      	"introduction":"This section includes reasons that support the opinion statement. Try again.",
-	          	      	"conclusion":"This section includes reasons that support the opinion statement. Try again."},
+	          	      	"not-irony":"This section includes reasons that support the opinion statement. Try again."
+		          	},
 	      	      	"hint_q1_3":{
-	          	      	"introduction":"This sentence repeats the opinion statement and makes a suggestion. Try again.",
-	          	      	"body":"This sentence repeats the opinion statement and makes a suggestion. Try again."
+	          	      	"irony":"This sentence repeats the opinion statement and makes a suggestion. Try again."
 	              	}
 	      	}
 	      	var rationaleArray = {
