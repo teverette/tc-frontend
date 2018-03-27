@@ -72,7 +72,7 @@
           	      	 The reader expects Ronald to be praised for doing something nice. When he gets in trouble instead, it is situational irony."
       	}
 		var answerKey = {q6_1:"1"};
-  		var nextPage = "practice-6.php";
+  		var nextPage = "learn-page-5.php";
 
 	    $(document).on("click",".check", function() {
 	    	ChoiceMatrix.assess(false);

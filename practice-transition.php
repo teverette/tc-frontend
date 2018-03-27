@@ -10,8 +10,8 @@
 	</head>
 	<body class="overview" style="background-color:transparent">
 
-		<a href="1-cloze-dropdown.php"><img src="images/Practice4.gif" style="width:1024px"/></a>
-		<a href="1-cloze-dropdown.php" style="width:900px; height:250px; position:absolute; bottom:25px;display:block;">&nbsp;</a>
+		<a href="practice-1.php"><img src="images/Practice4.gif" style="width:1024px"/></a>
+		<a href="practice-1.php" style="width:900px; height:250px; position:absolute; bottom:25px;display:block;">&nbsp;</a>
 		
 	</body>
 </html>

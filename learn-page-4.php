@@ -31,10 +31,6 @@
 		<?php $back = "practice-4.php"; ?>
 		<?php $next = "practice-5.php"; ?>
 		<?php include '_footer_progress.php'?>
-		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="2-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class=" button learn-page-forward-button button-right-side" href="learn-page-2b.php"><i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
 		
 		 <script>
 		      $(document).foundation();

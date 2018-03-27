@@ -76,7 +76,7 @@
 	      	      	"rationale_q5_3":"Correct! The reader expects Mr. Brown to lose weight, so when the opposite happens, it is situational irony."
 	      	}
 	      	var response_key = {};
-	      	var nextPage = "learn-page-4.php";
+	      	var nextPage = "practice-6.php";
 	      	var storage = window.sessionStorage;
 
 			$(document).on("click",".check", function() {
