@@ -31,15 +31,15 @@
 <?php $back = "practice-2.php"; ?>
 <?php include '_footer_progress.php'?>
 
-<div id="drawer-one" class="drop-down-drawer q1_1 text-center">
-	<a class="button secondary answer-option q1_1" data-value="1">Your dog is terrible!</a>
-	<a class="button secondary answer-option q1_2" data-value="2">Thank you for bringing your dog over.</a>
-	<a class="button secondary answer-option q1_3" data-value="3">Get this dog out of here!</a>	
+<div id="drawer-one" class="drop-down-drawer q2_1 text-center">
+	<a class="button secondary answer-option q2_1" data-value="1">Your dog is terrible!</a>
+	<a class="button secondary answer-option q2_2" data-value="2">Thank you for bringing your dog over.</a>
+	<a class="button secondary answer-option q2_3" data-value="3">Get this dog out of here!</a>	
 </div>
-<div id="drawer-two" class="drop-down-drawer q1_2 text-center">
-	<a class="button secondary answer-option q1_1" data-value="1">I bet none of you can do that trick!</a>
-	<a class="button secondary answer-option q1_2" data-value="2">I am such a loser.</a>
-	<a class="button secondary answer-option q1_3" data-value="3">Maybe I shouldn’t have been bragging.</a>	
+<div id="drawer-two" class="drop-down-drawer q2_2 text-center">
+	<a class="button secondary answer-option q2_1" data-value="1">I bet none of you can do that trick!</a>
+	<a class="button secondary answer-option q2_2" data-value="2">I am such a loser.</a>
+	<a class="button secondary answer-option q2_3" data-value="3">Maybe I shouldn’t have been bragging.</a>	
 </div>
 
 </div>
@@ -48,10 +48,10 @@
       	var answerKey = {q2_1:"2", q2_2:"1"};
       	var hintArray = {
       	      	"hint_q2_1":{
-          	      	2:"John may think the dog is terrible for chewing his shoes, so this is not ironic.",
+          	      	1:"John may think the dog is terrible for chewing his shoes, so this is not ironic.",
           	      	3:"John may want the dog to leave because he is unhappy about his shoes, so this is not ironic. Try again!"},
       	      	"hint_q2_2":{
-          	      	1:"Maria may feel like a loser after falling, so this is not irony.",
+          	      	2:"Maria may feel like a loser after falling, so this is not irony.",
           	      	3:"Maria might think that someone who falls shouldn’t brag, so this is not irony."
               	}
       	}
