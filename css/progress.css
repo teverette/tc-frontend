@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab'); */
 
 body.practice, body.progress {background-color: #FFF; color: #4A4A4A; font-family: 'Roboto', sans-serif; 
 	width:1024px;  position:relative;margin-right: 0;height:554px; overflow:none;}
@@ -40,7 +40,28 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 
 .rationale-sidebar img.status {width:50px; margin-bottom:21px}
 
+.hint-status:after {content: " ";
+    position: absolute;
+    top: 45%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent rgba(255,227,157,0.8) transparent transparent;
 
+}
+
+.correct-status:after {content: " ";
+    position: absolute;
+    top: 45%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent rgba(173,233,160,0.8) transparent transparent;
+}
+
+.rationale-icon, .hint-icon {transition: opacity 0.5s ease-in;}
 
 .pagination-circular li.current {
   top: 3px;
@@ -225,10 +246,10 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
     border-color: transparent #FBEB95 transparent transparent;
 }
 
-.rationale-icon {color: #98CF5C; position: relative; background-color: #4A4A4A; border-radius: 100%;cursor:pointer; transform: scale(1.0);}
+.rationale-icon {color: #98CF5C; position: relative; background-color: #4A4A4A; border-radius: 100%;cursor:pointer; transform: scale(1.0); display:none;}
 .rationale-icon:hover{color:#85B550}
 .rationale-icon.pressed{color:#85B550; box-shadow: 0px 0px 6px 1px #ABABAB;}
-.hint-icon {background-color:#4A4A4A; color: #F8E71C;position:relative; border-radius:100%;cursor:pointer}
+.hint-icon {background-color:#4A4A4A; color: #F8E71C;position:relative; border-radius:100%;cursor:pointer; display:none}
 .hint-icon:hover {color:#D9CA18}
 .hint-icon.pressed {color:#D9CA18;box-shadow: 0px 0px 1px 1px #4a4a4a}
 

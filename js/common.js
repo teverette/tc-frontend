@@ -222,16 +222,19 @@ var ChoiceMatrix = {
     		}
     	},
     	showHint: function() {
+      		$(".hint-icon").show("500");
+      		$(".rationale-icon").show("500");
     		// find any incorrect answers
     		$(".hint-icon").each(function(){
     			$(this).click(function(){
-    				$(".rationale-callout").hide();
+    				$(".rationale-sidebar").removeClass("correct-status");
     				$(".hint-icon").removeClass("pressed");
     				$(".rationale-icon").removeClass("pressed");
     				$(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
     				// get hint string && add to tip
+    				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
     				var hint_index = "hint_" + hint_id;				
     				$(".rationale-sidebar")
     					.html("<img src='../images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer])
@@ -244,7 +247,7 @@ var ChoiceMatrix = {
     		$(".rationale-icon").each(
 				function(){
 					$(this).click(function(){
-						$(".callout").hide();
+						$(".rationale-sidebar").removeClass("hint-status");
 						$(".rationale-icon").removeClass("pressed");
 						$(".hint-icon").removeClass("pressed");
 						$(this).addClass("pressed");
@@ -399,18 +402,22 @@ var ClozeDropdown = {
 		}
 	},
 	showHint: function() {
+  		
+		$(".hint-icon").show("500");
+  		$(".rationale-icon").show("500");
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
 			$(this).click(function(){
-				$(".callout").hide();
+				$(".rationale-sidebar").removeClass("correct-status");
 				$(".rationale-icon").removeClass("pressed");
 				$(".hint-icon").removeClass("pressed");
 				$(this).addClass("pressed");
 				var hint_id = $(this).data("question");
 				var selected_answer = $(this).data("selected");
-				var hint_index = "hint_" + hint_id;				
+				var hint_index = "hint_" + hint_id;		
+				var rat_hdr = ClozeDropdown.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
 				$(".rationale-sidebar")
-					.html("<img src='images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Nearly there!</h4>" + hintArray[hint_index][selected_answer])
+					.html("<img src='images/NotQuite_Symbol.png' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
 					.addClass("hint-status")
 					.show();
 			})
@@ -419,11 +426,11 @@ var ClozeDropdown = {
 		$(".rationale-icon").each(
 			function(){
 				$(this).click(function(){
-					$(".callout").hide();
+					$(".rationale-sidebar").removeClass("hint-status");
 					$(".rationale-icon").removeClass("pressed");
 					$(".hint-icon").removeClass("pressed");
 					$(this).addClass("pressed");
-					var rationale_index = "rationale_" + $(this).data("question");			
+					var rationale_index = "rationale_" + $(this).data("question");
 					$(".rationale-sidebar")
 						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
 						.addClass("correct-status").show();
@@ -433,6 +440,7 @@ var ClozeDropdown = {
 	assess: function() {
 		this.resetForm();
 		this.getResponses();
+
 		this.showHint();
 		this.showFirstHint();
 		if(this.isReadyNextStep()) {
