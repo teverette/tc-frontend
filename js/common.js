@@ -225,11 +225,10 @@ var ChoiceMatrix = {
       		$(".hint-icon").show("500");
       		$(".rationale-icon").show("500");
     		// find any incorrect answers
+      		
     		$(".hint-icon").each(function(){
     			$(this).click(function(){
-    				$(".rationale-sidebar").removeClass("correct-status");
-    				$(".hint-icon").removeClass("pressed");
-    				$(".rationale-icon").removeClass("pressed");
+    				$(".rationale-sidebar").removeClass("correct-status").empty();
     				$(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
@@ -241,22 +240,48 @@ var ChoiceMatrix = {
     					.addClass("hint-status")
     					.show();
     				
-    			})
+    			});
+    			$(this).hover(function(){
+    				$(this).addClass("pressed");
+    				var hint_id = $(this).data("question");
+    				var selected_answer = $(this).data("selected");
+    				// get hint string && add to tip
+    				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
+    				var hint_index = "hint_" + hint_id;				
+    				$(".rationale-sidebar")
+    					.html("<img src='../images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer])
+    					.addClass("hint-status")
+    					.show();
+    				
+    			},function(){
+    				$(".rationale-sidebar").removeClass("hint-status").empty();
+    				$(this).removeClass("pressed");
+    			});
     		});
     		
     		$(".rationale-icon").each(
 				function(){
-					$(this).click(function(){
-						$(".rationale-sidebar").removeClass("hint-status");
-						$(".rationale-icon").removeClass("pressed");
-						$(".hint-icon").removeClass("pressed");
+					$(this).hover(function(){
 						$(this).addClass("pressed");
+						$(".rationale-sidebar").removeClass("hint-status").empty();
 						var rationale_index = "rationale_" + $(this).data("question");			
 						$(".rationale-sidebar")
 							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
 							.addClass("correct-status")
 							.show();
-				})
+				},function(){
+    				$(".rationale-sidebar").removeClass("correct-status").empty();
+    				$(this).removeClass("pressed");
+    			});
+				$(this).click(function(){
+						$(this).addClass("pressed");
+						$(".rationale-sidebar").removeClass("hint-status").empty();
+						var rationale_index = "rationale_" + $(this).data("question");			
+						$(".rationale-sidebar")
+							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
+							.addClass("correct-status")
+							.show();
+				});
 			});
     	},
       	assess: function(includeScore) {
@@ -271,24 +296,6 @@ var ChoiceMatrix = {
 	    		updateCheckAgainBtn($(".check-disabled"));
     		}
       	},
-      	getRationale: function(status) {
-      		var status = status!==null ? status : "correct";
-      		var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle"></i> Correct!' : '<i class="fas fa-lg fa-times"></i> Not quite!';
-      		$('.answer-rationale-reveal').addClass(status);
-    		var $modal = $('.answer-rationale-reveal');
-
-    		$.ajax('rationales/'+this.name+'.html')
-    		  .done(function(resp){
-    			  
-    		    $modal.html(resp).foundation('open');
-    		    if(status=="correct") {
-      		    	$('.rationale-icon').attr('src','images/Confetti.png');
-    			  } else {
-    				  $('.rationale-icon').attr('src','images/TryAgain.png');
-    			  }
-    		    $('.answer-rationale-reveal .title').html(label);
-    		});
-    	},
     	setPreviousResponse: function() {
     		var responseKeyString = storage[this.name];
     		
@@ -407,6 +414,24 @@ var ClozeDropdown = {
   		$(".rationale-icon").show("500");
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
+			$(this).hover(
+				function(){
+					$(".rationale-sidebar").removeClass("correct-status");
+					$(".rationale-icon").removeClass("pressed");
+					$(".hint-icon").removeClass("pressed");
+					$(this).addClass("pressed");
+					var hint_id = $(this).data("question");
+					var selected_answer = $(this).data("selected");
+					var hint_index = "hint_" + hint_id;		
+					var rat_hdr = ClozeDropdown.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
+					$(".rationale-sidebar")
+						.html("<img src='images/NotQuite_Symbol.png' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
+						.addClass("hint-status")
+						.show();
+				},function(){
+					$(".rationale-sidebar").removeClass("hint-status").empty();
+					$(this).removeClass("pressed");
+			});
 			$(this).click(function(){
 				$(".rationale-sidebar").removeClass("correct-status");
 				$(".rationale-icon").removeClass("pressed");
@@ -420,21 +445,28 @@ var ClozeDropdown = {
 					.html("<img src='images/NotQuite_Symbol.png' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
 					.addClass("hint-status")
 					.show();
-			})
+			});
 		});
 		
 		$(".rationale-icon").each(
 			function(){
-				$(this).click(function(){
-					$(".rationale-sidebar").removeClass("hint-status");
-					$(".rationale-icon").removeClass("pressed");
-					$(".hint-icon").removeClass("pressed");
+				$(this).hover(function(){
 					$(this).addClass("pressed");
 					var rationale_index = "rationale_" + $(this).data("question");
 					$(".rationale-sidebar")
 						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
 						.addClass("correct-status").show();
-			})
+			},function(){
+				$(".rationale-sidebar").removeClass("correct-status").empty();
+				$(this).removeClass("pressed");
+			});
+				$(this).click(function(){
+					$(this).addClass("pressed");
+					var rationale_index = "rationale_" + $(this).data("question");
+					$(".rationale-sidebar")
+						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
+						.addClass("correct-status").show();
+			});
 		});
 	},
 	assess: function() {
