@@ -46,11 +46,6 @@
 		<?php $width = "89.9"; ?>
 		<?php $back = "learn-page-3.php"; ?>
 		<?php include '_footer_progress.php'?>
-	<div class="grid-x grid-padding-x footer">
-		<a class="button back button-left-side" href="learn-page-3.php"><i class="fas fa-lg fa-angle-left" ></i></a>
-		<a class="check-disabled button success button-right-side forward-button">Check <i class="fas fa-lg fa-angle-right" ></i></a>
-	</div>
-
 	
  <script>
       $(document).foundation();

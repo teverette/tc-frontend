@@ -29,6 +29,7 @@
 		<?php $width = "22.2"; ?>
 		<?php $back = "practice-7.php"; ?>
 		<?php $next = "practice-8.php"; ?>
+		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		 <script>

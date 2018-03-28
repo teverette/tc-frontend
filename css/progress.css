@@ -273,3 +273,5 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 	line-height: 32px;
 	border-bottom: 1px solid #FF6900;
 }
+
+.split-pane-left {width: 420px;	color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 19px;}
