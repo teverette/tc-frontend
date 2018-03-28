@@ -249,7 +249,7 @@ var ChoiceMatrix = {
     				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
     				var hint_index = "hint_" + hint_id;				
     				$(".rationale-sidebar")
-    					.html("<img src='../images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Nearly there!</h4>" +hintArray[hint_index][selected_answer])
+    					.html("<img src='../images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
     					.addClass("hint-status")
     					.show();
     				
