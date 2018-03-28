@@ -58,6 +58,7 @@
     	storage["quiz_total"]=0;
       	$(document).ready(function() {
 			ClozeDropdown.initialize("quiz_3",1,1);
+			ChoiceMatrix.isQuiz=true; 
 			if(hasAlreadyAnswered("quiz_3")) {
 				ClozeDropdown.setPreviousResponse();
 			}
