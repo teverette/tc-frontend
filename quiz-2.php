@@ -23,11 +23,10 @@
 </div>
 
 		</div>
-		<?php $width = "89.9"; ?>
-		<?php $back = "learn-page-3.php"; ?>
+		<?php $width = "40"; ?>
+		<?php $back = "quiz-1.php"; ?>
 		<?php include '_footer_progress.php'?>
 		
-
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal></div>

@@ -1,117 +1,68 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>What is verbal irony?</title>
-		<?php include '_stylesheet.html'; ?>
-		<?php include '_js.html'; ?>
-	</head>
-	<body class="practice quiz quiz-question" data-quiz-question="2">
-		<?php include '_quiz_progress.php'; ?>
-		<div class="content"> 
-		
-		<div class="grid-x grid-padding-x">
-		  <h2 class="title medium-12">How are the underlined words used by the writer to show the order or importance of the reasons?</h2>
-		  
-		  <table class="medium-12 unstriped grid-matrix">
-		  <thead>
-		    <tr>
-		      <th width="40%"></th>
-		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by order lists the sequence or amount of information.">Order</span></th>
-		      <th width="30%" class="text-center"><span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="Organizing by importance shows that special or major attention should be given to the information.">Importance</span></th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <td><span style="text-decoration: underline">One reason</span> it is faster under water is that a swimmer’s strokes can 
-		      spread across longer distances in less time.</td>
-		      <td class="text-center"><input type="radio" name="quiz_3_1" value="1"/></td>
-		      <td class="text-center"><input type="radio" name="quiz_3_1" value="2"/></td>
-		    </tr>
-		    <tr>
-		      <td><span style="text-decoration: underline">Another reason</span> underwater swimming is faster is that the splashing on 
-		      the surface slows the swimmer down.</td>
-		      <td class="text-center"><input type="radio" name="quiz_3_2" value="1"/></td>
-		      <td class="text-center"><input type="radio" name="quiz_3_2" value="2"/></td>
-		    </tr>
-		    <tr>
-		      <td><span style="text-decoration: underline">Above all</span>, underwater swimming is faster than surface swimming and does not 
-		      cause swimmers to get as tired from the splashing and repeated movements used in surface swimming.</td>
-		      <td class="text-center"><input type="radio" name="quiz_3_3" value="1"/></td>
-		      <td class="text-center"><input type="radio" name="quiz_3_3" value="2"/></td>
-		    </tr>
-		  </tbody>
-		</table>
-		
-		 
-		</div>
-		</div>
-		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="quiz-2.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class="check-disabled button success button-right-side forward-button submit" style="z-index:1001;position:relative;">Submit <i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
-		<div class="rationale-callout callout" style="height: 300px; top: 100px;"></div>
-		<div class="hint-callout callout" style="height: 300px; top: 100px;"></div>
-		<div class="full reveal answer-rationale-reveal" id="answer-rationale-reveal" data-reveal></div>
-		<script>
-			$(document).foundation();
-			
-	    	var questions = ["quiz_3_1","quiz_3_2","quiz_3_3"];
-	      	var answerKey = {quiz_3_1:"2", quiz_3_2:"2",quiz_3_3:"2"};
-	      	var rationaleText = "Reasons and evidence work together to support a writer&rsquo;s opinion. &rdquo;A cat might meow, but it&rsquo;s usually \
-      	      	not as loud as a barking dog&rdquo; is correct because it is specific evidence that supports the reason.";
-	      	var hintArray = {
-	      			"hint_quiz_3_1":{
-	          	      	"1":rationaleText
-	          	     	},
-	          	      	
-	      	      	"hint_quiz_3_2":{
-	          	      	"1":rationaleText},
-	          	      	
-	      	      	"hint_quiz_3_3":{
-	          	      	"1":rationaleText
-	              	}
-	      	}
-	      	var rationaleArray = {
-	      	      	"rationale_quiz_3_1": rationaleText,
-		      	    "rationale_quiz_3_2": rationaleText,
-			      	"rationale_quiz_3_3": rationaleText
-	      	}
-	      	
-	      	var response_key = {};
-	      	var nextPage = "quiz-4.php";
-	      	var storage = window.sessionStorage;
+<head>
+  <title>How is verbal irony used in narratives?</title>
+  	  <?php include '_stylesheet.html'; ?>
+	  <?php include '_js.html'; ?>
+</head>
+<body class="practice quiz">
 
-			$(document).on("click",".check", function() {
-				ChoiceMatrix.assess(false);
-			});
-	      
-	      	$(document).on("click",".check-verified", function() {
-			  window.location.href=nextPage;
-	     	});
+<div class="content"> 
+	<div class="content-header content-header-quiz">Quiz</div>
+	
+	<div class="grid-x grid-padding-x">
+	  <h2 class="title medium-12">Which statement creates situational irony? </h2>
+	 
+	  <div class="medium-12 grid-x lesson-copy">
+	  <p>A cat walks around a desk, its ears alert and its eyes bright with anticipation. It smells the air and listens intently. 
+	  Then it leaps to the desktop where it <a class="button dropdown-question" data-question="q3_1" data-drawer-id="drawer-one" onclick="showDrawer(this);">Select an option</a>. 
+	    
+	  </div>
+	  <input type="hidden" class="q3_1 dd-response" name="q3_1"></input>
+	</div>
+	<div class="rationale-sidebar"></div>
+</div>
+<?php $width = "60"; ?>
+<?php $back = "quiz-2.php"; ?>
+<?php include '_footer_progress.php'?>
 
-			$("input:radio").click(function() {
-				ChoiceMatrix.enableButton();
-			});
+<div id="drawer-one" class="drop-down-drawer q3_1 text-center">
+	<a class="button secondary answer-option q3_1" data-value="1">uses a computer mouse to go online</a>
+	<a class="button secondary answer-option q3_2" data-value="2">eats a piece of food left on the desk </a>
+	<a class="button secondary answer-option q3_3" data-value="3">paws at its reflection in the screen</a>	
+</div>
 
-			$(document).ready(function() {
-      			highlightCurrentQuiz();
-				ChoiceMatrix.initialize('quiz_3',3,3);
-      			ChoiceMatrix.isQuiz=true; 
-      			if(hasAlreadyAnswered("quiz_3")) {
-					ChoiceMatrix.setPreviousResponse();
-				}
-      			getScore();
-
-      		});
-
-			$(window).bind("unload", function() {
-				alert("unload");
-			});
-      		
-			window.onload = function() {
-				
+</div>
+ <script>
+      	$(document).foundation();
+      	var answerKey = {q3_1:"1"};
+      	var hintArray = {
+      	      	"hint_q3_1":{
+          	      	2:"John may think the dog is terrible for chewing his shoes, so this is not ironic.",
+          	      	3:"John may want the dog to leave because he is unhappy about his shoes, so this is not ironic."}
+      	}
+      	var rationaleArray = {
+      	      	"rationale_q3_1":"Situational irony occurs when the outcome of a situation is different than what is expected.<br/>  In this passage, the reader would expect the cat to refer to a living mouse, not a computer mouse."
+      	}
+		var nextPage = "quiz-4.php";
+    
+        $(document).on("click",".check", function() {
+        	ClozeDropdown.assess();
+        });
+      
+      	$(document).on("click",".check-verified", function() {
+		  window.location.href=nextPage;
+      	});
+      
+      	var storage = window.sessionStorage;
+    	storage["quiz_total"]=0;
+      	$(document).ready(function() {
+			ClozeDropdown.initialize("quiz_3",1,1);
+			if(hasAlreadyAnswered("quiz_3")) {
+				ClozeDropdown.setPreviousResponse();
 			}
-		  </script>
-		 <!-- <?php echo "page loaded";?> -->
-	</body>
+	  	});
+
+  </script>
+</body>
 </html>
