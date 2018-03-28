@@ -440,7 +440,7 @@ var ClozeDropdown = {
 				var hint_id = $(this).data("question");
 				var selected_answer = $(this).data("selected");
 				var hint_index = "hint_" + hint_id;		
-				var rat_hdr = ClozeDropdown.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
+				var rat_hdr = "<h4 class='nearly-there'>Not Quite</h4>";
 				$(".rationale-sidebar")
 					.html("<img src='images/NotQuite_Symbol.png' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
 					.addClass("hint-status")

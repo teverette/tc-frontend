@@ -6,29 +6,25 @@
 		<?php include '_js.html'; ?>
 	</head>
 <body class="practice quiz quiz-question" data-quiz-question="1">
-	<?php $width = "100"; ?>
-	<?php include '_quiz_progress.php'; ?>
 <div class="content"> 
+<div class="content-header content-header-quiz">Quiz</div>
 <div class="grid-x grid-padding-x">
   <h2 class="title medium-12">Which underlined words are used to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span>
    the body section of an opinion piece?</h2>
   <div class="medium-12 grid-x lesson-copy">
-  <p>An audience can enjoy a story no matter <mark class="keyword quiz_2_1 answer">how</mark> it's told, but books are more 
-  entertaining than movies and plays. <mark class="keyword quiz_2_2 answer">First of all</mark>, books can entertain readers anywhere. 
-  <mark class="keyword quiz_2_3 answer">Another reason</mark> books are more entertaining is that the authors can 
-  help readers focus on more interesting details. <mark class="keyword quiz_2_4 answer">Most importantly</mark>, books give readers the 
-  freedom to use their imagination, <mark class="keyword quiz_2_5 answer">instead</mark> of limiting it to a certain place.</p>
-  </div>
-  <div class="medium-12 lesson-desc grid-x hide rationale">
-  	<h3>Why are these the answers?</h3>
-  	<p>The correct answers are examples of words used to organize reasons based on their order, importance or amount.</p>
-  </div>
+  <p><mark class="keyword quiz_2_1 answer">Teresa hid her best jewelry in a brown bag in the kitchen drawer before she went on vacation.</mark> <mark class="keyword quiz_2_2 answer">Her friend came to her house every day to walk the dog.</mark>
+  <mark class="keyword quiz_2_3 answer">One day, her friend decided to clean out Teresa’s kitchen.</mark> <mark class="keyword quiz_2_4 answer">She got all the garbage, empty packaging, and unwanted mail and threw it away.</mark>
+  <mark class="keyword quiz_2_5 answer">Without looking inside, she threw away the plain brown bag she found at the back of the drawer.</mark>
+  </p>
+  
 </div>
+<div class="rationale-sidebar"></div>
 </div>
-<div class="grid-x grid-padding-x footer">
-	<a class="button back button-left-side" href="q1-choice-matrix.php#checked"><i class="fas fa-lg fa-angle-left" ></i></a>
-	<a class="check-disabled button success button-right-side forward-button submit">Submit <i class="fas fa-lg fa-angle-right" ></i></a>
-</div>
+
+		<?php $width = "89.9"; ?>
+		<?php $back = "learn-page-3.php"; ?>
+		<?php include '_footer_progress.php'?>
+
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
 <div class="full reveal answer-rationale-reveal" id="exampleModal8" data-reveal></div>
@@ -36,8 +32,8 @@
  <script>
       $(document).foundation();
 		var questions = ["quiz_2_1","quiz_2_2","quiz_2_3","quiz_2_4","quiz_2_5"];
-    	var question2 = {quiz_2_1:false, quiz_2_2:true,quiz_2_3:true,quiz_2_4:true,quiz_2_5:false};
-    	var rationalText = "The correct answers are examples of words used to organize reasons based on their importance.";
+    	var question2 = {quiz_2_1:false, quiz_2_2:false,quiz_2_3:false,quiz_2_4:false,quiz_2_5:true};
+    	var rationalText = "Dramatic irony happens when the reader knows information that a character does not know. [para break]  Teresa’s friend does not know what is in the bag, but the reader does.";
     	var rationaleArray = {
       	      	"rationale_quiz_2_1": rationalText,
       	      	"rationale_quiz_2_2": rationalText,
