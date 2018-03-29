@@ -239,7 +239,7 @@ var ChoiceMatrix = {
     					.html("<img src='../images/NotQuite_Symbol.png' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
     					.addClass("hint-status")
     					.show();
-    				
+    				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
     			});
     			$(this).hover(function(){
     				$(this).addClass("pressed");
@@ -281,6 +281,7 @@ var ChoiceMatrix = {
 							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
 							.addClass("correct-status")
 							.show();
+						$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
 				});
 			});
     	},
@@ -566,6 +567,10 @@ function scoreStuff() {
 		$('#'+curDrawer).hide("slide", { direction: "down" }, 400);
 
 		ClozeDropdown.enableButton();
+	});
+	
+	$(document).on("click",".upper-right-close", function() {
+		$(".split-pane .rationale-sidebar").toggleClass("minimize-sidebar");
 	});
 	
 	
