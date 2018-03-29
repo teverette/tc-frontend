@@ -8,7 +8,7 @@
 	  .title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  .overview-content {min-height: 458px; height: inherit;}
 	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
-	  .learn-page-title {font-family: 'Roboto Slab';font-size: 16px; color: #6D6E71; line-height: 18px;}
+	  .learn-page-title {font-family: 'Roboto Slab';font-size: 22px; color: #6D6E71; line-height: 29px;}
 	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
@@ -26,7 +26,7 @@
 			</div>
 			</div>
 		</div>
-		<?php $width = "22.2"; ?>
+		<?php $width = "65"; ?>
 		<?php $back = "practice-7.php"; ?>
 		<?php $next = "practice-8.php"; ?>
 		<?php $btnClass = "check"; ?>

@@ -12,10 +12,10 @@
 	</head>
 	<body class="overview" style="background-color:#4A90E2">
 	<div class="align-center">
-		<h1 class="title-summary">You earned the opinion dog!</h1>
+		<h1 class="title-summary">You earned the drama dog!</h1>
 		<img src="images/Summary.jpg" style="margin-top: 50px; height: 194px;"/>
 		<h3 style="font-family:'Roboto', sans-serif; color: #FCFCFC; font-family: "Roboto Slab"; font-size: 30px; font-weight: 300;	
-			line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> points out of <span>16</span>.</h3>
+			line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> points out of <span>11</span>.</h3>
 		
 		<div style="width:600px; margin:80px auto 0;position:relative;">
 			<div style="position:absolute; left:0;top:-30px">Novice</div>
@@ -30,8 +30,8 @@
 	$(document).ready(function() {
 		var storage = window.sessionStorage;
 		var points = storage["quiz_total"];
-		if(points>16) {
-			points = 16;
+		if(points>11) {
+			points = 11;
 		}
 		for(z=0; z<=points; z++) {
 			console.log("point counter: " + z);
@@ -40,7 +40,7 @@
 			
 		}
 		setTimeout(function(){$("span.points").text(points);}, 350);
-		var leftPosition = 6.25 * points;
+		var leftPosition = 9.1 * points;
 		$(".score-hash").animate({
 		    left: leftPosition + "%"
 		  }, 1200, function() {

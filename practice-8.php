@@ -30,13 +30,13 @@
 		</label>
 	  
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 161px">
+	  		<div class="mc-input-box" style="top: 128px">
 	  			<input  type="radio" class="q8_1 question" name="q8_1" value="3"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">Two runners have been racing for first place for an hour. As they round the corner to the finish line, they run into each other.</p>
 	  	</label>
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 267px">
+	  		<div class="mc-input-box" style="top: 205px">
 	  			<input  type="radio" class="q8_1 question" name="q8_1" value="4"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">A waiter drops a tray of food and a customer says, “Nice catch.”</p>
@@ -46,7 +46,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 	</div>
-		<?php $width = "89.9"; ?>
+		<?php $width = "71.5"; ?>
 		<?php $back = "learn-page-5.php"; ?>
 		<?php include '_footer_progress.php'?>
 	

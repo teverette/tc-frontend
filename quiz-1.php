@@ -5,12 +5,14 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
+	  	.rationale-sidebar .that-s-it {height: 40px;}
 	  	
 	  </style>
 	</head>
 <body class="practice quiz">
 	<div class="content"> 
 	<div class="content-header content-header-quiz">Quiz</div>
+	<span class="point-quiz-board"> - points</span>
 	<div class="grid-x grid-padding-x">
 	  
 	  <h2 class="title medium-12">What type of irony is used in this example?</h2>
@@ -50,11 +52,12 @@
       	var questions = ["q1_1"];
       	var hintArray = {
       	      	"hint_q1_1":{
-          	      	1:"Dramatic irony is when the readers know something the characters do not. <br/>Do you know more than this character?",
+          	      	1:"Consider if Lin actually means what he says to Tom, or if readers know information that the characters do not.",
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q1_1":"Correct! Joan’s choice seems tragic from the reader’s point of view, because we know something she does not."
+      	      	"rationale_q1_1":"Lin is frustrated at his brother for taking too long to return home. When he says, “I’m glad to see you’re enjoying your walk”, \
+          	      	he says something different than what he means. <br/><br/>When a character’s words and meaning are different, it is verbal irony."
       	}
 		var answerKey = {q1_1:"2"};
   		var nextPage = "quiz-2.php";
@@ -82,6 +85,11 @@
 			if(hasAlreadyAnswered("quiz_1")) {
 				ChoiceMatrix.setPreviousResponse();
 			}
+
+			var storage = window.sessionStorage;
+			var points = storage["quiz_total"];
+			var points_label = points==1 ? "point" : "points";
+			$(".point-quiz-board").html(points + " " + points_label);
 		});
 
       	window.onload = function() {

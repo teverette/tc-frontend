@@ -5,12 +5,13 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  	
+	  	.rationale-sidebar .that-s-it {height: 20px;}
 	  </style>
 	</head>
 <body class="practice quiz">
 	<div class="content"> 
 	<div class="content-header content-header-quiz">Quiz</div>
+	<span class="point-quiz-board"> - points</span>
 	<div class="grid-x grid-padding-x">
 	  
 	  <h2 class="title medium-12">What type of irony is used in this example?</h2>
@@ -53,8 +54,8 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 	</div>
-		<?php $width = "80"; ?>
-		<?php $back = "quiz-transition.php"; ?>
+		<?php $width = "100"; ?>
+		<?php $back = "quiz-3.php"; ?>
 		<?php include '_footer_progress.php'?>
 	
  <script>
@@ -96,6 +97,10 @@
 			if(hasAlreadyAnswered("quiz_4")) {
 				ChoiceMatrix.setPreviousResponse();
 			}
+			var storage = window.sessionStorage;
+			var points = storage["quiz_total"];
+			var points_label = points==1 ? "point" : "points";
+			$(".point-quiz-board").html(points + " " + points_label);
 		});
 
       	window.onload = function() {

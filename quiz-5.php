@@ -9,6 +9,7 @@
 		
 		<div class="content"> 
 		<div class="content-header content-header-quiz">Quiz</div>
+		<span class="point-quiz-board"> - points</span>
 		<div class="grid-x grid-padding-x">
 		  <p class="lesson-desc medium-12">Which of these shows <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
 		      	title="When words express something different than normal meaning">verbal irony?</span></p>
@@ -109,6 +110,10 @@
       			if(hasAlreadyAnswered("quiz_5")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
+    			var storage = window.sessionStorage;
+    			var points = storage["quiz_total"];
+    			var points_label = points==1 ? "point" : "points";
+    			$(".point-quiz-board").html(points + " " + points_label);
       		});
       		
 			window.onload = function() {

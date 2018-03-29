@@ -4,11 +4,13 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style></style>
 </head>
-<body class="practice quiz">
+<body class="practice quiz quiz-question" data-quiz-question="3">
 
 <div class="content"> 
 	<div class="content-header content-header-quiz">Quiz</div>
+	<span class="point-quiz-board"> - points</span>
 	
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which statement creates situational irony? </h2>
@@ -38,11 +40,11 @@
       	var answerKey = {q3_1:"1"};
       	var hintArray = {
       	      	"hint_q3_1":{
-          	      	2:"John may think the dog is terrible for chewing his shoes, so this is not ironic.",
-          	      	3:"John may want the dog to leave because he is unhappy about his shoes, so this is not ironic."}
+          	      	2:"Think about what outcome is most unexpected.",
+          	      	3:"Think about what outcome is most unexpected."}
       	}
       	var rationaleArray = {
-      	      	"rationale_q3_1":"Situational irony occurs when the outcome of a situation is different than what is expected.<br/>  In this passage, the reader would expect the cat to refer to a living mouse, not a computer mouse."
+      	      	"rationale_q3_1":"Situational irony occurs when the outcome of a situation is different than what is expected.<br/><br/>In this passage, the reader would expect the cat to refer to a living mouse, not a computer mouse."
       	}
 		var nextPage = "quiz-4.php";
     
@@ -55,13 +57,16 @@
       	});
       
       	var storage = window.sessionStorage;
-    	storage["quiz_total"]=0;
       	$(document).ready(function() {
 			ClozeDropdown.initialize("quiz_3",1,1);
-			ChoiceMatrix.isQuiz=true; 
+			ClozeDropdown.isQuiz=true; 
 			if(hasAlreadyAnswered("quiz_3")) {
 				ClozeDropdown.setPreviousResponse();
 			}
+			var storage = window.sessionStorage;
+			var points = storage["quiz_total"];
+			var points_label = points==1 ? "point" : "points";
+			$(".point-quiz-board").html(points + " " + points_label);
 	  	});
 
   </script>

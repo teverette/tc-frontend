@@ -8,6 +8,7 @@
 <body class="practice quiz quiz-question" data-quiz-question="1">
 <div class="content"> 
 <div class="content-header content-header-quiz">Quiz</div>
+<span class="point-quiz-board"> - points</span>
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which underlined words are used to <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="To arrange information and ideas into a pattern or section.">organize</span>
 	   the body section of an opinion piece?</h2>
@@ -96,38 +97,16 @@
 		  if(status) {
 		  	var title = "<h4 class='that-s-it'>That's it!</h4>";
 		  	obj=$(".rationale-sidebar");
+		  	obj.addClass("correct-status");
 		  } else {
 			  var title = "<h4 class='nearly-there'>Not Quite!</h4>";
 			  obj = $(".rationale-sidebar");
+			  obj.addClass("hint-status");
 		  }
 		  obj.html(title + rationaleArray["rationale_quiz_2_1"]).show();
 		  updateNextStepBtn($(".check-disabled"));
       	  $("input").attr('disabled','disabled');
 	  }
-      function callRationale() {
-    	  if(points==numberCorrect) {
-  			status = "correct";
-      	  } else {
-  			status ="incorrect";
-            }
-
-  			var label = status=="correct" ? '<i class="fas fa-lg fa-check-circle rationale-icon"></i> Correct!' : '<i class="fas fa-lg fa-times"></i> Not quite!';
-      		$('.answer-rationale-reveal').addClass(status);
-      	  	var $modal = $('.answer-rationale-reveal');
-
-  	  		$.ajax('rationales/quiz_2.html')
-  	  		  .done(function(resp){
-  	  		    $modal.html(resp).foundation('open');
-  	  		  if(status=="correct") {
-      		    	$('.rationale-icon').attr('src','images/Confetti.png');
-    			  } else {
-    				  $('.rationale-icon').attr('src','images/TryAgain.png');
-    			  }
-  	  		    $('.answer-rationale-reveal .title').html(label);
-  	  		});
-      	  updateNextStepBtn(this);
-      	  $("input").attr('disabled','disabled');
-      }
 
       
       $(document).on("click",".check-verified", function() {
@@ -169,6 +148,10 @@
 	    		  $("input").attr('disabled','disabled');
 	    	  }
   			getScore();
+			var storage = window.sessionStorage;
+			var points = storage["quiz_total"];
+			var points_label = points==1 ? "point" : "points";
+			$(".point-quiz-board").html(points + " " + points_label);
 		});
       window.onload = function() {
     	  
