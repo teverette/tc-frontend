@@ -278,3 +278,5 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .upper-right-close {position:absolute;right:3px; top:3px;}
 .point-quiz-board  { text-align:center; color: #FFF; height: 40px; width: 128px; background-color: #43B02A; position: absolute;font-family: "Roboto Slab";	font-size: 16px;	line-height: 21px;
     left: 484px; padding-top:5px;top: 0;}
+    
+.grid-matrix tr:hover {	background-color: rgba(74,144,226,0.08)}
