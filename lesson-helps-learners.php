@@ -23,10 +23,10 @@
 					<hr style="width:230px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
 					<p style="width:240px;text-align:center">What are the different types of irony?</p>			
 				</div>
-				<div class="lesson-point-item second-item" style="margin-left:94px;margin-top:20px">
+				<div class="lesson-point-item second-item" style="margin-left:94px;margin-top:15px">
 					<img src="images/Icon2.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
 					<img src="images/illo-2x.png" class="lesson-point"/>
-					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
+					<hr style="width:205px; border:1px solid #4A90E2; margin: 62px auto 16px;"/>
 					<p style="width:240px;text-align:center">What is suspense? </p>			
 				</div>
 				<div class="lesson-point-item third-item" style="margin-left:94px;">
@@ -42,7 +42,7 @@
 		<?php $back = "index.php"; ?>
 		<?php $next = "why-lesson.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_non_progress.php'?>
 		<script>
 		      $(document).foundation();
 	    </script>

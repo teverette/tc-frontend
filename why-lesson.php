@@ -49,7 +49,7 @@
 		<?php $back = "lesson-helps-learners.php"; ?>
 		<?php $next = "learn-page-2.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_non_progress.php'?>
 		
 		<script>
 		      $(document).foundation();
