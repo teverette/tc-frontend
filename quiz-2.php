@@ -126,7 +126,10 @@
       $(document).ready(function() {
 			highlightCurrentQuiz();
 			if(hasAlreadyAnswered("quiz_2")) {
-
+				$("mark").removeClass("answer");
+				$(".check-disabled").addClass("check-verified").text("Next");
+	    		  updateNextStepBtn($(".check-disabled"));
+	    		  $("input").attr('disabled','disabled');
 				var responseKeyString = storage["quiz_2"];
 	    		console.log(responseKeyString);
 	    			this.responseKey = JSON.parse(responseKeyString);
@@ -142,12 +145,11 @@
 	    				}
 
 	    			}
-	    			
-	    		  updateNextStepBtn($(".check-disabled"));
-	    		  $("input").attr('disabled','disabled');
+	    		
+	    		  
 	    	  }
   			getScore();
-			var storage = window.sessionStorage;
+			
 			var points = storage["quiz_total"];
 			var points_label = points==1 ? "point" : "points";
 			$(".point-quiz-board").html(points + " " + points_label);
