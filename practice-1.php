@@ -48,7 +48,7 @@
 		<div class="rationale-sidebar"></div>
 		</div>
 		<?php $width = "22.2"; ?>
-		<?php $back = "lp.php"; ?>
+		<?php $back = "learn-page-2.php"; ?>
 		<?php $next = ""; ?>
 		<?php include '_footer_progress.php'?>
 		<div class="hint-callout callout"></div>
@@ -61,19 +61,19 @@
 	      	var answerKey = {q1_1:"not-irony", q1_2:"irony",q1_3:"not-irony"};
 	      	var hintArray = {
 	      	      	"hint_q1_1":{
-	          	      	"irony":"This sentence states the opinion statement. Try again."
+	          	      	"irony":"Verbal irony is saying one thing but meaning another. <br/> Did the cat say one thing but mean another? "
 		          	},
 	      	      	"hint_q1_2":{
-	          	      	"not-irony":"This section includes reasons that support the opinion statement. Try again."
+	          	      	"not-irony":"Verbal irony is saying one thing but meaning another. <br/> Are the student’s words the same as what he means?"
 		          	},
 	      	      	"hint_q1_3":{
-	          	      	"irony":"This sentence repeats the opinion statement and makes a suggestion. Try again."
+	          	      	"irony":"Verbal irony is saying one thing but meaning another.<br/>Is there a difference between what the coach says and what he means?"
 	              	}
 	      	}
 	      	var rationaleArray = {
-	      	      	"rationale_q1_1":"Correct! This sentence introduces the opinion statement and helps the reader understand the topic.",
-	      	      	"rationale_q1_2":"Correct! The body gives reasons that support the writer’s opinion statement.",
-	      	      	"rationale_q1_3":"Correct! This sentence provides a strong finish by repeating the opinion statement and providing a call to action.",
+	      	      	"rationale_q1_1":"You got it! Verbal irony is saying one thing but meaning another. <br/> The cat’s words and meaning are the same, so this is not irony",
+	      	      	"rationale_q1_2":"Correct! Verbal irony is saying one thing but meaning another. <br/> The student is saying the opposite of what he means, so this is verbal irony. ",
+	      	      	"rationale_q1_3":"Correct! Verbal irony is saying one thing but meaning another. [para break] The coach is saying exactly what he means, so this is not ironic.",
 	      	}
 	      	var response_key = {};
 	      	var nextPage = "practice-2.php";
