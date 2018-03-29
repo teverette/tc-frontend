@@ -47,12 +47,10 @@
 		</div>
 		<div class="rationale-sidebar"></div>
 		</div>
-		<?php $width = "22.2"; ?>
-		<?php $back = "practice-3.php"; ?>
+		<?php $width = "45"; ?>
+		<?php $back = "learn-page-4.php"; ?>
 		<?php $next = ""; ?>
 		<?php include '_footer_progress.php'?>
-		<div class="hint-callout callout"></div>
-		<div class="rationale-callout callout"></div>
 		
 		<script>
 			$(document).foundation();
@@ -61,13 +59,13 @@
 	      	var answerKey = {q5_1:"irony", q5_2:"not-irony",q5_3:"irony"};
 	      	var hintArray = {
 	      	      	"hint_q5_1":{
-	          	      	"not-irony":"Situational irony is when the outcome of a situation is different than expected. <br/>Is it unexpected when the porch falls off?",
+	          	      	"not-irony":"Situational irony is when the outcome of a situation is different than expected. <br/><br/>Is it unexpected when the porch falls off?",
 	          	      	},
 	      	      	"hint_q5_2":{
-	          	      	"irony":"For situational irony, the outcome needs to be different from what is expected. <br/>Is it unexpected when the child cries?",
+	          	      	"irony":"For situational irony, the outcome needs to be different from what is expected. <br/><br/>Is it unexpected when the child cries?",
 						},
 	      	      	"hint_q5_3":{
-	          	      	"introduction":"In situational irony, something unexpected happens. <br/>Is it unexpected when Mr. Brown gains weight? Try again!",
+	          	      	"not-irony":"In situational irony, something unexpected happens. <br/><br/>Is it unexpected when Mr. Brown gains weight? Try again!",
 	              	}
 	      	}
 	      	var rationaleArray = {

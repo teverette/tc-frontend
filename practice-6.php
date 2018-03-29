@@ -49,7 +49,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 	</div>
-		<?php $width = "89.9"; ?>
+		<?php $width = "51.5"; ?>
 		<?php $back = "practice-5.php"; ?>
 		<?php include '_footer_progress.php'?>
 	
@@ -59,11 +59,11 @@
       	var questions = ["q6_1"];
       	var hintArray = {
       	      	"hint_q6_1":{
-          	      	2:"Situational Irony occurs when something happens that is different from what the reader would typically expect. \
-              	      	<br/> In this example, did you expect something different would happen? ",
-          	      	3:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/>\
+          	      	1:"Situational Irony occurs when something happens that is different from what the reader would typically expect. \
+              	      	<br/> <br/>In this example, did you expect something different would happen? ",
+          	      	3:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/><br/>\
               	      	 In this example, did you expect something different would happen?",
-              	    4:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/>\
+              	    4:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/><br/>\
                  	     In this example, did you expect something different would happen?"
 				}
       	}
@@ -71,7 +71,7 @@
       	      	"rationale_q6_1":"Correct! Situational Irony occurs when something happens that is different from what the reader would typically expect. <br/>\
           	      	 The reader expects Ronald to be praised for doing something nice. When he gets in trouble instead, it is situational irony."
       	}
-		var answerKey = {q6_1:"1"};
+		var answerKey = {q6_1:"2"};
   		var nextPage = "practice-7.php";
 
 	    $(document).on("click",".check", function() {

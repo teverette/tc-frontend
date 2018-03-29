@@ -8,14 +8,14 @@
 	  .title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  .overview-content {min-height: 458px; height: inherit;}
 	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
-	  .learn-page-title {font-family: 'Roboto Slab';font-size: 16px; color: #6D6E71; line-height: 18px;}
+	  .learn-page-title {font-family: 'Roboto Slab';font-size: 22px; color: #6D6E71; line-height: 29px;}
 	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
 	<body class="progress">
 		<div class="content">
 			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">What is situational irony?</h2>
+				<h2 class="medium-5 medium-offset-4 text-center learn-page-title">What is situational irony?</h2>
 				<p>Situational irony occurs when the actual outcome of a situation is different from the expected outcome. 
 				It can be used to add humor and interest or to build suspense.</p>
 				
@@ -27,9 +27,10 @@
 			</div>
 			</div>
 		</div>
-		<?php $width = "22.2"; ?>
+		<?php $width = "37.2"; ?>
 		<?php $back = "practice-4.php"; ?>
 		<?php $next = "practice-5.php"; ?>
+		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		 <script>
