@@ -4,7 +4,6 @@
 	  <title>Why Lesson?</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <link rel="stylesheet" href="css/progress.phase1.css" crossorigin="anonymous" />
 	  <style>
 	  	.title {background-color:#FBFBFB; color:#4A90E2; height:58px;padding-top: 8px;padding-left:114px;margin-bottom:10px}
 	  	.overview-content {min-height: 369px; height: inherit;}
@@ -31,8 +30,9 @@
 	  </style>
 	</head>
 	<body class="progress">
-		<h2 class="title medium-11">Why this lesson is important</h2>
+		
 		<div class="content">
+		<h2 class="title medium-11">Why this lesson is important</h2>
 			<div class="grid-x grid-padding-x" style="margin-top:0px;margin-left:115px">
 				
 				<div class="medium-5 lesson-desc" >
@@ -48,6 +48,7 @@
 		<?php $width = "11.1"; ?>
 		<?php $back = "lesson-helps-learners.php"; ?>
 		<?php $next = "learn-page-2.php"; ?>
+		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		<script>

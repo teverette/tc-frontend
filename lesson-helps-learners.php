@@ -7,8 +7,8 @@
 	  <style>
 	  	.title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  	.overview-content {min-height: 458px; height: inherit;}
-	  	.lesson-point-item {margin-top:17px;width:240px;text-align:center}
-	  	.lesson-point-item.first-item {margin-left: 57px;}
+	  	.lesson-point-item {margin-top:17px;width:150px;text-align:center}
+	  	.lesson-point-item.first-item {margin-left: 0;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:230px; display:inline-block}
 	  </style>
 	</head>
@@ -23,7 +23,7 @@
 					<hr style="width:230px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
 					<p style="width:240px;text-align:center">What are the different types of irony?</p>			
 				</div>
-				<div class="lesson-point-item second-item" style="margin-left:94px;">
+				<div class="lesson-point-item second-item" style="margin-left:94px;margin-top:20px">
 					<img src="images/Icon2.png" style="width:39px;height:39px;display:block; margin: 0 auto 25px;"/>
 					<img src="images/illo-2x.png" class="lesson-point"/>
 					<hr style="width:183px; border:1px solid #4A90E2; margin: 31px auto 16px;"/>
@@ -41,6 +41,7 @@
 		<?php $width = "11.1"; ?>
 		<?php $back = "index.php"; ?>
 		<?php $next = "why-lesson.php"; ?>
+		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		<script>
 		      $(document).foundation();
