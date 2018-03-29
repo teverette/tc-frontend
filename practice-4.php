@@ -49,7 +49,7 @@
 		</div>
 		<div class="rationale-sidebar"></div>
 		</div>
-		<?php $width = "22.2"; ?>
+		<?php $width = "31.0"; ?>
 		<?php $back = "practice-3.php"; ?>
 		<?php $next = ""; ?>
 		<?php include '_footer_progress.php'?>
@@ -63,22 +63,22 @@
 	      	var answerKey = {q4_1:"irony", q4_2:"not-irony",q4_3:"irony", q4_4:"not-irony"};
 	      	var hintArray = {
 	      	      	"hint_q4_1":{
-	          	      	"not-irony":"In dramatic irony, the reader knows more than the character. <br/>Do you know more than the character in this example?",
+	          	      	"not-irony":"In dramatic irony, the reader knows more than the character. <br/><br/>Do you know more than the character in this example?",
 	          	      	},
 	      	      	"hint_q4_2":{
-	          	      	"irony":"In dramatic irony, the reader knows more than the character. <br/>Do you know more than the character in this example?",
+	          	      	"irony":"In dramatic irony, the reader knows more than the character. <br/><br/>Do you know more than the character in this example?",
 						},
 	      	      	"hint_q4_3":{
-	          	      	"introduction":"In dramatic irony, the reader knows more than the character. <br/>Do you know more than the character in this example?",
+	          	      	"not-irony":"In dramatic irony, the reader knows more than the character. <br/><br/>Do you know more than the character in this example?",
 	              	},
 	              	"hint_q4_4":{
-	          	      	"introduction":"In dramatic irony, a funny or tragic situation is created when the reader knows more than a character. Try again!",
+	          	      	"irony":"In dramatic irony, a funny or tragic situation is created when the reader knows more than a character. Try again!",
 	              	}
 	      	}
 	      	var rationaleArray = {
-	      	      	"rationale_q4_1":"Correct! In dramatic irony, the reader knows more than the character. <br/>Readers know that the water is shallow, but the man does not.",
-	      	      	"rationale_q4_2":"Correct! In dramatic irony, the reader knows more than the character. <br/>Readers don’t know more than Christopher, so this is not ironic.",
-	      	      	"rationale_q4_3":"Correct! In dramatic irony, the reader knows more than the character. <br/>Readers know more than Marianna’s father about what happened to her broccoli.",
+	      	      	"rationale_q4_1":"Correct! In dramatic irony, the reader knows more than the character.<br/><br/>Readers know that the water is shallow, but the man does not.",
+	      	      	"rationale_q4_2":"Correct! In dramatic irony, the reader knows more than the character. <br/><br/>Readers don’t know more than Christopher, so this is not ironic.",
+	      	      	"rationale_q4_3":"Correct! In dramatic irony, the reader knows more than the character. <br/><br/>Readers know more than Marianna’s father about what happened to her broccoli.",
 	      	      	"rationale_q4_4":"Correct! Readers don’t know more than Sarah or her friend, so this is not ironic."
 	      	}
 	      	var response_key = {};

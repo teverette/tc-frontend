@@ -11,8 +11,8 @@
 	<div class="content-header content-header-practice">Practice</div>
 	
 	<div class="grid-x grid-padding-x">
-	  <h2 class="title medium-12">How is an opinion piece <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
-			      	title="To arrange information and ideas in to a pattern.">organized</span> into sections?</h2>
+	  <h2 class="title medium-12">Which statements create <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
+			      	title="When words express something different than normal meaning">verbal irony</span>?</h2>
 	 
 	  <div class="medium-12 grid-x lesson-copy">
 	    <p>John’s brother brings his dog to visit. The dog chews John’s favorite shoes. John says, 
@@ -27,8 +27,8 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 </div>
-<?php $width = "11.1"; ?>
-<?php $back = "practice-2.php"; ?>
+<?php $width = "13.1"; ?>
+<?php $back = "practice-1.php"; ?>
 <?php include '_footer_progress.php'?>
 
 <div id="drawer-one" class="drop-down-drawer q2_1 text-center">
@@ -49,7 +49,7 @@
       	var hintArray = {
       	      	"hint_q2_1":{
           	      	1:"John may think the dog is terrible for chewing his shoes, so this is not ironic.",
-          	      	3:"John may want the dog to leave because he is unhappy about his shoes, so this is not ironic. Try again!"},
+          	      	3:"John may want the dog to leave because he is unhappy about his shoes, so this is not ironic."},
       	      	"hint_q2_2":{
           	      	2:"Maria may feel like a loser after falling, so this is not irony.",
           	      	3:"Maria might think that someone who falls shouldn’t brag, so this is not irony."
