@@ -5,33 +5,31 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  .title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
-	  .overview-content {min-height: 458px; height: inherit;}
-	  	  .learn-page-title {font-family: 'Roboto Slab';font-size: 16px; color: #6D6E71; line-height: 18px;}
-	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
+.what-is-example {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-style: italic;	line-height: 20px;}
+.reason-for-example {color: #4A4A4A;	font-family: Roboto;	font-size: 14px;	font-weight: 300;	line-height: 20px;	text-align: center;}
 	  	</style>
 	</head>
-	<body class="practice">
-		<?php $width = "44.4"; ?>
-		<?php include '_progress.php'; ?>
-		<div class="overview-content">
+	<body class="practice learn">
+		<div class="content">
+			<div class="content-header content-header-learn">Learn</div>
 			<div class="grid-x grid-padding-x">
-				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">How can <strong>phrases</strong> help organize the sections in an opinion piece?</h2>
-				<div class="medium-8 medium-centered" style="margin: 0 auto;">
-					<div class="medium-8 medium-centered text-center" style="margin: 0 auto;">
-					<img src="images/7-b.png"/>
-					</div>
-					<div style="position:absolute; top:289px; left:190px; width:200px; height:100px; border-bottom: 2px solid #A7A9AC">
-						For example, a writer <br/> may organize their <br/>ideas with <strong>phrases</strong> like, 
-					</div>	
+				<h2 class="title-learn">What is verbal irony?</h2>
+				<div style="width:250px;display:inline-block">
+					<img src="images/CSK-L7-verbal-irony.gif" style="width:250px"/>
 				</div>
-			</div>
+				<div style="width:390px;display:inline-block;margin-left:25px; padding-top:30px">
+					<p class="what-is-example">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.
+					 While running from his apartment to the office, he dropped the folder that contained his application 
+					 into a deep puddle. “Well, this is going well,” he muttered.</p>
+				</div>
+				<div class="reason-for-example" style="padding-left:75px;margin-top:80px">Scott’s comment, “Well, this is going well,” shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</div>
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x footer">
-			<a class="button back button-left-side" href="learn-page-2.php"><i class="fas fa-lg fa-angle-left" ></i></a>
-			<a class=" button learn-page-forward-button button-right-side" href="3-choice-matrix.php"><i class="fas fa-lg fa-angle-right" ></i></a>
-		</div>
+
+		<?php $back = "learn-page-2.php"; ?>
+		<?php $next = "practice-transition.php"; ?>
+		<?php $btnClass = "check"; ?>
+		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();

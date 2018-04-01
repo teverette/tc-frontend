@@ -185,7 +185,20 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .learn .learn-page-forward-button {width:140px;height:40px;border: 1px solid #407CBE;	border-radius: 4px;	background-color: #307FE2;}
 .button.back:hover, .learn-page-forward-button:hover{opacity:1}
 .learn-page-forward-button:hover{background-color: #43B02A;}
-
+body.practice.learn .content {padding: 36px 166px 0 166px; overflow: scroll;}
+.learn .title-learn { height: 64px; width: 100%; color: #4A4A4A; font-family: "Roboto Slab"; 
+	  		font-size: 24px; font-weight: 300; line-height: 32px; text-align: center; margin:24px auto 41px;
+	  	}
+.irony-description {
+	height: 128px;
+	width: 654px;
+	color: #307FE2;
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 32px;
+	text-align: center;
+}
 .question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}
 .correct-icon-element {position: absolute;right: 1.75rem; color: #00AA00;top: 20px;}
 .incorrect-icon-element {position: absolute;right: 1.75rem; color: #FED700;top: 20px;}

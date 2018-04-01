@@ -10,10 +10,7 @@
 	  	.lesson-point-item {margin-top:17px;width:200px;text-align:center}
 	  	.lesson-point-item.first-item {margin-left: 0;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:100px; display:inline-block;margin-bottom:20px}
-	  	body.practice.learn .content {padding: 36px 166px 0 166px; overflow: scroll;}
-	  	.learn .title-learn { height: 64px; width: 100%; color: #4A4A4A; font-family: "Roboto Slab"; 
-	  		font-size: 24px; font-weight: 300; line-height: 32px; text-align: center; margin:24px auto 41px;
-	  	}
+	  	
 	  	.lesson-point-label {
 	color: #307FE2;
 	font-family: Roboto;
