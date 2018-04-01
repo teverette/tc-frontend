@@ -246,12 +246,12 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
     border-color: transparent #FBEB95 transparent transparent;
 }
 
-.rationale-icon {color: #98CF5C; position: relative; background-color: #4A4A4A; border-radius: 100%;cursor:pointer; transform: scale(1.0); display:none;}
+.rationale-icon {color: #98CF5C; position: relative; width: 30px; display: inline-block; border-radius: 100%;cursor:pointer; transform: scale(1.0); display:none;}
 .rationale-icon:hover{color:#85B550}
-.rationale-icon.pressed{color:#85B550; box-shadow: 0px 0px 6px 1px #ABABAB;}
-.hint-icon {background-color:#4A4A4A; color: #F8E71C;position:relative; border-radius:100%;cursor:pointer; display:none}
+.rationale-icon.pressed{ }
+.hint-icon {position:relative; border-radius:100%;cursor:pointer; display:none}
 .hint-icon:hover {color:#D9CA18}
-.hint-icon.pressed {color:#D9CA18;box-shadow: 0px 0px 1px 1px #4a4a4a}
+.hint-icon.pressed {}
 
 .that-s-it {
 	height: 49px;

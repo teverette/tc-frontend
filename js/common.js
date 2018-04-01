@@ -173,11 +173,11 @@ var ChoiceMatrix = {
 				$('input[name='+name+']:checked').parent().parent().addClass("correct");
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
-				.prepend('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px; transform: scale(1.95)" aria-hidden="true"></i>');
+				.prepend('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
-					.append('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"></i>');
+					.append('<span data-question="' + name + '" class="rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
 			}
       	},
 
@@ -186,22 +186,22 @@ var ChoiceMatrix = {
       			$('input[name='+name+']:checked').parent().parent().addClass("incorrect");
       			$('input[name='+name+']:checked').parent()
 				.addClass('incorrect')
-				.prepend('<i class="fas fa-lg fa-times" style="color: #FED700;position:absolute; right: -630px; top: 7px;" aria-hidden="true"></i>');
+				.prepend('<span class="hint-icon" style="color: #FED700;position:absolute; right: -630px; top: 7px;" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('incorrect')
-					.append('<i class="fas fa-times" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"></i>');
+					.append('<span class="hint-icon" style="color: #FED700;position:relative; right: -15px; top: 3px;" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			}
       	},
       	updateQuestionStateIncorrectHint: function(name, selectedAnswer) {
       		if(this.type=="mc") {
       			$('input[name='+name+']:checked').parent().parent().addClass("incorrect");
       			$('input[name='+name+']:checked').parent()
-				.prepend('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:absolute; right: -630px; top: 7px; border-radius:100%" aria-hidden="true"></i>');
+				.prepend('<span data-selected="'+selectedAnswer+'" data-question="' + name + '" class="hint-icon" style="color: #F8E71C;position:absolute; right: -630px; top: 7px; border-radius:100%" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 				.addClass('incorrect')
-				.append('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon" style="background-color:#4A4A4A; color: #F8E71C;position:relative; right: -15px; top: 3px; border-radius:100%" aria-hidden="true"></i>');
+				.append('<span data-selected="'+selectedAnswer+'" data-question="' + name + '" class="hint-icon" style=" color: #F8E71C;position:relative; right: -15px; top: 3px; border-radius:100%" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			}
       	},
       	resetForm: function() {
@@ -229,7 +229,7 @@ var ChoiceMatrix = {
     		$(".hint-icon").each(function(){
     			$(this).click(function(){
     				$(".rationale-sidebar").removeClass("correct-status").empty();
-    				$(this).addClass("pressed");
+    				// $(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
     				// get hint string && add to tip
@@ -242,7 +242,8 @@ var ChoiceMatrix = {
     				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
     			});
     			$(this).hover(function(){
-    				$(this).addClass("pressed");
+    				$(this).find("img").attr("src","images/Hint-Button Hover.png");
+    				// $(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
     				// get hint string && add to tip
@@ -254,14 +255,16 @@ var ChoiceMatrix = {
     					.show();
     				
     			},function(){
+    				$(this).find("img").attr("src","images/Hint-Button.png");
     				$(".rationale-sidebar").removeClass("hint-status").empty();
-    				$(this).removeClass("pressed");
+    				// $(this).removeClass("pressed");
     			});
     		});
     		
     		$(".rationale-icon").each(
 				function(){
 					$(this).hover(function(){
+						$(this).find("img").attr("src","images/Rationale-Button Hover.png");
 						$(this).addClass("pressed");
 						$(".rationale-sidebar").removeClass("hint-status").empty();
 						var rationale_index = "rationale_" + $(this).data("question");			
@@ -269,10 +272,11 @@ var ChoiceMatrix = {
 							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
 							.addClass("correct-status")
 							.show();
-				},function(){
-    				$(".rationale-sidebar").removeClass("correct-status").empty();
-    				$(this).removeClass("pressed");
-    			});
+					},function(){
+						$(this).find("img").attr("src","images/Rationale-Button.png");
+	    				$(".rationale-sidebar").removeClass("correct-status").empty();
+	    				$(this).removeClass("pressed");
+	    			});
 				$(this).click(function(){
 						$(this).addClass("pressed");
 						$(".rationale-sidebar").removeClass("hint-status").empty();
@@ -376,17 +380,17 @@ var ClozeDropdown = {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
 			if(this.isQuiz) {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
 				this.points++;
 			} else {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<i data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="right: -3px" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
 				this.points++;
 			}
 		}  else {
 			if(false) {
-				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-question="' + name + '" class="fas fa-times" style="color: #FED700;position:relative; right: -10px;" style="right: -3px" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('incorrect').after('<span data-question="' + name + '" class="hint-icon" style="color: #FED700;position:relative; right: -10px;" style="right: -3px" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			} else {
-				$('*[data-question="'+name+'"]').addClass('incorrect').after('<i data-selected="'+selectedAnswer+'" data-question="' + name + '" class="fas fa-question-circle hint-icon"  style="right: -3px" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('incorrect').after('<span data-selected="'+selectedAnswer+'" data-question="' + name + '" class="hint-icon" style="right: -3px" aria-hidden="true"><img src="images/Hint-Button.png" style="width:30px"/></span>');
 			}
 		}
       	
@@ -420,6 +424,7 @@ var ClozeDropdown = {
 					$(".rationale-sidebar").removeClass("correct-status");
 					$(".rationale-icon").removeClass("pressed");
 					$(".hint-icon").removeClass("pressed");
+					$(this).find("img").attr("src","images/Hint-Button Hover.png");
 					$(this).addClass("pressed");
 					var hint_id = $(this).data("question");
 					var selected_answer = $(this).data("selected");
@@ -430,6 +435,7 @@ var ClozeDropdown = {
 						.addClass("hint-status")
 						.show();
 				},function(){
+					$(this).find("img").attr("src","images/Hint-Button.png");
 					$(".rationale-sidebar").removeClass("hint-status").empty();
 					$(this).removeClass("pressed");
 			});
@@ -452,14 +458,16 @@ var ClozeDropdown = {
 		$(".rationale-icon").each(
 			function(){
 				$(this).hover(function(){
+					$(this).find("img").attr("src","images/Rationale-Button Hover.png");
 					$(this).addClass("pressed");
 					var rationale_index = "rationale_" + $(this).data("question");
 					$(".rationale-sidebar")
 						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
 						.addClass("correct-status").show();
-			},function(){
-				$(".rationale-sidebar").removeClass("correct-status").empty();
-				$(this).removeClass("pressed");
+					},function(){
+						$(this).find("img").attr("src","images/Rationale-Button.png");
+						$(".rationale-sidebar").removeClass("correct-status").empty();
+						$(this).removeClass("pressed");
 			});
 				$(this).click(function(){
 					$(this).addClass("pressed");
@@ -595,3 +603,9 @@ function scoreStuff() {
 	    }
 	    return "";
 	}
+	$(document).on("hover",".rationale-icon", 
+		function() {
+			$(this).attr("src","images/Rationale-Button Hover.png");
+		}
+	);
+	
