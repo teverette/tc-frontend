@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>What is verbal irony?</title>
+		<title>Which statements create verbal irony?</title>
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
 	</head>

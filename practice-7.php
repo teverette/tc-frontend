@@ -5,8 +5,8 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  	.radio p.lesson-copy {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 20px; margin-bottom:0;line-height: 20px;}
-	  	.title {margin-bottom: 12px;}
+	  	.radio p.lesson-copy {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 20px;}
+	  	.title {margin-bottom: 12px;color: #4A4A4A;	font-family: "Roboto Slab";	font-size: 24px;	font-weight: 300;	line-height: 32px;}
 	  	.p-label{background-color: gray; border-radius:3px; width:22px;height:22px;display:inline-block;text-align:center;color:#FFF;margin-right:2px;}
 	  	.split-pane .rationale-sidebar {left:527px; top:307px; width: 477px; height:147px;padding-top:5px; display: none;}
 	  	
@@ -14,6 +14,7 @@
 	  	.split-pane .rationale-sidebar:after {content:"<i class="fas fa-angle-down"></i>"}
 	  	.split-pane .hint-status:after,.split-pane .correct-status:after {margin-top: 0;border-width: 0;}
 	  	.split-pane .rationale-sidebar.minimize-sidebar{height:60px;top:397px;overflow:hidden}
+	  	.split-pane-left p {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 19px;}
 	  </style>
 	</head>
 <body class="practice">
@@ -34,7 +35,7 @@
 	 	
 	  </div>
 	  <div class="grid-x " style="position:fixed;display:inline-block;left:534px;top:60px; width: 450px">
-	  	<h2 class="title medium-12">Which story uses 
+	  	<h2 class="title medium-12" style="color: #4A4A4A;	font-family: "Roboto Slab";	font-size: 24px;	font-weight: 300;	line-height: 32px;">Which story uses 
 	  	<span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When the outcome of a situation is different than expected.">situational irony</span>?</h2>
 	  	<label class="radio">
 			<div class="mc-input-box" style="top: 27px;position:relative">
