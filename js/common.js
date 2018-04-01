@@ -380,7 +380,7 @@ var ClozeDropdown = {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
 			if(this.isQuiz) {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="fas fa-check-circle rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"></i>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
 				this.points++;
 			} else {
 				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');

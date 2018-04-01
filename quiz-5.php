@@ -62,24 +62,34 @@
 		
 		<script>
 			$(document).foundation();
-			
+			var hintResponse = "Dramatic irony means having information that characters don't, situational irony is when a scene ends differently than expected, and verbal irony is when the words said are the opposite of what is meant.";
+			var rationaleResponse = "The driver’s remark is verbal irony because he says “wonderful” when he is actually frustrated.<br/><br/>Maria’s situation is situational irony because the reader does not expect someone who starts a dog walking business to be allergic to dogs.<br/><br/>James’ situation creates suspense because he is almost caught by his parents. ";
 			var questions = ["q5_1","q5_2","q5_3"];
 	      	var answerKey = {q5_1:"verbal", q5_2:"situational",q5_3:"suspense"};
 	      	var hintArray = {
 	      	      	"hint_q5_1":{
-	          	      	"irony":"This sentence states the opinion statement. Try again."
+	          	      	"situational":hintResponse,
+	          	      	"dramatic":hintResponse,
+	          	      	"suspense":hintResponse,
+	          	      	"verbal":hintResponse
 		          	},
 	      	      	"hint_q5_2":{
-	          	      	"not-irony":"This section includes reasons that support the opinion statement. Try again."
+		      	      	"situational":hintResponse,
+	          	      	"dramatic":hintResponse,
+	          	      	"suspense":hintResponse,
+	          	      	"verbal":hintResponse
 		          	},
 	      	      	"hint_q5_3":{
-	          	      	"irony":"This sentence repeats the opinion statement and makes a suggestion. Try again."
+		      	      	"situational":hintResponse,
+	          	      	"dramatic":hintResponse,
+	          	      	"suspense":hintResponse,
+	          	      	"verbal":hintResponse
 	              	}
 	      	}
 	      	var rationaleArray = {
-	      	      	"rationale_q5_1":"Correct! This sentence introduces the opinion statement and helps the reader understand the topic.",
-	      	      	"rationale_q5_2":"Correct! The body gives reasons that support the writer’s opinion statement.",
-	      	      	"rationale_q5_3":"Correct! This sentence provides a strong finish by repeating the opinion statement and providing a call to action.",
+	      	      	"rationale_q5_1":rationaleResponse,
+	      	      	"rationale_q5_2":rationaleResponse,
+	      	      	"rationale_q5_3":rationaleResponse,
 	      	}
 	      	var response_key = {};
 	      	var nextPage = "lp-end.php";
@@ -107,11 +117,13 @@
 			$(document).ready(function() {
       			highlightCurrentQuiz();
       			ChoiceMatrix.initialize("quiz_5",3,3);
+      			ChoiceMatrix.isQuiz=true;
       			if(hasAlreadyAnswered("quiz_5")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
     			var storage = window.sessionStorage;
     			var points = storage["quiz_total"];
+    			
     			var points_label = points==1 ? "point" : "points";
     			$(".point-quiz-board").html(points + " " + points_label);
       		});

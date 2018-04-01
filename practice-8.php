@@ -30,13 +30,13 @@
 		</label>
 	  
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 128px">
+	  		<div class="mc-input-box" style="top: 158px">
 	  			<input  type="radio" class="q8_1 question" name="q8_1" value="3"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">Two runners have been racing for first place for an hour. As they round the corner to the finish line, they run into each other.</p>
 	  	</label>
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 205px">
+	  		<div class="mc-input-box" style="top: 268px">
 	  			<input  type="radio" class="q8_1 question" name="q8_1" value="4"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">A waiter drops a tray of food and a customer says, “Nice catch.”</p>
