@@ -12,26 +12,20 @@
 	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
-	<body class="progress">
+	<body class="practice learn">
 		<div class="content">
-			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-5 medium-offset-4 text-center learn-page-title">What is situational irony?</h2>
-				<p>Situational irony occurs when the actual outcome of a situation is different from the expected outcome. 
-				It can be used to add humor and interest or to build suspense.</p>
-				
-				<p style="padding-left:50px">Situational irony is often described as “a twist” in the story.</p>
-				
-				<p>For example, if an Olympic runner loses a race to a middle school student, 
-				situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</p>
-				
-			</div>
+			<div class="content-header content-header-learn">Learn</div>
+			<div class="grid-x grid-padding-x">
+				<h2 class="title-learn ">What is situational irony?</h2>
+				<p class="irony-description">Situational irony occurs when the actual outcome of a situation is different from the expected outcome. It can be used to add humor and interest or to build suspense.
+				 </p>
 			</div>
 		</div>
 		<?php $width = "37.2"; ?>
 		<?php $back = "practice-4.php"; ?>
-		<?php $next = "practice-5.php"; ?>
+		<?php $next = "learn-page-4b.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();

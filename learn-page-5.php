@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>What is suspense?</title>
+	  <title>What is situational irony?</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
@@ -12,25 +12,18 @@
 	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
 	  	</style>
 	</head>
-	<body class="progress">
+	<body class="practice learn">
 		<div class="content">
-			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">What is suspense?</h2>
-				<p>Suspense is the fear or excitement created by the unknown in a narrative. Suspense is used to make stories more interesting.</p>
-				
-				<p style="padding-left:50px">Marco heard movement downstairs. Pulling the covers over his head, he 
-				tried tried to ignore the mysterious sounds, but they grew louder.</p>
-				
-				<p>Because the source of the sounds is unknown, the reader feels the fear and excitement in the suspenseful scene.</p>
-				
-			</div>
+			<div class="content-header content-header-learn">Learn</div>
+			<div class="grid-x grid-padding-x">
+				<h2 class="title-learn ">What is suspense?</h2>
+				<p class="irony-description">Suspense is the fear or excitement created by the unknown in a narrative. Suspense is used to make stories more interesting.</p>
 			</div>
 		</div>
-		<?php $width = "65"; ?>
 		<?php $back = "practice-7.php"; ?>
-		<?php $next = "practice-8.php"; ?>
+		<?php $next = "learn-page-5b.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();
@@ -40,3 +33,4 @@
 	    </script>
 	</body>
 </html>
+

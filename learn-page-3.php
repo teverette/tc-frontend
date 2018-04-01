@@ -5,32 +5,26 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  .title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
-	  .overview-content {min-height: 458px; height: inherit;}
-	  .part-5 {color: #58595B;	font-family: Roboto;	font-size: 16px;	line-height: 20px;}
-	  .learn-page-title {font-family: 'Roboto Slab';font-size: 22px; color: #6D6E71; line-height: 29px;}
-	  .random-copy {font-family: 'Roboto';font-size: 18px; color: #424142; line-height: 24px;}
+
 	  	</style>
 	</head>
-	<body class="progress">
+	<body class="practice learn">
 		<div class="content">
-			<div class="grid-x grid-padding-x" >
-				<h2 class="medium-4 medium-offset-4 text-center learn-page-title">What is dramatic irony?</h2>
-				<p>Dramatic irony occurs when the reader knows information that a character does not. 
-				It can be used to build suspense or add interest. Dramatic irony encourages readers to continue reading to learn what the characters will do and whether they will ever learn the truth. </p>
-				
-				<p style="padding-left:50px">Marco slept peacefully in his bed, unaware of the guests who gathered downstairs for his surprise birthday party.</p>
-				
-				<p>Because the readers know about the birthday party and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</p>
-				
-			</div>
+			<div class="content-header content-header-learn">Learn</div>
+			<div class="grid-x grid-padding-x">
+				<h2 class="title-learn ">What is dramatic irony?</h2>
+				<p class="irony-description">Dramatic irony occurs when the reader knows information that a<br/>
+				 character does not. It can be used to build suspense or add interest.<br/>
+				 Dramatic irony encourages readers to continue reading to learn what the<br/>
+				  characters will do and whether they will ever learn the truth. 
+				 </p>
 			</div>
 		</div>
-		<?php $width = "19.7"; ?>
+
 		<?php $back = "practice-2.php"; ?>
-		<?php $next = "practice-3.php"; ?>
+		<?php $next = "learn-page-3b.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();

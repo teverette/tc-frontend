@@ -13,21 +13,20 @@
 		<div class="content">
 			<div class="content-header content-header-learn">Learn</div>
 			<div class="grid-x grid-padding-x">
-				<h2 class="title-learn">What is verbal irony?</h2>
+				<h2 class="title-learn">What is situational irony?</h2>
 				<div style="width:300px;display:inline-block">
-					<img src="images/CSK-L7-verbal-irony.gif" style="width:300px"/>
+					<img src="images/CSK-L7-twist.gif" style="width:230px"/>
 				</div>
-				<div style="width:320px;display:inline-block;margin-left:25px; padding-top:30px">
-					<p class="what-is-example">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.
-					 While running from his apartment to the office, he dropped the folder that contained his application 
-					 into a deep puddle. “Well, this is going well,” he muttered.</p>
+				<div style="width:300px;display:inline-block;margin-left:25px; padding-top:80px">
+					<p class="what-is-example">Situational irony is often described as “a twist” in the story. </p>
 				</div>
-				<div class="reason-for-example" style="padding-left:75px;margin-top:40px">Scott’s comment, “Well, this is going well,” shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</div>
+				<div class="reason-for-example" style="padding-left:75px;margin-top:0px">For example, if an Olympic runner loses a race to a middle school student, 
+				situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</div>
 			</div>
 		</div>
 
-		<?php $back = "learn-page-2.php"; ?>
-		<?php $next = "practice-transition.php"; ?>
+		<?php $back = "learn-page-4.php"; ?>
+		<?php $next = "practice-5.php"; ?>
 		<?php $btnClass = "check"; ?>
 		<?php include '_footer_non_progress.php'?>
 		
