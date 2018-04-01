@@ -5,11 +5,22 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>.overview-button {font-family:'Roboto', sans-serif;
-	  font-size:20px;color:#4A4A4A;background-color:#FFF;width:166px;height:49px; padding-top: 13px; line-height:24px; font-weight:500}</style>
+	  font-size:20px;color:#4A4A4A;background-color:#FFF;width:166px;height:49px; padding-top: 13px; line-height:24px; font-weight:500}
+	  .organizing-ideas-wit {
+	color: #FFFFFF;
+	font-family: "Roboto Slab";
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 63px;
+	text-align: center;
+	margin: 159px auto 200px;
+}
+	  </style>
+	  
 	</head>
-	<body class="overview">
-		<h1 class="title-only">Organizing Ideas with Authors' Crafts</h1>
-		<p><a class="button secondary neutral overview-button" href="lesson-helps-learners.php">Start Lesson</a></p>
+	<body class="overview ">
+		<h1 class="title-only organizing-ideas-wit">Organizing Ideas with <br/>Authors' Crafts</h1>
+		<p><a class="button secondary neutral overview-button" href="lesson-helps-learners.php">Click to Begin</a></p>
 		<script>
 			// reset scoring situation
 			var storage = window.sessionStorage;
