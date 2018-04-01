@@ -20,6 +20,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .practice .content {height:474px; font-family: 'Roboto Slab', sans-serif; font-size: 22px; line-height: 39px; font-weight: 300;z-index: 1000; position: relative; border: 10px solid #43B02A;}
 .progress .content {height:474px; font-family: 'Roboto'; font-size: 22px; line-height: 39px; font-weight: 300;}
 .quiz .content {border-color:#307FE2}
+.learn .content {border-color:#767676}
 .overview .title {text-align:center; font-family: 'Roboto Slab', serif; font-size:40px; color:#fff;  margin-top:159px}
 .title-only { margin:159px auto 237px; font-family: 'Roboto Slab', serif; font-size:40px}
 .overview p {margin-top:30px}
@@ -32,6 +33,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .content-header {height: 40px; width: 160px;position:absolute; left:324px; top:0; font-family: "Roboto Slab"; font-size: 18px; line-height: 24px; text-align:center; color:#FFF}
 .content-header-practice { background-color: #43B02A;}
 .content-header-quiz {background-color: #307FE2; padding-top:5px;}
+.content-header-learn {left:432px; background-color: #767676; padding-top:5px;}
 .rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:fixed; right:22px; top:20px; 
 	color: #4A4A4A; font-family: Roboto; font-size: 14px; font-weight: bold; line-height: 20px;	padding-top: 41px; padding-left: 23px;
 }
@@ -179,8 +181,9 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .button-left-side {position:relative; left:32px;width:40px}
 
 .button.back {background-color: #C7C5C8; opacity:0.95;height:40px;border-radius:100%}
+.learn .back {width:140px;border: 1px solid #407CBE;	border-radius: 4px;	background-color: #307FE2;}
+.learn .learn-page-forward-button {width:140px;height:40px;border: 1px solid #407CBE;	border-radius: 4px;	background-color: #307FE2;}
 .button.back:hover, .learn-page-forward-button:hover{opacity:1}
-.learn-page-forward-button {background-color: #43B02A; opacity:0.95;height:40px; width:40px; left: 910px; border-radius:100%; padding-top:2px]}
 .learn-page-forward-button:hover{background-color: #43B02A;}
 
 .question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}

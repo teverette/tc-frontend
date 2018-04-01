@@ -12,8 +12,9 @@
 	font-size: 48px;
 	font-weight: 300;
 	line-height: 63px;
+	height:189px;
 	text-align: center;
-	margin: 159px auto 200px;
+	margin: 201px auto 22px;
 }
 	  </style>
 	  
