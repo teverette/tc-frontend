@@ -21,10 +21,11 @@
 			</div>
 		</div>
 
+		<?php $width = "18.75"; ?>
 		<?php $back = "practice-2.php"; ?>
 		<?php $next = "learn-page-3b.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_non_progress.php'?>
+		<?php include '_footer_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();

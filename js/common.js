@@ -608,4 +608,6 @@ function scoreStuff() {
 			$(this).attr("src","images/Rationale-Button Hover.png");
 		}
 	);
-	
+$(document).ready(function() {
+	$(".learn .forward-button").html('Next <i class="fas fa-lg fa-caret-right" ></i>');
+});

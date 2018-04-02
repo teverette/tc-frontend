@@ -20,10 +20,11 @@
 				<p class="irony-description">Suspense is the fear or excitement created by the unknown in a narrative. Suspense is used to make stories more interesting.</p>
 			</div>
 		</div>
+		<?php $width = "75.0"; ?>
 		<?php $back = "practice-7.php"; ?>
 		<?php $next = "learn-page-5b.php"; ?>
 		<?php $btnClass = "check"; ?>
-		<?php include '_footer_non_progress.php'?>
+		<?php include '_footer_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();
