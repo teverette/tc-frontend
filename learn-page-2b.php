@@ -18,11 +18,11 @@
 					<img src="images/CSK-L7-verbal-irony.gif" style="width:300px"/>
 				</div>
 				<div style="width:320px;display:inline-block;margin-left:25px; padding-top:30px">
-					<p class="what-is-example">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.
+					<p class="what-is-example" style="display:none">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.
 					 While running from his apartment to the office, he dropped the folder that contained his application 
 					 into a deep puddle. “Well, this is going well,” he muttered.</p>
 				</div>
-				<div class="reason-for-example" style="padding-left:75px;margin-top:40px">Scott’s comment, “Well, this is going well,” shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</div>
+				<div class="reason-for-example " style="padding-left:75px;margin-top:40px; display:none;">Scott’s comment, “Well, this is going well,” shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</div>
 			</div>
 		</div>
 
@@ -34,7 +34,8 @@
 		 <script>
 		      $(document).foundation();
 		      $(document).ready(function() {
-					$(".lesson-desc").fadeIn(500);
+					$(".what-is-example").toggle('fade',500);
+					setTimeout(function(){$(".reason-for-example").toggle('fade',500)},600);
 		      });
 	    </script>
 	</body>
