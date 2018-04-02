@@ -8,7 +8,7 @@
 	<body class="practice">
 		<img src="images/speaker.jpg" class="speaker"/>
 		<div class="content"> 
-		<div class="global-tip" style="position:fixed; left:156px; top:10px; height: 82px; width: 200px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;
+		<div class="global-tip" style="position:fixed; z-index:10000; left:156px; top:10px; height: 82px; width: 200px; border-radius: 4px; color:#FFF; font-size:16px; line-height:19px; font-family:'Roboto'; font-weight:300; padding:10px;
 	background-color: #4A90E2; box-shadow: 0 2px 8px 0 rgba(96,96,96,0.5);};">Hover on the blue words to get a definition.
 	<span style="display:inline-block; float:right; margin-top: 20px; text-align: center; cursor:pointer; height: 24px; width: 34px; border: 2px solid #FFFFFF; border-radius: 2px;" onclick="$('.global-tip').hide()">OK</span></div>
 		<div class="content-header content-header-practice">Practice</div>

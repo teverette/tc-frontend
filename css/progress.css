@@ -157,7 +157,7 @@ input.question.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight:
 label.select {display:inline}
 label.radio, label.radio:after {display: inline-block; font-size: .875rem !important;}
 select.question {width:12rem;font-family: 'Roboto', sans-serif;}
-.footer {z-index:1002; padding-top:19px; height:80px;width:1024px;background-color: transparent;}
+.footer {z-index:1002; padding-top:19px; height:80px;width:1024px;background-color: #ECECEC;}
 .footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}
 /*.footer div {margin: 0 114px}*/
 .answer-rationale-reveal .footer {position:absolute; left:0}
