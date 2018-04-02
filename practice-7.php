@@ -18,11 +18,11 @@
 	  </style>
 	</head>
 <body class="practice">
-	<img src="images/speaker.jpg" class="speaker" style="left: 500px; top: 66px"/>
+	<img src="images/speaker.jpg" class="speaker" style="left: 524px; top: 66px"/>
 	<div class="content"> 
-	<div class="content-header content-header-practice">Practice</div>
+	<div class="content-header content-header-practice" style="z-index: 2;    left: 432px;">Practice</div>
 	<div class="grid-x grid-padding-x split-pane">
-	  <div class="split-pane-left" style="position:absolute; left:48px;">
+	  <div class="split-pane-left" style="position:absolute; left:0px; width: 510px;padding-left:48px; background-color:#ECECEC;z-index: 1; top: 0; padding-top: 40px;">
 	  <h2 class="title">Story</h2>
 	  	<p><span class="p-label">1</span>Ronald was very excited to start his first day working as a junior chef at an award-winning restaurant. The restaurant had 
 	  	received an enormous amount of positive reviews for its menu, wonderful food presentation, and beautiful ambience. Ronald was also 
@@ -35,7 +35,7 @@
 <p><span class="p-label">6</span>“I hope you enjoy it Ronald. I cooked it myself. I put the most money in the daily chef compliments jar and my paycheck usually has the costs of ten fish meals taken out of it.”
 	 	
 	  </div>
-	  <div class="grid-x " style="position:fixed;display:inline-block;left:534px;top:60px; width: 450px">
+	  <div class="grid-x " style="position:fixed;display:inline-block;left:544px;top:60px; width: 440px">
 	  	<h2 class="title medium-12" style="color: #4A4A4A;	font-family: "Roboto Slab";	font-size: 24px; font-weight: 300; line-height: 32px;">Why is this story an example of
 	  	<span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When the outcome of a situation is different than expected.">situational irony</span>?</h2>
 	  	<label class="radio">
