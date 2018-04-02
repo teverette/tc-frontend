@@ -9,11 +9,11 @@ function showRationale() {
 
 function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check-disabled").removeClass("again");
-	$(o).html('Next <i class="fas fa-lg fa-angle-right" ></i>');
+	$(o).html('Next <i class="fas fa-lg fa-caret-right" ></i>');
 }
 
 function updateCheckAgainBtn(o) {
-	$(o).html('Check again <i class="fas fa-lg fa-angle-right" ></i>').addClass('again');
+	$(o).html('Check again <i class="fas fa-lg fa-caret-right" ></i>').addClass('again');
 }
 
 function lockTest() {

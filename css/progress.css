@@ -180,8 +180,8 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
     width: 140px;}
 .button-left-side {position:relative; left:32px;width:40px}
 
-.button.back {background-color: #C7C5C8; opacity:0.95;height:40px;border-radius:100%}
-.learn .back {width:140px;border: 1px solid #407CBE;	border-radius: 4px;	background-color: #307FE2;}
+.button.back-old {background-color: #C7C5C8; opacity:0.95;height:40px;border-radius:100%}
+.button.back, .learn .back {width:140px;border: 1px solid #407CBE; border-radius: 4px; background-color: #307FE2;font-family: "Roboto Slab";	font-size: 20px;	line-height: 21px;opacity:0.95;}
 .learn .learn-page-forward-button {width:140px;height:40px;border: 1px solid #407CBE;	border-radius: 4px;	background-color: #307FE2;}
 .button.back:hover, .learn-page-forward-button:hover{opacity:1}
 .learn-page-forward-button:hover{background-color: #43B02A;}
