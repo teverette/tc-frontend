@@ -65,13 +65,13 @@
 	          	      	"irony":"For situational irony, the outcome needs to be different from what is expected. <br/><br/>Is it unexpected when the child cries?",
 						},
 	      	      	"hint_q5_3":{
-	          	      	"not-irony":"In situational irony, something unexpected happens. <br/><br/>Is it unexpected when Mr. Brown gains weight? Try again!",
+	          	      	"not-irony":"In situational irony, something unexpected happens. <br/><br/>Is it unexpected when Mr. Brown gains weight?",
 	              	}
 	      	}
 	      	var rationaleArray = {
-	      	      	"rationale_q5_1":"Correct! The reader expects a building inspector’s porch to be safe, so it is ironic when the opposite happens.",
-	      	      	"rationale_q5_2":"Correct! This is not situational irony, because the child’s reaction is what the reader expects.",
-	      	      	"rationale_q5_3":"Correct! The reader expects Mr. Brown to lose weight, so when the opposite happens, it is situational irony."
+	      	      	"rationale_q5_1":"The reader expects a building inspector’s porch to be safe, so it is ironic when the opposite happens.",
+	      	      	"rationale_q5_2":"This is not situational irony, because the child’s reaction is what the reader expects.",
+	      	      	"rationale_q5_3":"The reader expects Mr. Brown to lose weight, so when the opposite happens, it is situational irony."
 	      	}
 	      	var response_key = {};
 	      	var nextPage = "practice-6.php";

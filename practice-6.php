@@ -69,7 +69,7 @@
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q6_1":"Correct! Situational Irony occurs when something happens that is different from what the reader would typically expect. <br/>\
+      	      	"rationale_q6_1":"Situational Irony occurs when something happens that is different from what the reader would typically expect. <br/>\
           	      	 The reader expects Ronald to be praised for doing something nice. When he gets in trouble instead, it is situational irony."
       	}
 		var answerKey = {q6_1:"2"};
