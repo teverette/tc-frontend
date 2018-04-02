@@ -18,10 +18,10 @@
 					<img src="images/CSK-L7-situational-irony.gif" style="width:300px"/>
 				</div>
 				<div style="width:300px;display:inline-block;margin-left:25px; padding-top:50px">
-					<p class="what-is-example">Marco slept peacefully in his bed, unaware of the guests who gathered 
+					<p class="what-is-example" style="display:none">Marco slept peacefully in his bed, unaware of the guests who gathered 
 					downstairs for his surprise birthday party. </p>
 				</div>
-				<div class="reason-for-example" style="padding-left:75px;margin-top:60px">Because the readers know about the birthday party 
+				<div class="reason-for-example" style="padding-left:75px;margin-top:60px; display:none;">Because the readers know about the birthday party 
 				and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</div>
 			</div>
 		</div>
@@ -34,7 +34,8 @@
 		 <script>
 		      $(document).foundation();
 		      $(document).ready(function() {
-					$(".lesson-desc").fadeIn(500);
+		    	  $(".what-is-example").toggle('fade',500);
+				  setTimeout(function(){$(".reason-for-example").toggle('fade',500)},600);
 		      });
 	    </script>
 	</body>
