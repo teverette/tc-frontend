@@ -7,7 +7,7 @@
 	  <style>
 	  	.title {background-color:#FBFBFB; color:#4A90E2; height:82px;padding-top: 22px;padding-left:114px;margin-bottom:0;}
 	  	.overview-content {min-height: 458px; height: inherit;}
-	  	.lesson-point-item {margin-top:17px;width:200px;text-align:center}
+	  	.lesson-point-item {margin-top:17px;width:200px;text-align:center; display:none;}
 	  	.lesson-point-item.first-item {margin-left: 0;}
 	  	img.lesson-point {font-family:'Roboto Slab',sans-serif; width:100px; display:inline-block;margin-bottom:20px}
 	  	
@@ -59,6 +59,11 @@
 		<?php include '_footer_non_progress.php'?>
 		<script>
 		      $(document).foundation();
+		      $(document).ready(function(){
+		    	  $(".first-item").toggle('fade',500);
+				  setTimeout(function(){$(".second-item").toggle('fade',500)},700);
+				  setTimeout(function(){$(".third-item").toggle('fade',500)},1400);
+		      });
 	    </script>
 	</body>
 </html>

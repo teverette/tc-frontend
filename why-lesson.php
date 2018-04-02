@@ -25,10 +25,10 @@ p{
 			<div class="content-header content-header-learn">Learn</div>
 				<div class="grid-x grid-padding-x">
 					<h2 class="title-learn ">Why this lesson is important</h2>
-					<div class="medium-12 lesson-desc text-center" >
+					<div class="medium-12 lesson-desc text-center" style="display:none" >
 						<img src="images/why-lesson.jpg" style="width:333px"></span>
 					</div>
-					<div class="medium-12">
+					<div class="medium-12 second-item" style="display:none">
 						<p>
 						A narrative is a story: it contains characters, story events, and settings. Writers use techniques like irony and suspense 
 						to make their narratives more interesting and pleasurable for readers.</p>
@@ -45,8 +45,8 @@ p{
 		<script>
 		      $(document).foundation();
 		      $(document).ready(function() {
-					$(".lesson-desc").fadeIn(500);
-					$(".lesson-copy").fadeIn(500);
+		    	  setTimeout(function(){$(".lesson-desc").toggle('fade',500)}, 0);
+		    	  setTimeout(function(){$(".second-item").toggle('fade',500)},700);
 		      });
 	    </script>
 	</body>
