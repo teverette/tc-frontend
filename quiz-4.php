@@ -5,7 +5,9 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  	.rationale-sidebar .that-s-it {height: 20px;}
+	  	.rationale-sidebar .that-s-it {height: 26px;}
+	  	.rationale-sidebar {padding-top: 0}
+	  	.rationale-sidebar img.status  {margin-bottom: 3px}
 	  </style>
 	</head>
 <body class="practice quiz">

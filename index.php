@@ -4,15 +4,9 @@
 	  <title>Overview</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <style>.button.overview-button {color:#FFF; line-height:24px; font-weight:400;
-	  font-family: "Roboto Slab";	font-size: 14px;	line-height: 21px;
-	height: 40px;
-	width: 134px;
-	border: 1px solid #407CBE;
-	border-radius: 4px;
-	background-color: #307FE2;
-}
-.button.overview-button:hover {border: 1px solid #307FE2;	border-radius: 4px;	background-color: #FFFFFF; color:#307FE2}
+	  <style>.overview-button {font-family: "Roboto Slab"; font-size: 14px; line-height: 21px; color:#4A4A4A;
+	  	background-color:#FFF;width:166px;height:49px; padding-top: 13px; line-height:24px; font-weight:400}
+	  
 	  .organizing-ideas-wit {
 	color: #FFFFFF;
 	font-family: "Roboto Slab";

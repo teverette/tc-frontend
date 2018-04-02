@@ -124,7 +124,7 @@ ul.lesson-items > li:before { content:"\2022\00a0 \00a0 \00a0"; font-size: 36px;
 .lesson-label {color: #FFF; margin-bottom: 0; font-size: 36px; line-height: 48px; padding-left: 0; text-align:center;font-family: 'Roboto Slab', serif;}
 .title {font-family: 'Roboto Slab', serif; color: #4A4A4A; line-height:36px; font-size:24px;margin-bottom: 34px;}
 .lesson-desc {font-size:24px; color:#4A4A4A; font-family: 'Roboto', sans-serif;font-weight:300; line-height:36px;margin-bottom: 23px;}
-.lesson-copy, .lesson-copy mark {font-size:20px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:22px;}
+.lesson-copy, .lesson-copy mark {font-size:20px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:29px;}
 .label-type-icon {margin-right:20px;width:36px}
 .inline-select {width:intrinsic;display:inline; margin-right:.5rem;border-radius: 6px;margin-bottom:0;}
 .rationale {opacity:0}

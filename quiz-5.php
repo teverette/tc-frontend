@@ -4,6 +4,11 @@
 		<title>What is verbal irony?</title>
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
+		<style>
+			.rationale-sidebar .that-s-it {height: 26px;}
+	  	.rationale-sidebar {padding-top: 0}
+	  	.rationale-sidebar img.status  {margin-bottom: 3px}
+		</style>
 	</head>
 	<body class="practice quiz">
 		
@@ -11,8 +16,7 @@
 		<div class="content-header content-header-quiz">Quiz</div>
 		<span class="point-quiz-board"> - points</span>
 		<div class="grid-x grid-padding-x">
-		  <p class="lesson-desc medium-12">Which of these shows <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
-		      	title="When words express something different than normal meaning">verbal irony?</span></p>
+		  <p class="lesson-desc medium-12">What technique is being used in each example?</p>
 		   
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
@@ -92,7 +96,7 @@
 	      	      	"rationale_q5_3":rationaleResponse,
 	      	}
 	      	var response_key = {};
-	      	var nextPage = "lp-end.php";
+	      	var nextPage = "lesson-taught.php";
 	      	var storage = window.sessionStorage;
 
 			$(document).on("click",".check", function() {
