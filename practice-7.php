@@ -78,7 +78,7 @@
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q7_1":"An unexpected outcome is what creates situational irony."
+      	      	"rationale_q7_1":"<br/>An unexpected outcome is what creates situational irony."
       	}
 		var answerKey = {q7_1:"2"};
   		var nextPage = "learn-page-5.php";
