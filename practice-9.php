@@ -4,6 +4,9 @@
   <title>Which choice creates the most suspense?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style>
+	  .dropshadow {box-shadow: 0 2px 6px 0 rgba(170,170,170,0.5); z-index:5}
+	  </style>
 </head>
 <body class="practice">
 <img src="images/speaker.jpg" class="speaker" />
@@ -11,7 +14,7 @@
 	<div class="content-header content-header-practice" style="z-index: 1000">Practice</div>
 	
 	<div class="grid-x grid-padding-x">
-	  <h2 class="title medium-12" style="position:fixed; background-color:#FFF;padding-top:40px;top:10px">Which choice creates the most <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
+	  <h2 class="title medium-12" style="position:fixed; background-color:#FFF;padding-top:40px;top:10px;left: 10px; width: 1004px; padding-left: 110px;">Which choice creates the most <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
 			      	title="To arrange information and ideas in to a pattern.">suspense</span>?</h2>
 	 
 	  <div class="medium-12 grid-x lesson-copy" style="margin-top:45px">
@@ -77,6 +80,15 @@
 			ClozeDropdown.initialize("practice_9",1,1);
 			if(hasAlreadyAnswered("practice_9")) {
 				ClozeDropdown.setPreviousResponse();
+			}
+	  	});
+
+	  	$(".content").scroll(function() {
+			if ($(".content").scrollTop()>40) {
+				$(".title").addClass("dropshadow");
+			}
+			if ($(".content").scrollTop()<=40) {
+				$(".title").removeClass("dropshadow");
 			}
 	  	});
 

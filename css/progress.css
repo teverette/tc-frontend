@@ -273,8 +273,8 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .rationale-icon:hover{color:#85B550}
 .rationale-icon.pressed{ }
 .hint-icon {position:relative; border-radius:100%;cursor:pointer; display:none; animation-name: fadeInOut;
-    animation-duration: .75s;
-    animation-direction: reverse;
+    animation-duration: 1.50s;
+    animation-direction: normal;
     animation-iteration-count: infinite; animation-delay: 1s;}
 .hint-icon:hover {color:#D9CA18}
 .hint-icon.pressed {}
@@ -311,8 +311,11 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 
 /* The animation code */
 @keyframes fadeInOut {
-    from {opacity: 1.0;}
-    to {opacity: 0.5;}
+    0% {opacity: 1.0;}
+    25% {opacity: 0.75;}
+    50% {opacity: 0.55;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1.0;}
 }
 
 .display-none {display:none}
