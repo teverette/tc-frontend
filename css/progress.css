@@ -314,3 +314,5 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
     from {opacity: 1.0;}
     to {opacity: 0.5;}
 }
+
+.display-none {display:none}
