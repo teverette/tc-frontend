@@ -232,6 +232,7 @@ var ChoiceMatrix = {
     				// $(this).addClass("pressed");
     				var hint_id = $(this).data("question");
     				var selected_answer = $(this).data("selected");
+    				$(this).find("img").attr("src","images/Hint-Button Hover.png");
     				// get hint string && add to tip
     				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
     				var hint_index = "hint_" + hint_id;				
@@ -279,6 +280,7 @@ var ChoiceMatrix = {
 	    			});
 				$(this).click(function(){
 						$(this).addClass("pressed");
+						$(this).find("img").attr("src","images/Rationale-Button Hover.png");
 						$(".rationale-sidebar").removeClass("hint-status").empty();
 						var rationale_index = "rationale_" + $(this).data("question");			
 						$(".rationale-sidebar")
@@ -443,6 +445,7 @@ var ClozeDropdown = {
 				$(".rationale-sidebar").removeClass("correct-status");
 				$(".rationale-icon").removeClass("pressed");
 				$(".hint-icon").removeClass("pressed");
+				$(this).find("img").attr("src","images/Hint-Button Hover.png");
 				$(this).addClass("pressed");
 				var hint_id = $(this).data("question");
 				var selected_answer = $(this).data("selected");
@@ -471,6 +474,7 @@ var ClozeDropdown = {
 			});
 				$(this).click(function(){
 					$(this).addClass("pressed");
+					$(this).find("img").attr("src","images/Rationale-Button Hover.png");
 					var rationale_index = "rationale_" + $(this).data("question");
 					$(".rationale-sidebar")
 						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
