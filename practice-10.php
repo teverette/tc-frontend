@@ -67,9 +67,9 @@
               	 }
       	}
       	var rationaleArray = {
-      	      	"rationale_q10_1":"Correct! When the runner twists her ankle, readers worry about what will happen, creating suspense.",
-      	      	"rationale_q10_2":"Correct! Readers become more worried that the runner will not win the race.",
-      	      	"rationale_q10_3":"Correct! The question that worries readers is the same that worries the runner."
+      	      	"rationale_q10_1":"When the runner twists her ankle, readers worry about what will happen, creating suspense.",
+      	      	"rationale_q10_2":"Readers become more worried that the runner will not win the race.",
+      	      	"rationale_q10_3":"The question that worries readers is the same that worries the runner."
       	}
 		var nextPage = "quiz-transition.php";
     

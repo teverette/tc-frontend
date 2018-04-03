@@ -54,12 +54,12 @@
       	var questions = ["q3_1"];
       	var hintArray = {
       	      	"hint_q3_1":{
-          	      	2:"Dramatic irony is when the readers know something the characters do not. <br/>Do you know more than this character?",
-          	      	3:"Dramatic irony is when the readers know something the characters do not. <br/>Do you know more than this character?"
+          	      	2:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?",
+          	      	3:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?"
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q3_1":"Correct! Joan’s choice seems tragic from the reader’s point of view, because we know something she does not."
+      	      	"rationale_q3_1":"Joan’s choice seems tragic from the reader’s point of view, because we know something she does not."
       	}
 		var answerKey = {q3_1:"1"};
   		var nextPage = "practice-4.php";

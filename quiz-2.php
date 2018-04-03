@@ -35,7 +35,7 @@
       $(document).foundation();
 		var questions = ["quiz_2_1","quiz_2_2","quiz_2_3","quiz_2_4","quiz_2_5"];
     	var question2 = {quiz_2_1:false, quiz_2_2:false,quiz_2_3:false,quiz_2_4:false,quiz_2_5:true};
-    	var rationalText = "Dramatic irony happens when the reader knows information that a character does not know. [para break]  Teresa’s friend does not know what is in the bag, but the reader does.";
+    	var rationalText = "Dramatic irony happens when the reader knows information that a character does not know.<br/><br/>Teresa’s friend does not know what is in the bag, but the reader does.";
     	var rationaleArray = {
       	      	"rationale_quiz_2_1": rationalText,
       	      	"rationale_quiz_2_2": rationalText,

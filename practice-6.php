@@ -61,7 +61,7 @@
       	var hintArray = {
       	      	"hint_q6_1":{
           	      	1:"Situational Irony occurs when something happens that is different from what the reader would typically expect. \
-              	      	<br/> <br/>In this example, did you expect something different would happen? ",
+              	      	<br/><br/>In this example, did you expect something different would happen? ",
           	      	3:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/><br/>\
               	      	 In this example, did you expect something different would happen?",
               	    4:"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/><br/>\
@@ -69,7 +69,7 @@
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q6_1":"Situational Irony occurs when something happens that is different from what the reader would typically expect. <br/>\
+      	      	"rationale_q6_1":"Situational Irony occurs when something happens that is different from what the reader would typically expect.<br/><br/>\
           	      	 The reader expects Ronald to be praised for doing something nice. When he gets in trouble instead, it is situational irony."
       	}
 		var answerKey = {q6_1:"2"};

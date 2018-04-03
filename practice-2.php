@@ -56,8 +56,8 @@
               	}
       	}
       	var rationaleArray = {
-      	      	"rationale_q2_1":"Correct! John’s words are different from how he really feels, so this is ironic.",
-      	      	"rationale_q2_2":"Correct. Maria is saying she did “a trick” when actually she fell down."
+      	      	"rationale_q2_1":"John’s words are different from how he really feels, so this is ironic.",
+      	      	"rationale_q2_2":"Maria is saying she did “a trick” when actually she fell down."
       	}
 		var nextPage = "learn-page-3.php";
     

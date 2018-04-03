@@ -63,7 +63,7 @@
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q8_1":"Correct! Readers want to know who will win the race, especially since the runners have collided."
+      	      	"rationale_q8_1":"Readers want to know who will win the race, especially since the runners have collided."
       	}
 		var answerKey = {q8_1:"3"};
   		var nextPage = "practice-9.php";

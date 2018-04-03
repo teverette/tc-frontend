@@ -66,12 +66,12 @@
       	var questions = ["q4_1"];
       	var hintArray = {
       	      	"hint_q4_1":{
-          	      	1:"Dramatic irony is when the readers know something the characters do not. <br/>Do you know more than this character?",
+          	      	1:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?",
 				}
       	}
       	var rationaleArray = {
-      	      	"rationale_q4_1":"This is a coincidence but not an example of irony. <br/> It’s not dramatic irony because the reader does not know anything \
-          	      	 that the characters do not. <br/> It’s not situational irony  because the outcome is not particularly unexpected. <br/> It’s not verbal irony because the words in the story are literal and do not have other meanings."
+      	      	"rationale_q4_1":"This is a coincidence but not an example of irony.<br/><br/> It’s not dramatic irony because the reader does not know anything \
+          	      	 that the characters do not.<br/><br/>It’s not situational irony  because the outcome is not particularly unexpected. <br/><br/> It’s not verbal irony because the words in the story are literal and do not have other meanings."
       	}
 		var answerKey = {q4_1:"4"};
   		var nextPage = "quiz-5.php";
