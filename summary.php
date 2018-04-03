@@ -10,13 +10,13 @@
 	  	.title-summary {color: #FFFFFF;	font-family: "Roboto Slab";	font-size: 46px; margin-top:50px;font-weight: 300;	line-height: 36px;	text-align: center;}
 	  </style>
 	</head>
-	<body class="overview" style="background-color:#4A90E2">
+	<body class="overview" style="background-color:#00B7BD">
 	<div class="align-center">
-		<h1 class="title-summary">You earned the drama dog!</h1>
-		<img src="images/Summary.jpg" style="margin-top: 50px; height: 194px;"/>
-		<h3 style="font-family:'Roboto', sans-serif; color: #FCFCFC; font-family: "Roboto Slab"; font-size: 30px; font-weight: 300;	
-			line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> points out of <span>7</span>.</h3>
+		<img src="images/celebration-cat.jpg" style="margin-top: 100px; height: 194px; margin-bottom:100px"/>
+		<h3 style="font-family:'Roboto', sans-serif; color: #FCFCFC; font-family: 'Roboto Slab'; 
+		font-size: 30px; font-weight: 300;	line-height: 30px;	text-align: center; margin-bottom:30px;">That's <span class="points">&nbsp;</span> out of <span>7</span> points earned.</h3>
 		
+		<!-- 
 		<div style="width:600px; margin:80px auto 0;position:relative;">
 			<div style="position:absolute; left:0;top:-30px">Novice</div>
 			<div style="position:absolute; right:0px;top:-30px">Expert</div>
@@ -25,7 +25,7 @@
 		      <div class="score-hash" style="border-radius:100%; background-color:#fff; height:12px;width:12px;position:relative;top:-5px; left:0"></div>
 		    </div>
 	    </div>
-		
+		 -->
 	<script>
 	$(document).ready(function() {
 		var storage = window.sessionStorage;
