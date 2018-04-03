@@ -13,15 +13,15 @@
 		<div class="content">
 			<div class="content-header content-header-learn">Learn</div>
 			<div class="grid-x grid-padding-x">
-				<h2 class="title-learn">What is suspense?</h2>
+				<h2 class="title-learn display-none">What is suspense?</h2>
 				<div style="width:300px;display:inline-block">
-					<img src="images/CSK-L7-Suspense.gif" style="width:300px"/>
+					<img src="images/CSK-L7-Suspense.gif" style="width:300px" class="first-item display-none"/>
 				</div>
 				<div style="width:300px;display:inline-block;margin-left:25px; padding-top:40px">
-					<p class="what-is-example" style="display:none">Marco heard movement downstairs. Pulling the covers over his head, he tried tried to
+					<p class="what-is-example first-item display-none">Marco heard movement downstairs. Pulling the covers over his head, he tried tried to
 					 ignore the mysterious sounds, but they grew louder.</p>
 				</div>
-				<div class="reason-for-example" style="padding-left:75px;margin-top:30px;display:none">Because the source of the sounds is unknown,
+				<div class="reason-for-example display-none" style="padding-left:75px;margin-top:30px;display:none">Because the source of the sounds is unknown,
 				 the reader feels the fear and excitement in the suspenseful scene.</div>
 			</div>
 		</div>
@@ -34,8 +34,9 @@
 		 <script>
 		      $(document).foundation();
 		      $(document).ready(function() {
-		    	  $(".what-is-example").toggle('fade',500);
-				  setTimeout(function(){$(".reason-for-example").toggle('fade',500)},650);
+		    	  $(".title-learn").toggle('fade',500)
+		    	  setTimeout(function(){$(".first-item").toggle('fade',500)},650);
+				  setTimeout(function(){$(".reason-for-example").toggle('fade',500)},1300);
 		      });
 	    </script>
 	</body>

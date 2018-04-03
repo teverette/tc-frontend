@@ -36,7 +36,7 @@
 		      $(document).ready(function() {
 			      	$(".title-learn").toggle('fade',500);
 			      	setTimeout(function(){$(".first-item").toggle(500)},650);
-					setTimeout(function(){$(".reason-for-example").toggle('fade',500)},650);
+					setTimeout(function(){$(".reason-for-example").toggle('fade',500)},1300);
 		      });
 	    </script>
 	</body>
