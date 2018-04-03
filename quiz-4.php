@@ -55,7 +55,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 	</div>
-		<?php $width = "100"; ?>
+		<?php $width = "80"; ?>
 		<?php $back = "quiz-3.php"; ?>
 		<?php include '_quiz_progress.php'?>
 	

@@ -42,7 +42,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 	</div>
-		<?php $width = "89.9"; ?>
+		<?php $width = "20.0"; ?>
 		<?php $back = "quiz-transition.php"; ?>
 		<?php include '_quiz_progress.php'?>
 	
