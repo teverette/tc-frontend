@@ -45,7 +45,7 @@
       	}
     	var nextPage = "quiz-3.php";
     	var points=0;
-    	var numberCorrect=5;
+    	var numberCorrect=1;
     	var responseKey = {};
     
     	function loopThruQuestions() {
@@ -68,7 +68,7 @@
 	      	responseKey[name] = selectedAnswer;
 	      	if(!correctAnswer && !selectedAnswer) {
 				$(o).addClass('clear');
-				points++;
+				//points++;
 			} else if(correctAnswer==selectedAnswer) {
 				$(o).addClass('correct');
 				$(o).append('<i class="fas fa-check-circle rationale-icon" aria-hidden="true" style="position:relative;right: -6px;color: #77A977;"></i>');
