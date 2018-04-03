@@ -24,7 +24,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .overview .title {text-align:center; font-family: 'Roboto Slab', serif; font-size:40px; color:#fff;  margin-top:159px}
 .title-only { margin:159px auto 237px; font-family: 'Roboto Slab', serif; font-size:40px}
 .overview p {margin-top:30px}
-.progress {border-radius: 6px; height: 5px; background-color: #ECECEC;}
+.progress {border-radius: 6px; height: 5px; background-color: #D6D6D6;}
 .progress.secondary .progress-meter {border-radius: 6px; background-color: #9D9D9D;}
 
 .button.neutral {background-color: #FFF; color: #333333}
