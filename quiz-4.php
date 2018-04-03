@@ -67,6 +67,8 @@
       	var hintArray = {
       	      	"hint_q4_1":{
           	      	1:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?",
+          	      	2:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?",
+          	    	3:"Dramatic irony is when the readers know something the characters do not.<br/><br/>Do you know more than this character?"
 				}
       	}
       	var rationaleArray = {
