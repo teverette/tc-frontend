@@ -8,7 +8,6 @@
 <body class="practice quiz quiz-question" data-quiz-question="1">
 <div class="content"> 
 <div class="content-header content-header-quiz">Quiz</div>
-<span class="point-quiz-board"> - points</span>
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which sentence reveals the use of <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When a reader knows information that a character in a story does not.">dramatic irony?</span></h2>
 	  <div class="medium-12 grid-x lesson-copy">
@@ -18,14 +17,12 @@
 	  </p>
 	 <div class="rationale-sidebar"></div> 
 	</div>
-
-
 </div>
 
 		</div>
 		<?php $width = "40"; ?>
 		<?php $back = "quiz-1.php"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_quiz_progress.php'?>
 		
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
@@ -152,7 +149,8 @@
 			
 			var points = storage["quiz_total"];
 			var points_label = points==1 ? "point" : "points";
-			$(".point-quiz-board").html(points + " " + points_label);
+			$(".point-value").html(points);
+			$(".point-text").html("" + points_label);
 		});
       window.onload = function() {
     	  

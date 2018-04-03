@@ -3,6 +3,7 @@
 } else {
 	$nextHref = "";
 }?>
+
 <div class="grid-x grid-padding-x footer">
 	<a class="button back button-left-side" href="<?php echo $back;?>"><i class="fas fa-lg fa-caret-left" ></i>&nbsp;Back</a>
 	<a class="check-disabled <?php echo $btnClass;?> button success button-right-side forward-button" <?php echo $nextHref; ?>>Check <i class="fas fa-lg fa-caret-right" ></i></a>

@@ -14,7 +14,6 @@
 		
 		<div class="content"> 
 		<div class="content-header content-header-quiz">Quiz</div>
-		<span class="point-quiz-board"> - points</span>
 		<div class="grid-x grid-padding-x">
 		  <p class="lesson-desc medium-12">What technique is being used in each example?</p>
 		   
@@ -60,9 +59,7 @@
 		<?php $width = "100"; ?>
 		<?php $back = "quiz-4.php"; ?>
 		<?php $next = ""; ?>
-		<?php include '_footer_progress.php'?>
-		<div class="hint-callout callout"></div>
-		<div class="rationale-callout callout"></div>
+		<?php include '_quiz_progress.php'?>
 		
 		<script>
 			$(document).foundation();
@@ -129,7 +126,8 @@
     			var points = storage["quiz_total"];
     			
     			var points_label = points==1 ? "point" : "points";
-    			$(".point-quiz-board").html(points + " " + points_label);
+    			$(".point-value").html(points);
+    			$(".point-text").html("" + points_label);
       		});
       		
 			window.onload = function() {

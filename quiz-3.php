@@ -10,7 +10,6 @@
 
 <div class="content"> 
 	<div class="content-header content-header-quiz">Quiz</div>
-	<span class="point-quiz-board"> - points</span>
 	
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which statement creates situational irony? </h2>
@@ -26,7 +25,7 @@
 </div>
 <?php $width = "60"; ?>
 <?php $back = "quiz-2.php"; ?>
-<?php include '_footer_progress.php'?>
+<?php include '_quiz_progress.php'?>
 
 <div id="drawer-one" class="drop-down-drawer q3_1 text-center">
 	<a class="button secondary answer-option q3_1" data-value="1">uses a computer mouse to go online</a>
@@ -66,7 +65,8 @@
 			var storage = window.sessionStorage;
 			var points = storage["quiz_total"];
 			var points_label = points==1 ? "point" : "points";
-			$(".point-quiz-board").html(points + " " + points_label);
+			$(".point-value").html(points);
+			$(".point-text").html("" + points_label);
 	  	});
 
   </script>
