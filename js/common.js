@@ -409,9 +409,7 @@ var ClozeDropdown = {
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {
 			$(".hint-icon").first().trigger("click");
-		} else if($(".rationale-icon").length>0) {
-			$(".rationale-icon").first().trigger("click");
-		}
+		} 
 	},
 	showHint: function() {
   		
@@ -455,7 +453,7 @@ var ClozeDropdown = {
 					.show();
 			});
 		});
-		
+		/*
 		$(".rationale-icon").each(
 			function(){
 				$(this).hover(function(){
@@ -478,7 +476,7 @@ var ClozeDropdown = {
 						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
 						.addClass("correct-status").show();
 			});
-		});
+		}); */
 	},
 	assess: function() {
 		this.resetForm();
