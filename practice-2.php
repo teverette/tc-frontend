@@ -11,8 +11,7 @@
 	<div class="content-header content-header-practice">Practice</div>
 	
 	<div class="grid-x grid-padding-x">
-	  <h2 class="title medium-12">Which statements create <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
-			      	title="When words express something different than normal meaning">verbal irony</span>?</h2>
+	  <h2 class="title medium-12">Which statements create verbal irony?</h2>
 	 
 	  <div class="medium-12 grid-x lesson-copy">
 	    <p>John’s brother brings his dog to visit. The dog chews John’s favorite shoes. John says, 

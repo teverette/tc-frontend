@@ -14,8 +14,7 @@
 	<div class="content-header content-header-practice" style="z-index: 1000">Practice</div>
 	
 	<div class="grid-x grid-padding-x">
-	  <h2 class="title medium-12" style="position:fixed; background-color:#FFF;padding-top:40px;top:10px;left: 10px; width: 1004px; padding-left: 110px;">Which choice creates the most <span data-tooltip aria-haspopup="true" style="color:#4A90E2;" data-disable-hover="false" tabindex="1" 
-			      	title="To arrange information and ideas in to a pattern.">suspense</span>?</h2>
+	  <h2 class="title medium-12" style="position:fixed; background-color:#FFF;padding-top:40px;top:10px;left: 10px; width: 1004px; padding-left: 110px;">Which choice creates the most suspense?</h2>
 	 
 	  <div class="medium-12 grid-x lesson-copy" style="margin-top:45px">
 	    <p>Joan had been studying for the spelling bee all year. Her parents had quizzed her at dinner every night. Her teachers had given her extra homework to

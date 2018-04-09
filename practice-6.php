@@ -14,8 +14,7 @@
 	<div class="content-header content-header-practice">Practice</div>
 	<div class="grid-x grid-padding-x">
 	  
-	  <h2 class="title medium-12">Which story uses 
-	  	<span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When the outcome of a situation is different than expected.">situational irony</span>?</h2>
+	  <h2 class="title medium-12">Which story uses situational irony?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  	<label class="radio">
 			<div class="mc-input-box" style="top: 2px">

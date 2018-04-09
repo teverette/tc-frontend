@@ -36,8 +36,7 @@
 	 	
 	  </div>
 	  <div class="grid-x " style="position:fixed;display:inline-block;left:544px;top:60px; width: 440px">
-	  	<h2 class="title medium-12" style="color: #4A4A4A;	font-family: "Roboto Slab";	font-size: 24px; font-weight: 300; line-height: 32px;">Why is this story an example of
-	  	<span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When the outcome of a situation is different than expected.">situational irony</span>?</h2>
+	  	<h2 class="title medium-12" style="color: #4A4A4A;	font-family: "Roboto Slab";	font-size: 24px; font-weight: 300; line-height: 32px;">Why is this story an example of situational irony?</h2>
 	  	<label class="radio">
 			<div class="mc-input-box" style="top: 27px;position:relative">
 		  		<input type="radio" class="q7_1 question" name="q7_1" value="1"/>

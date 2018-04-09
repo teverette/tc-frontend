@@ -9,7 +9,7 @@
 <div class="content"> 
 <div class="content-header content-header-quiz">Quiz</div>
 	<div class="grid-x grid-padding-x">
-	  <h2 class="title medium-12">Which sentence reveals the use of <span data-tooltip has-tip aria-haspopup="true" class="has-tip" style="color:#4A90E2" data-disable-hover="false" tabindex="1" title="When a reader knows information that a character in a story does not.">dramatic irony?</span></h2>
+	  <h2 class="title medium-12">Which sentence reveals the use of dramatic irony?</h2>
 	  <div class="medium-12 grid-x lesson-copy">
 	  <p><mark class="keyword quiz_2_1 answer">Teresa hid her best jewelry in a brown bag in the kitchen drawer before she went on vacation.</mark> <mark class="keyword quiz_2_2 answer">Her friend came to her house every day to walk the dog.</mark>
 	  <mark class="keyword quiz_2_3 answer">One day, her friend decided to clean out Teresa’s kitchen.</mark> <mark class="keyword quiz_2_4 answer">She got all the garbage, empty packaging, and unwanted mail and threw it away.</mark>
@@ -90,16 +90,13 @@
       });
 	  function showRationale(status) {
 		  var obj;
-		  if(status) {
-		  	var title = "<h4 class='that-s-it'>That's it!</h4>";
-		  	obj=$(".rationale-sidebar");
-		  	obj.addClass("correct-status");
-		  } else {
+		  if(!status) {
 			  var title = "<h4 class='nearly-there'>Not Quite!</h4>";
 			  obj = $(".rationale-sidebar");
 			  obj.addClass("hint-status");
+			  obj.html(title + rationaleArray["rationale_quiz_2_1"]).show();
 		  }
-		  obj.html(title + rationaleArray["rationale_quiz_2_1"]).show();
+		  
 		  updateNextStepBtn($(".check-disabled"));
       	  $("input").attr('disabled','disabled');
 	  }

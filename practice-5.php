@@ -10,8 +10,7 @@
 		<div class="content"> 
 		<div class="content-header content-header-practice">Practice</div>
 		<div class="grid-x grid-padding-x">
-		  <p class="lesson-desc medium-12">Which of these uses <span data-tooltip aria-haspopup="true" style="color:#4A90E2" data-disable-hover="false" tabindex="1" 
-		      	title="When the outcome of a situation is different than expected.">situational irony</span>?</p>
+		  <p class="lesson-desc medium-12">Which of these uses situational irony?</p>
 		   
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>

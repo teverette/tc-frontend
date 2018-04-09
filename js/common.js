@@ -217,9 +217,7 @@ var ChoiceMatrix = {
       	showFirstHint: function() {
     		if($(".hint-icon").length>0) {
     			$(".hint-icon").first().trigger("click");
-    		} else if($(".rationale-icon").length>0) {
-    			$(".rationale-icon").first().trigger("click");
-    		}
+    		} 
     	},
     	showHint: function() {
       		$(".hint-icon").show("500");
@@ -261,7 +259,7 @@ var ChoiceMatrix = {
     				// $(this).removeClass("pressed");
     			});
     		});
-    		
+    		/*
     		$(".rationale-icon").each(
 				function(){
 					$(this).hover(function(){
@@ -289,7 +287,7 @@ var ChoiceMatrix = {
 							.show();
 						$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
 				});
-			});
+			});*/
     	},
       	assess: function(includeScore) {
       		// todo add question/answer verification logic
