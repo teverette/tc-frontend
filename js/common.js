@@ -474,14 +474,13 @@ var ClozeDropdown = {
 					var selected_answer = $(this).data("selected");
 					var hint_index = "hint_" + hint_id;		
 					var rat_hdr = ClozeDropdown.isQuiz ? "<h4 class='nearly-there'>Not Quite!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
-					$(".rationale-sidebar")
-						.html("<img src='"+img+"' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
-						.addClass("hint-status")
-						.show();
+					
+					$(".rationale-sidebar").fadeOut(600);
+    				setTimeout(function(){ClozeDropdown.showHintStatus(hint_index, selected_answer, img, index, rat_hdr)}, 600);
+    				
 					console.log($(this).data("question"));
 					ClozeDropdown.hintShownTracker.set($(this).data("question"),"true");
 					console.log("size of tracker: " + ClozeDropdown.hintShownTracker.size);
-					ClozeDropdown.clearAllHints(index);
 				},function(){
 					//$(this).find("img").attr("src","images/Hint-Button.png");
 				//	$(".rationale-sidebar").removeClass("hint-status").empty();
@@ -510,6 +509,15 @@ var ClozeDropdown = {
 			});
 		});
 	},
+	
+	showHintStatus: function(hint_index, selected_answer, img, index, rat_hdr) {
+		$(".rationale-sidebar")
+		.html("<img src='"+img+"' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
+		.addClass("hint-status")
+		.fadeIn(600);
+		ChoiceMatrix.clearAllHints(index);
+	},
+	
 	assess: function() {
 		this.resetForm();
 		this.getResponses();
