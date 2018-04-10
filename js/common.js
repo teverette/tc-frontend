@@ -246,7 +246,7 @@ var ChoiceMatrix = {
       		
     		$(".hint-icon").each(function(){
     			$(this).click(function(){
-    				$(".rationale-sidebar").removeClass("correct-status").empty();
+    				$(".rationale-sidebar").removeClass("correct-status").empty().hide();
     				var img = $(this).find('img').attr('src');
     				var hint_id = $(this).data("question");
     				var index = $(this).data("index");
@@ -258,7 +258,8 @@ var ChoiceMatrix = {
     				$(".rationale-sidebar")
     					.html("<img src='" + img + "' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
     					.addClass("hint-status")
-    					.show();
+    					.fadeIn(600);
+
     				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
     				$(this).parent().removeClass("fade50");
     				console.log($(this).data("question"));
@@ -283,11 +284,9 @@ var ChoiceMatrix = {
     				console.log($(this).data("question"));
     				ChoiceMatrix.hintShownTracker.set($(this).data("question"),"true");
     				
-    				$(".rationale-sidebar")
-    					.html("<img src='" + img + "' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
-    					.addClass("hint-status")
-    					.show();
-    				ChoiceMatrix.clearAllHints(index);
+    				$(".rationale-sidebar").fadeOut(600);
+    				setTimeout(function(){ChoiceMatrix.showHintStatus(hint_index, selected_answer, img, index)}, 600);
+    				
     			},function(){
     				// $(this).find("img").attr("src","images/Hint-Button.png");
     				//$(".rationale-sidebar").removeClass("hint-status").empty();
@@ -295,6 +294,13 @@ var ChoiceMatrix = {
     			});
     		});
 
+    	},
+    	showHintStatus: function(hint_index, selected_answer, img, index) {
+    		$(".rationale-sidebar")
+			.html("<img src='" + img + "' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
+			.addClass("hint-status")
+			.fadeIn(600);
+    		ChoiceMatrix.clearAllHints(index);
     	},
       	assess: function(includeScore) {
       		// todo add question/answer verification logic
