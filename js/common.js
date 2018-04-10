@@ -149,7 +149,7 @@ var ChoiceMatrix = {
     			increaseScoreBy(this.points);
     		}
     		
-    		if(ChoiceMatrix.activate && this.isQuiz) {
+    		if(this.isQuiz || this.hintCount==0) {
     			$("input").attr('disabled','disabled');
     			// save all response to storage
     			var string = JSON.stringify(this.responseKey)
