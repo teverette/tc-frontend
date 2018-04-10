@@ -173,11 +173,11 @@ var ChoiceMatrix = {
 				$('input[name='+name+']:checked').parent().parent().addClass("correct");
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
-				.prepend('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
+				.prepend('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 			} else {
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
-					.append('<span data-question="' + name + '" class="rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
+					.append('<span data-question="' + name + '" class="rationale-icon" style=" right: -15px; top: 3px;" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 			}
       	},
 
@@ -259,35 +259,7 @@ var ChoiceMatrix = {
     				// $(this).removeClass("pressed");
     			});
     		});
-    		/*
-    		$(".rationale-icon").each(
-				function(){
-					$(this).hover(function(){
-						$(this).find("img").attr("src","images/Rationale-Button Hover.png");
-						$(this).addClass("pressed");
-						$(".rationale-sidebar").removeClass("hint-status").empty();
-						var rationale_index = "rationale_" + $(this).data("question");			
-						$(".rationale-sidebar")
-							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
-							.addClass("correct-status")
-							.show();
-					},function(){
-						$(this).find("img").attr("src","images/Rationale-Button.png");
-	    				$(".rationale-sidebar").removeClass("correct-status").empty();
-	    				$(this).removeClass("pressed");
-	    			});
-				$(this).click(function(){
-						$(this).addClass("pressed");
-						$(this).find("img").attr("src","images/Rationale-Button Hover.png");
-						$(".rationale-sidebar").removeClass("hint-status").empty();
-						var rationale_index = "rationale_" + $(this).data("question");			
-						$(".rationale-sidebar")
-							.html("<img src='../images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" +rationaleArray[rationale_index])
-							.addClass("correct-status")
-							.show();
-						$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
-				});
-			});*/
+
     	},
       	assess: function(includeScore) {
       		// todo add question/answer verification logic
@@ -380,10 +352,10 @@ var ClozeDropdown = {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
 			if(this.isQuiz) {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 				this.points++;
 			} else {
-				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Rationale-Button.png" style="width:30px"/></span>');
+				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 				this.points++;
 			}
 		}  else {
@@ -453,30 +425,6 @@ var ClozeDropdown = {
 					.show();
 			});
 		});
-		/*
-		$(".rationale-icon").each(
-			function(){
-				$(this).hover(function(){
-					$(this).find("img").attr("src","images/Rationale-Button Hover.png");
-					$(this).addClass("pressed");
-					var rationale_index = "rationale_" + $(this).data("question");
-					$(".rationale-sidebar")
-						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
-						.addClass("correct-status").show();
-					},function(){
-						$(this).find("img").attr("src","images/Rationale-Button.png");
-						$(".rationale-sidebar").removeClass("correct-status").empty();
-						$(this).removeClass("pressed");
-			});
-				$(this).click(function(){
-					$(this).addClass("pressed");
-					$(this).find("img").attr("src","images/Rationale-Button Hover.png");
-					var rationale_index = "rationale_" + $(this).data("question");
-					$(".rationale-sidebar")
-						.html("<img src='images/StarSymbol.png' class='status'/><h4 class='that-s-it'>That's it!</h4>" + rationaleArray[rationale_index])
-						.addClass("correct-status").show();
-			});
-		}); */
 	},
 	assess: function() {
 		this.resetForm();
