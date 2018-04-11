@@ -332,4 +332,6 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 	background-color: #307FE2;color: #FFFFFF;
 	font-family: "Roboto Slab";	font-size: 14px;	line-height: 21px;	text-align: center;
 	display:inline-block;
+	position: absolute;
+	bottom:18px
 }
