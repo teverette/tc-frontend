@@ -28,6 +28,7 @@
 </div>
 <?php $width = "12.5"; ?>
 <?php $back = "practice-1.php"; ?>
+<?php $btnClass =""; ?>
 <?php include '_footer_progress.php'?>
 
 <div id="drawer-one" class="drop-down-drawer q2_1 text-center">
