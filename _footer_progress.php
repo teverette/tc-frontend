@@ -2,7 +2,11 @@
 	$nextHref = "href='" . $next . "'";
 } else {
 	$nextHref = "";
-}?>
+}
+if(!isset($btnClass)) {
+	$btnClass="";
+}
+?>
 
 <div class="grid-x grid-padding-x footer">
 	<a class="button back button-left-side" href="<?php echo $back;?>"><i class="fas fa-lg fa-caret-left" ></i>&nbsp;Back</a>
