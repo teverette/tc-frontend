@@ -232,6 +232,7 @@ var ChoiceMatrix = {
       		$(".fa-times").remove();
       		$(".hint-icon").remove();
       		$(".hint-callout").hide();
+      		$("td.incorrect").find("input").prop('checked', false);
       		$("td").removeClass("incorrect").removeClass("fade50");
       		$("label").removeClass("incorrect").removeClass("fade50");
       		$(".check").addClass("check-disabled").removeClass("check");
