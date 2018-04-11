@@ -240,6 +240,8 @@ var ChoiceMatrix = {
       		ChoiceMatrix.hintCount=0; 
       		ChoiceMatrix.hintShownTracker=new Map();
       		$(".correct").addClass("fade50");
+      		$(".correct input").prop("disabled",true);
+      		$(".correct").parent().find("td input").prop("disabled",true);
   
       	},
       	showFirstHint: function() {
@@ -466,7 +468,7 @@ var ClozeDropdown = {
   		$('.hint').hide();
   		ClozeDropdown.hintCount=0; 
   		ClozeDropdown.hintShownTracker=new Map();
-  		$(".correct").addClass("fade50");
+  		$(".correct").addClass("fade50").prop("disabled",true);
   		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
   	},
   	showFirstHint: function() {
