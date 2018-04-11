@@ -149,7 +149,7 @@ var ChoiceMatrix = {
     			increaseScoreBy(this.points);
     		}
     		
-    		if(this.isQuiz || this.hintCount==0) {
+    		if(this.isQuiz || this.points==this.numberCorrect) {
     			$("input").attr('disabled','disabled');
     			// save all response to storage
     			var string = JSON.stringify(this.responseKey)
@@ -173,12 +173,14 @@ var ChoiceMatrix = {
 
 		updateQuestionStateCorrect: function(name) {
 			if(this.type=="mc") {
+				if($('input[name='+name+']:checked').parent().parent().hasClass("correct")) {return}
 				$('input[name='+name+']:checked').parent().parent().addClass("correct");
 				$('input[name='+name+']:checked').parent()
 				.addClass('correct')
 				.addClass("fade50")
 				.prepend('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:absolute; right: -630px; top: 7px;" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 			} else {
+				if($('input[name='+name+']:checked').parent().hasClass("correct")) {return}
 				$('input[name='+name+']:checked').parent()
 					.addClass('correct')
 					.addClass("fade50")
@@ -209,9 +211,10 @@ var ChoiceMatrix = {
       		updateNextStepBtn($(".check-disabled"));
       	},
       	
-      	clearAllHints: function(index) {      		
+      	clearAllHints: function(index) {   
+      		if(ChoiceMatrix.isQuiz==true) {return}
       		if(ChoiceMatrix.hintShownTracker.size>=Number.parseInt(ChoiceMatrix.hintCount)) {
-      			$(".rationale-sidebar").append("<br/><a onclick='ChoiceMatrix.setToReady();' class='answer-hint-btn'>Ready: Try Again</a>");
+      			$(".rationale-sidebar").append("<br/><a onclick='ChoiceMatrix.resetForm();' class='answer-hint-btn'>Ready: Try Again</a>");
     		} else {
     			// find next hint icon
           		for(i=index+1; i<=this.minReq; i++) {
@@ -225,14 +228,18 @@ var ChoiceMatrix = {
       	},
       	
       	resetForm: function() {
-      		$(".rationale-icon").remove();
+      		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
       		$(".fa-times").remove();
       		$(".hint-icon").remove();
       		$(".hint-callout").hide();
-      		$("td").removeClass("incorrect").removeClass("correct");
-      		$("label").removeClass("incorrect").removeClass("correct");
+      		$("td").removeClass("incorrect").removeClass("fade50");
+      		$("label").removeClass("incorrect").removeClass("fade50");
       		$(".check").addClass("check-disabled").removeClass("check");
       		$('.hint').hide();
+      		ChoiceMatrix.hintCount=0; 
+      		ChoiceMatrix.hintShownTracker=new Map();
+      		$(".correct").addClass("fade50");
+  
       	},
       	showFirstHint: function() {
     		if($(".hint-icon").length>0) {
@@ -397,16 +404,17 @@ var ClozeDropdown = {
   		updateNextStepBtn($(".check-disabled"));
   	},
   	
-  	clearAllHints: function(index) {      		
+  	clearAllHints: function(index) {    
+  		if(ClozeDropdown.isQuiz==true) {return}
   		if(ClozeDropdown.hintShownTracker.size>=Number.parseInt(ClozeDropdown.hintCount)) {
-  			$(".rationale-sidebar").append("<br/><a onclick='ClozeDropdown.setToReady();' class='answer-hint-btn'>Ready: Try Again</a>");
+  			$(".rationale-sidebar").append("<br/><a onclick='ClozeDropdown.resetForm();' class='answer-hint-btn'>Ready: Try Again</a>");
 		} else {
 			// find next hint icon
       		for(i=index+1; i<=this.minReq; i++) {
       			if($('*[data-index="'+i+'"]').hasClass('hint-icon')) {
       				$('.next-help-icon').removeClass("next-help-icon");
       				$('*[data-index="'+i+'"]').addClass("next-help-icon");
-      				$(".rationale-sidebar").append("<br/><a onclick='$(\".next-help-icon\").trigger(\"click\");' class='answer-hint-btn'>Answer Hint</a>");
+      				$(".rationale-sidebar").append("<br/><a onclick='$(\".next-help-icon\").trigger(\"click\");' class='answer-hint-btn'><strong>Answer " + index + "</strong> Hint</a>");
       				break;
       			}
       		}
@@ -424,9 +432,11 @@ var ClozeDropdown = {
 			$(o).addClass('clear');
 		} else if(correctAnswer==selectedAnswer) {
 			if(this.isQuiz) {
+				if($('*[data-question="'+name+'"]').hasClass("correct")) {return}
 				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="color: #00AA00;position:relative;right: -10px;" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 				this.points++;
 			} else {
+				if($('*[data-question="'+name+'"]').hasClass("correct")) {return}
 				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 				this.points++;
 			}
@@ -444,13 +454,17 @@ var ClozeDropdown = {
     	
 	},
 	resetForm: function() {
-  		$(".fa-check").remove();
-  		$(".rationale-icon").remove();
+  		// $(".fa-check").remove();
+  		// $(".rationale-icon").remove();
   		$(".hint-icon").remove();
   		$(".hint-callout").hide();
-  		$(".button").removeClass("incorrect").removeClass("correct");
-  		$(".check").addClass("check-disabled").removeClass("check");
+  		$(".button").removeClass("incorrect");
+  		$(".check").addClass("check-disabled");
   		$('.hint').hide();
+  		ClozeDropdown.hintCount=0; 
+  		ClozeDropdown.hintShownTracker=new Map();
+  		$(".correct").addClass("fade50");
+  		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
   	},
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {

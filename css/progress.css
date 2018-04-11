@@ -31,7 +31,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .button.neutral:hover {background-color: #EEE; color: #333}
 
 .content-header {height: 40px; width: 160px;position:absolute; left:324px; top:0; font-family: "Roboto Slab"; font-size: 18px; line-height: 24px; text-align:center; color:#FFF}
-.content-header-practice { background-color: #43B02A;}
+.content-header-practice { background-color: #43B02A;left: 432px;}
 .content-header-quiz {background-color: #307FE2; padding-top:5px; left:432px}
 .content-header-learn {left:432px; background-color: #767676; padding-top:5px;}
 .rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: #ECECEC; position:fixed; right:22px; top:20px; 
@@ -333,5 +333,8 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 	font-family: "Roboto Slab";	font-size: 14px;	line-height: 21px;	text-align: center;
 	display:inline-block;
 	position: absolute;
-	bottom:18px
+	bottom:18px;
+	padding-top:6px;
 }
+
+a.answer-hint-btn:hover {color: #FFFFFF;}

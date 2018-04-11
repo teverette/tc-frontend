@@ -15,6 +15,7 @@
 	  	.split-pane .hint-status:after,.split-pane .correct-status:after {margin-top: 0;border-width: 0;}
 	  	.split-pane .rationale-sidebar.minimize-sidebar{height:60px;top:397px;overflow:hidden}
 	  	.split-pane-left p {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 19px;}
+	  	.split-pane .answer-hint-btn {bottom:55px; right:20px}
 	  </style>
 	</head>
 <body class="practice">
