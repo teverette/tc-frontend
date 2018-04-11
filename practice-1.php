@@ -46,6 +46,7 @@
 		<?php $width = "6.25"; ?>
 		<?php $back = "learn-page-2b.php"; ?>
 		<?php $next = ""; ?>
+		<?php $btnClass =""; ?>
 		<?php include '_footer_progress.php'?>
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
