@@ -308,15 +308,6 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .speaker {position:absolute; left:65.0px; top: 54px; width: 20px;}
 
 
-/* The animation code */
-@keyframes fadeInOut {
-    0% {opacity: 1.0;}
-    25% {opacity: 0.75;}
-    50% {opacity: 0.55;}
-    75% {opacity: 0.75;}
-    100% {opacity: 1.0;}
-}
-
 .display-none {display:none}
 
 .fade50 {opacity:0.5}
@@ -335,3 +326,5 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 }
 
 a.answer-hint-btn:hover {color: #FFFFFF;}
+
+.disabled-dd {cursor: not-allowed}

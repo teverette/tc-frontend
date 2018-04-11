@@ -228,6 +228,7 @@ var ChoiceMatrix = {
       	},
       	
       	resetForm: function() {
+      		$("input").prop('disabled',false);
       		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
       		$(".fa-times").remove();
       		$(".hint-icon").remove();
@@ -247,6 +248,7 @@ var ChoiceMatrix = {
       	showFirstHint: function() {
     		if($(".hint-icon").length>0) {
     			$(".hint-icon").first().trigger("click");
+    			$("input").prop('disabled',true);
     		} 
     	},
     	showHint: function() {
@@ -278,33 +280,6 @@ var ChoiceMatrix = {
     				ChoiceMatrix.clearAllHints(index);
     				
     			});
-    			/*
-    			$(this).hover(function(){
-    				// $(this).find("img").attr("src","images/Hint-Button Hover.png");
-    				
-    				$(this).addClass("pressed");
-    				var hint_id = $(this).data("question");
-    				var selected_answer = $(this).data("selected");
-    				var index = $(this).data("index");
-    				var img = "images/" + "Hint" + index + ".png"; 
-    				// get hint string && add to tip
-    				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
-    				var hint_index = "hint_" + hint_id;	
-    				
-    				$(".hint-icon").parent().addClass("fade50");
-    				$(this).parent().removeClass("fade50");
-    				console.log($(this).data("question"));
-    				ChoiceMatrix.hintShownTracker.set($(this).data("question"),"true");
-    				
-    				$(".rationale-sidebar").fadeOut(600);
-    				setTimeout(function(){ChoiceMatrix.showHintStatus(hint_index, selected_answer, img, index)}, 600);
-    				
-    			},function(){
-    				// $(this).find("img").attr("src","images/Hint-Button.png");
-    				//$(".rationale-sidebar").removeClass("hint-status").empty();
-    				//$(this).removeClass("pressed");
-    			});
-    			*/
     		});
 
     	},
@@ -459,8 +434,7 @@ var ClozeDropdown = {
     	
 	},
 	resetForm: function() {
-  		// $(".fa-check").remove();
-  		// $(".rationale-icon").remove();
+		$(".filled").removeClass("disabled-dd");
   		$(".hint-icon").remove();
   		$(".hint-callout").hide();
   		$(".button").removeClass("incorrect");
@@ -468,12 +442,13 @@ var ClozeDropdown = {
   		$('.hint').hide();
   		ClozeDropdown.hintCount=0; 
   		ClozeDropdown.hintShownTracker=new Map();
-  		$(".correct").addClass("fade50").prop("disabled",true);
+  		$(".correct").addClass("disabled-dd").addClass("fade50").prop("disabled",true);
   		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
   	},
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {
 			$(".hint-icon").first().trigger("click");
+			$(".filled").addClass("disabled-dd");
 		} 
 	},
 	showHint: function() {
@@ -482,30 +457,6 @@ var ClozeDropdown = {
   		$(".rationale-icon").show("500");
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
-			/*
-			$(this).hover(
-				function(){
-					$(".rationale-sidebar").removeClass("correct-status");
-					$(".rationale-icon").removeClass("pressed");
-					$(".hint-icon").removeClass("pressed");
-					
-					var index = $(this).data("index");
-					var img = "images/" + "Hint" + index + ".png"; 
-					$(this).addClass("pressed");
-					var hint_id = $(this).data("question");
-					var selected_answer = $(this).data("selected");
-					var hint_index = "hint_" + hint_id;		
-					var rat_hdr = ClozeDropdown.isQuiz ? "<h4 class='nearly-there'>Not Quite!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
-					
-					$(".rationale-sidebar").fadeOut(600);
-    				setTimeout(function(){ClozeDropdown.showHintStatus(hint_index, selected_answer, img, index, rat_hdr)}, 600);
-    				
-					console.log($(this).data("question"));
-					ClozeDropdown.hintShownTracker.set($(this).data("question"),"true");
-					console.log("size of tracker: " + ClozeDropdown.hintShownTracker.size);
-				},function(){}
-			); 
-			*/
 			$(this).click(function(){
 				$(".rationale-sidebar").removeClass("correct-status");
 				$(".rationale-icon").removeClass("pressed");
@@ -570,7 +521,7 @@ var ClozeDropdown = {
 		}
 		this.showHint();
 		this.showFirstHint();
-		$("input").attr('disabled','disabled');
+		$(".dropdown-question").addClass("disabled-dd").addClass("filled");
 		updateNextStepBtn($(".check-disabled"));
 	},
 	initialize: function(name, minToScore, minToCheck) {
@@ -588,6 +539,9 @@ function scoreStuff() {
 }
 
 	function showDrawer(o) {
+		if($(o).hasClass("disabled-dd")) {
+			return;
+		}
 		$('.hint').hide();
     	ClozeDropdown.resetForm();
     	var curDrawer = $(o).data('drawer-id');
