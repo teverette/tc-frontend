@@ -276,6 +276,7 @@ var ChoiceMatrix = {
     				ChoiceMatrix.clearAllHints(index);
     				
     			});
+    			/*
     			$(this).hover(function(){
     				// $(this).find("img").attr("src","images/Hint-Button Hover.png");
     				
@@ -301,6 +302,7 @@ var ChoiceMatrix = {
     				//$(".rationale-sidebar").removeClass("hint-status").empty();
     				//$(this).removeClass("pressed");
     			});
+    			*/
     		});
 
     	},
@@ -478,6 +480,7 @@ var ClozeDropdown = {
   		$(".rationale-icon").show("500");
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
+			/*
 			$(this).hover(
 				function(){
 					$(".rationale-sidebar").removeClass("correct-status");
@@ -499,7 +502,8 @@ var ClozeDropdown = {
 					ClozeDropdown.hintShownTracker.set($(this).data("question"),"true");
 					console.log("size of tracker: " + ClozeDropdown.hintShownTracker.size);
 				},function(){}
-			);
+			); 
+			*/
 			$(this).click(function(){
 				$(".rationale-sidebar").removeClass("correct-status");
 				$(".rationale-icon").removeClass("pressed");
