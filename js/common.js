@@ -379,15 +379,11 @@ var ClozeDropdown = {
 	    	return false;
 	    }
 	},
-	setToReady: function() {
-  		$(".hint-icon").parent().addClass("fade50");
-  		updateNextStepBtn($(".check-disabled"));
-  	},
   	
   	clearAllHints: function(index) {    
   		if(ClozeDropdown.isQuiz==true) {return}
   		if(ClozeDropdown.hintShownTracker.size>=Number.parseInt(ClozeDropdown.hintCount)) {
-  			$(".rationale-sidebar").append("<br/><a onclick='ClozeDropdown.resetForm();' class='answer-hint-btn'>Ready: Try Again</a>");
+  			$(".rationale-sidebar").append("<br/><a onclick='ClozeDropdown.resetForm();updateCheckAgainBtn($(\".check-disabled\"));' class='answer-hint-btn'>Ready: Try Again</a>");
 		} else {
 			// find next hint icon
       		for(i=index+1; i<=this.minReq; i++) {
@@ -438,12 +434,13 @@ var ClozeDropdown = {
   		$(".hint-icon").remove();
   		$(".hint-callout").hide();
   		$(".button").removeClass("incorrect");
-  		$(".check").addClass("check-disabled");
+  		$(".check").addClass("check-disabled").removeClass("check");
   		$('.hint').hide();
   		ClozeDropdown.hintCount=0; 
   		ClozeDropdown.hintShownTracker=new Map();
   		$(".correct").addClass("disabled-dd").addClass("fade50").prop("disabled",true);
   		$(".rationale-sidebar").removeClass("correct-status").removeClass("hint-status").empty().hide();
+  		
   	},
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {
@@ -497,7 +494,7 @@ var ClozeDropdown = {
 		if(this.isReadyNextStep()) {
 			updateNextStepBtn($(".check-disabled"));
 		} else {
-			updateCheckAgainBtn($(".check-disabled"));
+			// updateCheckAgainBtn($(".check-disabled"));
 		}
 		
 	},
