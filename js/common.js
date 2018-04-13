@@ -220,7 +220,7 @@ var ChoiceMatrix = {
           		for(i=index+1; i<=this.minReq; i++) {
           			if($('*[data-index="'+i+'"]').hasClass('hint-icon')) {
           				$('*[data-index="'+i+'"]').addClass("next-help-icon");
-          				$(".rationale-sidebar").append("<br/><a onclick='$(\".next-help-icon\").trigger(\"click\");' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
+          				$(".rationale-sidebar").append("<br/><a onclick='ChoiceMatrix.showNextHint($(\".next-help-icon\"));' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
           				break;
           			}
           		}
@@ -247,41 +247,39 @@ var ChoiceMatrix = {
       	},
       	showFirstHint: function() {
     		if($(".hint-icon").length>0) {
-    			$(".hint-icon").first().trigger("click");
+    			// $(".hint-icon").first().trigger("click");
+    			ChoiceMatrix.showNextHint($(".hint-icon").first());
     			$("input").prop('disabled',true);
     		} 
     	},
     	showHint: function() {
       		$(".hint-icon").fadeIn("600");
       		$(".rationale-icon").fadeIn("600");
-    		// find any incorrect answers
-      		
-    		$(".hint-icon").each(function(){
-    			$(this).click(function(){
-    				$(".rationale-sidebar").removeClass("correct-status").empty().hide();
-    				var hint_id = $(this).data("question");
-    				var index = $(this).data("index");
-    				var img = "images/" + "Hint" + index + ".png"; 
-    				var selected_answer = $(this).data("selected");
-    				$(".hint-icon").parent().addClass("fade50");
-    				// get hint string && add to tip
-    				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
-    				var hint_index = "hint_" + hint_id;				
-    				$(".rationale-sidebar")
-    					.html("<img src='" + img + "' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
-    					.addClass("hint-status")
-    					.fadeIn(600);
-
-    				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
-    				$(this).parent().removeClass("fade50");
-    				console.log($(this).data("question"));
-    				ChoiceMatrix.hintShownTracker.set($(this).data("question"),"true");
-    				console.log("size of tracker: " + ChoiceMatrix.hintShownTracker.size);
-    				ChoiceMatrix.clearAllHints(index);
-    				
-    			});
-    		});
-
+    	},
+    	
+    	showNextHint: function(obj) {
+				// $(".rationale-sidebar").removeClass("correct-status").empty().hide();
+				var hint_id = $(obj).data("question");
+				var index = $(obj).data("index");
+				var img = "images/" + "Hint" + index + ".png"; 
+				var selected_answer = $(obj).data("selected");
+				$(".hint-icon").parent().addClass("fade50");
+				// get hint string && add to tip
+				var rat_hdr = ChoiceMatrix.isQuiz ? "<h4 class='nearly-there'>Nearly there!</h4>" : "<h4 class='nearly-there'>Not Quite!</h4>";
+				var hint_index = "hint_" + hint_id;
+				$(".rationale-sidebar").fadeOut(700, function() {
+				$(".rationale-sidebar")
+					.html("<img src='" + img + "' class='status'/><h4 class='nearly-there'>Not Quite!</h4>" +hintArray[hint_index][selected_answer])
+					.addClass("hint-status")
+					.fadeIn(600);
+					console.log($(obj).data("question"));
+					ChoiceMatrix.hintShownTracker.set($(obj).data("question"),"true");
+					console.log("size of tracker: " + ChoiceMatrix.hintShownTracker.size);
+					ChoiceMatrix.clearAllHints(index);
+				});
+				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
+				$(obj).parent().removeClass("fade50");
+				
     	},
     	showHintStatus: function(hint_index, selected_answer, img, index) {
     		$(".rationale-sidebar")
@@ -390,7 +388,7 @@ var ClozeDropdown = {
       			if($('*[data-index="'+i+'"]').hasClass('hint-icon')) {
       				$('.next-help-icon').removeClass("next-help-icon");
       				$('*[data-index="'+i+'"]').addClass("next-help-icon");
-      				$(".rationale-sidebar").append("<br/><a onclick='$(\".next-help-icon\").trigger(\"click\");' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
+      				$(".rationale-sidebar").append("<br/><a onclick='ClozeDropdown.showNextHint($(\".next-help-icon\"));' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
       				break;
       			}
       		}
@@ -444,7 +442,7 @@ var ClozeDropdown = {
   	},
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {
-			$(".hint-icon").first().trigger("click");
+			ClozeDropdown.showNextHint($(".hint-icon").first());
 			$(".filled").addClass("disabled-dd");
 		} 
 	},
@@ -454,27 +452,31 @@ var ClozeDropdown = {
   		$(".rationale-icon").show("500");
 		// find any incorrect answers
 		$(".hint-icon").each(function(){
-			$(this).click(function(){
-				$(".rationale-sidebar").removeClass("correct-status");
-				$(".rationale-icon").removeClass("pressed");
-				$(".hint-icon").removeClass("pressed");
-				var index = $(this).data("index");
-				var img = "images/" + "Hint" + index + ".png"; 
-				$(this).addClass("pressed");
-				var hint_id = $(this).data("question");
-				var selected_answer = $(this).data("selected");
-				var hint_index = "hint_" + hint_id;		
-				var rat_hdr = "<h4 class='nearly-there'>Not Quite!</h4>";
+			//$(this).click();
+		});
+	},
+	showNextHint: function(obj) {
+			;
+			$(".rationale-icon").removeClass("pressed");
+			$(".hint-icon").removeClass("pressed");
+			var index = $(obj).data("index");
+			var img = "images/" + "Hint" + index + ".png"; 
+			$(obj).addClass("pressed");
+			var hint_id = $(obj).data("question");
+			var selected_answer = $(obj).data("selected");
+			var hint_index = "hint_" + hint_id;		
+			var rat_hdr = "<h4 class='nearly-there'>Not Quite!</h4>";
+			$(".rationale-sidebar").fadeOut(700, function() {
 				$(".rationale-sidebar")
 					.html("<img src='"+img+"' class='status'/>" + rat_hdr + hintArray[hint_index][selected_answer])
 					.addClass("hint-status")
-					.show();
-				console.log($(this).data("question"));
-				ClozeDropdown.hintShownTracker.set($(this).data("question"),"true");
+					.fadeIn(600);
+				ClozeDropdown.hintShownTracker.set($(obj).data("question"),"true");
 				console.log("size of tracker: " + ClozeDropdown.hintShownTracker.size);
 				ClozeDropdown.clearAllHints(index);
 			});
-		});
+			console.log($(obj).data("question"));
+			
 	},
 	
 	showHintStatus: function(hint_index, selected_answer, img, index, rat_hdr) {

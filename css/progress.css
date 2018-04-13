@@ -274,7 +274,7 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 .rationale-icon {color: #98CF5C; position: relative; width: 30px; display: inline-block; border-radius: 100%; transform: scale(1.0); display:none;}
 .rationale-icon:hover{color:#85B550}
 .rationale-icon.pressed{ }
-.hint-icon {position:relative; border-radius:100%;cursor:pointer;}
+.hint-icon {position:relative; border-radius:100%;}
 .hint-icon:hover {color:#D9CA18}
 .hint-icon.pressed {}
 
