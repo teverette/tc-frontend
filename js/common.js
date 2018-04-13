@@ -220,7 +220,7 @@ var ChoiceMatrix = {
           		for(i=index+1; i<=this.minReq; i++) {
           			if($('*[data-index="'+i+'"]').hasClass('hint-icon')) {
           				$('*[data-index="'+i+'"]').addClass("next-help-icon");
-          				$(".rationale-sidebar").append("<br/><a onclick='ChoiceMatrix.showNextHint($(\".next-help-icon\"));' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
+          				$(".rationale-sidebar").append("<br/><a onclick='ChoiceMatrix.showNextHint($(\".next-help-icon\").last());' class='answer-hint-btn'><strong>Answer " + (index+1) + "</strong> Hint</a>");
           				break;
           			}
           		}
