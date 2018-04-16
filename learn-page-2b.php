@@ -7,12 +7,13 @@
 	  <style>
 .what-is-example {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-style: italic;	line-height: 20px;}
 .reason-for-example {color: #4A4A4A;	font-family: Roboto;	font-size: 14px;	font-weight: 300;	line-height: 20px;	text-align: center;}
+.slide-2 {display:none}
 	  	</style>
 	</head>
 	<body class="practice learn">
 		<div class="content">
 			<div class="content-header content-header-learn">Learn</div>
-			<div class="grid-x grid-padding-x">
+			<div class="grid-x grid-padding-x slide-2">
 				<h2 class="title-learn display-none">What is verbal irony?</h2>
 				<div style="width:300px;display:inline-block">
 					<img src="images/CSK-L7-verbal-irony.gif" style="width:300px" class="first-item display-none"/>
