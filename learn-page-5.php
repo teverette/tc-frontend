@@ -41,7 +41,7 @@
 		</div>
 		<?php $width = "75.0"; ?>
 		<?php $back = "practice-7.php"; ?>
-		<?php $next = "learn-page-5b.php"; ?>
+		<?php $next = "practice-8.php"; ?>
 		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
