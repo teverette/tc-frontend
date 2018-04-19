@@ -45,7 +45,7 @@
 		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
-		 	var animationDuration=300;
+		 	var animationDuration=500;
 		 	var timeDelay = 0;
 		 	
 		      $(document).foundation();
@@ -75,13 +75,17 @@
 						timeDelay=animationDuration+50;
 						$(".slide-3-btn").fadeOut(100);
 						showElement($(".item-six"));
-						setTimeout(showElement.bind(null,$(".footer")), timeDelay);
+						setTimeout(slideUpElement.bind(null,$(".footer")), timeDelay);
 					});
 		      });
 
 		      function showElement(o) {
 			      console.log("inside hideElement");
 		    	  $(o).fadeIn(animationDuration);
+			  }
+
+			  function slideUpElement(o) {
+				  $(o).effect('slide', { direction: 'up', mode: 'show' }, 500);
 			  }
 
 			  function showElementsOnSlide2() {

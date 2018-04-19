@@ -42,12 +42,12 @@
 
 		<?php $width = "18.75"; ?>
 		<?php $back = "practice-2.php"; ?>
-		<?php $next = "learn-page-3b.php"; ?>
+		<?php $next = "practice-3.php"; ?>
 		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		 <script>
-		 var animationDuration=300;
+		 var animationDuration=500;
 		 	var timeDelay = 0;
 		      $(document).foundation();
 		      $(document).ready(function() {
