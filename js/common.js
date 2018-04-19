@@ -605,3 +605,23 @@ function scoreStuff() {
 $(document).ready(function() {
 	$(".learn .forward-button").html('Next <i class="fas fa-lg fa-caret-right" ></i>');
 });
+	
+var animationDuration=500;
+var timeDelay = 0; 	
+
+function showElement(o) {
+    console.log("inside hideElement");
+	  $(o).fadeIn(animationDuration);
+}
+
+function slideUpElement(o) {
+	  $(o).effect('slide', { direction: 'up', mode: 'show' }, 500);
+}
+
+function showElementsOnSlide2() {
+	  timeDelay=animationDuration+50;
+	  showElement($(".slide-2 .item-one"));
+	  setTimeout(showElement.bind(null,$(".slide-2 .item-two")), timeDelay);
+	  timeDelay+=animationDuration+50;
+	  setTimeout(showElement.bind(null,$(".slide-2 .item-three")), timeDelay);
+}

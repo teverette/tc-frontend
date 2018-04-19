@@ -47,7 +47,7 @@
 	<div class="rationale-sidebar"></div>
 	</div>
 		<?php $width = "87.5"; ?>
-		<?php $back = "learn-page-5b.php"; ?>
+		<?php $back = "learn-page-5.php"; ?>
 		<?php include '_footer_progress.php'?>
 	
  <script>

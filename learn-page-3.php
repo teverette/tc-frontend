@@ -4,14 +4,8 @@
 	  <title>Lesson Overview</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <style>
-		.item, .slide-2 {display:none}
-		.what-is-example {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-style: italic;	line-height: 20px;}
-		.reason-for-example {color: #4A4A4A;	font-family: Roboto;	font-size: 14px;	font-weight: 300;	line-height: 20px;	text-align: center;}
-		
-	  	</style>
 	</head>
-	<body class="practice learn">
+	<body class="practice learn learn-page-3">
 		<div class="content">
 			<div class="content-header content-header-learn">Learn</div>
 			<div class="grid-x grid-padding-x slide-1">
@@ -21,23 +15,22 @@
 				 Dramatic irony encourages readers to continue reading to learn what the<br/>
 				  characters will do and whether they will ever learn the truth. 
 				 </p>
-				 <img src="images/DownArrow.png" class="slide-1-btn item" style="text-align:center; height: 64px; margin:0 auto;cursor:pointer" />
+				 <img src="images/DownArrow.png" class="slide-btn slide-1-btn item" />
 			</div>
 			<div class="grid-x grid-padding-x slide-2">
-				<div style="width:300px;display:inline-block">
-					<img src="images/CSK-L7-situational-irony.gif" style="width:300px" class="first-item item item-one"/>
+				<div class="image-holder">
+					<img src="images/CSK-L7-situational-irony.gif" class="item item-one"/>
 				</div>
-				<div style="width:300px;display:inline-block;margin-left:25px; padding-top:50px">
+				<div class="content-example-holder">
 					<p class="what-is-example first-item item item-two">Marco slept peacefully in his bed, unaware of the guests who gathered 
 					downstairs for his surprise birthday party. </p>
 				</div>
-				<div class="reason-for-example item item-four" style="padding-left:75px;margin-top:60px;">Because the readers know about the birthday party 
+				<div class="reason-for-example item item-four">Because the readers know about the birthday party 
 				and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</div>
 				
-				<div class="item item-three" style="width:100%;text-align:center"><img src="images/DownArrow.png" class="slide-2-btn" style="height: 64px; margin:0 auto;cursor:pointer" /></div>
-				<div class="item item-five" style="width:100%;text-align:center"><img src="images/DownArrow.png" class="slide-3-btn" style="height: 64px; margin:0 auto;cursor:pointer"/></div>
+				<div class="slide-btn-box item item-three"><img src="images/DownArrow.png" class="slide-btn slide-2-btn"/></div>
+				<div class="slide-btn-box item item-five"><img src="images/DownArrow.png" class="slide-btn slide-3-btn"/></div>
 			</div>
-			
 		</div>
 
 		<?php $width = "18.75"; ?>
@@ -47,8 +40,6 @@
 		<?php include '_footer_progress.php'?>
 		
 		 <script>
-		 var animationDuration=500;
-		 	var timeDelay = 0;
 		      $(document).foundation();
 		      $(document).ready(function() {
 					$(".slide-1 .item").each(function() {
@@ -70,9 +61,14 @@
 
 		      $(".slide-2-btn").click(function () {
 					timeDelay=animationDuration+50;
-					$(".item-three").fadeOut(100);
+					$(".item-three").hide(0);
 					showElement($(".slide-2 .item-four"));
-					setTimeout(showElement.bind(null,$(".footer")), timeDelay);
+					showElement($(".footer"));
+					$(".content").animate({
+					    height: "474"
+					  }, 900, function() {
+					    // Animation complete.
+					});
 				});
 
 		      function showElement(o) {
