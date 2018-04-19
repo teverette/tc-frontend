@@ -80,6 +80,15 @@
 						    // Animation complete.
 						});
 					});
+
+					$('html').on ('mousewheel', function (e) {
+					    var delta = e.originalEvent.wheelDelta;
+						if (delta > 0) {
+					    	$(".slide-1").show("slide", { direction: "up" }, 900);
+							$(".slide-2").hide("slide", { direction: "down" }, 900);
+							$(".slide-1-btn").fadeIn(animationDuration);
+					    }
+					});
 		      });		  
 		      
 	    </script>
