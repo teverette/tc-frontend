@@ -33,7 +33,7 @@
 			</div>
 		</div>
 
-		<?php $back = "why-lesson.php"; ?>
+		<?php $back = "learn-page-1.php"; ?>
 		<?php $next = "practice-transition.php"; ?>
 		<?php $btnClass = "check"; ?>
 		<?php include '_footer_non_progress.php'?>

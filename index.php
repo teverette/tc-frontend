@@ -22,7 +22,7 @@
 	</head>
 	<body class="overview ">
 		<h1 class="title-only organizing-ideas-wit">Organizing Ideas with <br/>Authors' Crafts</h1>
-		<p><a class="button secondary neutral overview-button" href="lesson-helps-learners.php">Click to Begin</a></p>
+		<p><a class="button secondary neutral overview-button" href="lesson-page-1.php">Click to Begin</a></p>
 		<script>
 			// reset scoring situation
 			var storage = window.sessionStorage;
