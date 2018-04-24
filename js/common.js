@@ -549,11 +549,20 @@ function scoreStuff() {
     	if(curDrawer==visDrawer){
     		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
     		$('.dropdown-question').removeClass('selected-dd');
+    		contractContent();
     	} else {
-    		$(".drop-down-drawer:visible").hide("slide", { direction: "down" }, 400);
-    		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
-    		$('.dropdown-question').removeClass('selected-dd');
-    		$(o).addClass('selected-dd');
+    		$(".footer").hide();
+    		$(".content").animate({
+    		    height: "574"
+    		  }, 900, function() {
+    		    // Animation complete.
+    			  $(".drop-down-drawer:visible").hide("slide", { direction: "down" }, 400);
+    	    		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
+    	    		$('.dropdown-question').removeClass('selected-dd');
+    	    		$(o).addClass('selected-dd');
+    		});
+    		
+    		
     	}
  	}
 
@@ -567,7 +576,7 @@ function scoreStuff() {
 		$(this).addClass('selected-dd-response');
 		$('.dropdown-question').removeClass('selected-dd');
 		$('#'+curDrawer).hide("slide", { direction: "down" }, 400);
-
+		contractContent();
 		ClozeDropdown.enableButton();
 	});
 	
@@ -575,6 +584,23 @@ function scoreStuff() {
 		$(".split-pane .rationale-sidebar").toggleClass("minimize-sidebar");
 	});
 	
+	function extendContent() {
+		$(".footer").hide();
+		$(".content").animate({
+		    height: "574"
+		  }, 900, function() {
+		    // Animation complete.
+		});
+	}
+	
+	function contractContent() {
+		$(".content").animate({
+		    height: "474"
+		  }, 900, function() {
+		    // Animation complete.
+		});
+		$(".footer").show();
+	}
 	
 	function setCookie(cname, cvalue, exdays) {
 	    var d = new Date();

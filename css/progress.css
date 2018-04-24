@@ -218,9 +218,8 @@ p.mc-text {line-height: 31px; margin-left:33px}
 h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 
 /* dropdown */
-.drop-down-drawer {height: 87px; padding-top:20px; background-color: #DBE7F6; width:1004px; display:none; position:fixed; bottom: 104px;
-    margin-left: 10px;
-    margin-right: 10px; z-index:10000}
+.drop-down-drawer {height: 87px; padding-top:20px; background-color: #DBE7F6; width:1004px; display:none; position:relative; bottom: 97px;
+    margin-left: 10px; margin-right: 10px; z-index:10000}
 .dropdown-question {background-color:rgba(74,144,226,0.1);border: 1px solid #4A90E2; color:#8E8E8E;border-radius: 4px; font-family:Roboto; font-size: 22px; line-height: 25px; padding:7px 10px 9px;margin: 5px 0;min-width: 220px;}
 .dropdown-question.selected-dd, .dropdown-question.selected-dd:hover {border: 3px solid #4A90E2;padding:5px 10px;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
 .dropdown-question:hover {border: 1px solid #4A90E2;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
@@ -332,7 +331,7 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .learn .item, .slide-2 {display:none}
 .learn .what-is-example {color: #4A4A4A; font-family: Roboto; font-size: 16px; font-style: italic; line-height: 20px;}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
-.learn .content {height: 554px}
+.learn .content, .expanded.content {height: 554px}
 
 .slide-btn {height: 64px; margin:0 auto;cursor:pointer}
 .slide-btn:hover {position:relative; top:3px}
