@@ -57,6 +57,8 @@
 						setTimeout(showElementsOnSlide2(), 100);
 						timeDelay=0;
 					});
+					$(".slide-btn").removeClass("active-btn");
+					$(".slide-2-btn").addClass("active-btn");
 				});
 
 		      $(".slide-2-btn").click(function () {
@@ -69,6 +71,24 @@
 					  }, 900, function() {
 					    // Animation complete.
 					});
+					$(".slide-btn").removeClass("active-btn");
+					$(".slide-3-btn").addClass("active-btn");
+				});
+
+		      $('html').on ('mousewheel', function (e) {
+				    var delta = e.originalEvent.wheelDelta;
+					if (delta > 0 && !$(".slide-1").is(":visible")) {
+				    	$(".slide-1").show("slide", { direction: "up" }, 900);
+						$(".slide-2").hide("slide", { direction: "down" }, 900);
+						$(".slide-btn").hide();
+						$(".slide-1-btn").fadeIn(animationDuration);
+				    } else if (delta < 0) {
+						if($(".slide-1").is(":visible") && ($(".active-btn").length>0 || $(".footer").is(":visible"))) {
+							$(".slide-2").show("slide", { direction: "down" }, 450);
+							$(".slide-1").hide("slide", { direction: "up" }, 900);
+							$(".active-btn").show();
+						}
+				    }
 				});
 
 		      function showElement(o) {
