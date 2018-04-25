@@ -334,7 +334,7 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
 .learn .content, .expanded.content {height: 554px}
 
-.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 492px; top: 419px;}
+.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 478px; top: 419px;}
 .slide-btn:hover {top:422px}
 
 .learn-page-2 .slide-2 {margin-top:60px}
