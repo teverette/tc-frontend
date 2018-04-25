@@ -11,6 +11,7 @@
 	  	
 	  	.lesson-point-label {color: #307FE2; font-family: Roboto; font-size: 16px; font-weight: 500; line-height: 22px; text-align: center}
 	  	.lesson-point-item p {color: #4A4A4A; font-family: Roboto; font-size: 14px; font-weight: 300; line-height: 20px; text-align: center}
+	  	.title-learn {font-family:'Roboto Slab',sans-serif; font-weight:light; font-size: 24px}
 	  </style>
 	</head>
 	<body class="practice learn why-lesson">
@@ -42,10 +43,9 @@
 				<div class="medium-12 lesson-desc text-center" >
 					<img src="images/why-lesson.jpg" style="width:333px" class="item item-one"></span>
 				</div>
-				<div class="medium-12 second-item item item-two">
-					<p>
+				<div class="medium-12 second-item item item-two" style="font-family:roboto; font-size:14px;line-height: 20px;">
 					A narrative is a story: it contains characters, story events, and settings. Writers use techniques like irony and suspense 
-					to make their narratives more interesting and pleasurable for readers.</p>
+					to make their narratives more interesting and pleasurable for readers.
 				</div>
 			</div>
 		</div>
@@ -79,23 +79,32 @@
 				  }, 900, function() {
 				    // Animation complete.
 				});
+				$(".footer").addClass("active-btn");
 			});
 
 		    $('html').on ('mousewheel', function (e) {
 			    var delta = e.originalEvent.wheelDelta;
-				if (delta > 0 && !$(".slide-1").is(":visible")) {
+				if (delta > 2 && !$(".slide-1").is(":visible")) {
 			    	$(".slide-1").show("slide", { direction: "up" }, 900);
 					$(".slide-2").hide("slide", { direction: "down" }, 900);
 					$(".slide-btn").hide();
 					$(".slide-1-btn").fadeIn(animationDuration);
-			    } else if (delta < 0) {
-					if($(".slide-1").is(":visible") && ($(".active-btn").length>0 || $(".footer").is(":visible"))) {
+					hideFooter();
+					
+				} else if (delta < 1) {
+					if($(".slide-1").is(":visible") && ($(".active-btn").length>0)) {
 						$(".slide-2").show("slide", { direction: "down" }, 450);
 						$(".slide-1").hide("slide", { direction: "up" }, 900);
-						$(".active-btn").show();
+						if($(".footer.active-btn").length==0) { 
+								$(".active-btn").show();
+						} else {
+							showFooter();
+						}
 					}
 			    }
 			});
+
+
 	    </script>
 	</body>
 </html>

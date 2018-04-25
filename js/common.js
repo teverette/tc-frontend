@@ -651,3 +651,23 @@ function showElementsOnSlide2() {
 	  timeDelay+=animationDuration+50;
 	  setTimeout(showElement.bind(null,$(".slide-2 .item-three")), timeDelay);
 }
+
+function hideFooter() {
+	$(".footer").hide("slide", { direction: "down" }, 900);
+	$(".content").animate({
+	    height: "553"
+	  }, 900, function() {
+	    // Animation complete.
+	});
+	$(".footer").addClass("active-btn");
+}
+
+function showFooter() {
+	showElement($(".footer"));
+	$(".content").animate({
+	    height: "474"
+	  }, 900, function() {
+	    // Animation complete.
+	});
+	
+}
