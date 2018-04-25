@@ -328,13 +328,14 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 
 .disabled-dd {cursor: not-allowed}
 /* learn pages */
+
 .learn .item, .slide-2 {display:none}
 .learn .what-is-example {color: #4A4A4A; font-family: Roboto; font-size: 16px; font-style: italic; line-height: 20px;}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
 .learn .content, .expanded.content {height: 554px}
 
-.slide-btn {height: 64px; margin:0 auto;cursor:pointer}
-.slide-btn:hover {position:relative; top:3px}
+.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 492px; top: 419px;}
+.slide-btn:hover {top:422px}
 
 .learn-page-2 .slide-2 {margin-top:60px}
 .learn-page-2 .image-holder {width:300px;display:inline-block; top: -50px; position: relative}
