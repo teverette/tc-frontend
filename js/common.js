@@ -411,7 +411,7 @@ var ClozeDropdown = {
 				this.points++;
 			} else {
 				if($('*[data-question="'+name+'"]').hasClass("correct")) {return}
-				$('*[data-question="'+name+'"]').addClass('correct').after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
+				$('*[data-question="'+name+'"]').addClass('correct').addClass("fade50").after('<span data-question="' + name + '" class="rationale-icon" style="right: -3px" aria-hidden="true"><img src="images/Correct-Flat.png" style="width:30px"/></span>');
 				this.points++;
 			}
 		}  else {
@@ -431,6 +431,7 @@ var ClozeDropdown = {
 		$(".filled").removeClass("disabled-dd");
   		$(".hint-icon").remove();
   		$(".hint-callout").hide();
+  		$(".incorrect").removeClass("fade50");
   		$(".button").removeClass("incorrect");
   		$(".check").addClass("check-disabled").removeClass("check");
   		$('.hint').hide();
@@ -442,8 +443,9 @@ var ClozeDropdown = {
   	},
   	showFirstHint: function() {
 		if($(".hint-icon").length>0) {
+			$(".filled").addClass("disabled-dd").addClass("fade50");
 			ClozeDropdown.showNextHint($(".hint-icon").first());
-			$(".filled").addClass("disabled-dd");
+			
 		} 
 	},
 	showHint: function() {
@@ -456,12 +458,13 @@ var ClozeDropdown = {
 		});
 	},
 	showNextHint: function(obj) {
-			;
+		    $(".filled").addClass("fade50");
 			$(".rationale-icon").removeClass("pressed");
 			$(".hint-icon").removeClass("pressed");
 			var index = $(obj).data("index");
 			var img = "images/" + "Hint" + index + ".png"; 
 			$(obj).addClass("pressed");
+			$(obj).parent().find(".filled").removeClass("fade50");
 			var hint_id = $(obj).data("question");
 			var selected_answer = $(obj).data("selected");
 			var hint_index = "hint_" + hint_id;		
@@ -476,7 +479,6 @@ var ClozeDropdown = {
 				ClozeDropdown.clearAllHints(index);
 			});
 			console.log($(obj).data("question"));
-			
 	},
 	
 	showHintStatus: function(hint_index, selected_answer, img, index, rat_hdr) {
