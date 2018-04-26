@@ -59,18 +59,40 @@
 			
 			<div class="grid-x grid-padding-x slide-4 text-center">
 				<div class="image-holder">
-					<img src="images/CSK-L7-verbal-irony.gif" class="item item-one"/>
+					<img src="images/Illustration1.png" class="item item-one"/>
 				</div>
 				<div class="content-example-holder">
 					<p class="what-is-example first-item" ><span class="item item-two">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.</span>
-					<span class="item item-four">While running from his apartment to the office, he dropped the folder that contained his application 
+					
+				</div>
+				<img src="images/DownArrow.png" class="slide-btn slide-4-btn item" />
+			</div>
+			<div class="grid-x grid-padding-x slide-5 text-center">
+				<div class="image-holder">
+					<img src="images/Illustration2.png" class="item item-one"/>
+				</div>
+				<div class="content-example-holder">
+					<p class="what-is-example first-item" ><span class="item item-four">While running from his apartment to the office, he dropped the folder that contained his application 
 					 into a deep puddle. “Well, this is going well,” he muttered.</span></p>
 				</div>
-				<div class="reason-for-example"><span class="item item-six">Scott’s comment, “Well, this is going well,” 
+				<img src="images/DownArrow.png" class="slide-btn slide-5-btn item" />
+			</div>
+			<div class="grid-x grid-padding-x slide-6 text-center">
+				<div class="image-holder">
+					<img src="images/Illustration3.png" class="item item-one"/>
+				</div>
+				<div class="content-example-holder">
+					<p class="what-is-example first-item" ><span class="item item-four">“Well, this is going well,” he muttered.</span></p>
+				</div>
+				<img src="images/DownArrow.png" class="slide-btn slide-6-btn item" />
+			</div>
+			<div class="reason-for-example"><span class="item item-six">Scott’s comment, “Well, this is going well,” 
 				shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</span></div>
 				
-				<img src="images/DownArrow.png" class="slide-btn slide-4-btn item" />
-				<img src="images/DownArrow.png" class="slide-btn slide-5-btn item" />
+				
+				
+				
+				
 			</div>
 		</div>
 		<?php $width = "11.1"; ?>
@@ -142,13 +164,34 @@
 			$(".slide-4-btn").click(function () {
 				timeDelay=animationDuration+50;
 				$(".slide-4-btn").hide(0);
-				showElement($(".slide-4 .item-four"));
-				setTimeout(showElement.bind(null,$(".slide-4 .slide-5-btn")), timeDelay);
-				$(".slide-btn").removeClass("active-btn");
-				$(".slide-5-btn").addClass("active-btn");
+				$(".slide-4").hide("slide", { direction: "up" }, animationDuration, function(){
+					$(".slide-5").show().addClass("accessed");
+					
+					timeDelay=animationDuration+50;
+					showElement($(".slide-5 .item-one"));
+					showElement($(".slide-5 .item-four"));
+					setTimeout(showElement.bind(null,$(".slide-5 .slide-5-btn")), timeDelay);
+					timeDelay=0;
+				});
+				// $(".slide-btn").removeClass("active-btn");
+				// $(".slide-5-btn").addClass("active-btn");
 			});
 
 			$(".slide-5-btn").click(function () {
+				timeDelay=animationDuration+50;
+				$(".slide-5-btn").hide(0);
+				$(".slide-5").hide("slide", { direction: "up" }, animationDuration, function(){
+					$(".slide-6").show().addClass("accessed");
+					
+					timeDelay=animationDuration+50;
+					showElement($(".slide-6 .item-one"));
+					showElement($(".slide-6 .item-four"));
+					setTimeout(showElement.bind(null,$(".slide-6 .slide-6-btn")), timeDelay);
+					timeDelay=0;
+				});
+			});
+
+			$(".slide-6-btn").click(function () {
 				$(".slide-btn").removeClass("active-btn");
 				timeDelay=animationDuration+50;
 				$(".slide-5-btn").hide(0);

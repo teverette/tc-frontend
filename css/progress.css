@@ -330,7 +330,7 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 /* learn pages */
 
 .learn .item, .slide-2 {display:none}
-.learn .what-is-example {color: #4A4A4A; font-family: Roboto; font-size: 16px; font-style: italic; line-height: 20px;}
+.learn .what-is-example {color: #4A4A4A; font-family: Roboto; font-size: 16px; text-align: left; line-height: 20px; font-weight:500}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
 .learn .content, .expanded.content {height: 554px}
 
@@ -338,10 +338,10 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .slide-btn:hover {top:392px}
 
 
-.why-lesson .slide-4 .image-holder {width:300px;display:inline-block}
-.why-lesson .slide-4 .image-holder img {width:300px}
-.why-lesson .slide-4 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
-.why-lesson .slide-4 .reason-for-example {padding-left:75px;margin-top:10px}
+.why-lesson .slide-4 .image-holder,.why-lesson .slide-5 .image-holder,.slide-5 .image-holder  {width:300px;display:inline-block}
+.why-lesson .slide-4 .image-holder img,.why-lesson .slide-5 .image-holder img,  .slide-6 .image-holder img {width:300px}
+.why-lesson .slide-4 .content-example-holder,.why-lesson .slide-5 .content-example-holder, .slide-6 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
+.why-lesson .slide-4 .reason-for-example, .why-lesson .slide-5 .reason-for-example {padding-left:75px;margin-top:10px}
 
 .learn-page-2 .slide-2 {margin-top:60px}
 .learn-page-2 .image-holder {width:300px;display:inline-block; top: -50px; position: relative}
