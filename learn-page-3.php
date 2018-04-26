@@ -81,7 +81,7 @@
 				    	$(".slide-1").show("slide", { direction: "up" }, 900);
 						$(".slide-2").hide("slide", { direction: "down" }, 900);
 						$(".slide-btn").hide();
-						$(".slide-1-btn").fadeIn(animationDuration);
+						// $(".slide-1-btn").fadeIn(animationDuration);
 				    } else if (delta < 0) {
 						if($(".slide-1").is(":visible") && ($(".active-btn").length>0 || $(".footer").is(":visible"))) {
 							$(".slide-2").show("slide", { direction: "down" }, 450);

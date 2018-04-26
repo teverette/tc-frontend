@@ -8,15 +8,15 @@
 	<body class="practice learn learn-page-2">
 		<div class="content">
 			<div class="content-header content-header-learn">Learn</div>
-			<div class="grid-x grid-padding-x slide-1">
+			<div class="grid-x grid-padding-x slide-3">
 				<h2 class="title-learn item one">What is verbal irony?</h2>
 				<p class="irony-description item two">Verbal irony occurs when words express something different from<br/>
 				 their normal meanings. Verbal irony can be used to add humor or<br/> interest.
 				 </p>
-				 <img src="images/DownArrow.png" class="slide-btn slide-1-btn item three" />
+				 <img src="images/DownArrow.png" class="slide-btn slide-1-btn item item-six" />
 			</div>
 			
-			<div class="grid-x grid-padding-x slide-2 text-center">
+			<div class="grid-x grid-padding-x slide-4 text-center">
 				<div class="image-holder">
 					<img src="images/CSK-L7-verbal-irony.gif" class="item item-one"/>
 				</div>
