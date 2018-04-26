@@ -334,8 +334,14 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
 .learn .content, .expanded.content {height: 554px}
 
-.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 478px; top: 419px;}
-.slide-btn:hover {top:422px}
+.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 478px; top: 389px;}
+.slide-btn:hover {top:392px}
+
+
+.why-lesson .slide-4 .image-holder {width:300px;display:inline-block}
+.why-lesson .slide-4 .image-holder img {width:300px}
+.why-lesson .slide-4 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
+.why-lesson .slide-4 .reason-for-example {padding-left:75px;margin-top:10px}
 
 .learn-page-2 .slide-2 {margin-top:60px}
 .learn-page-2 .image-holder {width:300px;display:inline-block; top: -50px; position: relative}
