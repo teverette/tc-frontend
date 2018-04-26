@@ -12,6 +12,33 @@
 	  	.lesson-point-label {color: #307FE2; font-family: Roboto; font-size: 16px; font-weight: 500; line-height: 22px; text-align: center}
 	  	.lesson-point-item p {color: #4A4A4A; font-family: Roboto; font-size: 14px; font-weight: 300; line-height: 20px; text-align: center}
 	  	.title-learn {font-family:'Roboto Slab',sans-serif; font-weight:light; font-size: 24px}
+	  		  	.practice-section {
+	height: 63px;
+	color: #FFFFFF;
+	font-family: "Roboto Slab";
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 63px;
+	text-align: center; position:absolute; left:329px; top:200px; margin-bottom:37px;
+}
+.lorem-ipsum-dolor-si {
+	height: 56px;
+	width: 469px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 28px;
+	text-align: center;
+	position:absolute; top:290px; left:278px;
+}
+.practice-button {
+	height: 40px;
+	width: 134px;
+	border: 1px solid #307FE2;
+	border-radius: 4px;
+	background-color: #FFFFFF;position:absolute; left:445px; top:390px; padding-top:7px; text-align: center;
+}
 	  </style>
 	</head>
 	<body class="practice learn why-lesson">
@@ -69,7 +96,7 @@
 			</div>
 			<div class="grid-x grid-padding-x slide-5 text-center">
 				<div class="image-holder">
-					<img src="images/Illustration2.png" class="item item-one"/>
+					<img src="images/Illustration2.png" class="item item-one" style="top: -50px;position:relative"/>
 				</div>
 				<div class="content-example-holder">
 					<p class="what-is-example first-item" ><span class="item item-four">While running from his apartment to the office, he dropped the folder that contained his application 
@@ -86,15 +113,21 @@
 				</div>
 				<img src="images/DownArrow.png" class="slide-btn slide-6-btn item" />
 			</div>
-			<div class="reason-for-example"><span class="item item-six">Scott’s comment, “Well, this is going well,” 
-				shows verbal irony because Scott<br/> says things are going well, but he means that things are not going well at all.</span></div>
-				
-				
-				
-				
-				
+			<div class="grid-x grid-padding-x slide-7 text-center">
+				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:100px"><span class="item item-six">Scott’s comment, “Well, this is going well,” 
+					shows verbal<br/> irony because Scott says things are going well, but he<br/> means that things are not going well at all.</span>
+				</div>
+				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
 			</div>
+			
+			
 		</div>
+		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 653px;s">
+				<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
+				<h2 class="practice-section">Practice Section</h2>
+				<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
+				<a href="practice-1.php" class="practice-button">Practice</a>
+			</div>
 		<?php $width = "11.1"; ?>
 		<?php $back = "index.php"; ?>
 		<?php $next = "practice-transition.php"; ?>
@@ -192,19 +225,34 @@
 			});
 
 			$(".slide-6-btn").click(function () {
-				$(".slide-btn").removeClass("active-btn");
 				timeDelay=animationDuration+50;
-				$(".slide-5-btn").hide(0);
-				showElement($(".item-six"));
-				showElement($(".footer"));
-				$(".content").animate({
-				    height: "474"
-				  }, 900, function() {
-				    // Animation complete.
+				$(".slide-6-btn").hide(0);
+				$(".slide-6").hide("slide", { direction: "up" }, animationDuration, function(){
+					$(".slide-7").show().addClass("accessed");
+					
+					timeDelay=animationDuration+50;
+					showElement($(".slide-7 .item-six"));
+					setTimeout(showElement.bind(null,$(".slide-7 .slide-7-btn")), timeDelay);
+					timeDelay=0;
 				});
 			});
 
-var lastScrollStamp = new Date().getTime();
+			$(".slide-7-btn").click(function () {
+				$(".slide-btn").removeClass("active-btn");
+				timeDelay=animationDuration+50;
+				$(".slide-7-btn").hide(0);
+
+				showElement($(".slide-8"));
+				// $(".content").hide("slide", { direction: "up" }, 900);
+				$(".content-header").hide();
+				$(".content").animate({
+				    height: "0"
+				  }, 900, function() {
+					  $(".content").hide("slide", { direction: "up" }, 150);
+				});
+			});
+
+			var lastScrollStamp = new Date().getTime();
 		    $('html').on ('mousewheel', function (e) {
 			    var delta = e.originalEvent.wheelDelta;
 			    var nowScrollStamp = new Date().getTime();
@@ -225,7 +273,15 @@ var lastScrollStamp = new Date().getTime();
 					} else if ($(".slide-4").is(":visible")) {
 			    		$(".slide-4").hide("slide", { direction: "down" }, 900);
 				    	$(".slide-3").show("slide", { direction: "up" }, 900);
-						$(".footer").hide();
+					} else if ($(".slide-5").is(":visible")) {
+			    		$(".slide-5").hide("slide", { direction: "down" }, 900);
+				    	$(".slide-4").show("slide", { direction: "up" }, 900);
+					} else if ($(".slide-6").is(":visible")) {
+			    		$(".slide-6").hide("slide", { direction: "down" }, 900);
+				    	$(".slide-5").show("slide", { direction: "up" }, 900);
+					} else if ($(".slide-7").is(":visible")) {
+			    		$(".slide-7").hide("slide", { direction: "down" }, 900);
+				    	$(".slide-6").show("slide", { direction: "up" }, 900);
 					}
 				} else if (delta < 3 && scrollDiff>=1000) {
 			    	isScrolling = true;
@@ -244,7 +300,15 @@ var lastScrollStamp = new Date().getTime();
 					} else if($(".slide-3").is(":visible") && $(".slide-4").hasClass("accessed")) {
 						$(".slide-4").show("slide", { direction: "down" }, 900);
 						$(".slide-3").hide("slide", { direction: "up" }, 900);
-						showElement($(".footer"));
+					} else if($(".slide-4").is(":visible") && $(".slide-5").hasClass("accessed")) {
+						$(".slide-5").show("slide", { direction: "down" }, 900);
+						$(".slide-4").hide("slide", { direction: "up" }, 900);
+					} else if($(".slide-5").is(":visible") && $(".slide-6").hasClass("accessed")) {
+						$(".slide-6").show("slide", { direction: "down" }, 900);
+						$(".slide-5").hide("slide", { direction: "up" }, 900);
+					} else if($(".slide-6").is(":visible") && $(".slide-7").hasClass("accessed")) {
+						$(".slide-7").show("slide", { direction: "down" }, 900);
+						$(".slide-6").hide("slide", { direction: "up" }, 900);
 					}
 			    }
 			    isScrolling = false;

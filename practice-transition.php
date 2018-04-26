@@ -5,7 +5,6 @@
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
 	  <style>
-	  	.title-only {padding-top: 10%;line-height: 50px; font-size: 44px;}
 	  	.practice-section {
 	height: 63px;
 	color: #FFFFFF;
@@ -35,11 +34,12 @@
 }
 	  </style>
 	</head>
-	<body class="overview" style="background-color:#43B02A">
-		<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
-		<h2 class="practice-section">Practice Section</h2>
-		<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
-		<a href="practice-1.php" class="practice-button">Practice</a>
-		
+	<body class="overview" style="background-color:#43B02A;position:relative">
+		<div class="slide-7" style="width:100%">
+			<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
+			<h2 class="practice-section">Practice Section</h2>
+			<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
+			<a href="practice-1.php" class="practice-button">Practice</a>
+		</div>
 	</body>
 </html>
