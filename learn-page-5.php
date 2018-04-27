@@ -82,6 +82,7 @@
 			    var nowScrollStamp = new Date().getTime();
 			    var scrollDiff = nowScrollStamp - lastScrollStamp;
 			    if (delta > 3 && scrollDiff>=1500) {
+			    	lastScrollStamp = nowScrollStamp;
 					if($(".slide-2").is(":visible")) {
 				    	$(".slide-1").show("slide", { direction: "up" }, 900);
 						$(".slide-2").hide("slide", { direction: "down" }, 900);
@@ -91,13 +92,14 @@
 						$(".slide-3").hide("slide", { direction: "down" }, 900);
 						$(".footer").hide();
 						$(".content").animate({
-						    height: "574"
+						    height: "554"
 						  }, 900, function() {
 							  
 						});
 					}
 					
 			    } else if (delta < -3 && scrollDiff>=1500) {
+			    	lastScrollStamp = nowScrollStamp;
 					if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
 						$(".slide-2").show("slide", { direction: "down" }, 450);
 						$(".slide-1").hide("slide", { direction: "up" }, 900);
