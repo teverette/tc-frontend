@@ -20,12 +20,13 @@
 				</div>
 				<div class="content-example-holder">
 					<p class="what-is-example first-item item item-two">Situational irony is often described as “a twist” in the story. </p>
-				</div>
-				<div class="reason-for-example item item-four">For example, if an Olympic runner loses a race to a middle school student, 
-				situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</div>
-				
+				</div>				
 				<div class="slide-btn-box item item-three"><img src="images/DownArrow.png" class="slide-btn slide-2-btn"/></div>
-				<div class="slide-btn-box item item-five"><img src="images/DownArrow.png" class="slide-btn slide-3-btn"/></div>
+			</div>
+			<div class="grid-x grid-padding-x slide-3 text-center">
+				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:125px"><span class="">For example, if an Olympic runner loses a race to a middle school student, 
+				situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</span>
+				</div>
 			</div>
 		</div>
 		<?php $width = "43.75"; ?>
@@ -54,12 +55,16 @@
 					});
 					$(".slide-btn").removeClass("active-btn");
 					$(".slide-2-btn").addClass("active-btn");
+					$(".slide-2").addClass("accessed");
 				});
 
 		      $(".slide-2-btn").click(function () {
 					timeDelay=animationDuration+50;
 					$(".item-three").hide(0);
-					showElement($(".slide-2 .item-four"));
+					$(".slide-3").show("slide", { direction: "down" }, animationDuration*2);
+					$(".slide-2").hide("slide", { direction: "up" }, animationDuration);
+					
+					$(".slide-3").addClass("accessed");
 					showElement($(".footer"));
 					$(".footer").addClass("accessed");
 					$(".content").animate({
@@ -71,32 +76,43 @@
 					$(".slide-3-btn").addClass("active-btn");
 				});
 		      $('html').on ('mousewheel', function (e) {
-				    var delta = e.originalEvent.wheelDelta;
-				    if (delta > 3 && !$(".slide-1").is(":visible")) {
-				    	$(".slide-1").show("slide", { direction: "up" }, 900);
-						$(".slide-2").hide("slide", { direction: "down" }, 900);
-						$(".footer").hide();
-						$(".content").animate({
-						    height: "574"
-						  }, 900, function() {
-						    // Animation complete.
-						});
-						// $(".slide-1-btn").fadeIn(animationDuration);
-				    } else if (delta < 3) {
-				    	if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
+		    	  var delta = e.originalEvent.wheelDelta;
+				    var nowScrollStamp = new Date().getTime();
+				    var scrollDiff = nowScrollStamp - lastScrollStamp;
+				    if (delta > 3 && scrollDiff>=1500) {
+						if($(".slide-2").is(":visible")) {
+					    	$(".slide-1").show("slide", { direction: "up" }, 900);
+							$(".slide-2").hide("slide", { direction: "down" }, 900);
+							
+						} else if($(".slide-3").is(":visible")) {
+					    	$(".slide-2").show("slide", { direction: "up" }, 900);
+							$(".slide-3").hide("slide", { direction: "down" }, 900);
+							$(".footer").hide();
+							$(".content").animate({
+							    height: "574"
+							  }, 900, function() {
+								  
+							});
+						}
+						
+				    }else if (delta < -3 && scrollDiff>=1500) {
+						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
 							$(".slide-2").show("slide", { direction: "down" }, 450);
 							$(".slide-1").hide("slide", { direction: "up" }, 900);
-							if($(".footer").hasClass("accessed")) {
-								showElement($(".footer"));
-								$(".content").animate({
-								    height: "474"
-								  }, 900, function() {
-								    // Animation complete.
-								});
-							}
+							
+						} else if($(".slide-2").is(":visible") && $(".slide-3").hasClass("accessed")) {
+							$(".slide-3").show("slide", { direction: "down" }, 450);
+							$(".slide-2").hide("slide", { direction: "up" }, 900);
+							showElement($(".footer"));
+							$(".content").animate({
+							    height: "474"
+							  }, 900, function() {
+							    // Animation complete.
+							});
 						}
 				    }
 				});
+		      var lastScrollStamp = new Date().getTime();
 				
 		      function showElement(o) {
 			      console.log("inside hideElement");

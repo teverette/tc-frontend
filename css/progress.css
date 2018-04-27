@@ -201,9 +201,9 @@ body.practice.learn .content {padding: 36px 166px 0 166px; overflow: scroll;}
 	width: 654px;
 	color: #307FE2;
 	font-family: Roboto;
-	font-size: 20px;
+	font-size: 24px;
+	line-height: 38px;
 	font-weight: 500;
-	line-height: 32px;
 	text-align: center;
 }
 .question-type-icon {position:absolute;padding-left:0; padding-right:0; text-align:right; top:77px; left:36px}
@@ -353,17 +353,17 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .learn-page-3 .image-holder {width:300px;display:inline-block}
 .learn-page-3 .image-holder img {width:300px}
 .learn-page-3 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
-.learn-page-3 .reason-for-example {padding-left:75px;margin-top:60px}
+.learn-page-3 .reason-for-example {margin-top:60px}
 
 .learn-page-4 .image-holder {width:300px;display:inline-block;padding-left:50px}
 .learn-page-4 .image-holder img {width:230px}
 .learn-page-4 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:80px}
-.learn-page-4 .reason-for-example {padding-left:75px;margin-top:0px}
+.learn-page-4 .reason-for-example {margin-top:0px}
 
 .learn-page-5 .image-holder {width:300px;display:inline-block}
 .learn-page-5 .image-holder img {width:300px}
 .learn-page-5 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:40px}
-.learn-page-5 .reason-for-example {padding-left:75px;margin-top:30px}
+.learn-page-5 .reason-for-example {margin-top:30px}
 .learn .slide-btn-box {width:100%;text-align:center}
 
  .slide-7 {margin-top: 110px}

@@ -113,7 +113,7 @@
 				<img src="images/DownArrow.png" class="slide-btn slide-6-btn item" />
 			</div>
 			<div class="grid-x grid-padding-x slide-7 text-center">
-				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:100px"><span class="item item-six">Scott’s comment, “Well, this is going well,” 
+				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:100px"><span class="item item-six">Scott’s comment, <strong>“Well, this is going well,”</strong> 
 					shows verbal<br/> irony because Scott says things are going well, but he<br/> means that things are not going well at all.</span>
 				</div>
 				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
