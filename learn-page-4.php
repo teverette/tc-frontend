@@ -74,7 +74,6 @@
 		</div>
 		<?php $back = "practice-4.php"; ?>
 		<?php $width = "43.75"; ?>
-		<?php $btnClass = "check"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		 <script>
@@ -109,14 +108,6 @@
 					
 					$(".slide-3").addClass("accessed");
 					$(".slide-7-btn").show();
-					/*
-					showElement($(".footer"));
-					$(".footer").addClass("accessed");
-					$(".content").animate({
-					    height: "474"
-					  }, 900, function() {
-					    // Animation complete.
-					});*/
 					$(".slide-btn").removeClass("active-btn");
 					$(".slide-3-btn").addClass("active-btn");
 				});
@@ -143,6 +134,7 @@
 				    var nowScrollStamp = new Date().getTime();
 				    var scrollDiff = nowScrollStamp - lastScrollStamp;
 				    if (delta > 3 && scrollDiff>=1500) {
+				    	if($(".content-2").is(":visible")) {return}
 						if($(".slide-2").is(":visible")) {
 					    	$(".slide-1").show("slide", { direction: "up" }, 900);
 							$(".slide-2").hide("slide", { direction: "down" }, 900);
@@ -152,13 +144,14 @@
 							$(".slide-3").hide("slide", { direction: "down" }, 900);
 							$(".footer").hide();
 							$(".content").animate({
-							    height: "574"
+							    height: "554"
 							  }, 900, function() {
 								  
 							});
 						}
 						
 				    }else if (delta < -3 && scrollDiff>=1500) {
+				    	if($(".content-2").is(":visible")) {return}
 						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
 							$(".slide-2").show("slide", { direction: "down" }, 450);
 							$(".slide-1").hide("slide", { direction: "up" }, 900);
