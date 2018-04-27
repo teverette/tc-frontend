@@ -246,9 +246,9 @@
 				// $(".content").hide("slide", { direction: "up" }, 900);
 				$(".content-header").hide();
 				$(".content").animate({
-				    height: "0"
+				    height: "0", padding:"0", borderWidth:"0"
 				  }, 900, function() {
-					  $(".content").hide("slide", { direction: "up" }, 150);
+					  // $(".content").hide("slide", { direction: "up" }, 150);
 				});
 			});
 
