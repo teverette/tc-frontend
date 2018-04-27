@@ -135,6 +135,7 @@
 				    var scrollDiff = nowScrollStamp - lastScrollStamp;
 				    if (delta > 3 && scrollDiff>=1500) {
 				    	if($(".content-2").is(":visible")) {return}
+				    	lastScrollStamp = nowScrollStamp;
 						if($(".slide-2").is(":visible")) {
 					    	$(".slide-1").show("slide", { direction: "up" }, 900);
 							$(".slide-2").hide("slide", { direction: "down" }, 900);
@@ -152,6 +153,7 @@
 						
 				    }else if (delta < -3 && scrollDiff>=1500) {
 				    	if($(".content-2").is(":visible")) {return}
+				    	lastScrollStamp = nowScrollStamp;
 						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
 							$(".slide-2").show("slide", { direction: "down" }, 450);
 							$(".slide-1").hide("slide", { direction: "up" }, 900);

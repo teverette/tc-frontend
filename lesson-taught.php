@@ -10,7 +10,7 @@
 	  	</style>
 	</head>
 	<body class="practice learn">
-		<div class="content">
+		<div class="content" style="height:474px">
 			<div class="content-header content-header-learn">Learn</div>
 			<div class="grid-x grid-padding-x">
 				<h2 class="title-learn">This lesson taught learners:</h2>

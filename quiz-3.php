@@ -4,7 +4,7 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <style>.drop-down-drawer {height:130px}</style>
+	  <style>.drop-down-drawer {    height: 150px;bottom:150px}</style>
 </head>
 <body class="practice quiz quiz-question" data-quiz-question="3">
 

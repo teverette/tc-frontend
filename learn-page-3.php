@@ -133,6 +133,7 @@
 				});
 		      
 		      $('html').on ('mousewheel', function (e) {
+			      console.log("mousewheel detected");
 				    var delta = e.originalEvent.wheelDelta;
 				    var nowScrollStamp = new Date().getTime();
 				    var scrollDiff = nowScrollStamp - lastScrollStamp;
@@ -148,7 +149,7 @@
 							$(".slide-3").hide("slide", { direction: "down" }, 900);
 							$(".footer").hide();
 							$(".content").animate({
-							    height: "574"
+							    height: "554"
 							  }, 900, function() {
 								  
 							});
