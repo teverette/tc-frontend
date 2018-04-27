@@ -47,9 +47,8 @@
 			<div class="grid-x grid-padding-x slide-1" >
 				<h2 class="title-learn medium-12">This lesson helps learners answer<br/> the following questions: </h2>
 				<div class="lesson-point-item first-item item">
-					<div class="image-holder" style="height:95px">
-						<img src="images/irony.jpg" class="lesson-point"/>
-					</div>
+					 
+					<img src="images/irony.jpg" class="lesson-point" style="height:95px"/>
 					<h4 class="lesson-point-label">Irony</h4>
 					<p style="width:188px;text-align:center">What are the different types of irony?</p>			
 				</div>
