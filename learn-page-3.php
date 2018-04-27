@@ -109,14 +109,6 @@
 					$(".slide-2").hide("slide", { direction: "up" }, animationDuration);
 					
 					$(".slide-3").addClass("accessed");
-					/* showElement($(".footer"));
-					$(".footer").addClass("accessed");
-					$(".content").animate({
-					    height: "474"
-					  }, 900, function() {
-					    // Animation complete.
-					});
-					*/
 					$(".slide-btn").removeClass("active-btn");
 					$(".slide-7-btn").show();
 				});
@@ -145,6 +137,7 @@
 				    var nowScrollStamp = new Date().getTime();
 				    var scrollDiff = nowScrollStamp - lastScrollStamp;
 				    if (delta > 3 && scrollDiff>=1500) {
+				    	lastScrollStamp = nowScrollStamp;
 				    	if($(".content-2").is(":visible")) {return}
 						if($(".slide-2").is(":visible")) {
 					    	$(".slide-1").show("slide", { direction: "up" }, 900);
@@ -162,6 +155,7 @@
 						}
 						
 				    } else if (delta < -3 && scrollDiff>=1500) {
+				    	lastScrollStamp = nowScrollStamp;
 				    	if($(".content-2").is(":visible")) {return}
 						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
 							$(".slide-2").show("slide", { direction: "down" }, 450);
