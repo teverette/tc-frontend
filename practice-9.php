@@ -43,7 +43,7 @@
 <?php $back = "learn-page-5.php"; ?>
 <?php include '_footer_progress.php'?>
 
-<div id="drawer-one" class="drop-down-drawer q9_1 text-center" style="height: 128px;">
+<div id="drawer-one" class="drop-down-drawer q9_1 text-center" style="height: 150px;">
 	<a class="button secondary answer-option q9_1" data-value="1">her competitor took a deep breath and began to spell.</a>
 	<a class="button secondary answer-option q9_2" data-value="2">her competitor misspelled the word.</a>
 	<a class="button secondary answer-option q9_3" data-value="3">her competitor looked around the room.</a>	

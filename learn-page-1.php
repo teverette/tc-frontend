@@ -77,8 +77,8 @@
 			</div>
 			<div class="grid-x grid-padding-x slide-3">
 				<h2 class="title-learn item item-one">What is verbal irony?</h2>
-				<p class="irony-description item item-two">Verbal irony occurs when words express something different from<br/>
-				 their normal meanings. Verbal irony can be used to add humor or<br/> interest.
+				<p class="irony-description item item-two">Verbal irony occurs when words express something different from
+				 their normal meanings. Verbal irony can be used to add humor or interest.
 				 </p>
 				 <img src="images/DownArrow.png" class="slide-btn slide-3-btn item" />
 			</div>
