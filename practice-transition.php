@@ -39,7 +39,7 @@
 			<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
 			<h2 class="practice-section">Practice Section</h2>
 			<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
-			<a href="practice-1.php" class="practice-button">Practice</a>
+			<a href="learn-page-2.php" class="practice-button">Practice</a>
 		</div>
 	</body>
 </html>

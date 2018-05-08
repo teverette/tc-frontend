@@ -39,11 +39,22 @@
 	border-radius: 4px;
 	background-color: #FFFFFF;position:absolute; left:445px; top:390px; padding-top:7px; text-align: center;
 }
+.slide-1, .slide-2, .slide-3 {height:400px}
+.learn .slide-2 .item {display:block}
+.slide-btn-main {position:absolute; height: 64px; margin:0 auto;cursor:pointer;}
+.slide-btn-main:hover {bottom:-3px}
+.slide-8 {display:none}
 	  </style>
 	</head>
 	<body class="practice learn why-lesson">
-		<div class="content">
+		<div class="content" style="padding-bottom:125px; overflow:hidden">
 			<div class="content-header content-header-learn">Learn</div>
+			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
+				<a onclick="moveWindowReverse();">Back</a>
+				<img src="images/DownArrow.png" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2"/>
+			</div>
+			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
+			<div class="content-window" style="position:relative">
 			<div class="grid-x grid-padding-x slide-1" >
 				<h2 class="title-learn medium-12">This lesson helps learners answer<br/> the following questions: </h2>
 				<div class="lesson-point-item first-item item">
@@ -62,70 +73,26 @@
 					<h4 class="lesson-point-label">Irony</h4>
 					<p style="width:200px;text-align:center">How do writers use suspense and irony in narratives?</p>			
 				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-1-btn item one" />
 			</div>
-			<div class="grid-x grid-padding-x slide-2">
-				<h2 class="title-learn" style="margin:24px auto 24px; height:inherit">Why this lesson is important</h2>
+			<div class="grid-x grid-padding-x slide-2" style="display:flex">
+				<h2 class="title-learn" style="margin:24px auto 24px;">Why this lesson is important</h2>
 				<div class="medium-12 lesson-desc text-center" >
-					<img src="images/why-lesson.jpg" style="width:333px" class="item item-one"></span>
+					<img src="images/why-lesson.jpg" style="width:333px" class=""></span>
 				</div>
-				<div class="medium-12 second-item item item-two" style="font-family:roboto; font-size:14px;line-height: 20px;">
+				<div class="medium-12" style="font-family:roboto; font-size:14px;line-height: 20px;">
 					A narrative is a story: it contains characters, story events, and settings. Writers use techniques like irony and suspense 
 					to make their narratives more interesting and pleasurable for readers.
 				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-2-btn item item-three" />
-			</div>
-			<div class="grid-x grid-padding-x slide-3">
-				<h2 class="title-learn item item-one">What is verbal irony?</h2>
-				<p class="irony-description item item-two">Verbal irony occurs when words express something different from
-				 their normal meanings. Verbal irony can be used to add humor or interest.
-				 </p>
-				 <img src="images/DownArrow.png" class="slide-btn slide-3-btn item" />
 			</div>
 			
-			<div class="grid-x grid-padding-x slide-4 text-center">
-				<div class="image-holder">
-					<img src="images/Illustration1.png" class="item item-one"/>
-				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example first-item" ><span class="item item-two">Scott arrived downtown for his job interview almost 15 minutes late because his bus never arrived.</span>
-					
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-4-btn item" />
 			</div>
-			<div class="grid-x grid-padding-x slide-5 text-center">
-				<div class="image-holder">
-					<img src="images/Illustration2.png" class="item item-one" style="top: -50px;position:relative"/>
-				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example first-item" ><span class="item item-four">While running from his apartment to the office, he dropped the folder that contained his application 
-					 into a deep puddle. “Well, this is going well,” he muttered.</span></p>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-5-btn item" />
 			</div>
-			<div class="grid-x grid-padding-x slide-6 text-center">
-				<div class="image-holder">
-					<img src="images/Illustration3.png" class="item item-one"/>
-				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example first-item" ><span class="item item-four">“Well, this is going well,” he muttered.</span></p>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-6-btn item" />
-			</div>
-			<div class="grid-x grid-padding-x slide-7 text-center">
-				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:100px"><span class="item item-six">Scott’s comment, <strong>“Well, this is going well,”</strong> 
-					shows verbal<br/> irony because Scott says things are going well, but he<br/> means that things are not going well at all.</span>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
-			</div>
-			
-			
 		</div>
 		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 653px;s">
 				<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
 				<h2 class="practice-section">Practice Section</h2>
 				<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
-				<a href="practice-1.php" class="practice-button">Practice</a>
+				<a href="learn-page-2.php" class="practice-button">Practice</a>
 			</div>
 		<?php $width = "11.1"; ?>
 		<?php $back = "index.php"; ?>
@@ -141,17 +108,69 @@
 					setTimeout(showElement.bind(null,this), timeDelay);
 					timeDelay+=animationDuration+50;
 				});
+				
 		    });
-		    $(".slide-1-btn").click(function () {
-				$(".slide-1-btn").fadeOut(100);
-				$(".slide-1").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-2").show().addClass("accessed");
-					setTimeout(showElementsOnSlide2(), 100);
-					timeDelay=0;
+
+		    /* window scroller variables and functions */
+			var windowPos = 0;
+			var maxWindowPos = -800;
+			var scrollDistance = 400;
+		    $(".slide-btn-main").click(function () {
+		    	moveWindowForward();
+			    
+		    });
+
+		    function getWindowTopPosition() {
+		    	var position = $(".content-window").position();
+		    	return position.top;
+		    }
+
+		    function moveWindowForward() {
+		    	var newTopPosition = windowPos-scrollDistance;
+		    	if(newTopPosition > maxWindowPos) {
+					$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
+						windowPos = newTopPosition;
+				    });
+		    	} else {
+		    		showElement($(".slide-8"));
+
+					$(".content-header").hide();
+					$(".content").animate({
+					    height: "0", padding:"0", borderWidth:"0"
+					  }, 900, function() {
+						  
+					});
+		    	}
+		    }
+
+		    function moveWindowReverse() {
+			    console.log("current top: " + getWindowTopPosition());
+		    	var newTopPosition = windowPos+scrollDistance;
+		    	
+		    	console.log("new top: " + newTopPosition);
+		    	if(newTopPosition>=400) {
+					// hide/disable button
+					console.log("at top of content");
+					return;
+		    	}
+
+		    	$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
+		    		windowPos = newTopPosition;
+			    });
+		    }
+
+		    function showPracticeSlide() {
+		    	showElement($(".slide-8"));
+				// $(".content").hide("slide", { direction: "up" }, 900);
+				$(".content-header").hide();
+				$(".content").animate({
+				    height: "0", padding:"0", borderWidth:"0"
+				  }, 900, function() {
+					  // $(".content").hide("slide", { direction: "up" }, 150);
 				});
-				$(".slide-btn").removeClass("active-btn");
-				$(".slide-2-btn").addClass("active-btn");
-			});
+		    }
+		    /* end window scroller logic */
+		    
 		    $(".slide-2-btn").click(function () {
 				$(".slide-2-btn").fadeOut(100);
 				$(".slide-2").hide("slide", { direction: "up" }, animationDuration, function(){
@@ -205,8 +224,7 @@
 					setTimeout(showElement.bind(null,$(".slide-5 .slide-5-btn")), timeDelay);
 					timeDelay=0;
 				});
-				// $(".slide-btn").removeClass("active-btn");
-				// $(".slide-5-btn").addClass("active-btn");
+
 			});
 
 			$(".slide-5-btn").click(function () {

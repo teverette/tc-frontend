@@ -329,13 +329,13 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .disabled-dd {cursor: not-allowed}
 /* learn pages */
 
-.learn .item, .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7,.slide-8 {display:none}
+ .slide-2, .slide-3, .slide-4, .slide-5, .slide-6, .slide-7,.slide-8 {display:flex; height:400px}
 .learn .what-is-example {color: #4A4A4A; font-family: Roboto; font-size: 20px; text-align: left; line-height: 28px; font-weight:500}
 .learn .reason-for-example {color: #4A4A4A;	font-family: Roboto; font-size: 14px; font-weight: 300;	line-height: 20px; text-align: center;}
 .learn .content, .expanded.content {height: 554px} /*554px*/
 
-.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: absolute; left: 478px; top: 419px;}
-.slide-btn:hover {top:422px}
+.slide-btn {height: 64px; margin:0 auto;cursor:pointer;position: relative; }
+.slide-btn:hover {top:3px}
 
 
 .why-lesson .slide-4 .image-holder,.why-lesson .slide-5 .image-holder, .slide-5 .image-holder, .slide-6 .image-holder  {width:300px;display:inline-block}
@@ -343,8 +343,8 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .why-lesson .slide-4 .content-example-holder,.why-lesson .slide-5 .content-example-holder, .slide-6 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
 .why-lesson .slide-4 .reason-for-example, .why-lesson .slide-5 .reason-for-example {padding-left:75px;margin-top:10px}
 
-.learn-page-2 .slide-2 {margin-top:60px}
-.learn-page-2 .image-holder {width:300px;display:inline-block; top: -50px; position: relative}
+.learn-page-2 .slide-2 {}
+.learn-page-2 .image-holder {width:300px;display:inline-block; position: relative}
 .learn-page-2 .image-holder img {width:300px}
 .learn-page-2 .content-example-holder {width:320px;display:inline-block;margin-left:25px; padding-top:30px; text-align:left;height: 140px;}
 .learn-page-2 .reason-for-example {padding-left:75px;margin-top:10px}
@@ -363,9 +363,9 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .learn-page-5 .image-holder {width:300px;display:inline-block}
 .learn-page-5 .image-holder img {width:300px}
 .learn-page-5 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:40px}
-.learn-page-5 .reason-for-example {margin-top:30px}
+.learn-page-5 .reason-for-example {padding-left:75px;margin-top:30px}
 .learn .slide-btn-box {width:100%;text-align:center}
 
- .slide-7 {margin-top: 110px}
- .slide-5 {margin-top:75px}
- .slide-4, .slide-6 {margin-top:90px}
+ .slide-7 {margin-top: 0px}
+ .slide-5 {margin-top:0px}
+ .slide-4, .slide-6 {margin-top:0px}
