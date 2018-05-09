@@ -4,13 +4,14 @@
 	  <title>Lesson Overview</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <script src="js/window-scroller.js"></script>
 	  <style>
 	  	.slide-btn-main {position:absolute; height: 64px; margin:0 auto;cursor:pointer;}
 .slide-btn-main:hover {bottom:-3px}
 	  </style>
 	</head>
 	<body class="practice learn learn-page-2">
-		<div class="content">
+		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
 				<a onclick="moveWindowReverse();">Back</a>
@@ -58,75 +59,54 @@
 				</div>
 			</div>
 		</div>
+		<div class="content-2 item">
+			<img src="images/speaker.jpg" class="speaker item"/>
+			<div class="content"> 
+			<div class="content-header content-header-practice">Practice</div>
+			<div class="grid-x grid-padding-x">
+			  <p class="lesson-desc medium-12">Which of these shows verbal irony?</p>
+			   
+			  <table class="medium-12 unstriped grid-matrix">
+			  <thead>
+			    <tr>
+			      <th width="60%"></th>
+			      <th width="20%" class="text-center">Verbal Irony</th>
+			      <th width="20%" class="text-center">Not Verbal Irony</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>A cat drinking a bowl of milk smiles and says, &ldquo;I love milk!&rdquo;</td>
+			      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="irony"/></td>
+			      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="not-irony"/></td>
+			    </tr>
+			    <tr>
+			      <td>A teacher assigns a lot of homework and a student says, &ldquo;I can&rsquo;t imagine a better way to spend my weekend.&rdquo;</td>
+			      <td class="text-center"><input type="radio" name="q1_2" value="irony"/></td>
+			      <td class="text-center"><input type="radio" name="q1_2" value="not-irony"/></td>
+			    </tr>
+			    <tr>
+			      <td>A soccer player makes a goal and the coach says, &ldquo;Well done!&rdquo;</td>
+			      <td class="text-center"><input type="radio" name="q1_3" value="irony"/></td>
+			      <td class="text-center"><input type="radio" name="q1_3" value="not-irony"/></td>
+			    </tr>
+			  </tbody>
+			  
+			</table>
+			
+			</div>
+			<div class="rationale-sidebar"></div>
+			</div>
+		</div>
 
 		<?php $back = "learn-page-1.php"; ?>
-		<?php $next = "practice-transition.php"; ?>
-		<?php $btnClass = "check"; ?>
-		<?php include '_footer_non_progress.php'?>
+		<?php include '_footer_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();
+		      var maxWindowPos = -2000;
 		      $(document).ready(function() {
 					$(".footer").hide();
-
-				    /* window scroller variables and functions */
-					var windowPos = 0;
-					var maxWindowPos = -2000;
-					var scrollDistance = 400;
-				    $(".slide-btn-main").click(function () {
-				    	moveWindowForward();
-				    });
-
-				    function getWindowTopPosition() {
-				    	var position = $(".content-window").position();
-				    	return position.top;
-				    }
-
-				    function moveWindowForward() {
-				    	var newTopPosition = windowPos-scrollDistance;
-				    	if(newTopPosition > maxWindowPos) {
-							$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
-								windowPos = newTopPosition;
-						    });
-				    	} else {
-				    		showElement($(".slide-8"));
-
-							$(".content-header").hide();
-							$(".content").animate({
-							    height: "0", padding:"0", borderWidth:"0"
-							  }, 900, function() {
-								  
-							});
-				    	}
-				    }
-
-				    function moveWindowReverse() {
-					    console.log("current top: " + getWindowTopPosition());
-				    	var newTopPosition = windowPos+scrollDistance;
-				    	
-				    	console.log("new top: " + newTopPosition);
-				    	if(newTopPosition>=400) {
-							// hide/disable button
-							console.log("at top of content");
-							return;
-				    	}
-
-				    	$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
-				    		windowPos = newTopPosition;
-					    });
-				    }
-
-				    function showPracticeSlide() {
-				    	showElement($(".slide-8"));
-						// $(".content").hide("slide", { direction: "up" }, 900);
-						$(".content-header").hide();
-						$(".content").animate({
-						    height: "0", padding:"0", borderWidth:"0"
-						  }, 900, function() {
-							  // $(".content").hide("slide", { direction: "up" }, 150);
-						});
-				    }
-				    /* end window scroller logic */
 
 					$(".slide-3-btn").click(function () {
 						$(".slide-btn").removeClass("active-btn");
@@ -159,5 +139,57 @@
 		      });		  
 		      
 	    </script>
+	    		<script>
+			$(document).foundation();
+			
+			var questions = ["q1_1","q1_2","q1_3"];
+	      	var answerKey = {q1_1:"not-irony", q1_2:"irony",q1_3:"not-irony"};
+	      	var hintArray = {
+	      	      	"hint_q1_1":{
+	          	      	"irony":"Verbal irony is saying one thing but meaning another. <br/><br/>Did the cat say one thing but mean another? "
+		          	},
+	      	      	"hint_q1_2":{
+	          	      	"not-irony":"Verbal irony is saying one thing but meaning another. <br/><br/>Are the student’s words the same as what he means?"
+		          	},
+	      	      	"hint_q1_3":{
+	          	      	"irony":"Verbal irony is saying one thing but meaning another.<br/><br/>Is there a difference between what the coach says and what he means?"
+	              	}
+	      	}
+	      	var rationaleArray = {
+	      	      	"rationale_q1_1":"You got it! Verbal irony is saying one thing but meaning another. <br/><br/> The cat’s words and meaning are the same, so this is not irony",
+	      	      	"rationale_q1_2":"Correct! Verbal irony is saying one thing but meaning another. <br/><br/> The student is saying the opposite of what he means, so this is verbal irony. ",
+	      	      	"rationale_q1_3":"Correct! Verbal irony is saying one thing but meaning another. <br/><br/> The coach is saying exactly what he means, so this is not ironic.",
+	      	}
+	      	var response_key = {};
+	      	var nextPage = "practice-2.php";
+	      	var storage = window.sessionStorage;
+
+			$(document).on("click",".check", function() {
+				ChoiceMatrix.assess(false);
+			});
+	      
+	      	$(document).on("click",".check-verified", function() {
+			  window.location.href=nextPage;
+	     	});
+
+			$("input:radio").click(function() {
+				if($('.hint').is(':visible')) {
+					ChoiceMatrix.resetForm();
+				}
+				ChoiceMatrix.enableButton();
+			});
+
+			$(window).bind("unload", function() {
+				alert("unload");
+			});
+
+			$(document).ready(function() {
+      			highlightCurrentQuiz();
+      			ChoiceMatrix.initialize("practice_1",3,3);
+      			if(hasAlreadyAnswered("practice_1")) {
+					ChoiceMatrix.setPreviousResponse();
+				}
+      		});
+		  </script>
 	</body>
 </html>

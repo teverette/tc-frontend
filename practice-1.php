@@ -102,10 +102,6 @@
 					ChoiceMatrix.setPreviousResponse();
 				}
       		});
-      		
-			window.onload = function() {
-				
-			}
 		  </script>
 		 <!-- <?php echo "page loaded";?> -->
 	</body>

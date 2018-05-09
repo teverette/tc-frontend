@@ -4,36 +4,41 @@
 	  <title>Lesson Overview</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <script src="js/window-scroller.js"></script>
 	</head>
 	<body class="practice learn learn-page-3">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn</div>
-			<div class="grid-x grid-padding-x slide-1">
-				<h2 class="title-learn item">What is dramatic irony?</h2>
-				<p class="irony-description item">Dramatic irony occurs when the reader knows information that a
-				 character does not. It can be used to build suspense or add interest.
-				 Dramatic irony encourages readers to continue reading to learn what the
-				  characters will do and whether they will ever learn the truth. 
-				 </p>
-				 <img src="images/DownArrow.png" class="slide-btn slide-1-btn item" />
+			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
+				<a onclick="moveWindowReverse();">Back</a>
+				<img src="images/DownArrow.png" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2"/>
 			</div>
-			<div class="grid-x grid-padding-x slide-2">
-				<div class="image-holder">
-					<img src="images/Illustration4.png" class="item item-one"/>
-				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example first-item item item-two">Marco slept peacefully in his bed, unaware of the guests who gathered 
-					downstairs for his surprise birthday party. </p>
-				</div>
-				<div class="reason-for-example item item-four"></div>
-				
-				<div class="slide-btn-box item item-three"><img src="images/DownArrow.png" class="slide-btn slide-2-btn"/></div>
+			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
+			<div class="content-window" style="position:relative">
+					<div class="grid-x grid-padding-x slide-1">
+						<h2 class="title-learn item">What is dramatic irony?</h2>
+						<p class="irony-description item">Dramatic irony occurs when the reader knows information that a
+						 character does not. It can be used to build suspense or add interest.
+						 Dramatic irony encourages readers to continue reading to learn what the
+						  characters will do and whether they will ever learn the truth. 
+						 </p>
+					</div>
+					<div class="grid-x grid-padding-x slide-2">
+						<div class="image-holder">
+							<img src="images/Illustration4.png" class="item item-one"/>
+						</div>
+						<div class="content-example-holder">
+							<p class="what-is-example first-item item item-two">Marco slept peacefully in his bed, unaware of the guests who gathered 
+							downstairs for his surprise birthday party. </p>
+						</div>
+						<div class="reason-for-example item item-four"></div>
+					</div>
+					<div class="grid-x grid-padding-x slide-3 text-center">
+						<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:150px"><span class="">Because the readers know about the birthday party 
+						and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</span>
+						</div>
+					</div>
 			</div>
-			<div class="grid-x grid-padding-x slide-3 text-center">
-				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:150px"><span class="">Because the readers know about the birthday party 
-				and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</span>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
 			</div>
 		</div>
 		<div class="content-2 item">
@@ -78,6 +83,8 @@
 		
 		 <script>
 		      $(document).foundation();
+		      var maxWindowPos = -1200;
+		      
 		      
 		      $(document).ready(function() {
 		    	    $(".forward-button").html('Check <i class="fas fa-lg fa-caret-right" ></i>');
@@ -88,6 +95,7 @@
 					});
 					$(".slide-1").addClass("accessed");
 					$(".footer").hide();
+					
 		      });
 
 		      $(".slide-1-btn").click(function () {

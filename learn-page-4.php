@@ -4,30 +4,36 @@
 	  <title>What is situational irony?</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <script src="js/window-scroller.js"></script>
 	</head>
 	<body class="practice learn learn-page-4">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn</div>
-			<div class="grid-x grid-padding-x slide-1">
-				<h2 class="title-learn item">What is situational irony?</h2>
-				<p class="irony-description item">Situational irony occurs when the actual outcome of a situation is different from the expected outcome. It can be used to add humor and interest or to build suspense.
-				 </p>
-				 <img src="images/DownArrow.png" class="slide-btn slide-1-btn item"/>
+			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
+				<a onclick="moveWindowReverse();">Back</a>
+				<img src="images/DownArrow.png" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2"/>
 			</div>
-			<div class="grid-x grid-padding-x slide-2">
-				<div class="image-holder">
-					<img src="images/CSK-L7-twist.gif" class="first-item item item-one"/>
-				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example first-item item item-two">Situational irony is often described as “a twist” in the story. </p>
-				</div>				
-				<div class="slide-btn-box item item-three"><img src="images/DownArrow.png" class="slide-btn slide-2-btn"/></div>
+			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
+			<div class="content-window" style="position:relative">
+					<div class="grid-x grid-padding-x slide-1">
+						<h2 class="title-learn item">What is situational irony?</h2>
+						<p class="irony-description item">Situational irony occurs when the actual outcome of a situation is different from the expected outcome. It can be used to add humor and interest or to build suspense.
+						 </p>
+					</div>
+					<div class="grid-x grid-padding-x slide-2">
+						<div class="image-holder">
+							<img src="images/CSK-L7-twist.gif" class="first-item item item-one"/>
+						</div>
+						<div class="content-example-holder">
+							<p class="what-is-example first-item item item-two">Situational irony is often described as “a twist” in the story. </p>
+						</div>				
+					</div>
+					<div class="grid-x grid-padding-x slide-3 text-center">
+						<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:125px"><span class="">For example, if an Olympic runner loses a race to a middle school student, 
+						situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</span>
+						</div>
+					</div>
 			</div>
-			<div class="grid-x grid-padding-x slide-3 text-center">
-				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:125px"><span class="">For example, if an Olympic runner loses a race to a middle school student, 
-				situational irony is created; readers expect the Olympic runner to win, but instead, the opposite occurs.</span>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
 			</div>
 		</div>
 		<div class="content-2 item">
@@ -78,6 +84,7 @@
 		
 		 <script>
 		      $(document).foundation();
+		      var maxWindowPos = -1200;
 		      $(document).ready(function() {
 		    	  $(".forward-button").html('Check <i class="fas fa-lg fa-caret-right" ></i>');
 		    	  $(".footer").hide();
