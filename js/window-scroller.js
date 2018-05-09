@@ -1,12 +1,13 @@
 /* window scroller variables and functions */
-$(document).ready(function() {
+
 					var windowPos = 0;
-					
 					var scrollDistance = 400;
+$(document).ready(function() {				
+					
 				    $(".slide-btn-main").click(function () {
 				    	moveWindowForward();
 				    });
-
+});
 				    function getWindowTopPosition() {
 				    	var position = $(".content-window").position();
 				    	return position.top;
@@ -52,4 +53,3 @@ $(document).ready(function() {
 						});
 				    }
 				    /* end window scroller logic */
-});

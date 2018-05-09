@@ -6,16 +6,15 @@
 	  <?php include '_js.html'; ?>
 	  <script src="js/window-scroller.js"></script>
 	  <style>
-	  	.slide-btn-main {position:absolute; height: 64px; margin:0 auto;cursor:pointer;}
-.slide-btn-main:hover {bottom:-3px}
+
 	  </style>
 	</head>
 	<body class="practice learn learn-page-2">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
-				<a onclick="moveWindowReverse();">Back</a>
-				<img src="images/DownArrow.png" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2"/>
+								<a class="slide-btn-back" onclick="moveWindowReverse();">Back</a>
+				<a href="#" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" >Got It</a>
 			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">

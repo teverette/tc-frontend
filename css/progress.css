@@ -369,6 +369,12 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
  .slide-7 {margin-top: 0px}
  .slide-5 {margin-top:0px}
  .slide-4, .slide-6 {margin-top:0px}
- 
- .slide-btn-main {position:absolute; height: 64px; margin:0 auto;cursor:pointer;}
-.slide-btn-main:hover {bottom:-3px}
+ .slide-btn-back {position:absolute; left: 238px}
+ .slide-btn-main {position:absolute; left:303px; cursor:pointer;
+	height: 40px;
+	width: 98px;
+	border: 1px solid #407CBE;
+	border-radius: 4px;
+	background-color: #307FE2;
+	color: #FFF;
+}

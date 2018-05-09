@@ -41,8 +41,7 @@
 }
 .slide-1, .slide-2, .slide-3 {height:400px}
 .learn .slide-2 .item {display:block}
-.slide-btn-main {position:absolute; height: 64px; margin:0 auto;cursor:pointer;}
-.slide-btn-main:hover {bottom:-3px}
+
 .slide-8 {display:none}
 	  </style>
 	</head>
@@ -50,8 +49,8 @@
 		<div class="content" style="padding-bottom:125px; overflow:hidden">
 			<div class="content-header content-header-learn">Learn</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
-				<a onclick="moveWindowReverse();">Back</a>
-				<img src="images/DownArrow.png" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2"/>
+				<a class="slide-btn-back" onclick="moveWindowReverse();">Back</a>
+				<a href="#" class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" >Got It</a>
 			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
