@@ -343,7 +343,7 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .why-lesson .slide-4 .content-example-holder,.why-lesson .slide-5 .content-example-holder, .slide-6 .content-example-holder {width:300px;display:inline-block;margin-left:25px; padding-top:50px}
 .why-lesson .slide-4 .reason-for-example, .why-lesson .slide-5 .reason-for-example {padding-left:75px;margin-top:10px}
 
-.learn-page-2 .slide-2 {}
+.learn-page-2 .slide-3, .learn-page-2 .slide-4, .learn-page-2 .slide-5, .learn-page-2 .slide-5, .learn-page-2 .slide-6 {padding-top:100px}
 .learn-page-2 .image-holder {width:300px;display:inline-block; position: relative}
 .learn-page-2 .image-holder img {width:300px}
 .learn-page-2 .content-example-holder {width:320px;display:inline-block;margin-left:25px; padding-top:30px; text-align:left;height: 140px;}
