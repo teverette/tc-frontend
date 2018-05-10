@@ -4,31 +4,37 @@
 	  <title>What is situational irony?</title>
 	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <script src="js/window-scroller.js"></script>
 	</head>
 	<body class="practice learn learn-page-5">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn</div>
-			<div class="grid-x grid-padding-x slide-1">
-				<h2 class="title-learn item">What is suspense?</h2>
-				<p class="irony-description item">Suspense is the fear or excitement created by the unknown in a narrative. Suspense is used to make stories more interesting.</p>
-				<img src="images/DownArrow.png" class="slide-btn slide-1-btn item"/>
+			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
+				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
+				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" >Got It&nbsp;<i class="fas fa-arrow-down"></i></a>
 			</div>
-			<div class="grid-x grid-padding-x slide-2" style="margin-top: 50px;">
-				<div class="image-holder" style="top: -45px; position: relative">
-					<img src="images/Illustration5.png" class=" item-one"/>
+			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
+			<div class="content-window" style="position:relative">
+				<div class="grid-x grid-padding-x slide-1">
+					<h2 class="title-learn item">What is suspense?</h2>
+					<p class="irony-description item">Suspense is the fear or excitement created by the unknown in a narrative. Suspense is used to make stories more interesting.</p>
 				</div>
-				<div class="content-example-holder">
-					<p class="what-is-example  item-two">Marco heard movement downstairs. Pulling the covers over his head, he tried tried to
-					 ignore the mysterious sounds, but they grew louder.</p>
+				<div class="grid-x grid-padding-x slide-2" >
+					<div class="image-holder" style="">
+						<img src="images/Illustration5.png" class=" item-one"/>
+					</div>
+					<div class="content-example-holder">
+						<p class="what-is-example  item-two">Marco heard movement downstairs. Pulling the covers over his head, he tried tried to
+						 ignore the mysterious sounds, but they grew louder.</p>
+					</div>
+					<div class="reason-for-example  item-four"></div>
 				</div>
-				<div class="reason-for-example  item-four"></div>
-				 <div class="slide-btn-box item item-three"><img src="images/DownArrow.png" class="slide-btn slide-2-btn"/></div>
+				<div class="grid-x grid-padding-x slide-3 text-center">
+					<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:125px"><span>Because the source of the sounds is unknown,
+					 the reader feels the fear and excitement in the suspenseful scene.</span>
+					</div>
+				</div>
 			</div>
-			<div class="grid-x grid-padding-x slide-3 text-center">
-				<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:125px"><span>Because the source of the sounds is unknown,
-				 the reader feels the fear and excitement in the suspenseful scene.</span>
-				</div>
-				<img src="images/DownArrow.png" class="slide-btn slide-7-btn item" />
 			</div>
 		</div>
 		<div class="content-2 item">
@@ -77,6 +83,7 @@
 		
 		 <script>
 		    $(document).foundation();
+		    var maxWindowPos = -1200;
 		    $(document).ready(function() {
 		    	$(".forward-button").html('Check <i class="fas fa-lg fa-caret-right" ></i>');
 		    	$(".footer").hide();
@@ -125,7 +132,7 @@
 					
 				});
 			});
-			
+			/*
 		    $('html').on ('mousewheel', function (e) {
 			    var delta = e.originalEvent.wheelDelta;
 			    var nowScrollStamp = new Date().getTime();
@@ -162,7 +169,7 @@
 			    }
 			});
 	      var lastScrollStamp = new Date().getTime();
-			
+			*/
 		    function showElement(o) {
 			      console.log("inside hideElement");
 		    	  $(o).fadeIn(animationDuration);
