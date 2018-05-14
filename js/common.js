@@ -9,7 +9,8 @@ function showRationale() {
 
 function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check-disabled").removeClass("again");
-	$(o).html('Next <i class="fas fa-lg fa-arrow-down icon-on-right" ></i>');
+	
+	$(o).removeClass("button").addClass("next").html('<img src="images/DownArrow.png"/>');
 }
 
 function updateCheckAgainBtn(o) {

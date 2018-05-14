@@ -50,7 +50,7 @@
 			<div class="content-header content-header-learn">Learn & Practice</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
 				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><i class="fas fa-arrow-down"></i></a>
+				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><img src="images/DownArrow.png"/></a>
 			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">

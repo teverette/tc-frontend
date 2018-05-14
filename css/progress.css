@@ -178,6 +178,8 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .button-right-side {position: absolute;
     right: 442px;
     width: 140px;}
+.button-right-side.next {right: 475px; width: 40px; padding:0}
+.quiz .button-right-side {right: 42px;}
 .button-left-side {position:absolute; left:20px;width:40px; text-align: left}
 .icon-on-left {margin-right: 3px}
 .icon-on-right {margin-left: 3px}
@@ -378,9 +380,6 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
  .slide-btn-main {position:absolute; 
     height: 40px;
     width: 40px;
-	border: 1px solid #407CBE;
-	border-radius: 100%;
-	background-color: #307FE2;
 	color: #FFF;
 	left: 327px;
 }
