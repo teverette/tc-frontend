@@ -14,7 +14,7 @@
 			<div class="content-header content-header-learn">Learn</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
 				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" >Got It&nbsp;<i class="fas fa-arrow-down"></i></a>
+				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><i class="fas fa-arrow-down"></i></a>
 			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
@@ -119,28 +119,8 @@
 						    // Animation complete.
 						});
 					});
-					/*
-					$('html').on ('mousewheel', function (e) {
-					    var delta = e.originalEvent.wheelDelta;
-						if (delta > 0 && !$(".slide-1").is(":visible")) {
-					    	$(".slide-1").show("slide", { direction: "up" }, 900);
-							$(".slide-2").hide("slide", { direction: "down" }, 900);
-							$(".slide-btn").hide();
-							$(".slide-1-btn").fadeIn(animationDuration);
-					    } else if (delta < 0) {
-							if($(".slide-1").is(":visible") && ($(".active-btn").length>0 || $(".footer").is(":visible"))) {
-								$(".slide-2").show("slide", { direction: "down" }, 450);
-								$(".slide-1").hide("slide", { direction: "up" }, 900);
-								$(".active-btn").show();
-							}
-					    }
-					});
-					*/
 		      });		  
 		      
-	    </script>
-	    		<script>
-			$(document).foundation();
 			
 			var questions = ["q1_1","q1_2","q1_3"];
 	      	var answerKey = {q1_1:"not-irony", q1_2:"irony",q1_3:"not-irony"};
@@ -179,9 +159,6 @@
 				ChoiceMatrix.enableButton();
 			});
 
-			$(window).bind("unload", function() {
-				alert("unload");
-			});
 
 			$(document).ready(function() {
       			highlightCurrentQuiz();
@@ -189,6 +166,7 @@
       			if(hasAlreadyAnswered("practice_1")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
+      			$(".forward-button").html('Check <i class="fas fa-lg fa-check icon-on-right"></i>');
       		});
 		  </script>
 	</body>

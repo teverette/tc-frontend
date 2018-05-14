@@ -11,7 +11,7 @@
 			<div class="content-header content-header-learn">Learn</div>
 			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
 				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" >Got It&nbsp;<i class="fas fa-arrow-down"></i></a>
+				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><i class="fas fa-arrow-down"></i></a>
 			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
@@ -86,7 +86,7 @@
 		      $(document).foundation();
 		      var maxWindowPos = -1200;
 		      $(document).ready(function() {
-		    	  $(".forward-button").html('Check <i class="fas fa-lg fa-caret-right" ></i>');
+		    	  $(".forward-button").html('Check <i class="fas fa-lg fa-check icon-on-right"></i>');
 		    	  $(".footer").hide();
 		    	  $(".slide-1 .item").each(function() {
 						setTimeout(showElement.bind(null,this), timeDelay);
@@ -136,50 +136,7 @@
 						
 					});
 				});
-				/*
-		      $('html').on ('mousewheel', function (e) {
-		    	  var delta = e.originalEvent.wheelDelta;
-				    var nowScrollStamp = new Date().getTime();
-				    var scrollDiff = nowScrollStamp - lastScrollStamp;
-				    if (delta > 3 && scrollDiff>=1500) {
-				    	if($(".content-2").is(":visible")) {return}
-				    	lastScrollStamp = nowScrollStamp;
-						if($(".slide-2").is(":visible")) {
-					    	$(".slide-1").show("slide", { direction: "up" }, 900);
-							$(".slide-2").hide("slide", { direction: "down" }, 900);
-							
-						} else if($(".slide-3").is(":visible")) {
-					    	$(".slide-2").show("slide", { direction: "up" }, 900);
-							$(".slide-3").hide("slide", { direction: "down" }, 900);
-							$(".footer").hide();
-							$(".content").animate({
-							    height: "554"
-							  }, 900, function() {
-								  
-							});
-						}
-						
-				    }else if (delta < -3 && scrollDiff>=1500) {
-				    	if($(".content-2").is(":visible")) {return}
-				    	lastScrollStamp = nowScrollStamp;
-						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
-							$(".slide-2").show("slide", { direction: "down" }, 450);
-							$(".slide-1").hide("slide", { direction: "up" }, 900);
-							
-						} else if($(".slide-2").is(":visible") && $(".slide-3").hasClass("accessed")) {
-							$(".slide-3").show("slide", { direction: "down" }, 450);
-							$(".slide-2").hide("slide", { direction: "up" }, 900);
-							showElement($(".footer"));
-							$(".content").animate({
-							    height: "474"
-							  }, 900, function() {
-							    // Animation complete.
-							});
-						}
-				    }
-				});
-		      var lastScrollStamp = new Date().getTime();
-				*/
+				
 		      function showElement(o) {
 			      console.log("inside hideElement");
 		    	  $(o).fadeIn(animationDuration);

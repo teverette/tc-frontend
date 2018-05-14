@@ -9,11 +9,11 @@ function showRationale() {
 
 function updateNextStepBtn(o) {
 	$(o).addClass("check-verified").removeClass("check-disabled").removeClass("again");
-	$(o).html('Next <i class="fas fa-lg fa-caret-right" ></i>');
+	$(o).html('Next <i class="fas fa-lg fa-arrow-down icon-on-right" ></i>');
 }
 
 function updateCheckAgainBtn(o) {
-	$(o).html('Check again <i class="fas fa-lg fa-caret-right" ></i>').addClass('again');
+	$(o).html('Check again <i class="fas fa-lg fa-check icon-on-right" ></i>').addClass('again');
 }
 
 function lockTest() {
@@ -631,7 +631,7 @@ function scoreStuff() {
 		}
 	);
 $(document).ready(function() {
-	$(".learn .forward-button").html('Next <i class="fas fa-lg fa-caret-right" ></i>');
+	$(".learn .forward-button").html('Next <i class="fas fa-lg fa-arrow-up" ></i>');
 });
 	
 var animationDuration=500;
