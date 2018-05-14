@@ -3,8 +3,8 @@
 body.practice, body.progress {background-color: #FFF; color: #4A4A4A; font-family: 'Roboto', sans-serif; 
 	width:1024px;  position:relative;margin-right: 0;height:554px; overflow:none;}
 body.practice {position: inherit}
-body.practice .content {padding:36px 272px 0 114px; overflow: scroll;}
-body.progress .content {padding:36px 272px 0 114px; overflow: scroll;}
+body.practice .content {padding:36px 279px 0 114px; overflow: scroll;}
+body.progress .content {padding:36px 279px 0 114px; overflow: scroll;}
 body.overview {background-color: #4A90E2; color: #FFF; text-align:center;width:1024px;}
 body.answer-rationale {background-color: #94D150; color: #FFF; width:1024px; padding-top: 50px; }
 .answer-rationale .title{color: #FFF}
