@@ -34,8 +34,8 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .content-header-practice { background-color: #43B02A;left: 432px;}
 .content-header-quiz {background-color: #307FE2; padding-top:5px; left:432px}
 .content-header-learn {left:432px; background-color: #43B02A; padding-top:5px;}
-.rationale-sidebar {height: 436px; width: 172.93px; border-radius: 5px; background-color: transparent; position:fixed; right:22px; top:20px; 
-	color: #4A4A4A; font-family: Roboto; font-size: 14px; line-height: 20px;	padding-top: 41px; padding-left: 23px;
+.rationale-sidebar {height: 436px; width: 179.93px; border-radius: 5px; background-color: transparent; position:fixed; right: 32px; top:20px; 
+	color: #4A4A4A; font-family: Roboto; font-size: 14px; line-height: 20px; padding-top: 41px; padding-left: 23px;
 }
 .hint-status {border-radius: 5px;	background-color: #FFE39D;}
 .correct-status{border-radius: 5px;	background-color: #ADE9A0;}
@@ -46,8 +46,8 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
     position: absolute;
     top: 45%;
     right: 100%; /* To the left of the tooltip */
-    margin-top: -15px;
-    border-width: 15px;
+    margin-top: -10px;
+    border-width: 10px;
     border-style: solid;
     border-color: transparent rgba(255,227,157,0.8) transparent transparent;
 
