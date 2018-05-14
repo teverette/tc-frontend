@@ -17,14 +17,14 @@
 	  <h2 class="title medium-12">Which story uses situational irony?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  	<label class="radio">
-			<div class="mc-input-box" style="top: 2px">
+			<div class="mc-input-box" style="top:0">
 		  		<input type="radio" class="q6_1 question" name="q6_1" value="1"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">A boy leaves the theater after watching a boring movie.
 		  	 He decides that he is hungry, so he stops for food on his way home. </p>
 		</label>
 		<label class="radio">
-			<div class="mc-input-box" style="top: 111px">
+			<div class="mc-input-box" style="top: 54px">
 		  		<input type="radio" class="q6_1 question" name="q6_1" value="2"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Ronald sees a lot of limes on the tree at the park. 
@@ -32,14 +32,14 @@
 		</label>
 	  
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 221px">
+	  		<div class="mc-input-box" style="top: 132px">
 	  			<input  type="radio" class="q6_1 question" name="q6_1" value="3"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">When Marcia gets home from school, she puts her phone in her pocket so she can open the door. 
 	  		She unpacks her bag and then cannot find her phone.</p>
 	  	</label>
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 331px">
+	  		<div class="mc-input-box" style="top: 186px">
 	  			<input  type="radio" class="q6_1 question" name="q6_1" value="4"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">A woman yells at Larry for walking on her grass. Larry says, “Aren’t you nice?”</p>

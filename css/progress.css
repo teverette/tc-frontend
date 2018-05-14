@@ -3,8 +3,8 @@
 body.practice, body.progress {background-color: #FFF; color: #4A4A4A; font-family: 'Roboto', sans-serif; 
 	width:1024px;  position:relative;margin-right: 0;height:554px; overflow:none;}
 body.practice {position: inherit}
-body.practice .content {padding:36px 279px 0 114px; overflow: scroll;}
-body.progress .content {padding:36px 279px 0 114px; overflow: scroll;}
+body.practice .content {padding:73px 279px 0 114px; overflow: scroll;}
+body.progress .content {padding:73px 279px 0 114px; overflow: scroll;}
 body.overview {background-color: #4A90E2; color: #FFF; text-align:center;width:1024px;}
 body.answer-rationale {background-color: #94D150; color: #FFF; width:1024px; padding-top: 50px; }
 .answer-rationale .title{color: #FFF}
@@ -122,9 +122,9 @@ ul.lesson-items > li:before { content:"\2022\00a0 \00a0 \00a0"; font-size: 36px;
 
 /* invision */
 .lesson-label {color: #FFF; margin-bottom: 0; font-size: 36px; line-height: 48px; padding-left: 0; text-align:center;font-family: 'Roboto Slab', serif;}
-.title {font-family: 'Roboto Slab', serif; color: #4A4A4A; line-height:36px; font-size:24px;margin-bottom: 34px;}
+.title {font-family: 'Roboto Slab', serif; color: #4A4A4A; line-height:32px; font-size:24px;margin-bottom: 34px;}
 .lesson-desc {font-size:24px; color:#4A4A4A; font-family: 'Roboto', sans-serif;font-weight:300; line-height:36px;margin-bottom: 23px;}
-.lesson-copy, .lesson-copy mark {font-size:20px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:29px;}
+.lesson-copy, .lesson-copy mark {font-size:16px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:29px;}
 .label-type-icon {margin-right:20px;width:36px}
 .inline-select {width:intrinsic;display:inline; margin-right:.5rem;border-radius: 6px;margin-bottom:0;}
 .rationale {opacity:0}
@@ -139,7 +139,7 @@ mark.keyword.correct {background-color: #C7F9C7; border-color: #C7F9C7; border-b
 input.question {margin: 0 .5rem 0 1.5rem; transform: scale(1.5);}
 .incorrect .question, td.incorrect, label.radio.incorrect, .dropdown-question.filled.incorrect {background-color:#FBEB95}
 .correct .question, td.correct, label.radio.correct, .dropdown-question.filled.correct {background-color:#C2F4C2}
-.mc-input-box {position:absolute; left:-25px; padding-left: 10px; padding-right: 0;}
+.mc-input-box {position:absolute; left:-28px; padding-left: 10px; padding-right: 0;}
 table, th, td {
    border: 2px solid rgba(199,197,200, .4);
 }
@@ -214,7 +214,7 @@ body.practice.learn .content {padding: 36px 166px 0 166px; overflow: scroll;}
 .correct-icon-element {position: absolute;right: 1.75rem; color: #00AA00;top: 20px;}
 .incorrect-icon-element {position: absolute;right: 1.75rem; color: #FED700;top: 20px;}
 
-p.mc-text {line-height: 31px; margin-left:33px} 
+p.mc-text {line-height: 20px; margin-left:33px} 
 .mc-correct {color:#43B02A; font-weight:bold}
 .mc-incorrect {color: #FED700; font-weight:bold}
 

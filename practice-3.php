@@ -17,14 +17,14 @@
 	  <h2 class="title medium-12">Which example uses dramatic irony?</h2>
 	  <div class="grid-x medium-12" style="position:relative">
 	  	<label class="radio">
-			<div class="mc-input-box" style="top: 2px">
+			<div class="mc-input-box" style="top:0">
 		  		<input type="radio" class="q3_1 question" name="q3_1" value="1"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Joan is lost in the woods. She is scared and it is getting dark. 
 		  	The reader knows that her house is over the next hill, but Joan goes in the wrong direction.</p>
 		</label>
 		<label class="radio">
-			<div class="mc-input-box" style="top: 111px">
+			<div class="mc-input-box" style="top:73px">
 		  		<input type="radio" class="q3_1 question" name="q3_1" value="2"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Laura is looking for her mobile phone that she has 
@@ -32,7 +32,7 @@
 		</label>
 	  
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 221px">
+	  		<div class="mc-input-box" style="top:130px">
 	  			<input  type="radio" class="q3_1 question" name="q3_1" value="3"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">Lucas finishes his homework and leaves it on his desk. 
