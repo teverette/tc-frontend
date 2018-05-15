@@ -72,7 +72,8 @@
 				points++;
 			}  else if(!correctAnswer && selectedAnswer) {
 				$(o).addClass('incorrect');
-				$(o).append('<i class="fas fa-times" aria-hidden="true" style="position:relative;right: -6px;color: #FED700;"></i>');
+				$(o).append('<img src="images/NotQuite_Symbol.png" style="width:18px;position:relative;right: -18px;"/>');
+				// $(o).append('<i class="fas fa-times" aria-hidden="true" style="position:relative;right: -6px;color: #FED700;"></i>');
 			} 
     	}
       

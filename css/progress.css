@@ -124,18 +124,18 @@ ul.lesson-items > li:before { content:"\2022\00a0 \00a0 \00a0"; font-size: 36px;
 .lesson-label {color: #FFF; margin-bottom: 0; font-size: 36px; line-height: 48px; padding-left: 0; text-align:center;font-family: 'Roboto Slab', serif;}
 .title {font-family: 'Roboto Slab', serif; color: #4A4A4A; line-height:32px; font-size:24px;margin-bottom: 34px;}
 .lesson-desc {font-size:24px; color:#4A4A4A; font-family: 'Roboto', sans-serif;font-weight:300; line-height:36px;margin-bottom: 23px;}
-.lesson-copy, .lesson-copy mark {font-size:16px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:29px;}
+.lesson-copy, .lesson-copy mark {font-size:18px;color:#4A4A4A;font-family: 'Roboto Slab', serif; font-weight:300; line-height:29px;}
 .label-type-icon {margin-right:20px;width:36px}
 .inline-select {width:intrinsic;display:inline; margin-right:.5rem;border-radius: 6px;margin-bottom:0;}
 .rationale {opacity:0}
 .rationale h3 {color:#FFF; background-color:#00C016;width:100%; font-size: 24px; padding: 0 1.0rem}
 .rationale p {font-size: 20px;}
-mark.keyword {background-color: #FFF; border-width: 0; border-bottom: 2px solid gray; padding: 0 6px 0 6px;}
+mark.keyword {background-color: #FFF; border-width: 0; border-bottom: 1px solid gray; padding: 0 6px 0 6px;}
 mark.keyword:hover {background-color: #DDEDFF;border-radius: 2px 2px 0 0;}
 mark.keyword.selected {background-color: #BBDAFF; padding:0 20px 0 6px;border-radius: 2px 2px 0 0;}
-mark.keyword.incorrect {background-color:#C2B25C; border-color:#FED700;border-bottom: 2px solid #4A4A4A; padding-right: 12px;border-radius: 2px 2px 0 0;}
+mark.keyword.incorrect {background-color:#FFE8B2; border-color:#FED700;border-bottom: 1px solid #4A4A4A; padding-right: 0px;margin-right: 18px;border-radius: 2px 2px 0 0;}
 
-mark.keyword.correct {background-color: #C7F9C7; border-color: #C7F9C7; border-bottom: 2px solid #4A4A4A; padding-right: 12px;}
+mark.keyword.correct {background-color: #C7F9C7; border-color: #C7F9C7; border-bottom: 1px solid #4A4A4A; padding-right: 12px;}
 input.question {margin: 0 .5rem 0 1.5rem; transform: scale(1.5);}
 .incorrect .question, td.incorrect, label.radio.incorrect, .dropdown-question.filled.incorrect {background-color:#FBEB95}
 .correct .question, td.correct, label.radio.correct, .dropdown-question.filled.correct {background-color:#C2F4C2}
