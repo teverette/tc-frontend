@@ -46,26 +46,26 @@
 			  <h2 class="title medium-12">Which example uses suspense?</h2>
 			  <div class="grid-x medium-12" style="position:relative">
 			  	<label class="radio">
-					<div class="mc-input-box" style="top: 2px">
+					<div class="mc-input-box" style="top:0">
 				  		<input type="radio" class="q8_1 question" name="q8_1" value="1"/>
 				  	</div>
 				  	<p class="lesson-copy mc-text">A boy rises from his bed, stretches his arms wide, and is ready to start the day.</p>
 				</label>
 				<label class="radio">
-					<div class="mc-input-box" style="top: 81px">
+					<div class="mc-input-box" style="top:52px">
 				  		<input type="radio" class="q8_1 question" name="q8_1" value="2"/>
 				  	</div>
 				  	<p class="lesson-copy mc-text">A woman searches everywhere for her hat, which is on her head.</p>
 				</label>
 			  
 			  	<label class="radio">
-			  		<div class="mc-input-box" style="top: 158px">
+			  		<div class="mc-input-box" style="top: 92px">
 			  			<input  type="radio" class="q8_1 question" name="q8_1" value="3"/>
 			  		</div>
 			  		<p class="lesson-copy mc-text">Two runners have been racing for first place for an hour. As they round the corner to the finish line, they run into each other.</p>
 			  	</label>
 			  	<label class="radio">
-			  		<div class="mc-input-box" style="top: 268px">
+			  		<div class="mc-input-box" style="top: 147px">
 			  			<input  type="radio" class="q8_1 question" name="q8_1" value="4"/>
 			  		</div>
 			  		<p class="lesson-copy mc-text">A waiter drops a tray of food and a customer says, “Nice catch.”</p>

@@ -20,34 +20,34 @@
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
-		      <th width="30%"></th>
-		      <th width="15%" class="text-center">Verbal Irony</th>
-		      <th width="15%" class="text-center">Situational Irony</th>
-		      <th width="15%" class="text-center">Dramatic Irony</th>
-		      <th width="15%" class="text-center">Suspense</th>
+		      <th width="38%"></th>
+		      <th width="13%" class="text-center">Verbal Irony</th>
+		      <th width="13%" class="text-center">Situational Irony</th>
+		      <th width="13%" class="text-center">Dramatic Irony</th>
+		      <th width="13%" class="text-center">Suspense</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
 		      <td>A driver gets stuck in traffic and says, “Wonderful.” </td>
-		      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="verbal"/></td>
-		      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="situational"/></td>
-		      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="dramatic"/></td>
-		      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="suspense"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="verbal"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="situational"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="dramatic"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="suspense"/></td>
 		    </tr>
 		    <tr>
 		      <td>Maria starts a dog walking business. She discovers she’s allergic to dogs.</td>
-		       <td class="text-center"><input type="radio" class="q5_2" name="q5_2" value="verbal"/></td>
-		      <td class="text-center"><input type="radio" class="q5_2" name="q5_2" value="situational"/></td>
-		      <td class="text-center"><input type="radio" class="q5_2" name="q5_2" value="dramatic"/></td>
-		      <td class="text-center"><input type="radio" class="q5_2" name="q5_2" value="suspense"/></td>
+		       <td class="text-center cm-col"><input type="radio" class="q5_2" name="q5_2" value="verbal"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_2" name="q5_2" value="situational"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_2" name="q5_2" value="dramatic"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_2" name="q5_2" value="suspense"/></td>
 		    </tr>
 		    <tr>
 		      <td>James sneaks out of the house. His parents wake up and walk by his bedroom but do not go inside</td>
-		       <td class="text-center"><input type="radio" class="q5_3" name="q5_3" value="verbal"/></td>
-		      <td class="text-center"><input type="radio" class="q5_3" name="q5_3" value="situational"/></td>
-		      <td class="text-center"><input type="radio" class="q5_3" name="q5_3" value="dramatic"/></td>
-		      <td class="text-center"><input type="radio" class="q5_3" name="q5_3" value="suspense"/></td>
+		       <td class="text-center cm-col"><input type="radio" class="q5_3" name="q5_3" value="verbal"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_3" name="q5_3" value="situational"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_3" name="q5_3" value="dramatic"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q5_3" name="q5_3" value="suspense"/></td>
 		    </tr>
 		  </tbody>
 		  

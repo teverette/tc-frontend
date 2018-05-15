@@ -226,11 +226,28 @@ h2.lesson-label {font-family: 'Roboto', serif; font-weight: normal;}
 /* dropdown */
 .drop-down-drawer {height: 87px; padding-top:20px; background-color: #DBE7F6; width:1004px; display:none; position:relative; bottom: 97px;
     margin-left: 10px; margin-right: 10px; z-index:10000}
-.dropdown-question {background-color:rgba(74,144,226,0.1);border: 1px solid #4A90E2; color:#8E8E8E;border-radius: 4px; font-family:Roboto; font-size: 22px; line-height: 25px; padding:7px 10px 9px;margin: 5px 0;min-width: 220px;}
+.dropdown-question {padding:7px 10px 9px;margin: 5px 0;min-width: 165px; text-align: left;
+color: #000000;
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    line-height: 19px;
+    border: 2px solid #407CBE;
+    border-radius: 4px;
+    background-color: #E7EDF5;
+}
 .dropdown-question.selected-dd, .dropdown-question.selected-dd:hover {border: 3px solid #4A90E2;padding:5px 10px;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
-.dropdown-question:hover {border: 1px solid #4A90E2;background-color:rgba(74,144,226,0.1);color:#8E8E8E;}
+.dropdown-question:hover {border: 3px solid #407CBE; border-radius: 4px; background-color: #BBDBFF; color:#000; padding-top:6px; padding-left: 9px}
 .dropdown-question.filled {border: 1px solid #4A90E2;background-color:rgba(74,144,226,0.1);color:#2D2D2D;width: max-content;}
-.drop-down-drawer .button.answer-option {background-color:#FFFFFF;border: 1px solid #4A90E2;height: 39px;border-radius: 4px; color:#4A4A4A; font-size:22px; line-height:25px}
+.drop-down-drawer .button.answer-option {font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    border: 1px solid #4A90E2;
+    border-radius: 5px;
+    background-color: #FFF; 
+    color:#4A4A4A}
+    
+.drop-down-drawer .button.answer-option:hover {background-color: #EEF6FF;}
 .drop-down-drawer .button.answer-option.selected-dd-response {border: 1px solid #A6B9CE;border-radius: 4px;background-color: #F3F3F3; color:#9B9B9B}
 .button.answer-option{min-width:138px; width:initial}
 /* end dropdown */	 

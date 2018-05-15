@@ -24,7 +24,7 @@
 		  		<input type="radio" class="q4_1 question" name="q4_1" value="1"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text" style="width:100%">Dramatic</p>
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Dramatic</p>
 		</label>
 		<br/>
 		<label class="radio" style="position:absolute; left:0;top: 40px">
@@ -32,14 +32,14 @@
 		  		<input type="radio" class="q4_1 question" name="q4_1" value="2"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text">Situational</p>
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Situational</p>
 		</label>
 		<label class="radio" style="position:absolute; left:0;top: 80px">
 			<div class="mc-input-box" style="">
 		  		<input type="radio" class="q4_1 question" name="q4_1" value="3"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text" style="width:100%">Verbal</p>
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Verbal</p>
 		</label>
 		<br/>
 		<label class="radio" style="position:absolute; left:0;top: 120px">
@@ -47,7 +47,7 @@
 		  		<input type="radio" class="q4_1 question" name="q4_1" value="4"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text">Irony is not being used
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Irony is not being used
 </p>
 		</label>
 	  </div>
