@@ -22,6 +22,7 @@
 					<p class="what-is-example">how suspense and different types of irony are used in a narrative</p>
 				</div>
 			</div>
+			
 		</div>
 
 		<?php $back = "quiz-5.php"; ?>

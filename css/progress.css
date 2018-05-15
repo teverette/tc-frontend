@@ -181,7 +181,7 @@ select.question {width:12rem;font-family: 'Roboto', sans-serif;}
     right: 442px;
     width: 140px;}
 .button-right-side.next {right: 475px; width: 40px; padding:0}
-.quiz .button-right-side {right: 42px;}
+/* .quiz .button-right-side {right: 42px;} */
 .button-left-side {position:absolute; left:20px;width:40px; text-align: left}
 .icon-on-left {margin-right: 3px}
 .icon-on-right {margin-left: 3px}
