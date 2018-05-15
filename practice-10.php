@@ -6,7 +6,6 @@
 	  <?php include '_js.html'; ?>
 </head>
 <body class="practice">
-<img src="images/speaker.jpg" class="speaker" />
 <div class="content" style="padding: 73px 276px 0 114px;"> 
 	<div class="content-header content-header-practice">Practice</div>
 	

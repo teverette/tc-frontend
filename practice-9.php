@@ -9,7 +9,6 @@
 	  </style>
 </head>
 <body class="practice">
-<img src="images/speaker.jpg" class="speaker" />
 <div class="content"> 
 	<div class="content-header content-header-practice" style="z-index: 1000">Practice</div>
 	
