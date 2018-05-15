@@ -46,29 +46,29 @@
 			  <table class="medium-12 unstriped grid-matrix">
 			  <thead>
 			    <tr>
-			      <th width="60%"></th>
-			      <th width="20%" class="text-center">Situational Irony</th>
-			      <th width="20%" class="text-center">NOT Situational Irony</th>
+			      <th width="62%"></th>
+			      <th width="19%" class="text-center">Situational Irony</th>
+			      <th width="19%" class="text-center">NOT Situational Irony</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <td>Ms. Jones inspects buildings to be sure they are safe. She is very strict and feels responsible for the safety of others. 
 			      She hires a company to build a porch on the front of her home. The porch falls off.</td>
-			      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="irony"/></td>
-			      <td class="text-center"><input type="radio" class="q5_1" name="q5_1" value="not-irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" class="q5_1" name="q5_1" value="not-irony"/></td>
 			    </tr>
 			    <tr>
 			      <td>The mother of a toddler buys a gate to block the stairs. While she is distracted the child wanders to the stairs.
 			       He rattles the gate and cries because he can’t climb up. </td>
-			      <td class="text-center"><input type="radio" name="q5_2" value="irony"/></td>
-			      <td class="text-center"><input type="radio" name="q5_2" value="not-irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" name="q5_2" value="irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" name="q5_2" value="not-irony"/></td>
 			    </tr>
 			    <tr>
 			      <td>Mr. Brown exercises every morning and eats small meals for weeks in order to lose weight. 
 			      One Saturday morning, he weighs himself. He has gained two pounds.</td>
-			      <td class="text-center"><input type="radio" name="q5_3" value="irony"/></td>
-			      <td class="text-center"><input type="radio" name="q5_3" value="not-irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" name="q5_3" value="irony"/></td>
+			      <td class="text-center cm-col"><input type="radio" name="q5_3" value="not-irony"/></td>
 			    </tr>
 			  </tbody>
 			  

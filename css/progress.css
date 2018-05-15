@@ -140,16 +140,18 @@ input.question {margin: 0 .5rem 0 1.5rem; transform: scale(1.5);}
 .incorrect .question, td.incorrect, label.radio.incorrect, .dropdown-question.filled.incorrect {background-color:#FBEB95}
 .correct .question, td.correct, label.radio.correct, .dropdown-question.filled.correct {background-color:#C2F4C2}
 .mc-input-box {position:absolute; left:-28px; padding-left: 10px; padding-right: 0;}
-table, th, td {
-   border: 2px solid rgba(199,197,200, .4);
-}
+td.cm-col {border: 2px solid rgba(199,197,200, .4);}
 table.grid-matrix td {position:relative}
+
 .grid-matrix {width:795px;}
 .grid-matrix td input {margin: 0.5rem 0 0.5rem; transform: scale(1.5);}
-.grid-matrix th {font-size:18px; font-weight:500; font-family: 'Roboto', sans-serif; height:32px;line-height: 25px;}
-.grid-matrix td {font-family:'Roboto', sans-serif; font-size:18px; line-height: 25px; color:#4a4a4a; font-weight:400;}
+.grid-matrix th {font-size:12px; font-weight:500; 	font-family: "Roboto Slab"; height:32px; line-height: 16px;}
+.grid-matrix td {font-family:'Roboto', sans-serif; font-size:16px; line-height: 20px; color:#4a4a4a; font-weight:400;}
 .grid-matrix tr {min-height:32px}
-.grid-matrix thead tr {background-color:#ECECEC}
+.grid-matrix thead tr, table thead {background-color:transparent}
+table tbody, table tfoot, table thead {border-width: 0}
+table thead {border-bottom:2px solid rgba(199,197,200, .4);}
+table.unstriped tbody tr {border-width:0}
 
 
 input.question.incorrect:after {font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f00d"; position: relative;right: -.75rem; top:.2rem; color:#FED700; font-size:22px;}

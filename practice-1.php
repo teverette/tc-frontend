@@ -23,18 +23,18 @@
 		  <tbody>
 		    <tr>
 		      <td>A cat drinking a bowl of milk smiles and says, &ldquo;I love milk!&rdquo;</td>
-		      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="irony"/></td>
-		      <td class="text-center"><input type="radio" class="q1_1" name="q1_1" value="not-irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q1_1" name="q1_1" value="irony"/></td>
+		      <td class="text-center  cm-col"><input type="radio" class="q1_1" name="q1_1" value="not-irony"/></td>
 		    </tr>
 		    <tr>
 		      <td>A teacher assigns a lot of homework and a student says, &ldquo;I can&rsquo;t imagine a better way to spend my weekend.&rdquo;</td>
-		      <td class="text-center"><input type="radio" name="q1_2" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q1_2" value="not-irony"/></td>
+		      <td class="text-center  cm-col"><input type="radio" name="q1_2" value="irony"/></td>
+		      <td class="text-center  cm-col"><input type="radio" name="q1_2" value="not-irony"/></td>
 		    </tr>
 		    <tr>
 		      <td>A soccer player makes a goal and the coach says, &ldquo;Well done!&rdquo;</td>
-		      <td class="text-center"><input type="radio" name="q1_3" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q1_3" value="not-irony"/></td>
+		      <td class="text-center  cm-col"><input type="radio" name="q1_3" value="irony"/></td>
+		      <td class="text-center  cm-col"><input type="radio" name="q1_3" value="not-irony"/></td>
 		    </tr>
 		  </tbody>
 		  

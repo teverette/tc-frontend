@@ -15,31 +15,31 @@
 		  <table class="medium-12 unstriped grid-matrix">
 		  <thead>
 		    <tr>
-		      <th width="60%"></th>
-		      <th width="20%" class="text-center">Uses Dramatic Irony</th>
-		      <th width="20%" class="text-center">Does Not Use Dramatic Irony</th>
+		      <th width="62%"></th>
+		      <th width="19%" class="text-center">Uses Dramatic Irony</th>
+		      <th width="19%" class="text-center">Does Not Use Dramatic Irony</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
 		      <td>A man who cannot swim falls in the water and yells “Help!” The reader knows the water is shallow enough that the man can stand up.</td>
-		      <td class="text-center"><input type="radio" class="q4_1" name="q4_1" value="irony"/></td>
-		      <td class="text-center"><input type="radio" class="q4_1" name="q4_1" value="not-irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q4_1" name="q4_1" value="irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" class="q4_1" name="q4_1" value="not-irony"/></td>
 		    </tr>
 		    <tr>
 		      <td>No one knows what happened to Christopher’s bike. He locked it to the bike rack at school but it disappeared.</td>
-		      <td class="text-center"><input type="radio" name="q4_2" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q4_2" value="not-irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_2" value="irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_2" value="not-irony"/></td>
 		    </tr>
 		    <tr>
 		      <td>Marianna’s father is happy that she ate all of her broccoli, but the reader knows that she fed it to the dog while her father was not watching.</td>
-		      <td class="text-center"><input type="radio" name="q4_3" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q4_3" value="not-irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_3" value="irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_3" value="not-irony"/></td>
 		    </tr>
 		    <tr>
 		      <td>Sarah is usually good at soccer. On the day of the big game, though, she misses the ball every time she tries to kick it. Her friend says, “Wow, you are having a great game.”</td>
-		      <td class="text-center"><input type="radio" name="q4_4" value="irony"/></td>
-		      <td class="text-center"><input type="radio" name="q4_4" value="not-irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_4" value="irony"/></td>
+		      <td class="text-center cm-col"><input type="radio" name="q4_4" value="not-irony"/></td>
 		    </tr>
 		  </tbody>
 		  
