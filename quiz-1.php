@@ -27,7 +27,7 @@
 		  		<input type="radio" class="q1_1 question" name="q1_1" value="1"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text" style="width:100%">Dramatic</p>
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Dramatic</p>
 		</label>
 		<br/>
 		<label class="radio" style="position:absolute; left:0;top: 40px">
@@ -35,7 +35,7 @@
 		  		<input type="radio" class="q1_1 question" name="q1_1" value="2"/>
 		  		
 		  	</div>
-		  	<p class="lesson-copy mc-text">Verbal</p>
+		  	<p class="lesson-copy mc-text" style="padding-top: 3px;">Verbal</p>
 		</label>
 	  </div>
 	  
