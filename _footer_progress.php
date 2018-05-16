@@ -14,6 +14,6 @@ if(!isset($btnClass)) {
 	      <div class="progress-meter" style="width:<?php echo $width . "%"; ?>;margin: 0;"></div>
 	    </div>
 	</nav>
-	<a class="button back button-left-side" href="<?php echo $back;?>"><i class="fas fa-arrow-up icon-on-left"></i>Back</a>
+	<a class="button back button-left-side" href="<?php echo $back;?>"><img src="images/Back - Text Link.png" style="width: 55px;"/></a>
 	<a class="check-disabled <?php echo $btnClass;?> button success button-right-side forward-button" <?php echo $nextHref; ?>>Check <i class="fas fa-check"></i></a>
 </div>
