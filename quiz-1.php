@@ -92,10 +92,6 @@
 			$(".point-value").html(points);
 			$(".point-text").html(" " + points_label);
 		});
-
-      	window.onload = function() {
-    		
-		}
   </script>
 </body>
 </html>

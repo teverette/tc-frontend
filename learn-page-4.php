@@ -9,10 +9,6 @@
 	<body class="practice learn learn-page-4">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn & Practice</div>
-			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
-				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><img src="images/DownArrow.png"/></a>
-			</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
 					<div class="grid-x grid-padding-x slide-1">
@@ -35,6 +31,7 @@
 					</div>
 			</div>
 			</div>
+			<?php include '_footer_learn_progress.php'; ?>
 		</div>
 		<div class="content-2 item">
 			<div class="content"> 

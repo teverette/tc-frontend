@@ -10,8 +10,7 @@
 	  	</style>
 	</head>
 	<body class="practice learn">
-		<div class="content" style="height:474px">
-			<div class="content-header content-header-learn">Learn</div>
+		<div class="content" style="padding-bottom:125px; overflow:hidden;	border: 8px solid #ECECEC;">
 			<div class="grid-x grid-padding-x">
 				<h2 class="title-learn">This lesson taught learners:</h2>
 				<div style="width:300px;display:inline-block">
@@ -22,19 +21,21 @@
 					<p class="what-is-example">how suspense and different types of irony are used in a narrative</p>
 				</div>
 			</div>
-			
+			<?php $back = "quiz-5.php"; ?>
+		<?php $next = "summary.php"; ?>
+		<?php $btnClass = "check next"; ?>
+		<?php include '_footer_learn_progress.php'?>
 		</div>
 
-		<?php $back = "quiz-5.php"; ?>
-		<?php $next = "summary.php"; ?>
-		<?php $btnClass = "check"; ?>
-		<?php include '_footer_non_progress.php'?>
 		
 		 <script>
 		      $(document).foundation();
 		      $(document).ready(function() {
 					$(".lesson-desc").fadeIn(500);
 		      });
+		      $(".slide-btn-main").click(function () {
+			    	window.location='summary.php';
+			    });
 	    </script>
 	</body>
 </html>

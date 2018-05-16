@@ -7,7 +7,7 @@
 </head>
 <body class="practice">
 <div class="content"> 
-	<div class="content-header content-header-practice">Practice</div>
+	<div class="content-header content-header-practice">Learn & Practice</div>
 	
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which statements create verbal irony?</h2>
@@ -24,11 +24,12 @@
 	  <input type="hidden" class="q2_2 dd-response" name="q2_2"></input>
 	</div>
 	<div class="rationale-sidebar"></div>
-</div>
-<?php $width = "12.5"; ?>
+	<?php $width = "12.5"; ?>
 <?php $back = "practice-1.php"; ?>
 <?php $btnClass =""; ?>
 <?php include '_footer_progress.php'?>
+</div>
+
 
 <div id="drawer-one" class="drop-down-drawer q2_1 text-center">
 	<a class="button secondary answer-option q2_1" data-value="1">Your dog is terrible!</a>

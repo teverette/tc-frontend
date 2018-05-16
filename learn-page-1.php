@@ -46,12 +46,8 @@
 	  </style>
 	</head>
 	<body class="practice learn why-lesson">
-		<div class="content" style="padding-bottom:125px; overflow:hidden">
-			<div class="content-header content-header-learn">Learn & Practice</div>
-			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
-				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><img src="images/DownArrow.png"/></a>
-			</div>
+		<div class="content" style="padding-bottom:125px; overflow:hidden;	border: 8px solid #ECECEC;">
+
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
 			<div class="grid-x grid-padding-x slide-1" >
@@ -86,8 +82,9 @@
 			
 			</div>
 			</div>
+			<?php include '_footer_learn_progress.php'?>
 		</div>
-		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 653px;s">
+		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 653px;">
 				<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
 				<h2 class="practice-section">Practice Section</h2>
 				<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>

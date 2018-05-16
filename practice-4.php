@@ -7,7 +7,7 @@
 	</head>
 	<body class="practice">
 		<div class="content"> 
-		<div class="content-header content-header-practice">Practice</div>
+		<div class="content-header content-header-practice">Learn & Practice</div>
 		<div class="grid-x grid-padding-x">
 		  <p class="lesson-desc medium-12">Which of these shows dramatic irony?</p>
 		   

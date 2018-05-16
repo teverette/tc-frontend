@@ -10,7 +10,7 @@
 </head>
 <body class="practice">
 <div class="content"> 
-	<div class="content-header content-header-practice" style="z-index: 1000">Practice</div>
+	<div class="content-header content-header-practice" style="z-index: 1000">Learn & Practice</div>
 	
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12" style="position:fixed; background-color:#FFF;padding-top:40px;top:10px;left: 10px; width: 1004px; padding-left: 110px;">Which choice creates the most suspense?</h2>

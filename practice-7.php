@@ -21,7 +21,7 @@
 <body class="practice">
 	<img src="images/speaker.jpg" class="speaker" style="left: 524px; top: 66px"/>
 	<div class="content"> 
-	<div class="content-header content-header-practice" style="z-index: 2;    left: 432px;">Practice</div>
+	<div class="content-header content-header-practice" style="z-index: 2;left: 432px;">Learn & Practice</div>
 	<div class="grid-x grid-padding-x split-pane">
 	  <div class="split-pane-left" style="position:absolute; left:0px; width: 510px;padding-left:48px; background-color:#ECECEC;z-index: 1; top: 0; padding-top: 40px;">
 	  <h2 class="title">Story</h2>

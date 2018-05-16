@@ -9,41 +9,39 @@
 	<body class="practice learn learn-page-3">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn & Practice</div>
-			<div style="width:700px; margin:0 auto; text-align:center; position: absolute; bottom: 30px;  height: 64px;">
-				<a class="slide-btn-back" onclick="moveWindowReverse();"><i class="fas fa-arrow-up"></i>&nbsp;Back</a>
-				<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" ><img src="images/DownArrow.png"/></a>
-			</div>
+			
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
-			<div class="content-window" style="position:relative">
-					<div class="grid-x grid-padding-x slide-1">
-						<h2 class="title-learn item">What is dramatic irony?</h2>
-						<p class="irony-description item">Dramatic irony occurs when the reader knows information that a
-						 character does not. It can be used to build suspense or add interest.
-						 Dramatic irony encourages readers to continue reading to learn what the
-						  characters will do and whether they will ever learn the truth. 
-						 </p>
-					</div>
-					<div class="grid-x grid-padding-x slide-2">
-						<div class="image-holder">
-							<img src="images/Illustration4.png" class="item item-one"/>
+				<div class="content-window" style="position:relative">
+						<div class="grid-x grid-padding-x slide-1">
+							<h2 class="title-learn item">What is dramatic irony?</h2>
+							<p class="irony-description item">Dramatic irony occurs when the reader knows information that a
+							 character does not. It can be used to build suspense or add interest.
+							 Dramatic irony encourages readers to continue reading to learn what the
+							  characters will do and whether they will ever learn the truth. 
+							 </p>
 						</div>
-						<div class="content-example-holder">
-							<p class="what-is-example first-item item item-two">Marco slept peacefully in his bed, unaware of the guests who gathered 
-							downstairs for his surprise birthday party. </p>
+						<div class="grid-x grid-padding-x slide-2">
+							<div class="image-holder">
+								<img src="images/Illustration4.png" class="item item-one"/>
+							</div>
+							<div class="content-example-holder">
+								<p class="what-is-example first-item item item-two">Marco slept peacefully in his bed, unaware of the guests who gathered 
+								downstairs for his surprise birthday party. </p>
+							</div>
+							<div class="reason-for-example item item-four"></div>
 						</div>
-						<div class="reason-for-example item item-four"></div>
-					</div>
-					<div class="grid-x grid-padding-x slide-3 text-center">
-						<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:150px"><span class="">Because the readers know about the birthday party 
-						and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</span>
+						<div class="grid-x grid-padding-x slide-3 text-center">
+							<div class="reason-for-example" style="font-family: Roboto;	font-size: 24px; line-height: 38px; margin-top:150px"><span class="">Because the readers know about the birthday party 
+							and Marco does not, dramatic irony is created. The irony adds excitement and tension to the scene.</span>
+							</div>
 						</div>
-					</div>
+				</div>
 			</div>
-			</div>
+			<?php include '_footer_learn_progress.php'; ?>
 		</div>
 		<div class="content-2 item">
 			<div class="content"> 
-			<div class="content-header content-header-practice">Practice</div>
+			<div class="content-header content-header-practice">Learn & Practice</div>
 			<div class="grid-x grid-padding-x">
 			  
 			  <h2 class="title medium-12">Which example uses dramatic irony?</h2>
