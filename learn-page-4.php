@@ -31,6 +31,7 @@
 					</div>
 			</div>
 			</div>
+			<?php $width = "49"; ?>
 			<?php include '_footer_learn_progress.php'; ?>
 		</div>
 		<div class="content-2 item">
@@ -75,7 +76,7 @@
 			</div>
 		</div>
 		<?php $back = "practice-4.php"; ?>
-		<?php $width = "43.75"; ?>
+		<?php $width = "56.00"; ?>
 		<?php include '_footer_progress.php'?>
 		
 		 <script>

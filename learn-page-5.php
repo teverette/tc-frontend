@@ -32,6 +32,7 @@
 				</div>
 			</div>
 			</div>
+			<?php $width = "70.0"; ?>
 			<?php include '_footer_learn_progress.php'; ?>
 		</div>
 		<div class="content-2 item">

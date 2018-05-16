@@ -82,6 +82,7 @@
 			
 			</div>
 			</div>
+			<?php $width = "0"; ?>
 			<?php include '_footer_learn_progress.php'?>
 		</div>
 		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 653px;">
@@ -90,7 +91,7 @@
 				<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
 				<a href="learn-page-2.php" class="practice-button">Practice</a>
 			</div>
-		<?php $width = "11.1"; ?>
+		<?php $width = "7.0"; ?>
 		<?php $back = "index.php"; ?>
 		<?php $next = "practice-transition.php"; ?>
 		<?php $btnClass = "check"; ?>

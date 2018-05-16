@@ -24,6 +24,7 @@
 			<?php $back = "quiz-5.php"; ?>
 		<?php $next = "summary.php"; ?>
 		<?php $btnClass = "check next"; ?>
+		<?php $width = "100"; ?>
 		<?php include '_footer_learn_progress.php'?>
 		</div>
 

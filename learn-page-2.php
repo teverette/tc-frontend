@@ -53,6 +53,7 @@
 					</div>
 				</div>
 			</div>
+			<?php $width = "7.0"; ?>
 			<?php include '_footer_learn_progress.php'; ?>
 		</div>
 		<div class="content-2 item">
@@ -93,7 +94,7 @@
 			<div class="rationale-sidebar"></div>
 			</div>
 		</div>
-
+<?php $width = "14.0"; ?>
 		<?php $back = "learn-page-1.php"; ?>
 		<?php include '_footer_progress.php'?>
 		

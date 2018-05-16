@@ -63,7 +63,7 @@
 	</div>
 
 	</div>
-		<?php $width = "68.5"; ?>
+		<?php $width = "77.0"; ?>
 		<?php $back = "practice-6.php"; ?>
 		<?php include '_footer_progress.php'?>
 	

@@ -28,7 +28,7 @@
 	  <input type="hidden" class="q2_2 dd-response" name="q2_2"></input>
 	</div>
 	<div class="rationale-sidebar"></div>
-	<?php $width = "12.5"; ?>
+	<?php $width = "21.0"; ?>
 <?php $back = "practice-1.php"; ?>
 <?php $btnClass =""; ?>
 <?php include '_footer_progress.php'?>
