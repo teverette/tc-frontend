@@ -4,6 +4,10 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style type="text/css">
+	  .content .footer {left: 0 !important}
+	  body.practice .content {    padding: 73px 262px 70px 114px;}
+	  </style>
 </head>
 <body class="practice">
 <div class="content"> 

@@ -62,7 +62,7 @@
 				</label>
 			  
 			  	<label class="radio">
-			  		<div class="mc-input-box" style="top:130px">
+			  		<div class="mc-input-box" style="top:151px">
 			  			<input  type="radio" class="q3_1 question" name="q3_1" value="3"/>
 			  		</div>
 			  		<p class="lesson-copy mc-text">Lucas finishes his homework and leaves it on his desk. 

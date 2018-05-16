@@ -27,7 +27,7 @@
 		  		<input type="radio" class="q6_1 question" name="q6_1" value="2"/>
 		  	</div>
 		  	<p class="lesson-copy mc-text">Ronald sees a lot of limes on the tree at the park. 
-		  	He gather ingredients to make limeade for the children playing there. He gets in trouble for picking fruit off of a tree at the park.</p>
+		  	He gathers ingredients to make limeade for the children playing there. He gets in trouble for picking fruit off of a tree at the park.</p>
 		</label>
 	  
 	  	<label class="radio">
@@ -38,7 +38,7 @@
 	  		She unpacks her bag and then cannot find her phone.</p>
 	  	</label>
 	  	<label class="radio">
-	  		<div class="mc-input-box" style="top: 186px">
+	  		<div class="mc-input-box" style="top: 206px">
 	  			<input  type="radio" class="q6_1 question" name="q6_1" value="4"/>
 	  		</div>
 	  		<p class="lesson-copy mc-text">A woman yells at Larry for walking on her grass. Larry says, “Aren’t you nice?”</p>

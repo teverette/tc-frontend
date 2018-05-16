@@ -555,17 +555,15 @@ function scoreStuff() {
     		contractContent();
     	} else {
     		$(".footer").hide();
-    		$(".content").animate({
+    		/* $(".content").animate({
     		    height: "574"
     		  }, 900, function() {
-    		    // Animation complete.
+    		    // Animation complete. */
     			  $(".drop-down-drawer:visible").hide("slide", { direction: "down" }, 400);
     	    		$('#'+curDrawer).toggle("slide", { direction: "down" }, 400);
     	    		$('.dropdown-question').removeClass('selected-dd');
     	    		$(o).addClass('selected-dd');
-    		});
-    		
-    		
+    		//});
     	}
  	}
 
@@ -589,19 +587,19 @@ function scoreStuff() {
 	
 	function extendContent() {
 		$(".footer").hide();
-		$(".content").animate({
+		/* $(".content").animate({
 		    height: "574"
 		  }, 900, function() {
 		    // Animation complete.
-		});
+		}); */
 	}
 	
 	function contractContent() {
-		$(".content").animate({
+		/* $(".content").animate({
 		    height: "474"
 		  }, 900, function() {
 		    // Animation complete.
-		});
+		}); */
 		$(".footer").show();
 	}
 	
