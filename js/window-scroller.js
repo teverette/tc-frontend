@@ -51,5 +51,8 @@ $(document).ready(function() {
 							  $("body").removeClass("learn");
 						      showElement($(".footer"));
 						});
+						if(question_item != null) {
+							$(".num-questions-remaining").text(10-question_item + " questions left");
+						}
 				    }
 				    /* end window scroller logic */

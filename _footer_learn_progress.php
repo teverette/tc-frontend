@@ -6,4 +6,5 @@
 	</nav>
 	<a class="slide-btn-back" onclick="moveWindowReverse();" style="left: 24px; top:26px"><img src="images/Back - Text Link.png" style="width: 55px;"/></a>
 	<a class="slide-btn-main" data-active-slide="slide-1" data-next-slide="slide-2" style="left: 484px;top: 15px;"><img src="images/DownArrow.png"/></a>
+	<span class="num-questions-remaining"></span>
 </div>

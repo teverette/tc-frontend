@@ -95,6 +95,7 @@
 			if(hasAlreadyAnswered("practice_6")) {
 				ChoiceMatrix.setPreviousResponse();
 			}
+			$(".num-questions-remaining").text("4 questions left");
 		});
 
       	window.onload = function() {

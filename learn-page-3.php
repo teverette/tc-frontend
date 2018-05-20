@@ -82,9 +82,10 @@
 		 <script>
 		      $(document).foundation();
 		      var maxWindowPos = -1200;
-		      
+		      var question_item = 3;
 		      
 		      $(document).ready(function() {
+		    	  $(".num-questions-remaining").text("8 questions left");
 		    	    $(".forward-button").html('Check <i class="fas fa-lg fa-check icon-on-right"></i>');
 					$(".slide-1 .item").each(function() {
 						console.log("inside item each");

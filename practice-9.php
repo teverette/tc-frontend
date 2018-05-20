@@ -79,6 +79,7 @@
 			if(hasAlreadyAnswered("practice_9")) {
 				ClozeDropdown.setPreviousResponse();
 			}
+			$(".num-questions-remaining").text("1 question left");
 	  	});
 
 	  	$(".content").scroll(function() {

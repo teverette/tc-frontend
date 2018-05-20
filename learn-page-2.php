@@ -101,9 +101,10 @@
 		 <script>
 		      $(document).foundation();
 		      var maxWindowPos = -2000;
+		      var question_item = 1;
 		      $(document).ready(function() {
 					$(".footer").hide();
-
+					$(".num-questions-remaining").text("10 questions left");
 					$(".slide-3-btn").click(function () {
 						$(".slide-btn").removeClass("active-btn");
 						timeDelay=animationDuration+50;

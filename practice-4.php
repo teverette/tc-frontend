@@ -108,6 +108,7 @@
       			if(hasAlreadyAnswered("practice_4")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
+      			$(".num-questions-remaining").text("6 questions left");
       		});
       		
 			window.onload = function() {

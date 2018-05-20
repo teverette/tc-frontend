@@ -86,6 +86,7 @@
 			if(hasAlreadyAnswered("practice_10")) {
 				ClozeDropdown.setPreviousResponse();
 			}
+			$(".num-questions-remaining").text("last question");
 	  	});
 
   </script>

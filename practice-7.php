@@ -104,11 +104,8 @@
 			if(hasAlreadyAnswered("practice_7")) {
 				ChoiceMatrix.setPreviousResponse();
 			}
+			$(".num-questions-remaining").text("3 questions left");
 		});
-
-      	window.onload = function() {
-    		
-		}
   </script>
 </body>
 </html>

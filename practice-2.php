@@ -80,6 +80,7 @@
 			if(hasAlreadyAnswered("practice_2")) {
 				ClozeDropdown.setPreviousResponse();
 			}
+			$(".num-questions-remaining").text("8 questions left");
 	  	});
 
   </script>
