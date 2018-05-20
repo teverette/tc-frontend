@@ -4,7 +4,7 @@ body.practice, body.progress {background-color: #FFF; color: #4A4A4A; font-famil
 	width:1024px;  position:relative;margin-right: 0;height:554px; overflow:none;}
 body.practice {position: inherit}
 body.practice .content {padding:73px 279px 70px 114px; overflow: scroll;}
-body.quiz .content {padding:73px 279px 0 114px; overflow: scroll;}
+body.quiz .content {padding:73px 279px 70px 114px; overflow: scroll;}
 body.progress .content {padding:73px 279px 0 114px; overflow: scroll;}
 body.overview {background-color: #4A90E2; color: #FFF; text-align:center;width:1024px;}
 body.answer-rationale {background-color: #94D150; color: #FFF; width:1024px; padding-top: 50px; }
@@ -20,7 +20,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 
 .practice .content {height:553px; font-family: 'Roboto Slab', sans-serif; font-size: 22px; line-height: 39px; font-weight: 300;z-index: 1000; position: relative; border: 8px solid #43B02A;}
 .progress .content {height:474px; font-family: 'Roboto'; font-size: 22px; line-height: 39px; font-weight: 300;}
-.quiz .content {border-color:#307FE2; height: 483px;}
+.quiz .content {border-color:#307FE2; height: 553px;}
 /* .learn .content {border-color:#767676} */
 .overview .title {text-align:center; font-family: 'Roboto Slab', serif; font-size:40px; color:#fff;  margin-top:159px}
 .title-only { margin:159px auto 237px; font-family: 'Roboto Slab', serif; font-size:40px}
@@ -404,4 +404,5 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 	left: 327px;
 }
 
-.num-questions-remaining {right:32px;color: #58595B;	font-family: Roboto; font-size: 16px; line-height: 19px; text-align: right;position: absolute; top: 25px;}
+.num-questions-remaining {right:32px;color: #58595B; font-family: Roboto; font-size: 16px; line-height: 19px; text-align: right;position: absolute; top: 25px;}
+.quiz-status {right:32px;color: #58595B; font-family: Roboto; font-size: 16px; line-height: 19px; text-align: right;position: absolute;    top: 16px;}

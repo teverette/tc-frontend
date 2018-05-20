@@ -11,18 +11,18 @@
 	<div class="grid-x grid-padding-x">
 	  <h2 class="title medium-12">Which sentence reveals the use of dramatic irony?</h2>
 	  <div class="medium-12 grid-x lesson-copy">
-	  <p><mark class="keyword quiz_2_1 answer">Teresa hid her best jewelry in a brown bag in the kitchen drawer before she went on vacation.</mark> <mark class="keyword quiz_2_2 answer">Her friend came to her house every day to walk the dog.</mark>
-	  <mark class="keyword quiz_2_3 answer">One day, her friend decided to clean out Teresa’s kitchen.</mark> <mark class="keyword quiz_2_4 answer">She got all the garbage, empty packaging, and unwanted mail and threw it away.</mark>
-	  <mark class="keyword quiz_2_5 answer">Without looking inside, she threw away the plain brown bag she found at the back of the drawer.</mark>
-	  </p>
-	 <div class="rationale-sidebar"></div> 
+	  	<p><mark class="keyword quiz_2_1 answer">Teresa hid her best jewelry in a brown bag in the kitchen drawer before she went on vacation.</mark> <mark class="keyword quiz_2_2 answer">Her friend came to her house every day to walk the dog.</mark>
+	 	 <mark class="keyword quiz_2_3 answer">One day, her friend decided to clean out Teresa’s kitchen.</mark> <mark class="keyword quiz_2_4 answer">She got all the garbage, empty packaging, and unwanted mail and threw it away.</mark>
+	 	 <mark class="keyword quiz_2_5 answer">Without looking inside, she threw away the plain brown bag she found at the back of the drawer.</mark>
+	  	</p>
+	 	<div class="rationale-sidebar"></div> 
+	  </div>
 	</div>
-</div>
-
-		</div>
 		<?php $width = "40"; ?>
 		<?php $back = "quiz-1.php"; ?>
 		<?php include '_quiz_progress.php'?>
+	</div>
+		
 		
 		<div class="hint-callout callout"></div>
 		<div class="rationale-callout callout"></div>
@@ -120,6 +120,7 @@
       var storage = window.sessionStorage;
       $(document).ready(function() {
 			highlightCurrentQuiz();
+			$(".quiz-questions-remaining").text("3 questions left");
 			if(hasAlreadyAnswered("quiz_2")) {
 				$("mark").removeClass("answer");
 				$(".check-disabled").addClass("check-verified").text("Next");

@@ -6,7 +6,6 @@
 	  <?php include '_js.html'; ?>
 	  <style>
 	  	.rationale-sidebar .that-s-it {height: 40px;}
-	  	
 	  </style>
 	</head>
 <body class="practice quiz">
@@ -40,11 +39,12 @@
 	  </div>
 	  
 	</div>
-	<div class="rationale-sidebar"></div>
-	</div>
-		<?php $width = "20.0"; ?>
+	<?php $width = "20.0"; ?>
 		<?php $back = "quiz-transition.php"; ?>
 		<?php include '_quiz_progress.php'?>
+	<div class="rationale-sidebar"></div>
+	</div>
+		
 	
  <script>
       $(document).foundation();
@@ -78,6 +78,7 @@
  		});
 
       	$(document).ready(function() {
+      		$(".quiz-questions-remaining").text("4 questions left");
 			highlightCurrentQuiz();
 			highlightAllCorrectQuiz();
 			ChoiceMatrix.initialize("quiz_1",1,1,"mc");

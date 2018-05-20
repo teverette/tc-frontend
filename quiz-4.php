@@ -54,10 +54,11 @@
 	  
 	</div>
 	<div class="rationale-sidebar"></div>
-	</div>
 		<?php $width = "80"; ?>
 		<?php $back = "quiz-3.php"; ?>
 		<?php include '_quiz_progress.php'?>
+	</div>
+		
 	
  <script>
       $(document).foundation();
@@ -93,6 +94,7 @@
  		});
 
       	$(document).ready(function() {
+      		$(".quiz-questions-remaining").text("1 questions left");
 			highlightCurrentQuiz();
 			highlightAllCorrectQuiz();
 			ChoiceMatrix.initialize("quiz_4",1,1,"mc");

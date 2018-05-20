@@ -21,11 +21,12 @@
 	  </div>
 	  <input type="hidden" class="q3_1 dd-response" name="q3_1"></input>
 	</div>
+	<?php $width = "60"; ?>
+	<?php $back = "quiz-2.php"; ?>
+	<?php include '_quiz_progress.php'?>
 	<div class="rationale-sidebar"></div>
 </div>
-<?php $width = "60"; ?>
-<?php $back = "quiz-2.php"; ?>
-<?php include '_quiz_progress.php'?>
+
 
 <div id="drawer-one" class="drop-down-drawer q3_1 text-center">
 	<a class="button secondary answer-option q3_1" data-value="1">uses a computer mouse to go online</a>
@@ -57,6 +58,7 @@
       
       	var storage = window.sessionStorage;
       	$(document).ready(function() {
+      		$(".quiz-questions-remaining").text("2 questions left");
 			ClozeDropdown.initialize("quiz_3",1,1);
 			ClozeDropdown.isQuiz=true; 
 			if(hasAlreadyAnswered("quiz_3")) {
