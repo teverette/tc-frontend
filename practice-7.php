@@ -19,7 +19,6 @@
 	  </style>
 	</head>
 <body class="practice">
-	<img src="images/speaker.jpg" class="speaker" style="left: 524px; top: 66px"/>
 	<div class="content"> 
 	<div class="content-header content-header-practice" style="z-index: 2;left: 432px;">Learn & Practice</div>
 	<div class="grid-x grid-padding-x split-pane">
