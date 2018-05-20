@@ -11,7 +11,6 @@
 	  	.split-pane .rationale-sidebar {left:527px; top:307px; width: 477px; height:147px;padding-top:5px; display: none;}
 	  	
 	  	.split-pane .rationale-sidebar h4 {display:inline-block; margin-left:21px; width:80% }
-	  	.split-pane .rationale-sidebar:after {content:"<i class="fas fa-angle-down"></i>"}
 	  	.split-pane .hint-status:after,.split-pane .correct-status:after {margin-top: 0;border-width: 0;}
 	  	.split-pane .rationale-sidebar.minimize-sidebar{height:60px;top:397px;overflow:hidden}
 	  	.split-pane-left p {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 19px;}

@@ -278,7 +278,6 @@ var ChoiceMatrix = {
 					console.log("size of tracker: " + ChoiceMatrix.hintShownTracker.size);
 					ChoiceMatrix.clearAllHints(index);
 				});
-				$(".split-pane .rationale-sidebar").append('<i class="fas fa-angle-down upper-right-close"></i>').removeClass("minimize-sidebar");
 				$(obj).parent().removeClass("fade50");
 				
     	},
@@ -579,10 +578,6 @@ function scoreStuff() {
 		$('#'+curDrawer).hide("slide", { direction: "down" }, 400);
 		contractContent();
 		ClozeDropdown.enableButton();
-	});
-	
-	$(document).on("click",".upper-right-close", function() {
-		$(".split-pane .rationale-sidebar").toggleClass("minimize-sidebar");
 	});
 	
 	function extendContent() {
