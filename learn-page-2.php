@@ -164,7 +164,7 @@
       			if(hasAlreadyAnswered("practice_1")) {
 					ChoiceMatrix.setPreviousResponse();
 				}
-      			$(".forward-button").html('Check <i class="fas fa-lg fa-check icon-on-right"></i>');
+      			$(".forward-button").html('Check <img src="images/check-icon-white.png" style="margin-left:3px"/>');
       		});
 		  </script>
 	</body>

@@ -234,6 +234,7 @@
 			if(hasAlreadyAnswered("practice_3")) {
 				ChoiceMatrix.setPreviousResponse();
 			}
+			$(".forward-button").html('Check <img src="images/check-icon-white.png" style="margin-left:3px"/>');
 		});
 
 

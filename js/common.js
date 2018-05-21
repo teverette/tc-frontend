@@ -14,7 +14,7 @@ function updateNextStepBtn(o) {
 }
 
 function updateCheckAgainBtn(o) {
-	$(o).html('Check again <img src="images/NotQuite_Symbol.png" style="width:18px;position:relative;right: -18px;"/>').addClass('again');
+	$(o).html('Check again <img src="images/check-icon-white-again.png" style="margin-left:3px"/>').addClass('again');
 }
 
 function lockTest() {
