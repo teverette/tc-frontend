@@ -10,7 +10,9 @@
 	  </style>
 	</head>
 	<body class="practice learn learn-page-2">
-		<div class="content first-content">
+		<div class="content-borderless">
+		<div class="content-borderless-window">
+		<div class="content first-content" style="padding-bottom:125px; overflow:hidden">
 			<div class="content-header content-header-learn">Learn & Practice</div>
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
@@ -93,17 +95,18 @@
 			</div>
 			<div class="rationale-sidebar"></div>
 			</div>
-		</div>
-<?php $width = "14.0"; ?>
+			<?php $width = "14.0"; ?>
 		<?php $back = "learn-page-1.php"; ?>
 		<?php include '_footer_progress.php'?>
+		</div>
+
 		
 		 <script>
 		      $(document).foundation();
 		      var maxWindowPos = -2000;
 		      var question_item = 1;
 		      $(document).ready(function() {
-					$(".footer").hide();
+					//$(".footer").hide();
 					$(".num-questions-remaining").text("10 questions left");
 					$(".slide-3-btn").click(function () {
 						$(".slide-btn").removeClass("active-btn");

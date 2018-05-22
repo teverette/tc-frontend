@@ -7,6 +7,8 @@
 	  <script src="js/window-scroller.js"></script>
 	</head>
 	<body class="practice learn learn-page-3">
+		<div class="content-borderless">
+		<div class="content-borderless-window">
 		<div class="content first-content">
 			<div class="content-header content-header-learn">Learn & Practice</div>
 			
@@ -74,10 +76,12 @@
 			</div>
 			<div class="rationale-sidebar"></div>
 			</div>
-		</div>
-		<?php $back = "practice-2.php"; ?>
+			<?php $back = "practice-2.php"; ?>
 		<?php $width = "35.0"; ?>
 		<?php include '_footer_progress.php'?>
+		</div>
+		</div></div>
+		
 		
 		 <script>
 		      $(document).foundation();
@@ -92,9 +96,7 @@
 						setTimeout(showElement.bind(null,this), timeDelay);
 						timeDelay+=animationDuration+50;
 					});
-					$(".slide-1").addClass("accessed");
-					$(".footer").hide();
-					
+					$(".slide-1").addClass("accessed");					
 		      });
 
 		      $(".slide-1-btn").click(function () {

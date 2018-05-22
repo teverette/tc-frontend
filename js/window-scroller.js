@@ -42,15 +42,7 @@ $(document).ready(function() {
 
 				    function showPracticeSlide() {
 				    	showElement($(".content-2"));
-						// $(".content").hide("slide", { direction: "up" }, 900);
-						$(".first-content .content-header").hide();
-						$(".first-content").animate({
-						    height: "0", padding:"0", borderWidth:"0"
-						  }, 900, function() {
-							  $(".speaker").show();
-							  $("body").removeClass("learn");
-						      showElement($(".footer"));
-						});
+				    	$(".content-borderless-window").animate({top:-554}, 500, 'swing');
 						if(question_item != null) {
 							$(".num-questions-remaining").text(10-question_item + " questions left");
 						}
