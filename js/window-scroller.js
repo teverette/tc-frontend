@@ -14,6 +14,13 @@ $(document).ready(function() {
 				    }
 
 				    function moveWindowForward() {
+				    	var numOfSlides = -1*maxWindowPos/scrollDistance;
+				    	
+				    	var progressIncrement = 69.50/numOfSlides;
+				    	console.log("jump width: " + progressIncrement);
+				    	var currentProgressWidth = $(".progress-meter").width();
+				    	var newProgressWidth = currentProgressWidth + progressIncrement;
+				    	$(".progress-meter").width(newProgressWidth);
 				    	var newTopPosition = windowPos-scrollDistance;
 				    	if(newTopPosition > maxWindowPos) {
 							$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
