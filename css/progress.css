@@ -162,7 +162,8 @@ label.radio, label.radio:after {display: inline-block; font-size: .875rem !impor
 select.question {width:12rem;font-family: 'Roboto', sans-serif;}
 .footer {z-index:1002; padding-top:19px; height:80px;width:1008px;}
 .footer hr {width:1024px; border-bottom-width:1px; margin:0;border-color:#979797}
-/*.footer div {margin: 0 114px}*/
+.practice.learn .nonlearn-footer {position: absolute; bottom: 8px; height: 70px; left: 0; border-top: 1px solid #D3D3D3; padding-top:13px; background-color: #FFF;}
+.practice .nonlearn-footer {position: absolute; bottom: 0; height: 70px; left: 0; border-top: 1px solid #D3D3D3; padding-top:13px; background-color: #FFF;}
 .answer-rationale-reveal .footer {position:absolute; left:0}
 .answer-rationale-reveal.incorrect {background-color: #7F7F7F; color: #FFF}
 .answer-rationale-reveal.correct {background-color: #94D150; color: #FFF}
@@ -417,3 +418,5 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .question-scroller {height:375px; overflow:scroll}
 .practice.fixed-body { height: 553px;    overflow: hidden;   position: relative;}
 	  	.practice.fixed-body .footer {left:8px !important; bottom:8px !important;}
+	  	
+	 

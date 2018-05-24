@@ -15,5 +15,5 @@
 	</nav>
 	<a class="button back button-left-side" href="<?php echo $back;?>"><img src="images/Back - Text Link.png" style="width: 55px; "/></a>
 	<a class="check-disabled <?php echo $btnClass;?> button success button-right-side forward-button" <?php echo $nextHref; ?>>Check <i class="fas fa-check"></i></a>
-	<div class="quiz-status" style="display:inline-block; "><span class="quiz-questions-remaining">4 questions left</span>&nbsp;<img src="images/scoring-star.jpg" style="width:30px; margin-right:10px"><span class="point-value">0</span>&nbsp;<span class="point-text">points</span></div>
+	<div class="quiz-status" style="display:inline-block; "><span class="quiz-questions-remaining">4 questions left</span>&nbsp;<img src="images/scoring-star.png" style="margin-right:10px"><span class="point-value">0</span>&nbsp;<span class="point-text">points</span></div>
 </div>
