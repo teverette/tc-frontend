@@ -413,3 +413,7 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 .practice .content {border: 8px solid #43B02A}
 .quiz .content {border: 8px solid #307FE2}
 .learn .content {border-width:0}
+
+.question-scroller {height:375px; overflow:scroll}
+.practice.fixed-body { height: 553px;    overflow: hidden;   position: relative;}
+	  	.practice.fixed-body .footer {left:8px !important; bottom:8px !important;}

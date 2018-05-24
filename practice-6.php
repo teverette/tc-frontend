@@ -47,10 +47,11 @@
 	  
 	</div>
 	<div class="rationale-sidebar"></div>
-	</div>
-		<?php $width = "63.0"; ?>
+	<?php $width = "63.0"; ?>
 		<?php $back = "learn-page-4.php"; ?>
 		<?php include '_footer_progress.php'?>
+	</div>
+		
 	
  <script>
       $(document).foundation();

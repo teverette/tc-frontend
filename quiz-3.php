@@ -4,7 +4,9 @@
   <title>How is verbal irony used in narratives?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
-	  <style>.drop-down-drawer {    height: 150px;bottom:150px}</style>
+	  <style>
+	  	.drop-down-drawer {height: 80px; bottom:88px}
+	  </style>
 </head>
 <body class="practice quiz quiz-question" data-quiz-question="3">
 
@@ -26,7 +28,6 @@
 	<?php include '_quiz_progress.php'?>
 	<div class="rationale-sidebar"></div>
 </div>
-
 
 <div id="drawer-one" class="drop-down-drawer q3_1 text-center">
 	<a class="button secondary answer-option q3_1" data-value="1">uses a computer mouse to go online</a>

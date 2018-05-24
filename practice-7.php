@@ -15,11 +15,14 @@
 	  	.split-pane .rationale-sidebar.minimize-sidebar{height:60px;top:397px;overflow:hidden}
 	  	.split-pane-left p {color: #4A4A4A;	font-family: Roboto;	font-size: 16px;	font-weight: 300;	line-height: 19px;}
 	  	.split-pane .answer-hint-btn {bottom:55px; right:20px}
+	  	.practice.fixed-body { height: 553px;    overflow: hidden;   position: relative;}
+	  	.practice.fixed-body .footer {left:8px !important; bottom:8px !important;}
 	  </style>
 	</head>
-<body class="practice">
+<body class="practice fixed-body">
 	<div class="content"> 
 	<div class="content-header content-header-practice" style="z-index: 2;left: 432px;">Learn & Practice</div>
+	<div>
 	<div class="grid-x grid-padding-x split-pane">
 	  <div class="split-pane-left" style="position:absolute; left:0px; width: 510px;padding-left:48px; background-color:#ECECEC;z-index: 1; top: 0; padding-top: 40px;">
 	  <h2 class="title">Story</h2>
@@ -57,13 +60,13 @@
 	  	</label>
 	  </div>
 	  <div class="rationale-sidebar"></div>
-	  
+	  </div>
 	</div>
-
+	
 	</div>
-		<?php $width = "77.0"; ?>
+	<?php $width = "77.0"; ?>
 		<?php $back = "practice-6.php"; ?>
-		<?php include '_footer_progress.php'?>
+		<?php include '_footer_progress.php'?>	
 	
  <script>
       $(document).foundation();

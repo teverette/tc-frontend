@@ -6,9 +6,10 @@
 	  <?php include '_js.html'; ?>
 	  <style>
 	  .dropshadow {box-shadow: 0 2px 6px 0 rgba(170,170,170,0.5); z-index:5}
+	  
 	  </style>
 </head>
-<body class="practice">
+<body class="practice fixed-body">
 <div class="content"> 
 	<div class="content-header content-header-practice" style="z-index: 1000">Learn & Practice</div>
 	
@@ -38,9 +39,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 </div>
-<?php $width = "91.0"; ?>
-<?php $back = "learn-page-5.php"; ?>
-<?php include '_footer_progress.php'?>
+
 
 <div id="drawer-one" class="drop-down-drawer q9_1 text-center" style="height: 150px;">
 	<a class="button secondary answer-option q9_1" data-value="1">her competitor took a deep breath and began to spell.</a>
@@ -49,6 +48,9 @@
 </div>
 
 </div>
+<?php $width = "91.0"; ?>
+<?php $back = "learn-page-5.php"; ?>
+<?php include '_footer_progress.php'?>
  <script>
       	$(document).foundation();
       	var answerKey = {q9_1:"1"};

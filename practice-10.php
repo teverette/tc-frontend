@@ -4,8 +4,44 @@
   <title>Which choices create suspense?</title>
   	  <?php include '_stylesheet.html'; ?>
 	  <?php include '_js.html'; ?>
+	  <style>
+	  	.content-borderless {border-color:#43B02A}
+	  	.content-borderless .content {border-width:0}
+	    .title-only {padding-top: 10%;line-height: 50px; font-size: 44px;}
+	  	.practice-section {
+	height: 63px;
+	color: #FFFFFF;
+	font-family: "Roboto Slab";
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 63px;
+	text-align: center; position:absolute; left:360px; top:200px; margin-bottom:37px;
+}
+.lorem-ipsum-dolor-si {
+	height: 56px;
+	width: 469px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 28px;
+	text-align: center;
+	position:absolute; top:290px; left:278px;
+}
+.practice-button {
+	height: 40px;
+	width: 134px;
+	border: 1px solid #307FE2;
+	border-radius: 4px;
+	background-color: #FFFFFF;position:absolute; left:445px; top:390px; padding-top:7px;
+	text-align: center;
+}
+.white-border {border-color:#FFF}
+	  </style>
 </head>
-<body class="practice">
+<body class="practice fixed-body">
+<div class="content-borderless">
+		<div class="content-borderless-window">
 <div class="content" style="padding: 73px 276px 0 114px;"> 
 	<div class="content-header content-header-practice">Learn & Practice</div>
 	
@@ -26,9 +62,7 @@
 	</div>
 	<div class="rationale-sidebar"></div>
 </div>
-<?php $width = "98.0"; ?>
-<?php $back = "practice-9.php"; ?>
-<?php include '_footer_progress.php'?>
+
 
 <div id="drawer-one" class="drop-down-drawer q10_1 text-center" style="height: 128px;">
 	<a class="button secondary answer-option q10_1" data-value="1">twists her ankle and falls.</a>
@@ -45,7 +79,18 @@
 	<a class="button secondary answer-option q10_2" data-value="2">What made that hole?</a>
 	<a class="button secondary answer-option q10_3" data-value="3">What’s for dinner tonight?</a>	
 </div>
+<div class="slide-8" style="width:100%;background-color:#307FE2;position:relative;height: 538px;z-index: 10;">
+				<img src="images/quiz-icon-v2.jpg" style="height:100px; top:96px; left: 355px; position:absolute;"/>
+		<h2 class="practice-section">Quiz Section</h2>
+		<p class="lorem-ipsum-dolor-si">Now you can earn points</p>
+		<a href="quiz-1.php" class="practice-button">Click to Begin</a>
+			</div>
+</div>
 
+<?php $width = "98.0"; ?>
+<?php $back = "practice-9.php"; ?>
+<?php include '_footer_progress.php'?>
+</div>
 </div>
  <script>
       	$(document).foundation();
@@ -76,7 +121,11 @@
         });
       
       	$(document).on("click",".check-verified", function() {
-		  window.location.href=nextPage;
+		  // window.location.href=nextPage;
+		  $(".footer").hide();
+      		$(".content-borderless-window").animate({top:-554, borderWidth:0}, 500, 'swing', function() {
+      			$(".content-borderless").addClass("white-border").animate({borderWidth:8}, 500, 'swing');
+      		});
       	});
       
       	var storage = window.sessionStorage;
@@ -88,7 +137,13 @@
 			}
 			$(".num-questions-remaining").text("last question");
 	  	});
-
+      	var storage = window.sessionStorage;
+    	storage["quiz_total"]=0;
+    	storage.removeItem('quiz_1');
+    	storage.removeItem('quiz_2');
+    	storage.removeItem('quiz_3');
+    	storage.removeItem('quiz_4');
+    	storage.removeItem('quiz_5');
   </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 	  body.practice .content {    padding: 73px 262px 70px 114px;}
 	  </style>
 </head>
-<body class="practice">
+<body class="practice fixed-body">
 <div class="content"> 
 	<div class="content-header content-header-practice">Learn & Practice</div>
 	
@@ -28,10 +28,6 @@
 	  <input type="hidden" class="q2_2 dd-response" name="q2_2"></input>
 	</div>
 	<div class="rationale-sidebar"></div>
-	<?php $width = "21.0"; ?>
-<?php $back = "practice-1.php"; ?>
-<?php $btnClass =""; ?>
-<?php include '_footer_progress.php'?>
 </div>
 
 
@@ -45,8 +41,10 @@
 	<a class="button secondary answer-option q2_2" data-value="2">I am such a loser.</a>
 	<a class="button secondary answer-option q2_3" data-value="3">Maybe I shouldn’t have been bragging.</a>	
 </div>
-
-</div>
+	<?php $width = "21.0"; ?>
+<?php $back = "practice-1.php"; ?>
+<?php $btnClass =""; ?>
+<?php include '_footer_progress.php'?>
  <script>
       	$(document).foundation();
       	var answerKey = {q2_1:"2", q2_2:"1"};

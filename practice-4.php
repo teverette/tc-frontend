@@ -4,9 +4,16 @@
 		<title>Which examples use dramatic irony?</title>
 		<?php include '_stylesheet.html'; ?>
 		<?php include '_js.html'; ?>
+		<style>
+		::-webkit-scrollbar {
+		    width: 0px;  /* remove scrollbar space */
+		    background: transparent;  /* optional: just make scrollbar invisible */
+		}
+		</style>
 	</head>
-	<body class="practice">
+	<body class="practice fixed-body">
 		<div class="content"> 
+
 		<div class="content-header content-header-practice">Learn & Practice</div>
 		<div class="grid-x grid-padding-x">
 		  <p class="lesson-desc medium-12">Which of these shows dramatic irony?</p>
@@ -46,8 +53,9 @@
 		
 		</div>
 		<div class="rationale-sidebar"></div>
+
 		</div>
-		<?php $width = "42"; ?>
+				<?php $width = "42"; ?>
 		<?php $back = "practice-3.php"; ?>
 		<?php $next = ""; ?>
 		<?php include '_footer_progress.php'?>
