@@ -7,11 +7,10 @@
 	  <script src="js/window-scroller.js"></script>
 	</head>
 	<body class="practice learn learn-page-3">
+		<div class="content-header content-header-learn">Learn & Practice</div>
 		<div class="content-borderless">
 		<div class="content-borderless-window">
 		<div class="content first-content">
-			<div class="content-header content-header-learn">Learn & Practice</div>
-			
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 				<div class="content-window" style="position:relative">
 						<div class="grid-x grid-padding-x slide-1">
@@ -44,7 +43,6 @@
 		</div>
 		<div class="content-2 item">
 			<div class="content"> 
-			<div class="content-header content-header-practice">Learn & Practice</div>
 			<div class="grid-x grid-padding-x">
 			  
 			  <h2 class="title medium-12">Which example uses dramatic irony?</h2>
