@@ -35,6 +35,7 @@ background-color: #FBFBFB; color:#4A90E2; height: 92px;margin-bottom:0;}
 .content-header-practice { background-color: #43B02A;left: 432px;padding-top: 6px;}
 .content-header-quiz {background-color: #307FE2; padding-top:5px; left:432px}
 .content-header-learn {left:432px; background-color: #43B02A; padding-top:5px;}
+.learn .content-header-learn {top: 8px; left:440px;}
 .rationale-sidebar {height: 436px; width: 179.93px; border-radius: 5px; background-color: transparent; position:fixed; right: 32px; top:20px; 
 	color: #4A4A4A; font-family: Roboto; font-size: 14px; line-height: 20px; padding-top: 41px; padding-left: 23px;
 }
@@ -417,6 +418,6 @@ a.answer-hint-btn:hover {color: #FFFFFF;}
 
 .question-scroller {height:375px; overflow:scroll}
 .practice.fixed-body { height: 553px;    overflow: hidden;   position: relative;}
-	  	.practice.fixed-body .footer {left:8px !important; bottom:8px !important;}
-	  	
+.practice.fixed-body .footer {left:8px !important; bottom:8px !important;}
+.learn-footer {width: 1008px; margin: 0 auto; text-align: center; position: absolute; bottom: 13px;height: 70px; left: 0; border-top: 1px solid #D3D3D3; padding-top:13px}	  	
 	 

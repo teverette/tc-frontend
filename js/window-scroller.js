@@ -49,6 +49,7 @@ $(document).ready(function() {
 
 				    function showPracticeSlide() {
 				    	showElement($(".content-2"));
+				    	$(".learn-footer").hide();
 				    	$(".content-borderless-window").animate({top:-554}, 500, 'swing');
 						if(question_item != null) {
 							$(".num-questions-remaining").text(10-question_item + " questions left");

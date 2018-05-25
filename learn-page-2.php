@@ -10,10 +10,11 @@
 	  </style>
 	</head>
 	<body class="practice learn learn-page-2">
+		<div class="content-header content-header-learn">Learn & Practice</div>
 		<div class="content-borderless">
 		<div class="content-borderless-window">
 		<div class="content first-content" style="padding-bottom:125px; overflow:hidden">
-			<div class="content-header content-header-learn">Learn & Practice</div>
+			
 			<div class="content-wrapper" style="width:700px; height:400px;overflow:hidden">
 			<div class="content-window" style="position:relative">
 					<div class="grid-x grid-padding-x slide-3">
@@ -60,7 +61,6 @@
 		</div>
 		<div class="content-2 item">
 			<div class="content"> 
-			<div class="content-header content-header-practice">Learn & Practice</div>
 			<div class="grid-x grid-padding-x">
 			  <p class="lesson-desc medium-12">Which of these shows verbal irony?</p>
 			   
