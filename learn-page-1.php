@@ -88,7 +88,7 @@
 			<?php include '_footer_learn_progress.php'?>
 			
 		</div>
-		<div class="slide-8" style="width:100%;background-color:#43B02A;position:relative;height: 538px;z-index: 10;">
+		<div class="content-2" style="width:100%;background-color:#43B02A;position:relative;height: 538px;z-index: 10;">
 				<img src="images/practice-icon-v2.jpg" style="height:100px; top:96px; left: 378px; position:absolute;"/>
 				<h2 class="practice-section">Practice Section</h2>
 				<p class="lorem-ipsum-dolor-si">Go ahead and make mistakes!</p>
@@ -111,61 +111,10 @@
 				});
 		    });
 
-		    /* window scroller variables and functions */
-			var windowPos = 0;
+		    /* window scroller & nav variables  */
 			var maxWindowPos = -800;
-			var scrollDistance = 400;
-		    $(".slide-btn-main").click(function () {
-		    	moveWindowForward();
-		    });
-
-		    function getWindowTopPosition() {
-		    	var position = $(".content-window").position();
-		    	return position.top;
-		    }
-
-		    function moveWindowForward() {
-		    	var newTopPosition = windowPos-scrollDistance;
-		    	var numOfSlides = -1*maxWindowPos/scrollDistance;
-		    	var progressIncrement = 69.50/numOfSlides;
-		    	var currentProgressWidth = $(".progress-meter").width();
-		    	var newProgressWidth = currentProgressWidth + progressIncrement;
-		    	$(".progress-meter").width(newProgressWidth);
-		    	if(newTopPosition > maxWindowPos) {
-					$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
-						windowPos = newTopPosition;
-				    });
-		    	} else {
-					showElement($(".slide-8"));
-					$(".content-borderless-window").animate({top:-554}, 500, 'swing');
-		    	}
-		    }
-
-		    function moveWindowReverse() {
-		    	var newTopPosition = windowPos+scrollDistance;
-		    	
-		    	console.log("new top: " + newTopPosition);
-		    	if(newTopPosition>=400) {
-					// hide/disable button
-					console.log("at top of content");
-					return;
-		    	}
-
-		    	$(".content-window").animate({top:newTopPosition}, animationDuration, 'swing', function() {
-		    		windowPos = newTopPosition;
-			    });
-		    }
-
-		    function showPracticeSlide() {
-		    	showElement($(".slide-8"));
-				$(".content-header").hide();
-				$(".content").animate({
-				    height: "0", padding:"0", borderWidth:"0"
-				  }, 900, function() {
-				});
-		    }
-		    /* end window scroller logic */
-
+			var question_item = 0;
+			var back = "index.php";
 	    </script>
 	</body>
 </html>

@@ -33,13 +33,14 @@ function moveWindowForward() {
 }
 
 function moveWindowReverse() {
-    console.log("current top: " + getWindowTopPosition());
 	var newTopPosition = windowPos+scrollDistance;
 	
-	console.log("new top: " + newTopPosition);
+	// go browser back, if user click back but is at the top of the page
 	if(newTopPosition>=400) {
-		// hide/disable button
 		console.log("at top of content");
+		if(back!=null && back!="") {
+			window.location.href=back;
+		}
 		return;
 	}
 

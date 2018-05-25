@@ -83,6 +83,8 @@
 		    $(document).foundation();
 		    var maxWindowPos = -1200;
 		    var question_item = 8;
+		    var back = "<?php echo $back; ?>";
+		    
 		    $(document).ready(function() {
 		    	$(".num-questions-remaining").text("3 questions left");
 		    	$(".forward-button").html('Check <i class="fas fa-lg fa-check icon-on-right"></i>');

@@ -105,6 +105,8 @@
 		      $(document).foundation();
 		      var maxWindowPos = -2000;
 		      var question_item = 1;
+			  var back = "<?php echo $back; ?>";
+			  
 		      $(document).ready(function() {
 					$(".num-questions-remaining").text("10 questions left");
 		      });		  

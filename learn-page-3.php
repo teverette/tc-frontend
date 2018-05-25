@@ -74,7 +74,7 @@
 			</div>
 			<div class="rationale-sidebar"></div>
 			</div>
-			<?php $back = "practice-2.php"; ?>
+		<?php $back = "practice-2.php"; ?>
 		<?php $width = "35.0"; ?>
 		<?php include '_footer_progress.php'?>
 		</div>
@@ -84,6 +84,7 @@
 		      $(document).foundation();
 		      var maxWindowPos = -1200;
 		      var question_item = 3;
+		      var back = "<?php echo $back; ?>";
 		      
 		      $(document).ready(function() {
 		    	  $(".num-questions-remaining").text("8 questions left");
