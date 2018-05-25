@@ -93,16 +93,9 @@ function increaseScoreBy(points) {
 	
 	var p = $(".point-value");
 	var position = p.position();
+	$(".point-value").text(storage["quiz_total"]);
 
-    var points_inc = "+ " + points;
-	$("body").append("<span class='points-earned' style='left: 910px;position:absolute; z-index:10000; color:#7D7D7D; top:600px'>"+points_inc+"</span>");
-	$(".points-earned").addClass('animate').animate({
-	    left: "857px",
-	    top: "12px"
-	  }, 2000, function() {
-	    	$(".points-earned").hide();
-	    	$(".point-value").text(storage["quiz_total"]);
-	    });
+    
 	
 }
 var storage = window.sessionStorage;
