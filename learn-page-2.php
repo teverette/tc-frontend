@@ -106,20 +106,7 @@
 		      var maxWindowPos = -2000;
 		      var question_item = 1;
 		      $(document).ready(function() {
-					//$(".footer").hide();
 					$(".num-questions-remaining").text("10 questions left");
-					$(".slide-3-btn").click(function () {
-						$(".slide-btn").removeClass("active-btn");
-						timeDelay=animationDuration+50;
-						$(".slide-3-btn").hide(0);
-						showElement($(".item-six"));
-						showElement($(".footer"));
-						$(".content").animate({
-						    height: "474"
-						  }, 900, function() {
-						    // Animation complete.
-						});
-					});
 		      });		  
 		      
 			

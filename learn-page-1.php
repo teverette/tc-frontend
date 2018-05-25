@@ -106,11 +106,9 @@
 		    $(document).foundation();
 		    $(document).ready(function(){
 		    	$(".slide-1 .item").each(function() {
-					console.log("inside item each");
 					setTimeout(showElement.bind(null,this), timeDelay);
 					timeDelay+=animationDuration+50;
 				});
-				
 		    });
 
 		    /* window scroller variables and functions */
@@ -119,7 +117,6 @@
 			var scrollDistance = 400;
 		    $(".slide-btn-main").click(function () {
 		    	moveWindowForward();
-			    
 		    });
 
 		    function getWindowTopPosition() {
@@ -131,7 +128,6 @@
 		    	var newTopPosition = windowPos-scrollDistance;
 		    	var numOfSlides = -1*maxWindowPos/scrollDistance;
 		    	var progressIncrement = 69.50/numOfSlides;
-		    	console.log("jump width: " + progressIncrement);
 		    	var currentProgressWidth = $(".progress-meter").width();
 		    	var newProgressWidth = currentProgressWidth + progressIncrement;
 		    	$(".progress-meter").width(newProgressWidth);
@@ -146,7 +142,6 @@
 		    }
 
 		    function moveWindowReverse() {
-			    console.log("current top: " + getWindowTopPosition());
 		    	var newTopPosition = windowPos+scrollDistance;
 		    	
 		    	console.log("new top: " + newTopPosition);
@@ -163,176 +158,13 @@
 
 		    function showPracticeSlide() {
 		    	showElement($(".slide-8"));
-				// $(".content").hide("slide", { direction: "up" }, 900);
 				$(".content-header").hide();
 				$(".content").animate({
 				    height: "0", padding:"0", borderWidth:"0"
 				  }, 900, function() {
-					  // $(".content").hide("slide", { direction: "up" }, 150);
 				});
 		    }
 		    /* end window scroller logic */
-		    
-		    $(".slide-2-btn").click(function () {
-				$(".slide-2-btn").fadeOut(100);
-				$(".slide-2").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-3").show().addClass("accessed");
-					  timeDelay=animationDuration+50;
-					  showElement($(".slide-3 .item-one"));
-					  setTimeout(showElement.bind(null,$(".slide-3 .item-two")), timeDelay);
-					  timeDelay+=animationDuration+50;
-					  setTimeout(showElement.bind(null,$(".slide-3 .item-three")), timeDelay);
-					  timeDelay+=animationDuration+50;
-					  setTimeout(showElement.bind(null,$(".slide-3 .slide-3-btn ")), timeDelay);
-					timeDelay=0;
-				});
-				$(".slide-btn").removeClass("active-btn");
-				$(".slide-3-btn").addClass("active-btn");
-
-			});
-
-		    $(".slide-3-btn").click(function () {
-				$(".slide-3-btn").fadeOut(100);
-				$(".slide-3").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-4").show().addClass("accessed");
-					
-					timeDelay=animationDuration+50;
-					showElement($(".slide-4 .item-one"));
-					showElement($(".slide-4 .item-two"));
-					setTimeout(showElement.bind(null,$(".slide-4 .slide-4-btn")), timeDelay);
-					timeDelay=0;
-				});
-				$(".slide-btn").removeClass("active-btn");
-				$(".slide-4-btn").addClass("active-btn");
-			});
-
-			function showElementsOnSlide3() {
-				$(".slide-3 .item").each(function() {
-					console.log("inside item each");
-					setTimeout(showElement.bind(null,this), timeDelay);
-					timeDelay+=animationDuration+50;
-				});
-			}
-
-			$(".slide-4-btn").click(function () {
-				timeDelay=animationDuration+50;
-				$(".slide-4-btn").hide(0);
-				$(".slide-4").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-5").show().addClass("accessed");
-					
-					timeDelay=animationDuration+50;
-					showElement($(".slide-5 .item-one"));
-					showElement($(".slide-5 .item-four"));
-					setTimeout(showElement.bind(null,$(".slide-5 .slide-5-btn")), timeDelay);
-					timeDelay=0;
-				});
-
-			});
-
-			$(".slide-5-btn").click(function () {
-				timeDelay=animationDuration+50;
-				$(".slide-5-btn").hide(0);
-				$(".slide-5").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-6").show().addClass("accessed");
-					
-					timeDelay=animationDuration+50;
-					showElement($(".slide-6 .item-one"));
-					showElement($(".slide-6 .item-four"));
-					setTimeout(showElement.bind(null,$(".slide-6 .slide-6-btn")), timeDelay);
-					timeDelay=0;
-				});
-			});
-
-			$(".slide-6-btn").click(function () {
-				timeDelay=animationDuration+50;
-				$(".slide-6-btn").hide(0);
-				$(".slide-6").hide("slide", { direction: "up" }, animationDuration, function(){
-					$(".slide-7").show().addClass("accessed");
-					
-					timeDelay=animationDuration+50;
-					showElement($(".slide-7 .item-six"));
-					setTimeout(showElement.bind(null,$(".slide-7 .slide-7-btn")), timeDelay);
-					timeDelay=0;
-				});
-			});
-
-			$(".slide-7-btn").click(function () {
-				$(".slide-btn").removeClass("active-btn");
-				timeDelay=animationDuration+50;
-				$(".slide-7-btn").hide(0);
-
-				showElement($(".slide-8"));
-				// $(".content").hide("slide", { direction: "up" }, 900);
-				$(".content-header").hide();
-				$(".content").animate({
-				    height: "0", padding:"0", borderWidth:"0"
-				  }, 900, function() {
-					  // $(".content").hide("slide", { direction: "up" }, 150);
-				});
-			});
-
-			var lastScrollStamp = new Date().getTime();
-		    $('html').on ('mousewheel', function (e) {
-			    var delta = e.originalEvent.wheelDelta;
-			    var nowScrollStamp = new Date().getTime();
-			    var scrollDiff = nowScrollStamp - lastScrollStamp;
-			    if (delta > 3 && scrollDiff>=1000) {
-			    	isScrolling = true;
-			    	lastScrollStamp = nowScrollStamp;
-			    	if ($(".slide-1").is(":visible")) {
-						return;
-					} else if ($(".slide-2").is(":visible")) {
-			    		$(".slide-2").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-1").show("slide", { direction: "up" }, 900);
-						//$(".slide-2-btn").hide();
-					} else if ($(".slide-3").is(":visible")) {
-			    		$(".slide-3").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-2").show("slide", { direction: "up" }, 900);
-						//$(".slide-3-btn").hide();
-					} else if ($(".slide-4").is(":visible")) {
-			    		$(".slide-4").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-3").show("slide", { direction: "up" }, 900);
-					} else if ($(".slide-5").is(":visible")) {
-			    		$(".slide-5").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-4").show("slide", { direction: "up" }, 900);
-					} else if ($(".slide-6").is(":visible")) {
-			    		$(".slide-6").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-5").show("slide", { direction: "up" }, 900);
-					} else if ($(".slide-7").is(":visible")) {
-			    		$(".slide-7").hide("slide", { direction: "down" }, 900);
-				    	$(".slide-6").show("slide", { direction: "up" }, 900);
-					}
-				} else if (delta < 3 && scrollDiff>=1000) {
-			    	isScrolling = true;
-			    	lastScrollStamp = nowScrollStamp;
-					if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
-						$(".slide-2").show("slide", { direction: "down" }, 900);
-						$(".slide-1").hide("slide", { direction: "up" }, 900);
-						/* if($(".footer.active-btn").length==0) { 
-								$(".active-btn").show();
-						} else {
-							showFooter();
-						} */
-					} else if($(".slide-2").is(":visible") && $(".slide-3").hasClass("accessed")) {
-						$(".slide-3").show("slide", { direction: "down" }, 900);
-						$(".slide-2").hide("slide", { direction: "up" }, 900);
-					} else if($(".slide-3").is(":visible") && $(".slide-4").hasClass("accessed")) {
-						$(".slide-4").show("slide", { direction: "down" }, 900);
-						$(".slide-3").hide("slide", { direction: "up" }, 900);
-					} else if($(".slide-4").is(":visible") && $(".slide-5").hasClass("accessed")) {
-						$(".slide-5").show("slide", { direction: "down" }, 900);
-						$(".slide-4").hide("slide", { direction: "up" }, 900);
-					} else if($(".slide-5").is(":visible") && $(".slide-6").hasClass("accessed")) {
-						$(".slide-6").show("slide", { direction: "down" }, 900);
-						$(".slide-5").hide("slide", { direction: "up" }, 900);
-					} else if($(".slide-6").is(":visible") && $(".slide-7").hasClass("accessed")) {
-						$(".slide-7").show("slide", { direction: "down" }, 900);
-						$(".slide-6").hide("slide", { direction: "up" }, 900);
-					}
-			    }
-			    isScrolling = false;
-			});
-
 
 	    </script>
 	</body>

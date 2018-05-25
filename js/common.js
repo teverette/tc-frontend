@@ -632,7 +632,6 @@ var animationDuration=500;
 var timeDelay = 0; 	
 
 function showElement(o) {
-    console.log("inside hideElement");
 	  $(o).fadeIn(animationDuration);
 }
 

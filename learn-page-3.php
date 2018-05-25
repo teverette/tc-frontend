@@ -79,8 +79,7 @@
 		<?php include '_footer_progress.php'?>
 		</div>
 		</div></div>
-		
-		
+			
 		 <script>
 		      $(document).foundation();
 		      var maxWindowPos = -1200;
@@ -97,107 +96,6 @@
 					$(".slide-1").addClass("accessed");					
 		      });
 
-		      $(".slide-1-btn").click(function () {
-					$(".slide-1-btn").fadeOut(100);
-					$(".slide-1").hide("slide", { direction: "up" }, animationDuration, function(){
-						$(".slide-2").show().addClass("accessed");
-						setTimeout(showElementsOnSlide2(), 100);
-						timeDelay=0;
-					});
-					$(".slide-btn").removeClass("active-btn");
-					$(".slide-2-btn").addClass("active-btn");
-					$(".slide-2").addClass("accessed");
-				});
-
-		      $(".slide-2-btn").click(function () {
-					timeDelay=animationDuration+50;
-					$(".item-three").hide(0);
-					$(".slide-3").show("slide", { direction: "up" }, animationDuration*2);
-					$(".slide-2").hide("slide", { direction: "up" }, animationDuration);
-					
-					$(".slide-3").addClass("accessed");
-					$(".slide-btn").removeClass("active-btn");
-					$(".slide-7-btn").show();
-				});
-
-		      $(".slide-7-btn").click(function () {
-					$(".slide-btn").removeClass("active-btn");
-					timeDelay=animationDuration+50;
-					$(".slide-7-btn").hide(0);
-
-					showElement($(".content-2"));
-					// $(".content").hide("slide", { direction: "up" }, 900);
-					$(".first-content .content-header").hide();
-					
-					$(".first-content").animate({
-					    height: "0", padding:"0", borderWidth:"0"
-					  }, 900, function() {
-						$(".speaker").show();
-						$("body").removeClass("learn");
-						showElement($(".footer"));
-						
-					});
-				});
-		      
-		      $('html').on ('mousewheel', function (e) {
-			      console.log("mousewheel detected");
-				    var delta = e.originalEvent.wheelDelta;
-				    var nowScrollStamp = new Date().getTime();
-				    var scrollDiff = nowScrollStamp - lastScrollStamp;
-				    if (delta > 3 && scrollDiff>=1500) {
-				    	lastScrollStamp = nowScrollStamp;
-				    	if($(".content-2").is(":visible")) {return}
-						if($(".slide-2").is(":visible")) {
-					    	$(".slide-1").show("slide", { direction: "up" }, 900);
-							$(".slide-2").hide("slide", { direction: "down" }, 900);
-							
-						} else if($(".slide-3").is(":visible")) {
-					    	$(".slide-2").show("slide", { direction: "up" }, 900);
-							$(".slide-3").hide("slide", { direction: "down" }, 900);
-							$(".footer").hide();
-							$(".content").animate({
-							    height: "554"
-							  }, 900, function() {
-								  
-							});
-						}
-						
-				    } else if (delta < -3 && scrollDiff>=1500) {
-				    	lastScrollStamp = nowScrollStamp;
-				    	if($(".content-2").is(":visible")) {return}
-						if($(".slide-1").is(":visible") && $(".slide-2").hasClass("accessed")) {
-							$(".slide-2").show("slide", { direction: "down" }, 450);
-							$(".slide-1").hide("slide", { direction: "up" }, 900);
-							
-						} else if($(".slide-2").is(":visible") && $(".slide-3").hasClass("accessed")) {
-							$(".slide-3").show("slide", { direction: "down" }, 450);
-							$(".slide-2").hide("slide", { direction: "up" }, 900);
-							showElement($(".footer"));
-							$(".content").animate({
-							    height: "474"
-							  }, 900, function() {
-							    // Animation complete.
-							});
-						}
-				    }
-				});
-		      var lastScrollStamp = new Date().getTime();
-		      
-		      function showElement(o) {
-			      console.log("inside hideElement");
-		    	  $(o).fadeIn(animationDuration);
-			  }
-
-		      function showElementsOnSlide2() {
-				  timeDelay=animationDuration+50;
-				  showElement($(".slide-2 .item-one"));
-				  setTimeout(showElement.bind(null,$(".slide-2 .item-two")), timeDelay);
-				  timeDelay+=animationDuration+50;
-				  setTimeout(showElement.bind(null,$(".slide-2 .item-three")), timeDelay);
-			  }
-	    </script>
-	     <script>
-      $(document).foundation();
       /* setup question and answer for quiz question */
       	var questions = ["q3_1"];
       	var hintArray = {
@@ -236,8 +134,6 @@
 			}
 			$(".forward-button").html('Check <img src="images/check-icon-white.png" style="margin-left:3px"/>');
 		});
-
-
   </script>
 	</body>
 </html>

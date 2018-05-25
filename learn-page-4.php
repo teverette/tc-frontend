@@ -96,61 +96,6 @@
 					$(".slide-1").addClass("accessed");
 		      });
 
-		      $(".slide-1-btn").click(function () {
-					$(".slide-1-btn").fadeOut(100);
-					$(".slide-1").hide("slide", { direction: "up" }, animationDuration, function(){
-						$(".slide-2").show().addClass("accessed");
-						setTimeout(showElementsOnSlide2(), 100);
-						timeDelay=0;
-					});
-					$(".slide-btn").removeClass("active-btn");
-					$(".slide-2-btn").addClass("active-btn");
-					$(".slide-2").addClass("accessed");
-				});
-
-		      $(".slide-2-btn").click(function () {
-					timeDelay=animationDuration+50;
-					$(".item-three").hide(0);
-					$(".slide-3").show("slide", { direction: "down" }, animationDuration*2);
-					$(".slide-2").hide("slide", { direction: "up" }, animationDuration);
-					
-					$(".slide-3").addClass("accessed");
-					$(".slide-7-btn").show();
-					$(".slide-btn").removeClass("active-btn");
-					$(".slide-3-btn").addClass("active-btn");
-				});
-		      $(".slide-7-btn").click(function () {
-					$(".slide-btn").removeClass("active-btn");
-					timeDelay=animationDuration+50;
-					$(".slide-7-btn").hide(0);
-
-					showElement($(".content-2"));
-					// $(".content").hide("slide", { direction: "up" }, 900);
-					$(".first-content .content-header").hide();
-					
-					$(".first-content").animate({
-					    height: "0", padding:"0", borderWidth:"0"
-					  }, 900, function() {
-						$(".speaker").show();
-						$("body").removeClass("learn");
-						showElement($(".footer"));
-						
-					});
-				});
-				
-		      function showElement(o) {
-			      console.log("inside hideElement");
-		    	  $(o).fadeIn(animationDuration);
-			  }
-
-		      function showElementsOnSlide2() {
-				  timeDelay=animationDuration+50;
-				  showElement($(".slide-2 .item-one"));
-				  setTimeout(showElement.bind(null,$(".slide-2 .item-two")), timeDelay);
-				  timeDelay+=animationDuration+50;
-				  setTimeout(showElement.bind(null,$(".slide-2 .item-three")), timeDelay);
-			  }
-
 		      var questions = ["q5_1","q5_2","q5_3"];
 		      	var answerKey = {q5_1:"irony", q5_2:"not-irony",q5_3:"irony"};
 		      	var hintArray = {
